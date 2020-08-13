@@ -7,7 +7,11 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controler;
 
     public float speed = 12f;
-    public float sprintMultiplier = 2f;
+    public float sprintSpeed = 20f;
+    public float sprintMaxAmmount = 100f;
+    public float sprintUsePerSec = 10f;
+    public float sprintRefilPerSec = 10f;
+
     public float jumpHeight = 3f;
     public float gravity = 9.81f;
 
@@ -16,36 +20,59 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
 
     Vector3 velocity;
-    bool isSprinting;
-    bool isGrounded;
+    bool isWalking;
+    bool canSprint = true;
+    bool isOnGround;
 
     // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
-        if(isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
+        isWalking = (x != 0 || z != 0);
+        isOnGround = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+        if (isOnGround && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+
+        if (sprintMaxAmmount > 100)
+        {
+            sprintMaxAmmount = 100;
+        }
+        
         Vector3 move = transform.right * x + transform.forward * z;
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !isSprinting)
+        if (Input.GetKey(KeyCode.LeftShift) && isWalking && canSprint)
         {
-            speed *= sprintMultiplier;
+            speed = sprintSpeed;
+            sprintMaxAmmount -= sprintUsePerSec * Time.deltaTime;
+            if (sprintMaxAmmount <= 0)
+            {
+                canSprint = false;
+            }
+        }
+        else
+        {
+            speed = 12f;
+            if (sprintMaxAmmount < 100f)
+            {
+                sprintMaxAmmount += sprintRefilPerSec * Time.deltaTime;
+            }
+            if (sprintMaxAmmount >= 25f)
+            {
+                canSprint = true;
+            }           
         }
 
         controler.Move(move * speed * Time.deltaTime);
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * 2 * gravity);
-        }
-
-       
+        }       
 
         velocity.y -= gravity * Time.deltaTime;
 
