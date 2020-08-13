@@ -23,6 +23,7 @@ public class WaveSpawner : MonoBehaviour
     SpawnState state = SpawnState.Counting;
 
     public Wave[] waves;
+    public Transform[] spawnPoints;
     [Space]
     public float timeBetweenWaves = 5f;
     public float waveCountdown = 0f;
@@ -112,7 +113,8 @@ public class WaveSpawner : MonoBehaviour
     void SpawnEnemy(Enemy enemy)
     {
         Debug.Log("Spawning enemy");
-        Instantiate(enemy, transform.position, Quaternion.identity);
+        Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+        Instantiate(enemy, spawnPoint.position, Quaternion.identity);
     }
    
 }
