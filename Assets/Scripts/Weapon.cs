@@ -6,15 +6,18 @@ public class Weapon : MonoBehaviour
 {
     public float fireRate = 0.5f;
     public float weaponRange = 10f;
+    public float damage = 10f;
 
     public LayerMask raycastLayer;
     bool shooting = false;
     float timer = 0;
 
-
     void Update()
     {
-        RaycastHit hit;
+        if (Input.GetMouseButtonDown(0))
+        {
+            Fire();
+        }
 
         if (Input.GetMouseButton(0))
         {
@@ -30,24 +33,31 @@ public class Weapon : MonoBehaviour
 
             if (shooting)
             {
-                if (Physics.Raycast(transform.position, transform.forward, out hit, weaponRange, raycastLayer))
-                {
-                    Debug.DrawRay(transform.position, transform.forward * weaponRange, Color.red);
-                    string layerHitted = LayerMask.LayerToName(hit.transform.gameObject.layer);
-
-                    switch (layerHitted)
-                    {
-                        case "Enemy":
-                            Destroy(hit.transform.gameObject);
-                            break;
-                    }
-                }
-                else
-                {
-                    Debug.DrawRay(transform.position, transform.forward * weaponRange, Color.green);
-                }
-                timer = 0f;
+                Fire();
             }
         }
+    }
+
+    public void Fire()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, weaponRange, raycastLayer))
+        {
+            Debug.DrawRay(transform.position, transform.forward * weaponRange, Color.red);
+            string layerHitted = LayerMask.LayerToName(hit.transform.gameObject.layer);
+
+            switch (layerHitted)
+            {
+                case "Enemy":
+                    hit.collider.gameObject.GetComponent<Enemy>().health -= damage;
+                    Debug.Log(hit.collider.gameObject.GetComponent<Enemy>().health);
+                    break;
+            }
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, transform.forward * weaponRange, Color.green);
+        }
+        timer = 0f;
     }
 }
