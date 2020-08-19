@@ -1,58 +1,127 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Weapon : MonoBehaviour
 {
-    public Transform playerBody;
+    public Transform playerCamera;
+    public Animator reloadAnimation;
     public bool isSemiautomatic = false;
+    public int fullAmmo = 30;
+    public int ammoInWeapon;
+    public int maxAmmo = 240;
     public float fireRate = 0.1f;
-    public float weaponRange = 30f;
+    public float range = 30f;
     public float damage = 10f;
+    public TextMeshProUGUI ammoText;
 
     public LayerMask raycastLayer; 
-    bool shooting = false;
+    bool isShooting = false;
+    bool isReloading = false;
+    bool isClipEmpty = false;
+    bool canReload = false;
     float timer = 0;
 
+    private void Start()
+    {
+        reloadAnimation = GetComponent<Animator>();
+        ammoInWeapon = fullAmmo;
+    }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if(maxAmmo == 0)
         {
-            Fire();
+            isClipEmpty = true;
+        }
+        else
+        {
+            isClipEmpty = false;
         }
 
-        if (isSemiautomatic)
+        if (ammoInWeapon == fullAmmo)
         {
-            if (Input.GetMouseButton(0))
+            canReload = false;
+        }
+        else
+        {
+            canReload = true;
+        }
+
+        if(!isReloading && ammoInWeapon !=0)
+        {
+            if (Input.GetMouseButtonDown(0))
             {
-                timer += Time.deltaTime;
-                if (timer >= fireRate)
+                Fire();
+            }            
+
+            if (isSemiautomatic)
+            {
+                if (Input.GetMouseButton(0))
                 {
-                    shooting = true;
+                    timer += Time.deltaTime;
+                    if (timer >= fireRate)
+                    {
+                        isShooting = true;
+                    }
+                    else
+                    {
+                        isShooting = false;
+                    }
+
+                    if (isShooting)
+                    {
+                        Fire();
+                    }
                 }
                 else
                 {
-                    shooting = false;
+                    timer = 0;
                 }
-
-                if (shooting)
-                {
-                    Fire();
-                }
-            }
-            else
-            {
-                timer = 0;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if(!isReloading && !isClipEmpty && canReload)
+            {
+                StartCoroutine(Reload());
+            }
+        }
+
+        ammoText.text = ammoInWeapon.ToString() + " / " + maxAmmo.ToString();
+    }
+
+    IEnumerator Reload()
+    {
+        isReloading = true;
+
+        reloadAnimation.Play("Reloading");
+        int ammoToLoad = fullAmmo - ammoInWeapon;
+        
+        yield return new WaitForSeconds(3);
+
+        if (maxAmmo > ammoToLoad)
+        {
+            ammoInWeapon += ammoToLoad;
+            maxAmmo -= ammoToLoad;            
+        }
+        else
+        {
+            ammoInWeapon += maxAmmo;
+            maxAmmo = 0;
+        }
+
+        isReloading = false;
     }
 
     public void Fire()
     {
         RaycastHit hit;
-        if (Physics.Raycast(playerBody.position, transform.forward, out hit, weaponRange, raycastLayer))
+        ammoInWeapon--;
+        if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, range, raycastLayer))
         {
-            Debug.DrawRay(playerBody.position, transform.forward * hit.distance, Color.red);
+            Debug.DrawRay(playerCamera.position, playerCamera.forward * hit.distance, Color.red);
             string layerHitted = LayerMask.LayerToName(hit.transform.gameObject.layer);
 
             switch (layerHitted)
@@ -64,7 +133,7 @@ public class Weapon : MonoBehaviour
         }
         else
         {
-            Debug.DrawRay(playerBody.position, transform.forward * weaponRange, Color.green);
+            Debug.DrawRay(playerCamera.position, playerCamera.forward * range, Color.green);
         }
         timer = 0f;
     }
