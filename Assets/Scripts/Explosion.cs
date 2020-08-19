@@ -5,8 +5,6 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
     ParticleSystem explosion;
-    float maxTimer = 5f;
-    float timer = 0;
 
     // Update is called once per frame
     private void Start()
@@ -15,8 +13,6 @@ public class Explosion : MonoBehaviour
     }
     void Update()
     {
-        timer += Time.deltaTime;
-
         StartCoroutine(Vanish());
     }
 
