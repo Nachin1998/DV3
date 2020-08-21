@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
+
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -16,19 +18,24 @@ public class WaveSpawner : MonoBehaviour
 
     public enum SpawnState
     {
-        Spawning, 
-        Waiting, 
-        Counting
+        CountDown,
+        Spawning,
+        ActiveWave
     }
-    SpawnState state = SpawnState.Counting;
+    SpawnState state = SpawnState.CountDown;
 
     public Wave[] waves;
     public Transform[] spawnPoints;
     [Space]
     public float timeBetweenWaves = 5f;
-    public float waveCountdown = 0f;
+    [Space]
+    public TextMeshProUGUI enemyAmmountText;
+    public TextMeshProUGUI waveStateText;
 
+    int totalEnemies = 0;
     float searchingLiveEnemiesCountdown = 1f;
+    float waveCountdown = 0f;
+    int currentWave = 0;
     int nextWave = 0;
 
     void Start()
@@ -38,57 +45,68 @@ public class WaveSpawner : MonoBehaviour
 
     void Update()
     {
-        if(state == SpawnState.Waiting)
+        if (state == SpawnState.ActiveWave)
         {
-            if (!isEnemyAlive())
+            waveStateText.text = "Wave " + (currentWave + 1).ToString();
+            enemyAmmountText.text = "Total Enemies: " + totalEnemies.ToString();
+            if (!AreEnemiesAlive())
             {
                 EndWave();
-                return;
             }
-            else
-            {
-                return;
-            }
+            return;
         }
-        if(waveCountdown <= 0)
+        
+        if (waveCountdown <= 0)
         {
-            if(state != SpawnState.Spawning)
+            waveStateText.text = "";
+            if (state != SpawnState.ActiveWave)
             {
-                StartCoroutine(SpawnWave(waves[nextWave]));
-            }
+                waveCountdown = 0;
+                if (state != SpawnState.Spawning)
+                {
+                    enemyAmmountText.text = "Spawning enemies";
+                    StartCoroutine(SpawnWave(waves[nextWave]));
+                }
+            }           
         }
         else
         {
             waveCountdown -= Time.deltaTime;
-        }
+
+            enemyAmmountText.text = "All enemies defeated";
+            waveStateText.text = "Next wave in: " + waveCountdown.ToString("F2");
+        }        
     }
 
     void EndWave()
     {
         Debug.Log("Wave Finished");
 
-        state = SpawnState.Counting;
+        state = SpawnState.CountDown;
         waveCountdown = timeBetweenWaves;
+        totalEnemies = 0;
 
-        if(nextWave + 1 > waves.Length - 1)
+        if (nextWave + 1 > waves.Length - 1)
         {
             nextWave = 0;
+            currentWave = 0;
             Debug.Log("All waves completed! Starting over");
         }
         else
         {
-            nextWave++;              
+            nextWave++;
+            currentWave++;
         }
     }
 
-    bool isEnemyAlive()
+    bool AreEnemiesAlive()
     {
         searchingLiveEnemiesCountdown -= Time.deltaTime;
 
-        if(searchingLiveEnemiesCountdown <= 0)
+        if (searchingLiveEnemiesCountdown <= 0)
         {
             searchingLiveEnemiesCountdown = 1f;
-            if(GameObject.FindGameObjectWithTag("Enemy") == null)
+            if (GameObject.FindGameObjectWithTag("Enemy") == null)
             {
                 return false;
             }
@@ -99,7 +117,10 @@ public class WaveSpawner : MonoBehaviour
     IEnumerator SpawnWave(Wave wave)
     {
         Debug.Log("Spawning wave...");
+        
         state = SpawnState.Spawning;
+
+        //totalEnemies = wave.enemyAmmount;
 
         for (int i = 0; i < wave.enemyAmmount; i++)
         {
@@ -107,14 +128,15 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(1 / wave.spawnRate);
         }
 
-        state = SpawnState.Waiting;
+        state = SpawnState.ActiveWave;
     }
 
     void SpawnEnemy(Enemy enemy)
     {
         Debug.Log("Spawning enemy");
-        Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-        Instantiate(enemy, spawnPoint.position, Quaternion.identity, transform);
+        Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+        Instantiate(enemy, randomSpawnPoint.position, Quaternion.identity, randomSpawnPoint.transform);
+        totalEnemies++;
     }
-   
+
 }

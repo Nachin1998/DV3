@@ -12,14 +12,17 @@ public class Weapon : MonoBehaviour
     public int ammoInWeapon;
     public int maxAmmo = 240;
     public float fireRate = 0.1f;
+
     public float range = 30f;
     public float damage = 10f;
+    public float force = 10f;
+
     public TextMeshProUGUI ammoText;
 
     public LayerMask raycastLayer; 
     bool isShooting = false;
     bool isReloading = false;
-    bool isClipEmpty = false;
+    bool isOutOfAmmo = false;
     bool canReload = false;
     float timer = 0;
 
@@ -32,11 +35,11 @@ public class Weapon : MonoBehaviour
     {
         if(maxAmmo == 0)
         {
-            isClipEmpty = true;
+            isOutOfAmmo = true;
         }
         else
         {
-            isClipEmpty = false;
+            isOutOfAmmo = false;
         }
 
         if (ammoInWeapon == fullAmmo)
@@ -83,7 +86,7 @@ public class Weapon : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            if(!isReloading && !isClipEmpty && canReload)
+            if(!isReloading && !isOutOfAmmo && canReload)
             {
                 StartCoroutine(Reload());
             }
@@ -123,11 +126,14 @@ public class Weapon : MonoBehaviour
         {
             Debug.DrawRay(playerCamera.position, playerCamera.forward * hit.distance, Color.red);
             string layerHitted = LayerMask.LayerToName(hit.transform.gameObject.layer);
+            Vector3 direction = hit.transform.position - playerCamera.position;
+            direction.y = 0;
 
             switch (layerHitted)
             {
                 case "Enemy":
                     hit.collider.gameObject.GetComponent<Enemy>().TakeDamage(damage);
+                    hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(direction.normalized * force, ForceMode.Impulse);
                     break;
             }
         }
