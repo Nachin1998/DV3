@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
     public Transform playerCamera;
     public Animator reloadAnimation;
     public bool isSemiautomatic = false;
-    public int fullAmmo = 30;
+    public int ammoInClips = 30;
     public int ammoInWeapon;
     public int maxAmmo = 240;
     public float fireRate = 0.1f;
@@ -29,7 +29,7 @@ public class Weapon : MonoBehaviour
     private void Start()
     {
         reloadAnimation = GetComponent<Animator>();
-        ammoInWeapon = fullAmmo;
+        ammoInWeapon = ammoInClips;
     }
     void Update()
     {
@@ -42,7 +42,7 @@ public class Weapon : MonoBehaviour
             isOutOfAmmo = false;
         }
 
-        if (ammoInWeapon == fullAmmo)
+        if (ammoInWeapon == ammoInClips)
         {
             canReload = false;
         }
@@ -100,7 +100,7 @@ public class Weapon : MonoBehaviour
         isReloading = true;
 
         reloadAnimation.Play("Reloading");
-        int ammoToLoad = fullAmmo - ammoInWeapon;
+        int ammoToLoad = ammoInClips - ammoInWeapon;
         
         yield return new WaitForSeconds(3);
 
@@ -124,6 +124,7 @@ public class Weapon : MonoBehaviour
         ammoInWeapon--;
         if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, range, raycastLayer))
         {
+            Debug.Log("Hit!");
             Debug.DrawRay(playerCamera.position, playerCamera.forward * hit.distance, Color.red);
             string layerHitted = LayerMask.LayerToName(hit.transform.gameObject.layer);
             Vector3 direction = hit.transform.position - playerCamera.position;
