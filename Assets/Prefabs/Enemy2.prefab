@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6511082302336137664}
   - component: {fileID: 6804443054062942821}
   - component: {fileID: -8583467142719576462}
+  - component: {fileID: -3459777625814254019}
   m_Layer: 10
   m_Name: Enemy2
   m_TagString: Enemy
@@ -93,7 +94,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6804443054062942821
 MonoBehaviour:
@@ -108,8 +109,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  damage: 10
+  attackDistance: 3
+  attackSpeedRate: 2
+  isDead: 0
   explosion: {fileID: 7387208657726731796, guid: f7e3609d31e1c5c4eab5859c54c92f9c,
     type: 3}
+  agent: {fileID: -3459777625814254019}
 --- !u!54 &-8583467142719576462
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,3 +132,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!195 &-3459777625814254019
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873786581521468403}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 3.5
+  m_Acceleration: 4
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 3
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

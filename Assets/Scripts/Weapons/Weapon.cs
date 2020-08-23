@@ -51,12 +51,27 @@ public class Weapon : MonoBehaviour
             canReload = true;
         }
 
-        if(!isReloading && ammoInWeapon !=0)
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (!isReloading && !isOutOfAmmo && canReload)
+            {
+                StartCoroutine(Reload());
+            }
+        }
+
+        ammoText.text = ammoInWeapon.ToString() + " / " + maxAmmo.ToString();
+
+        if (!isReloading && ammoInWeapon !=0)
         {
             if (Input.GetMouseButtonDown(0))
             {
                 Fire();
-            }            
+            }
+
+            if (!isSemiautomatic)
+            {
+                return;
+            }
 
             if (isSemiautomatic)
             {
@@ -82,17 +97,7 @@ public class Weapon : MonoBehaviour
                     timer = 0;
                 }
             }
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            if(!isReloading && !isOutOfAmmo && canReload)
-            {
-                StartCoroutine(Reload());
-            }
-        }
-
-        ammoText.text = ammoInWeapon.ToString() + " / " + maxAmmo.ToString();
+        }        
     }
 
     IEnumerator Reload()

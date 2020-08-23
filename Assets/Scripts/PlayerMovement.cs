@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,8 +11,11 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 12f;
     public float sprintSpeed = 20f;
     public float sprintMaxAmmount = 100f;
+    public float currentSprint = 100f;
     public float sprintUsePerSec = 10f;
     public float sprintRefilPerSec = 10f;
+
+    public Image sprintBar;
 
     public float jumpHeight = 3f;
     public float gravity = 9.81f;
@@ -39,23 +43,34 @@ public class PlayerMovement : MonoBehaviour
         isWalking = (x != 0 || z != 0);
         isOnGround = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
+        sprintBar.fillAmount = currentSprint / 100;
+
         if (isOnGround && velocity.y < 0)
         {
             velocity.y = -2f;
         }
 
-        if (sprintMaxAmmount > 100)
+        if (currentSprint > sprintMaxAmmount)
         {
-            sprintMaxAmmount = 100;
+            currentSprint = sprintMaxAmmount;
         }
-        
+
+        if (canSprint)
+        {
+            sprintBar.color = Color.blue;
+        }
+        else
+        {
+            sprintBar.color = Color.red;
+        }
+
         Vector3 move = transform.right * x + transform.forward * z;
 
         if (Input.GetKey(KeyCode.LeftShift) && isWalking && canSprint)
         {
             speed = sprintSpeed;
-            sprintMaxAmmount -= sprintUsePerSec * Time.deltaTime;
-            if (sprintMaxAmmount <= 0)
+            currentSprint -= sprintUsePerSec * Time.deltaTime;
+            if (currentSprint <= 0)
             {
                 canSprint = false;
             }
@@ -63,11 +78,11 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             speed = 12f;
-            if (sprintMaxAmmount < 100f)
+            if (currentSprint < sprintMaxAmmount)
             {
-                sprintMaxAmmount += sprintRefilPerSec * Time.deltaTime;
+                currentSprint += sprintRefilPerSec * Time.deltaTime;
             }
-            if (sprintMaxAmmount >= 25f)
+            if (currentSprint >= 25f)
             {
                 canSprint = true;
             }           
