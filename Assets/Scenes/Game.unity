@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: e818728929ff07842807ffe20ebc5106, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: cb055e2ea3ea69642b6b29e6c0092a83, type: 2}
 --- !u!1 &46300474
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +556,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118691626}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.98, y: 1.5, z: 8.44}
+  m_LocalPosition: {x: 17.7, y: 1.5, z: 8.44}
   m_LocalScale: {x: 8, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 301917648}
@@ -1730,6 +1730,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy2
       objectReference: {fileID: 0}
+    - target: {fileID: 873786581521468403, guid: a5988dcb476d1694a9a67c7c456d7e73,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7765908675317834594, guid: a5988dcb476d1694a9a67c7c456d7e73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1768,7 +1773,7 @@ PrefabInstance:
     - target: {fileID: 7765908675317834594, guid: a5988dcb476d1694a9a67c7c456d7e73,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7765908675317834594, guid: a5988dcb476d1694a9a67c7c456d7e73,
         type: 3}
@@ -2978,7 +2983,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 719420075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalPosition: {x: 0.2, y: 2.46, z: 14.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 282840814}
@@ -3244,7 +3249,7 @@ PrefabInstance:
     - target: {fileID: 5678447478247955808, guid: 6342f75b08bc7df458b6b3a5a02e8480,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5678447478247955808, guid: 6342f75b08bc7df458b6b3a5a02e8480,
         type: 3}
@@ -3265,6 +3270,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8235985159091381635, guid: 6342f75b08bc7df458b6b3a5a02e8480,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6342f75b08bc7df458b6b3a5a02e8480, type: 3}
@@ -4269,6 +4279,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy3
       objectReference: {fileID: 0}
+    - target: {fileID: 7106247654787318896, guid: 27eae6ec654343446b3f89e8b3f7410f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9112473908583881683, guid: 27eae6ec654343446b3f89e8b3f7410f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4784,7 +4799,7 @@ GameObject:
   m_Layer: 0
   m_Name: WaveSpawner
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4802,15 +4817,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - name: Cubes
-    enemy: {fileID: 204547095700748672, guid: 6342f75b08bc7df458b6b3a5a02e8480, type: 3}
+    enemy: {fileID: 2216548953777227981, guid: 3ba8440a31a770847b7aaf72b7ea6807, type: 3}
     enemyAmmount: 10
     spawnRate: 3
   - name: Spheres
-    enemy: {fileID: 6804443054062942821, guid: a5988dcb476d1694a9a67c7c456d7e73, type: 3}
+    enemy: {fileID: 8637836359615038146, guid: 2e68a0b0de5fbbc4a84fe8dd789bb5c0, type: 3}
     enemyAmmount: 5
     spawnRate: 2
   - name: Capsules
-    enemy: {fileID: 6670788199265028789, guid: 27eae6ec654343446b3f89e8b3f7410f, type: 3}
+    enemy: {fileID: 9110361034628252052, guid: 4321315c026b0ac40af01eaf3bc557aa, type: 3}
     enemyAmmount: 2
     spawnRate: 1
   spawnPoints:
