@@ -6,7 +6,9 @@ using TMPro;
 public class Weapon : MonoBehaviour
 {
     public Transform playerCamera;
+    public ParticleSystem muzzleFlash;
     public Animator reloadAnimation;
+    public AudioSource shotSound;
     public bool isSemiautomatic = false;
     public int ammoInClips = 30;
     public int ammoInWeapon;
@@ -20,6 +22,7 @@ public class Weapon : MonoBehaviour
     public TextMeshProUGUI ammoText;
 
     public LayerMask raycastLayer; 
+
     bool isShooting = false;
     bool isReloading = false;
     bool isOutOfAmmo = false;
@@ -30,10 +33,16 @@ public class Weapon : MonoBehaviour
     {
         reloadAnimation = GetComponent<Animator>();
         ammoInWeapon = ammoInClips;
+        muzzleFlash.Stop();
     }
     void Update()
     {
-        if(maxAmmo == 0)
+        if (Pause.gameIsPaused)
+        {
+            return;
+        }
+
+        if (maxAmmo == 0)
         {
             isOutOfAmmo = true;
         }
@@ -127,6 +136,11 @@ public class Weapon : MonoBehaviour
     {
         RaycastHit hit;
         ammoInWeapon--;
+        muzzleFlash.Play();
+       
+            shotSound.Play();
+        
+        
         if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, range, raycastLayer))
         {
             Debug.Log("Hit!");
@@ -148,5 +162,13 @@ public class Weapon : MonoBehaviour
             Debug.DrawRay(playerCamera.position, playerCamera.forward * range, Color.green);
         }
         timer = 0f;
+        StartCoroutine(MuzzleFlash());
+    }
+
+    public IEnumerator MuzzleFlash()
+    {
+        muzzleFlash.Play();
+        yield return new WaitForSeconds(muzzleFlash.main.duration);
+        muzzleFlash.Stop();
     }
 }

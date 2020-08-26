@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     public Player player;
     public Camera weaponCamera;
     [Space]
-    public GameObject playerStateText;
     public GameObject deathMenu;
     [Space]
     public TextMeshProUGUI ammoText;
@@ -23,7 +22,6 @@ public class GameManager : MonoBehaviour
 
         deathMenu.SetActive(false);
 
-        playerStateText.SetActive(false);
         ammoText.gameObject.SetActive(true);
         totalEnemies.gameObject.SetActive(true);
         waveState.gameObject.SetActive(true);
@@ -45,7 +43,6 @@ public class GameManager : MonoBehaviour
 
             deathMenu.SetActive(true);
 
-            playerStateText.SetActive(true);
             ammoText.gameObject.SetActive(false);
             totalEnemies.gameObject.SetActive(false);
             waveState.gameObject.SetActive(false);
