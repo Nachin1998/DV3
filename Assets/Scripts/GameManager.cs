@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI waveState;
     [Space]
     public Image aim;
+
     void Start()
     {
         weaponCamera.gameObject.SetActive(true);
@@ -29,25 +30,23 @@ public class GameManager : MonoBehaviour
         aim.gameObject.SetActive(true);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!player.isDead)
         {
             return;
         }
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-            weaponCamera.gameObject.SetActive(false);
 
-            deathMenu.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        weaponCamera.gameObject.SetActive(false);
 
-            ammoText.gameObject.SetActive(false);
-            totalEnemies.gameObject.SetActive(false);
-            waveState.gameObject.SetActive(false);
+        deathMenu.SetActive(true);
 
-            aim.gameObject.SetActive(false);
-        }
+        ammoText.gameObject.SetActive(false);
+        totalEnemies.gameObject.SetActive(false);
+        waveState.gameObject.SetActive(false);
+
+        aim.gameObject.SetActive(false);
     }
 }

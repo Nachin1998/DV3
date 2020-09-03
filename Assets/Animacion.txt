@@ -1,0 +1,19 @@
+Disparo1: 10 - 25
+
+Disparo2: 30 - 45
+
+Recarga:  50 - 290
+
+Caminata: 300 - 350
+
+Correr (Inicio): 360 - 380
+
+Correr (Loop): 390 - 440
+
+Disparo1 (Correr): 450 - 465
+
+Disparo2 (Correr): 470 - 485
+
+Correr (Inicio despues de Disparo): 490 - 500
+
+Correr (Fin): 510 - 554

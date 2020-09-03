@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Image sprintBar;
 
+    public Animator weaponAnim;
+
     public float jumpHeight = 3f;
     public float gravity = 9.81f;
 
@@ -27,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     bool isWalking;
     bool canSprint = true;
+    bool isSprinting = false;
     bool isOnGround;
 
     // Update is called once per frame
@@ -44,6 +47,8 @@ public class PlayerMovement : MonoBehaviour
         isOnGround = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         sprintBar.fillAmount = currentSprint / 100;
+
+        weaponAnim.SetBool("isSprinting", isSprinting);
 
         if (isOnGround && velocity.y < 0)
         {
@@ -64,29 +69,11 @@ public class PlayerMovement : MonoBehaviour
             sprintBar.color = Color.red;
         }
 
+        weaponAnim.SetBool("isWalking", isWalking);
+
         Vector3 move = transform.right * x + transform.forward * z;
 
-        if (Input.GetKey(KeyCode.LeftShift) && isWalking && canSprint)
-        {
-            speed = sprintSpeed;
-            currentSprint -= sprintUsePerSec * Time.deltaTime;
-            if (currentSprint <= 0)
-            {
-                canSprint = false;
-            }
-        }
-        else
-        {
-            speed = 12f;
-            if (currentSprint < sprintMaxAmmount)
-            {
-                currentSprint += sprintRefilPerSec * Time.deltaTime;
-            }
-            if (currentSprint >= 25f)
-            {
-                canSprint = true;
-            }           
-        }
+        StartCoroutine(Sprint());
 
         controler.Move(move * speed * Time.deltaTime);
 
@@ -98,5 +85,37 @@ public class PlayerMovement : MonoBehaviour
         velocity.y -= gravity * Time.deltaTime;
 
         controler.Move(velocity * Time.deltaTime);
+    }
+
+    public IEnumerator Sprint()
+    {
+        if (Input.GetKey(KeyCode.LeftShift) && isWalking && canSprint)
+        {
+            weaponAnim.SetBool("startedSprinting", true);
+            yield return new WaitForSeconds(0.3f);
+
+            isSprinting = true;
+            speed = sprintSpeed;
+            currentSprint -= sprintUsePerSec * Time.deltaTime;
+            if (currentSprint <= 0)
+            {
+                canSprint = false;
+                weaponAnim.SetBool("isSprinting", canSprint);
+            }
+        }
+        else
+        {
+            isSprinting = false;
+            speed = 12f;
+            if (currentSprint < sprintMaxAmmount)
+            {
+                currentSprint += sprintRefilPerSec * Time.deltaTime;
+            }
+            if (currentSprint >= 25f)
+            {
+                canSprint = true;
+            }
+            weaponAnim.SetBool("startedSprinting", false);
+        }
     }
 }

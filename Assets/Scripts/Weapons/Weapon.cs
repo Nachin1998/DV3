@@ -7,7 +7,7 @@ public class Weapon : MonoBehaviour
 {
     public Transform playerCamera;
     public ParticleSystem muzzleFlash;
-    public Animator reloadAnimation;
+    public Animator animator;
     public AudioSource shotSound;
     public bool isSemiautomatic = false;
     public int ammoInClips = 30;
@@ -31,7 +31,7 @@ public class Weapon : MonoBehaviour
 
     private void Start()
     {
-        reloadAnimation = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         ammoInWeapon = ammoInClips;
         muzzleFlash.Stop();
     }
@@ -113,7 +113,7 @@ public class Weapon : MonoBehaviour
     {
         isReloading = true;
 
-        reloadAnimation.Play("Reloading");
+        animator.SetBool("isReloading", true);
         int ammoToLoad = ammoInClips - ammoInWeapon;
         
         yield return new WaitForSeconds(3);
@@ -129,6 +129,7 @@ public class Weapon : MonoBehaviour
             maxAmmo = 0;
         }
 
+        animator.SetBool("isReloading", false);
         isReloading = false;
     }
 
@@ -137,8 +138,9 @@ public class Weapon : MonoBehaviour
         RaycastHit hit;
         ammoInWeapon--;
         muzzleFlash.Play();
-       
-            shotSound.Play();
+        //animator.Play("Shoot");
+        animator.SetBool("isShooting", true);
+        shotSound.Play();
         
         
         if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, range, raycastLayer))
@@ -168,7 +170,8 @@ public class Weapon : MonoBehaviour
     public IEnumerator MuzzleFlash()
     {
         muzzleFlash.Play();
-        yield return new WaitForSeconds(muzzleFlash.main.duration);
+        yield return new WaitForSeconds(muzzleFlash.main.duration * 3);
+        animator.SetBool("isShooting", false);
         muzzleFlash.Stop();
     }
 }
