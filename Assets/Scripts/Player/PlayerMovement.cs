@@ -100,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
             if (currentSprint <= 0)
             {
                 canSprint = false;
-                weaponAnim.SetBool("isSprinting", canSprint);
+                //weaponAnim.SetBool("isSprinting", false);
             }
         }
         else

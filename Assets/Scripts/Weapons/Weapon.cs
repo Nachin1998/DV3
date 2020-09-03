@@ -116,7 +116,7 @@ public class Weapon : MonoBehaviour
         animator.SetBool("isReloading", true);
         int ammoToLoad = ammoInClips - ammoInWeapon;
         
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2.5f);
 
         if (maxAmmo > ammoToLoad)
         {
