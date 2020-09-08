@@ -5,10 +5,10 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: Fire1
+    second: Shot1
   - first:
       74: -1087291740326087708
-    second: Fire2
+    second: Shot2
   - first:
       74: 229770723416056496
     second: Reload
@@ -23,10 +23,10 @@ ModelImporter:
     second: Run Loop
   - first:
       74: 6641085478485924818
-    second: Shoot Running
+    second: Sprinting Shot 1
   - first:
       74: 7754501921320999938
-    second: Shoot Running 2
+    second: Sprinting Shot 2
   - first:
       74: -5059006814000262888
     second: Stop Running
@@ -62,7 +62,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Fire1
+      name: Shot1
       takeName: Take 001
       internalID: 0
       firstFrame: 10
@@ -91,7 +91,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 1
     - serializedVersion: 16
-      name: Fire2
+      name: Shot2
       takeName: Take 001
       internalID: 0
       firstFrame: 30
@@ -236,7 +236,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 1
     - serializedVersion: 16
-      name: Shoot Running
+      name: Sprinting Shot 1
       takeName: Take 001
       internalID: 0
       firstFrame: 450
@@ -265,7 +265,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 1
     - serializedVersion: 16
-      name: Shoot Running 2
+      name: Sprinting Shot 2
       takeName: Take 001
       internalID: 0
       firstFrame: 470

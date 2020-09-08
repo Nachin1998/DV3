@@ -8,9 +8,12 @@ public class Player : MonoBehaviour
     public float health = 100f;
     public Image healthBar;
     public bool isDead = false;
+
+    public Image bloodScreen;
     void Start()
     {
         healthBar.fillAmount = health / 100;
+        bloodScreen.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -33,5 +36,14 @@ public class Player : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+        StartCoroutine(ScreenDamage(1));
+    }
+
+    public IEnumerator ScreenDamage(float bloodDuration)
+    {
+        bloodScreen.gameObject.SetActive(true);
+        bloodScreen.CrossFadeAlpha(0, bloodDuration, false);
+        yield return new WaitForSeconds(bloodDuration);
+        bloodScreen.gameObject.SetActive(false);
     }
 }

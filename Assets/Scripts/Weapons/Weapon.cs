@@ -116,7 +116,7 @@ public class Weapon : MonoBehaviour
         animator.SetBool("isReloading", true);
         int ammoToLoad = ammoInClips - ammoInWeapon;
         
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2.8f);
 
         if (maxAmmo > ammoToLoad)
         {
@@ -138,7 +138,6 @@ public class Weapon : MonoBehaviour
         RaycastHit hit;
         ammoInWeapon--;
         muzzleFlash.Play();
-        //animator.Play("Shoot");
         animator.SetBool("isShooting", true);
         shotSound.Play();
         

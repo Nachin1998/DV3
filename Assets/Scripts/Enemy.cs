@@ -47,6 +47,11 @@ public class Enemy : MonoBehaviour
             //transform.LookAt(target.transform);
         }
 
+        if (playerTarget.isDead)
+        {
+            return;
+        }
+
         if (!isDead && agent.remainingDistance <= attackDistance)
         {
             AttackTarget();

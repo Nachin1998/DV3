@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI waveState;
     [Space]
     public Image aim;
+    public Image bloodImage;
 
     void Start()
     {
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
         waveState.gameObject.SetActive(true);
 
         aim.gameObject.SetActive(true);
+        bloodImage.gameObject.SetActive(false);
     }
 
     void Update()
@@ -48,5 +50,6 @@ public class GameManager : MonoBehaviour
         waveState.gameObject.SetActive(false);
 
         aim.gameObject.SetActive(false);
+        bloodImage.gameObject.SetActive(true);
     }
 }
