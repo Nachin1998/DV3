@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
-
+        
         if (playerTarget && !isDead)
         {
             agent.SetDestination(playerTarget.transform.position - distaceToAttack.normalized);
@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
             return;
         }
 
-        if (!isDead && agent.remainingDistance <= attackDistance)
+        if (!isDead && Vector3.Distance(transform.position, playerTarget.transform.position) <= attackDistance)
         {
             AttackTarget();
         }

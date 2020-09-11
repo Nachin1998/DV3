@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 35607240199916264}
   - component: {fileID: 3235020950564575703}
   - component: {fileID: 8950748751457709906}
+  - component: {fileID: 113642409}
   m_Layer: 10
   m_Name: Bear
   m_TagString: Enemy
@@ -51,7 +52,7 @@ MonoBehaviour:
   health: 100
   damage: 10
   attackDistance: 3.5
-  attackSpeedRate: 1
+  attackSpeedRate: 0.2
   isDead: 0
   explosion: {fileID: 7387208657726731796, guid: f7e3609d31e1c5c4eab5859c54c92f9c,
     type: 3}
@@ -66,11 +67,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 100
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 3
+  m_StoppingDistance: 2.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -90,7 +91,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.8837216
-  m_Center: {x: 0, y: 1.7015355, z: 0}
+  m_Center: {x: 0, y: 1.75, z: 0}
 --- !u!136 &3235020950564575703
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -101,10 +102,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.8043358
-  m_Height: 2.254587
+  m_Radius: 0.5898875
+  m_Height: 1.807225
   m_Direction: 1
-  m_Center: {x: -0.016711771, y: 0.11484945, z: 0}
+  m_Center: {x: -0.02149576, y: 0.22368097, z: 0.031736255}
 --- !u!54 &8950748751457709906
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -121,6 +122,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &113642409
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3235020950564575702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.7208903, y: 0.56140995, z: 0.5701752}
+  m_Center: {x: 0.020257592, y: 0.67006826, z: -0.010398865}
 --- !u!1001 &3204039361890938556
 PrefabInstance:
   m_ObjectHideFlags: 0
