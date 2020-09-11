@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     public Explosion explosion;
     [Space]
 
+    public string targetTag;
     public NavMeshAgent agent;
 
     Player playerTarget;
@@ -24,7 +25,16 @@ public class Enemy : MonoBehaviour
     private void Start()    
     {
         maxSpeedRate = attackSpeedRate;
-        playerTarget = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
+        switch (GameManager.gameMode)
+        {
+            case GameManager.GameMode.Survival:
+                playerTarget = GameObject.FindGameObjectWithTag(targetTag).GetComponent<Player>();
+                break;
+            default:
+                break;
+        }
+        
     }
 
     void Update()

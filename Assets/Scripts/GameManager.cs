@@ -6,6 +6,15 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public enum GameMode
+    {
+        None,
+        Survival,
+        HoldZone
+    }
+
+    public static GameMode gameMode = GameMode.Survival;
+
     public Player player;
     public Camera weaponCamera;
     [Space]
