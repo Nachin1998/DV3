@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; }
     public enum GameMode
     {
         None,
@@ -13,52 +14,24 @@ public class GameManager : MonoBehaviour
         HoldZone
     }
 
-    public static GameMode gameMode = GameMode.Survival;
+    public GameMode gameMode = GameMode.None;
 
-    public Player player;
-    public Camera weaponCamera;
-    [Space]
-    public GameObject deathMenu;
-    [Space]
-    public TextMeshProUGUI ammoText;
-    public TextMeshProUGUI totalEnemies;
-    public TextMeshProUGUI waveState;
-    [Space]
-    public Image aim;
-    public Image bloodImage;
-
-    void Start()
+    private void Awake()
     {
-        weaponCamera.gameObject.SetActive(true);
-
-        deathMenu.SetActive(false);
-
-        ammoText.gameObject.SetActive(true);
-        totalEnemies.gameObject.SetActive(true);
-        waveState.gameObject.SetActive(true);
-
-        aim.gameObject.SetActive(true);
-        bloodImage.gameObject.SetActive(false);
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    void Update()
+
+    public void SetGameMode(int desiredGameMode)
     {
-        if (!player.isDead)
-        {
-            return;
-        }
-
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        weaponCamera.gameObject.SetActive(false);
-
-        deathMenu.SetActive(true);
-
-        ammoText.gameObject.SetActive(false);
-        totalEnemies.gameObject.SetActive(false);
-        waveState.gameObject.SetActive(false);
-
-        aim.gameObject.SetActive(false);
-        bloodImage.gameObject.SetActive(true);
+        gameMode = (GameMode)desiredGameMode;
     }
 }

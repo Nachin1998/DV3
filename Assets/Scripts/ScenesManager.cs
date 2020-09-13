@@ -25,6 +25,18 @@ public class ScenesManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void SurvivalMode()
+    {
+        GameManager.Instance.gameMode = GameManager.GameMode.Survival;
+        SceneManager.LoadScene(1);
+    }
+
+    public void HoldZoneMode()
+    {
+        GameManager.Instance.gameMode = GameManager.GameMode.HoldZone;
+        SceneManager.LoadScene(2);
+    }
+
     public void QuitGame()
     {
         Application.Quit();

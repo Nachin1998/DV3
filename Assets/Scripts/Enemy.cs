@@ -14,11 +14,13 @@ public class Enemy : MonoBehaviour
     public Explosion explosion;
     [Space]
 
-    public string targetTag;
     public NavMeshAgent agent;
 
+    GameObject target;
     Player playerTarget;
-    Vector3 distaceToAttack;
+
+    GameObject platformTarget;
+
     float maxSpeedRate;
 
     // Update is called once per frame
@@ -26,10 +28,33 @@ public class Enemy : MonoBehaviour
     {
         maxSpeedRate = attackSpeedRate;
 
-        switch (GameManager.gameMode)
+        switch (GameManager.Instance.gameMode)
         {
             case GameManager.GameMode.Survival:
-                playerTarget = GameObject.FindGameObjectWithTag(targetTag).GetComponent<Player>();
+                target = GameObject.FindGameObjectWithTag("Player");
+                playerTarget = target.GetComponent<Player>();
+                break;
+
+            case GameManager.GameMode.HoldZone:
+                GameObject[] platforms = GameObject.FindGameObjectsWithTag("CapturePoint");
+                platformTarget = platforms[Random.Range(0, platforms.Length)];
+                break;
+            default:
+                break;
+        }        
+    }
+
+    void Update()
+    {
+        switch (GameManager.Instance.gameMode)
+        {
+            case GameManager.GameMode.None:
+                break;
+            case GameManager.GameMode.Survival:
+                ChasePlayer();
+                break;
+            case GameManager.GameMode.HoldZone:
+                SearchZone();
                 break;
             default:
                 break;
@@ -37,9 +62,9 @@ public class Enemy : MonoBehaviour
         
     }
 
-    void Update()
+    void ChasePlayer()
     {
-        distaceToAttack = playerTarget.transform.position - transform.position;
+        Vector3 distaceToAttack = playerTarget.transform.position - transform.position;
         if (health <= 0)
         {
             isDead = true;
@@ -50,7 +75,7 @@ public class Enemy : MonoBehaviour
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
-        
+
         if (playerTarget && !isDead)
         {
             agent.SetDestination(playerTarget.transform.position - distaceToAttack.normalized);
@@ -66,6 +91,13 @@ public class Enemy : MonoBehaviour
         {
             AttackTarget();
         }
+    }
+
+    void SearchZone()
+    {
+        Debug.Log("HOLD AREA");
+        Vector3 distaceToPlatform = platformTarget.transform.position - transform.position;
+        agent.SetDestination(platformTarget.transform.position - distaceToPlatform.normalized);
     }
 
     public void TakeDamage(float damage)

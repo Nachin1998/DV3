@@ -13,7 +13,7 @@ public class WaveSpawner : MonoBehaviour
         public string name;
         public Enemy enemy;
         public int enemyAmmount;
-        public float spawnRate;
+        public float enemiesPerSecond;
     }
 
     public enum SpawnState
@@ -125,7 +125,7 @@ public class WaveSpawner : MonoBehaviour
         for (int i = 0; i < wave.enemyAmmount; i++)
         {
             SpawnEnemy(wave.enemy);
-            yield return new WaitForSeconds(1 / wave.spawnRate);
+            yield return new WaitForSeconds(1 / wave.enemiesPerSecond);
         }
 
         state = SpawnState.ActiveWave;

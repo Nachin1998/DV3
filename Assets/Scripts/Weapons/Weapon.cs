@@ -64,13 +64,13 @@ public class Weapon : MonoBehaviour
         {
             if (!isReloading && !isOutOfAmmo && canReload)
             {
-                StartCoroutine(Reload());
+                StartCoroutine(Reload(2.8f));
             }
         }
 
         ammoText.text = ammoInWeapon.ToString() + " / " + maxAmmo.ToString();
 
-        if (!isReloading && ammoInWeapon !=0)
+        if (!isReloading && ammoInWeapon != 0)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -109,14 +109,20 @@ public class Weapon : MonoBehaviour
         }        
     }
 
-    IEnumerator Reload()
+    private void OnEnable()
+    {
+        isReloading = false;
+        animator.SetBool("isReloading", false);
+    }
+
+    IEnumerator Reload(float reloadDuration)
     {
         isReloading = true;
 
         animator.SetBool("isReloading", true);
         int ammoToLoad = ammoInClips - ammoInWeapon;
         
-        yield return new WaitForSeconds(2.8f);
+        yield return new WaitForSeconds(reloadDuration);
 
         if (maxAmmo > ammoToLoad)
         {

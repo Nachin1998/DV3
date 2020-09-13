@@ -56,6 +56,7 @@ MonoBehaviour:
   isDead: 0
   explosion: {fileID: 7387208657726731796, guid: f7e3609d31e1c5c4eab5859c54c92f9c,
     type: 3}
+  targetTag: Player
   agent: {fileID: 4477459958546897242}
 --- !u!195 &4477459958546897242
 NavMeshAgent:
