@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
     public void SetGameMode(int desiredGameMode)
     {
         gameMode = (GameMode)desiredGameMode;

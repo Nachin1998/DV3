@@ -18,9 +18,8 @@ public class Explosion : MonoBehaviour
 
     IEnumerator Vanish()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2f);
         explosion.Stop();
-        yield return new WaitForSeconds(2);
-        Destroy(gameObject);
+        Destroy(gameObject, 2f);
     }
 }
