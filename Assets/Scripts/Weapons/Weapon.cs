@@ -109,6 +109,11 @@ public class Weapon : MonoBehaviour
         }        
     }
 
+    public virtual void Shoot()
+    {
+
+    }
+
     private void OnEnable()
     {
         isReloading = false;
