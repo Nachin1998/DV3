@@ -1,26 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Pistol : BaseWeapon
 {
-    // Start is called before the first frame update
-
-    // Update is called once per frame
-    new void Start()
+    void Start()
     {
-        base.Start();
+        InitWeapon();
     }
 
-    new void Update()
+    void Update()
     {
-        base.Update();
+        UpdateAmmo();
 
         if (Input.GetMouseButtonDown(0))
         {
             if (!isReloading && !isOutOfAmmo)
             {
-                base.Fire();
+                Fire();
             }
         }
 

@@ -20,16 +20,16 @@ public class BaseWeapon : MonoBehaviour
 
     public LayerMask raycastLayer;
 
-    Animator animator;
-    AudioSource shotSound;
+    protected Animator animator;
+    protected AudioSource shotSound;
     
-    [HideInInspector] public bool isShooting = false;
-    [HideInInspector] public bool isReloading = false;
-    [HideInInspector] public bool isOutOfAmmo = false;
-    [HideInInspector] public bool isOutOfClips = false;
-    [HideInInspector] public bool canReload = false;
+    protected bool isShooting = false;
+    protected bool isReloading = false;
+    protected bool isOutOfAmmo = false;
+    protected bool isOutOfClips = false;
+    protected bool canReload = false;
 
-    protected void Start()
+    protected void InitWeapon()
     {
         animator = GetComponent<Animator>();
         shotSound = GetComponent<AudioSource>();
@@ -37,7 +37,7 @@ public class BaseWeapon : MonoBehaviour
         ammoInWeapon = ammoInClips;
         muzzleFlash.Stop();
     }
-    protected void Update()
+    protected void UpdateAmmo()
     {
         if (Pause.gameIsPaused)
         {
@@ -74,10 +74,10 @@ public class BaseWeapon : MonoBehaviour
         ammoText.text = ammoInWeapon.ToString() + " / " + maxAmmo.ToString();
     }
 
-    public virtual void OnEnable()
+    void OnDisable()
     {
         isReloading = false;
-        animator.SetBool("isReloading", false);
+        //animator.SetBool("isReloading", false);
     }
 
     public virtual IEnumerator Reload(float reloadDuration)
