@@ -2,11 +2,21 @@
 
 public class Pause : MonoBehaviour
 {
+    Player player;
     public GameObject pauseMenu;
     public static bool gameIsPaused = false;
 
+    private void Start()
+    {
+        player = FindObjectOfType<Player>();
+    }
     void Update()
     {
+        if (player.isDead)
+        {
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (gameIsPaused)

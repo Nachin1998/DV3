@@ -3,41 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Weapon : MonoBehaviour
+public class BaseWeapon : MonoBehaviour
 {
     public Transform playerCamera;
     public ParticleSystem muzzleFlash;
-    public int ammoInClips = 30;
+    public int ammoInClips;
     public int ammoInWeapon;
-    public int maxAmmo = 240;
-    public float fireRate = 0.1f;
+    public int maxAmmo;
+    public float fireRate;
 
-    public float range = 30f;
-    public float damage = 10f;
-    public float force = 10f;
+    public float range;
+    public float damage;
+    public float force;
 
     public TextMeshProUGUI ammoText;
 
-    public LayerMask raycastLayer; 
+    public LayerMask raycastLayer;
 
     Animator animator;
     AudioSource shotSound;
     
-    bool isShooting = false;
-    bool isReloading = false;
-    bool isOutOfAmmo = false;
-    bool canReload = false;
-    bool isSemiautomatic = false;
-    float timer = 0;
-    private void Start()
+    [HideInInspector] public bool isShooting = false;
+    [HideInInspector] public bool isReloading = false;
+    [HideInInspector] public bool isOutOfAmmo = false;
+    [HideInInspector] public bool isOutOfClips = false;
+    [HideInInspector] public bool canReload = false;
+
+    protected void Start()
     {
         animator = GetComponent<Animator>();
         shotSound = GetComponent<AudioSource>();
+        
         ammoInWeapon = ammoInClips;
         muzzleFlash.Stop();
     }
-
-    void Update()
+    protected void Update()
     {
         if (Pause.gameIsPaused)
         {
@@ -46,11 +46,11 @@ public class Weapon : MonoBehaviour
 
         if (maxAmmo == 0)
         {
-            isOutOfAmmo = true;
+            isOutOfClips = true;
         }
         else
         {
-            isOutOfAmmo = false;
+            isOutOfClips = false;
         }
 
         if (ammoInWeapon == ammoInClips)
@@ -62,74 +62,37 @@ public class Weapon : MonoBehaviour
             canReload = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (ammoInWeapon == 0)
         {
-            if (!isReloading && !isOutOfAmmo && canReload)
-            {
-                StartCoroutine(Reload(2.8f));
-            }
+            isOutOfAmmo = true;
+        }
+        else
+        {
+            isOutOfAmmo = false;
         }
 
         ammoText.text = ammoInWeapon.ToString() + " / " + maxAmmo.ToString();
-
-        if (!isReloading && !isOutOfAmmo)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Fire();
-            }
-
-            if (!isSemiautomatic)
-            {
-                return;
-            }
-
-            if (isSemiautomatic)
-            {
-                if (Input.GetMouseButton(0))
-                {
-                    timer += Time.deltaTime;
-                    if (timer >= fireRate)
-                    {
-                        isShooting = true;
-                    }
-                    else
-                    {
-                        isShooting = false;
-                    }
-
-                    if (isShooting)
-                    {
-                        Fire();
-                    }
-                }
-                else
-                {
-                    timer = 0;
-                }
-            }
-        }        
     }
 
-    private void OnEnable()
+    public virtual void OnEnable()
     {
         isReloading = false;
         animator.SetBool("isReloading", false);
     }
 
-    IEnumerator Reload(float reloadDuration)
+    public virtual IEnumerator Reload(float reloadDuration)
     {
         isReloading = true;
 
         animator.SetBool("isReloading", true);
         int ammoToLoad = ammoInClips - ammoInWeapon;
-        
+
         yield return new WaitForSeconds(reloadDuration);
 
         if (maxAmmo > ammoToLoad)
         {
             ammoInWeapon += ammoToLoad;
-            maxAmmo -= ammoToLoad;            
+            maxAmmo -= ammoToLoad;
         }
         else
         {
@@ -141,15 +104,15 @@ public class Weapon : MonoBehaviour
         isReloading = false;
     }
 
-    public void Fire()
+    public virtual void Fire()
     {
         RaycastHit hit;
         ammoInWeapon--;
         muzzleFlash.Play();
         animator.SetBool("isShooting", true);
         shotSound.Play();
-        
-        
+
+
         if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, range, raycastLayer))
         {
             Debug.Log("Hit!");
@@ -170,14 +133,13 @@ public class Weapon : MonoBehaviour
         {
             Debug.DrawRay(playerCamera.position, playerCamera.forward * range, Color.green);
         }
-        timer = 0f;
-        StartCoroutine(MuzzleFlash(0.3f));
+        StartCoroutine(MuzzleFlash());
     }
 
-    public IEnumerator MuzzleFlash(float muzzleFlashDuration)
+    public IEnumerator MuzzleFlash()
     {
         muzzleFlash.Play();
-        yield return new WaitForSeconds(muzzleFlashDuration);
+        yield return new WaitForSeconds(muzzleFlash.main.duration * 3);
         animator.SetBool("isShooting", false);
         muzzleFlash.Stop();
     }

@@ -48,7 +48,7 @@ public class WaveSpawner : MonoBehaviour
         if (state == SpawnState.ActiveWave)
         {
             waveStateText.text = "Wave " + (currentWave + 1).ToString();
-            enemyAmmountText.text = "Total Enemies: " + totalEnemies.ToString();
+            enemyAmmountText.text = "x " + totalEnemies.ToString();
             if (!AreEnemiesAlive())
             {
                 EndWave();

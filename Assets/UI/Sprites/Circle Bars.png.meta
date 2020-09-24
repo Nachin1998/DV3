@@ -1,0 +1,662 @@
+fileFormatVersion: 2
+guid: 4ec35a7171eecdd4796f0e49a8da4ade
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5625681957894993096
+    second: Screenshot 2020-09-24 141659_0
+  - first:
+      213: 635971618866652477
+    second: Screenshot 2020-09-24 141659_1
+  - first:
+      213: -5956613805496435078
+    second: Screenshot 2020-09-24 141659_2
+  - first:
+      213: -4070590929343099132
+    second: Screenshot 2020-09-24 141659_3
+  - first:
+      213: -1668681072505950606
+    second: Screenshot 2020-09-24 141659_4
+  - first:
+      213: -3939189392507935120
+    second: Screenshot 2020-09-24 141659_5
+  - first:
+      213: -7067860134609660345
+    second: Screenshot 2020-09-24 141659_6
+  - first:
+      213: -7635572123343384857
+    second: Screenshot 2020-09-24 141659_7
+  - first:
+      213: 3142709231742771380
+    second: Screenshot 2020-09-24 141659_8
+  - first:
+      213: 8607183168152012944
+    second: Screenshot 2020-09-24 141659_9
+  - first:
+      213: -6598149402748150531
+    second: Screenshot 2020-09-24 141659_10
+  - first:
+      213: -3690683075051519833
+    second: Screenshot 2020-09-24 141659_11
+  - first:
+      213: -8712439880065498548
+    second: Screenshot 2020-09-24 141659_12
+  - first:
+      213: -2563383156785345570
+    second: Screenshot 2020-09-24 141659_13
+  - first:
+      213: -6124922586077453229
+    second: Screenshot 2020-09-24 141659_14
+  - first:
+      213: -4665295706402203892
+    second: Screenshot 2020-09-24 141659_15
+  - first:
+      213: -2975727093497471422
+    second: Screenshot 2020-09-24 141659_16
+  - first:
+      213: 7288592900196665095
+    second: Screenshot 2020-09-24 141659_17
+  - first:
+      213: 7786412937062160577
+    second: Screenshot 2020-09-24 141659_18
+  - first:
+      213: -5824537213435946011
+    second: Screenshot 2020-09-24 141659_19
+  - first:
+      213: -8731621317452080484
+    second: Screenshot 2020-09-24 141659_20
+  - first:
+      213: -8407115512565943464
+    second: Screenshot 2020-09-24 141659_21
+  - first:
+      213: -4329217941630321460
+    second: Screenshot 2020-09-24 141659_22
+  - first:
+      213: 6173073693120150356
+    second: Screenshot 2020-09-24 141659_23
+  - first:
+      213: -6925086530698320687
+    second: Screenshot 2020-09-24 141659_24
+  - first:
+      213: -8564149062621673184
+    second: Screenshot 2020-09-24 141659_25
+  - first:
+      213: 6964223309011126683
+    second: Screenshot 2020-09-24 141659_26
+  - first:
+      213: -9045841238380621693
+    second: Screenshot 2020-09-24 141659_27
+  - first:
+      213: -6220901377161343599
+    second: Screenshot 2020-09-24 141659_28
+  - first:
+      213: 3590399066529867515
+    second: Screenshot 2020-09-24 141659_29
+  - first:
+      213: -5410206509287444401
+    second: Screenshot 2020-09-24 141659_30
+  - first:
+      213: 1949351031878607552
+    second: Screenshot 2020-09-24 141659_31
+  - first:
+      213: 1323693527153377365
+    second: Screenshot 2020-09-24 141659_32
+  - first:
+      213: -5127397842971261526
+    second: Screenshot 2020-09-24 141659_33
+  - first:
+      213: -6419666043262177137
+    second: Screenshot 2020-09-24 141659_34
+  - first:
+      213: 8293393380464536639
+    second: Screenshot 2020-09-24 141659_35
+  - first:
+      213: -4644111330091192845
+    second: Screenshot 2020-09-24 141659_36
+  - first:
+      213: -4632182663550612642
+    second: Screenshot 2020-09-24 141659_37
+  - first:
+      213: 127047438570494070
+    second: Screenshot 2020-09-24 141659_38
+  - first:
+      213: 2087007441618114136
+    second: Screenshot 2020-09-24 141659_39
+  - first:
+      213: -549968484663628888
+    second: Screenshot 2020-09-24 141659_40
+  - first:
+      213: -315726007621580136
+    second: Screenshot 2020-09-24 141659_41
+  - first:
+      213: -1523756359428827744
+    second: Screenshot 2020-09-24 141659_42
+  - first:
+      213: 5817593229615321735
+    second: Screenshot 2020-09-24 141659_43
+  - first:
+      213: -5990619478381051408
+    second: Screenshot 2020-09-24 141659_44
+  - first:
+      213: -3249117587487864571
+    second: Screenshot 2020-09-24 141659_45
+  - first:
+      213: -6032912391219824370
+    second: Screenshot 2020-09-24 141659_46
+  - first:
+      213: 8411437165299457722
+    second: Screenshot 2020-09-24 141659_47
+  - first:
+      213: 8832912887738555838
+    second: Screenshot 2020-09-24 141659_48
+  - first:
+      213: -8673931478795978842
+    second: Screenshot 2020-09-24 141659_49
+  - first:
+      213: 1943306183851551986
+    second: Screenshot 2020-09-24 141659_50
+  - first:
+      213: -616495639580546951
+    second: Screenshot 2020-09-24 141659_51
+  - first:
+      213: -3978966252412151927
+    second: Screenshot 2020-09-24 141659_52
+  - first:
+      213: 6275871402998766557
+    second: Screenshot 2020-09-24 141659_53
+  - first:
+      213: -8419578374454304109
+    second: Screenshot 2020-09-24 141659_54
+  - first:
+      213: 1495044829283662626
+    second: Screenshot 2020-09-24 141659_55
+  - first:
+      213: -1213610828004065184
+    second: Screenshot 2020-09-24 141659_56
+  - first:
+      213: -7722657483458336385
+    second: Screenshot 2020-09-24 141659_57
+  - first:
+      213: 9153223962104357297
+    second: Screenshot 2020-09-24 141659_58
+  - first:
+      213: -1864361672155982917
+    second: Screenshot 2020-09-24 141659_59
+  - first:
+      213: 2694777176739553440
+    second: Screenshot 2020-09-24 141659_60
+  - first:
+      213: 8736840074208781007
+    second: Screenshot 2020-09-24 141659_61
+  - first:
+      213: -3415558406773549664
+    second: Screenshot 2020-09-24 141659_62
+  - first:
+      213: -7475069597623528556
+    second: Screenshot 2020-09-24 141659_63
+  - first:
+      213: -2440746007119885481
+    second: Screenshot 2020-09-24 141659_64
+  - first:
+      213: 8862778888641962350
+    second: Screenshot 2020-09-24 141659_65
+  - first:
+      213: -5434410969335334516
+    second: Screenshot 2020-09-24 141659_66
+  - first:
+      213: -309999752452326331
+    second: Screenshot 2020-09-24 141659_67
+  - first:
+      213: 8688369942989786711
+    second: Screenshot 2020-09-24 141659_68
+  - first:
+      213: 4747346130878323997
+    second: Screenshot 2020-09-24 141659_69
+  - first:
+      213: -1038849553502306863
+    second: Screenshot 2020-09-24 141659_70
+  - first:
+      213: -5455909403711136456
+    second: Screenshot 2020-09-24 141659_71
+  - first:
+      213: 5488256219474699118
+    second: Screenshot 2020-09-24 141659_72
+  - first:
+      213: -2646899982534089262
+    second: Screenshot 2020-09-24 141659_73
+  - first:
+      213: 8261240931600283354
+    second: Screenshot 2020-09-24 141659_74
+  - first:
+      213: 7820461763230743052
+    second: Screenshot 2020-09-24 141659_75
+  - first:
+      213: 3582548838481622282
+    second: Screenshot 2020-09-24 141659_76
+  - first:
+      213: 7186959894672547152
+    second: Screenshot 2020-09-24 141659_77
+  - first:
+      213: 179395116633548878
+    second: Screenshot 2020-09-24 141659_78
+  - first:
+      213: -3696898640184374419
+    second: Screenshot 2020-09-24 141659_79
+  - first:
+      213: -492627472308971650
+    second: Screenshot 2020-09-24 141659_80
+  - first:
+      213: -641795887779977209
+    second: Screenshot 2020-09-24 141659_81
+  - first:
+      213: -9204593790393252482
+    second: Screenshot 2020-09-24 141659_82
+  - first:
+      213: -6210521794304531493
+    second: Screenshot 2020-09-24 141659_83
+  - first:
+      213: 2264369625685693217
+    second: Screenshot 2020-09-24 141659_84
+  - first:
+      213: 319365214741795480
+    second: Screenshot 2020-09-24 141659_85
+  - first:
+      213: 6507515285681143199
+    second: Screenshot 2020-09-24 141659_86
+  - first:
+      213: 6120780384997815756
+    second: Screenshot 2020-09-24 141659_87
+  - first:
+      213: -8343660100054018352
+    second: Screenshot 2020-09-24 141659_88
+  - first:
+      213: -7090886416246071570
+    second: Screenshot 2020-09-24 141659_89
+  - first:
+      213: -5587036477483834946
+    second: Screenshot 2020-09-24 141659_90
+  - first:
+      213: -475413936898164792
+    second: Screenshot 2020-09-24 141659_91
+  - first:
+      213: 6326542135759391925
+    second: Screenshot 2020-09-24 141659_92
+  - first:
+      213: -2419615906248781775
+    second: Screenshot 2020-09-24 141659_93
+  - first:
+      213: 3322720767362645955
+    second: Screenshot 2020-09-24 141659_94
+  - first:
+      213: 678759732227766840
+    second: Screenshot 2020-09-24 141659_95
+  - first:
+      213: -2522158334721157654
+    second: Screenshot 2020-09-24 141659_96
+  - first:
+      213: 4653600283870256583
+    second: Screenshot 2020-09-24 141659_97
+  - first:
+      213: -1453819401569657750
+    second: Screenshot 2020-09-24 141659_98
+  - first:
+      213: -5467745228297381873
+    second: Screenshot 2020-09-24 141659_99
+  - first:
+      213: -8124953530153113051
+    second: Screenshot 2020-09-24 141659_100
+  - first:
+      213: 6385144386073214337
+    second: Screenshot 2020-09-24 141659_101
+  - first:
+      213: 2599186060610260846
+    second: Screenshot 2020-09-24 141659_102
+  - first:
+      213: -3431995258884750328
+    second: Screenshot 2020-09-24 141659_103
+  - first:
+      213: 5327002977480958725
+    second: Screenshot 2020-09-24 141659_104
+  - first:
+      213: 5574035950063805416
+    second: Screenshot 2020-09-24 141659_105
+  - first:
+      213: -1452451858165297718
+    second: Screenshot 2020-09-24 141659_106
+  - first:
+      213: -5005724114255555694
+    second: Screenshot 2020-09-24 141659_107
+  - first:
+      213: -4221263160029294860
+    second: Screenshot 2020-09-24 141659_108
+  - first:
+      213: -5539462800961516012
+    second: Screenshot 2020-09-24 141659_109
+  - first:
+      213: 8820296398775195533
+    second: Screenshot 2020-09-24 141659_110
+  - first:
+      213: 4357666590707511318
+    second: Screenshot 2020-09-24 141659_111
+  - first:
+      213: 1824649445115020290
+    second: Screenshot 2020-09-24 141659_112
+  - first:
+      213: -3374675330567532720
+    second: Screenshot 2020-09-24 141659_113
+  - first:
+      213: 3449157765627218688
+    second: Screenshot 2020-09-24 141659_0
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Screenshot 2020-09-24 141659_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 539
+        width: 219
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4b7af3fef621e40800000000000000
+      internalID: 5625681957894993096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Screenshot 2020-09-24 141659_1
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 536
+        width: 205
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d35e6cd51dc63d800800000000000000
+      internalID: 635971618866652477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Screenshot 2020-09-24 141659_2
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 541
+        width: 211
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e723bad4bd55da0800000000000000
+      internalID: -5956613805496435078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Screenshot 2020-09-24 141659_3
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 296
+        width: 200
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40fc39edd1b5287c0800000000000000
+      internalID: -4070590929343099132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Screenshot 2020-09-24 141659_4
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 296
+        width: 196
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e6dd5d767a7d8e0800000000000000
+      internalID: -1668681072505950606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Screenshot 2020-09-24 141659_5
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 281
+        width: 211
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076e3944e103559c0800000000000000
+      internalID: -3939189392507935120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Screenshot 2020-09-24 141659_6
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 32
+        width: 200
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746527a97aae9ed90800000000000000
+      internalID: -7067860134609660345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Screenshot 2020-09-24 141659_7
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 44
+        width: 207
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee0e3bdb9ff80690800000000000000
+      internalID: -7635572123343384857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Screenshot 2020-09-24 141659_8
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 40
+        width: 203
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b06e5e35652d9b20800000000000000
+      internalID: 3142709231742771380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
