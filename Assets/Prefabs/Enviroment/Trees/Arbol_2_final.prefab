@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1198757508623704513}
   - component: {fileID: 3080363613935524027}
   - component: {fileID: 2219014290887595332}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Hoja_arbol_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 240558738862444665}
   - component: {fileID: 7660630246576991965}
   - component: {fileID: 5004749844382835272}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Arbol_2_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6042580162769639018}
-  m_Layer: 0
+  - component: {fileID: 6164005834561656110}
+  - component: {fileID: 5717962097352159671}
+  m_Layer: 12
   m_Name: Arbol_2_final
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,6 +193,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &6164005834561656110
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6381704061410118864}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &5717962097352159671
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6381704061410118864}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 19.230938
+  m_Height: 843.06476
+  m_Direction: 1
+  m_Center: {x: 4.1853905, y: -348.66995, z: 1.8951416}
 --- !u!1 &7498768745747142958
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +234,7 @@ GameObject:
   - component: {fileID: 566552818107786293}
   - component: {fileID: 3631716295289986981}
   - component: {fileID: 8976915617010099878}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Rama_arbol_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

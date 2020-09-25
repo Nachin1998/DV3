@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7895486440025410099}
   - component: {fileID: 3743828645272817344}
   - component: {fileID: 4736518582109019296}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Rama_B_arbol_gordo_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 5754045333674083296}
   - component: {fileID: 5981747483749561765}
   - component: {fileID: 1543377427058585488}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Rama_A_arbol_gordo_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1581215409097839211}
-  m_Layer: 0
+  - component: {fileID: 8312412221867828176}
+  - component: {fileID: 1922062156974496414}
+  m_Layer: 12
   m_Name: Arbol_gordo_1_Final
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,6 +191,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &8312412221867828176
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2214165342842177745}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3477534257266962355, guid: 2629fe46a740ee64a8af927a56e474ee, type: 3}
+--- !u!54 &1922062156974496414
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2214165342842177745}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3038971076916688118
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +232,7 @@ GameObject:
   - component: {fileID: 3098362830497192096}
   - component: {fileID: 3941070454538462146}
   - component: {fileID: 5632613343797499770}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Hoja_arbol_gordo_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7827300518666270938}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Arbol_gordo_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +345,7 @@ GameObject:
   - component: {fileID: 1207801982017258451}
   - component: {fileID: 3767699161132194496}
   - component: {fileID: 2772956130901299630}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Arbol_gordo_1_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}

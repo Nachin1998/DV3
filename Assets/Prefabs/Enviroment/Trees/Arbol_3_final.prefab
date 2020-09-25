@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 789385624419225227}
-  m_Layer: 0
+  - component: {fileID: 6344617335440112956}
+  - component: {fileID: 500100849}
+  m_Layer: 12
   m_Name: Arbol_3_final
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,6 +36,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &6344617335440112956
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126002553413342257}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &500100849
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126002553413342257}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 20.113937
+  m_Height: 600.8821
+  m_Direction: 1
+  m_Center: {x: 2.17447, y: -397.2795, z: -15.415701}
 --- !u!1 &443911599110119675
 GameObject:
   m_ObjectHideFlags: 0
@@ -45,7 +77,7 @@ GameObject:
   - component: {fileID: 3001978268856536341}
   - component: {fileID: 1922521136168992490}
   - component: {fileID: 1988366854482686580}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Arbol_3_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +156,7 @@ GameObject:
   - component: {fileID: 2423838534477587175}
   - component: {fileID: 2554151211026939678}
   - component: {fileID: 5209550474192821637}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Rama_B_arbol_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +235,7 @@ GameObject:
   - component: {fileID: 9126425101882872430}
   - component: {fileID: 6581887485216453599}
   - component: {fileID: 454581134555529052}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Rama_A_arbol_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +314,7 @@ GameObject:
   - component: {fileID: 1924697919543888402}
   - component: {fileID: 1065793824489288000}
   - component: {fileID: 5109385090616783231}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Hoja_arbol_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
