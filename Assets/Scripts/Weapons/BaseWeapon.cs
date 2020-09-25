@@ -77,7 +77,6 @@ public class BaseWeapon : MonoBehaviour
     void OnDisable()
     {
         isReloading = false;
-        //animator.SetBool("isReloading", false);
     }
 
     public virtual IEnumerator Reload(float reloadDuration)
@@ -125,7 +124,8 @@ public class BaseWeapon : MonoBehaviour
             {
                 case "Enemy":
                     hit.collider.gameObject.GetComponent<Enemy>().TakeDamage(damage);
-                    hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(direction.normalized * force, ForceMode.Impulse);
+                    hit.collider.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                    //hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(direction.normalized * force, ForceMode.Impulse);
                     break;
             }
         }

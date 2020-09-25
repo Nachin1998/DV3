@@ -80,7 +80,7 @@ public class WaveSpawner : MonoBehaviour
 
     void EndWave()
     {
-        Debug.Log("Wave Finished");
+       // Debug.Log("Wave Finished");
 
         state = SpawnState.CountDown;
         waveCountdown = timeBetweenWaves;
@@ -116,7 +116,7 @@ public class WaveSpawner : MonoBehaviour
 
     IEnumerator SpawnWave(Wave wave)
     {
-        Debug.Log("Spawning wave...");
+       // Debug.Log("Spawning wave...");
         
         state = SpawnState.Spawning;
 
@@ -133,7 +133,7 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy(Enemy enemy)
     {
-        Debug.Log("Spawning enemy");
+        //Debug.Log("Spawning enemy");
         Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
         Instantiate(enemy, randomSpawnPoint.position, Quaternion.identity, randomSpawnPoint.transform);
         totalEnemies++;
