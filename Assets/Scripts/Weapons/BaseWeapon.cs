@@ -7,6 +7,7 @@ public class BaseWeapon : MonoBehaviour
 {
     public Transform playerCamera;
     public ParticleSystem muzzleFlash;
+    public ParticleSystem impactEffect;
     public int ammoInClips;
     public int ammoInWeapon;
     public int maxAmmo;
@@ -39,11 +40,6 @@ public class BaseWeapon : MonoBehaviour
     }
     protected void UpdateAmmo()
     {
-        if (Pause.gameIsPaused)
-        {
-            return;
-        }
-
         if (maxAmmo == 0)
         {
             isOutOfClips = true;
@@ -128,6 +124,8 @@ public class BaseWeapon : MonoBehaviour
                     //hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(direction.normalized * force, ForceMode.Impulse);
                     break;
             }
+            PlaceImpactEffect(hit);
+           
         }
         else
         {
@@ -142,5 +140,11 @@ public class BaseWeapon : MonoBehaviour
         yield return new WaitForSeconds(muzzleFlash.main.duration * 3);
         animator.SetBool("isShooting", false);
         muzzleFlash.Stop();
+    }
+
+    protected void PlaceImpactEffect(RaycastHit hitPoint)
+    {
+        GameObject impactGO = Instantiate(impactEffect.gameObject, hitPoint.point, Quaternion.LookRotation(hitPoint.normal));
+        Destroy(impactGO, 1f);
     }
 }

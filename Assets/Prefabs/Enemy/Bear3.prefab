@@ -54,8 +54,7 @@ MonoBehaviour:
   attackDistance: 3.5
   attackSpeedRate: 1
   isDead: 0
-  explosion: {fileID: 7387208657726731796, guid: f7e3609d31e1c5c4eab5859c54c92f9c,
-    type: 3}
+  explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 3}
   agent: {fileID: 2501769507658642365}
 --- !u!195 &2501769507658642365
 NavMeshAgent:

@@ -11,14 +11,12 @@ public class Enemy : MonoBehaviour
     public float attackSpeedRate = 2f;
     public bool isDead = false;
 
-    public Explosion explosion;
-    [Space]
+    public GameObject explosion;
 
-    public NavMeshAgent agent;
-
+    NavMeshAgent agent;
     GameObject target;
-    Player playerTarget;
 
+    Player playerTarget;
     GameObject platformTarget;
 
     float maxSpeedRate;
@@ -26,6 +24,8 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     private void Start()    
     {
+        agent = GetComponent<NavMeshAgent>();
+
         maxSpeedRate = attackSpeedRate;
 
         switch (GameManager.Instance.gameMode)
@@ -46,6 +46,15 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        if (agent.speed >= 5)
+        {
+            agent.speed = 5;
+        }
+        else
+        {
+            agent.speed += Time.deltaTime;
+        }
+
         switch (GameManager.Instance.gameMode)
         {
             case GameManager.GameMode.None:
@@ -65,6 +74,8 @@ public class Enemy : MonoBehaviour
     void ChasePlayer()
     {
         Vector3 distaceToAttack = playerTarget.transform.position - transform.position;
+       
+
         if (health <= 0)
         {
             isDead = true;
@@ -72,8 +83,7 @@ public class Enemy : MonoBehaviour
 
         if (isDead)
         {
-            Instantiate(explosion, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            Die();
         }
 
         if (playerTarget && !isDead)
@@ -103,6 +113,10 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+        if(agent.speed > 3.5f)
+        {
+            agent.speed -= 1;
+        }
     }
 
     void AttackTarget()
@@ -116,5 +130,13 @@ public class Enemy : MonoBehaviour
         {
             attackSpeedRate -= Time.deltaTime;
         }
+    }
+
+    public void Die()
+    {
+        GameObject explosionGO = Instantiate(explosion, transform.position, Quaternion.identity);
+        Destroy(explosionGO, 2);
+        gameObject.SetActive(false);
+        Destroy(gameObject, 2.1f);
     }
 }

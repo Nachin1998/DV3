@@ -19,6 +19,11 @@ public class Shotgun : BaseWeapon
 
     void Update()
     {
+        if (Pause.gameIsPaused)
+        {
+            return;
+        }
+
         UpdateAmmo();       
 
         if(timer >= timeToFireAgain)
@@ -78,6 +83,7 @@ public class Shotgun : BaseWeapon
                         hits[i].collider.gameObject.GetComponent<Rigidbody>().AddForce(pushDirection.normalized * force, ForceMode.Impulse);
                         break;
                 }
+                PlaceImpactEffect(hits[i]);
             }
             else
             {

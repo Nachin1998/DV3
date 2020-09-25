@@ -205,16 +205,16 @@ MonoBehaviour:
   waves:
   - name: Cubes
     enemy: {fileID: 7130800298231032691, guid: 3ba8440a31a770847b7aaf72b7ea6807, type: 3}
-    enemyAmmount: 30
-    spawnRate: 0.5
+    enemyAmmount: 1
+    enemiesPerSecond: 5
   - name: Spheres
     enemy: {fileID: 8637836359615038146, guid: 2e68a0b0de5fbbc4a84fe8dd789bb5c0, type: 3}
     enemyAmmount: 5
-    spawnRate: 2
+    enemiesPerSecond: 1
   - name: Capsules
     enemy: {fileID: 9110361034628252052, guid: 4321315c026b0ac40af01eaf3bc557aa, type: 3}
     enemyAmmount: 2
-    spawnRate: 1
+    enemiesPerSecond: 1
   spawnPoints:
   - {fileID: 1651538297898262701}
   - {fileID: 1651538297974023597}
@@ -225,7 +225,7 @@ MonoBehaviour:
   - {fileID: 4495068454143819060}
   - {fileID: 860101062718769864}
   - {fileID: 1061535203930984497}
-  timeBetweenWaves: 10
+  timeBetweenWaves: 5
   enemyAmmountText: {fileID: 0}
   waveStateText: {fileID: 0}
 --- !u!1 &1651538297898262690

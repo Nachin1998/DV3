@@ -15,6 +15,11 @@ public class SMG : BaseWeapon
     // Update is called once per frame
     void Update()
     {
+        if (Pause.gameIsPaused)
+        {
+            return;
+        }
+
         UpdateAmmo();
 
         if (Input.GetKeyDown(KeyCode.R))

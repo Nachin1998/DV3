@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2824743423009132425}
   - component: {fileID: 4380255638721077712}
   - component: {fileID: -482094578651398893}
-  - component: {fileID: 7387208657726731796}
   m_Layer: 0
   m_Name: Thanosd
   m_TagString: Untagged
@@ -4772,16 +4771,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7387208657726731796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1137131228138744862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 156e4628c5cbb1d419ffbdc0c15c2df6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosion: {fileID: 0}

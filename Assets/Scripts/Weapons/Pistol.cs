@@ -9,8 +9,12 @@ public class Pistol : BaseWeapon
 
     void Update()
     {
-        UpdateAmmo();
+        if (Pause.gameIsPaused)
+        {
+            return;
+        }
 
+        UpdateAmmo();
         if (Input.GetMouseButtonDown(0))
         {
             if (!isReloading && !isOutOfAmmo)
