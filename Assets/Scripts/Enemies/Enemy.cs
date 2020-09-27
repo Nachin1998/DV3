@@ -10,18 +10,20 @@ public class Enemy : MonoBehaviour
     public float attackDistance = 3f;
     public float attackSpeedRate = 2f;
     public bool isDead = false;
-
+    [Space]
     public GameObject enemyHead;
     public GameObject explosion;
+    [Space]
+    public Color damageColor;
 
-    NavMeshAgent agent;
     GameObject target;
-
     Player playerTarget;
     GameObject platformTarget;
 
+    NavMeshAgent agent;
     Rigidbody rb;
 
+    Color startingColor;
     float maxSpeedRate;
 
     // Update is called once per frame
@@ -31,7 +33,6 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         maxSpeedRate = attackSpeedRate;
-
        
         switch (GameManager.Instance.gameMode)
         {
@@ -120,6 +121,8 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+        //StartCoroutine(DamageVisual());
+
         if(agent.speed > 3.5f)
         {
             agent.speed -= 1;
@@ -139,8 +142,14 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    /*IEnumerator DamageVisual()
+    {
+        yield return new WaitForSeconds(0.02f);
+    }*/
+
     public void Die()
     {
+        //mat.color = startingColor;
         GameObject explosionGO = Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(explosionGO, 2);
         gameObject.SetActive(false);

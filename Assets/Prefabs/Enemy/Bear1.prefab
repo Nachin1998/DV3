@@ -60,6 +60,8 @@ MonoBehaviour:
   enemyHead: {fileID: 855007440842304155}
   explosion: {fileID: 1137131228138744862, guid: f7e3609d31e1c5c4eab5859c54c92f9c,
     type: 3}
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  mat: {fileID: 2100000, guid: 535c7ac3cae1a434a9e528d8ed45189e, type: 2}
 --- !u!195 &1195177810958035909
 NavMeshAgent:
   m_ObjectHideFlags: 0
