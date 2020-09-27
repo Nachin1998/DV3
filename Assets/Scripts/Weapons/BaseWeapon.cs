@@ -78,8 +78,8 @@ public class BaseWeapon : MonoBehaviour
     public virtual IEnumerator Reload(float reloadDuration)
     {
         isReloading = true;
-
         animator.SetBool("isReloading", true);
+
         int ammoToLoad = ammoInClips - ammoInWeapon;
 
         yield return new WaitForSeconds(reloadDuration);
@@ -106,7 +106,6 @@ public class BaseWeapon : MonoBehaviour
         muzzleFlash.Play();
         animator.SetBool("isShooting", true);
         shotSound.Play();
-
 
         if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, range, raycastLayer))
         {

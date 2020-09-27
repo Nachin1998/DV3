@@ -29,26 +29,36 @@ public class WaveSpawner : MonoBehaviour
     [Space]
     public float timeBetweenWaves = 5f;
     [Space]
-    public TextMeshProUGUI enemyAmmountText;
+    public GameObject enemyAmmount;
     public TextMeshProUGUI waveStateText;
 
     int totalEnemies = 0;
+
     float searchingLiveEnemiesCountdown = 1f;
     float waveCountdown = 0f;
     int currentWave = 0;
     int nextWave = 0;
 
+    TextMeshProUGUI enemyAmmountText;
+
     void Start()
     {
         waveCountdown = timeBetweenWaves;
+        enemyAmmountText = enemyAmmount.GetComponentInChildren<TextMeshProUGUI>();
+
+        enemyAmmount.gameObject.SetActive(false);
     }
 
     void Update()
     {
         if (state == SpawnState.ActiveWave)
         {
-            waveStateText.text = "Wave " + (currentWave + 1).ToString();
+            totalEnemies = FindObjectsOfType<Enemy>().Length;
+
+            waveStateText.gameObject.SetActive(false);
+            enemyAmmount.SetActive(true);
             enemyAmmountText.text = "x " + totalEnemies.ToString();
+
             if (!AreEnemiesAlive())
             {
                 EndWave();
@@ -58,30 +68,29 @@ public class WaveSpawner : MonoBehaviour
         
         if (waveCountdown <= 0)
         {
-            waveStateText.text = "";
+            waveStateText.text = "Spawning Nightmares...";
             if (state != SpawnState.ActiveWave)
             {
                 waveCountdown = 0;
                 if (state != SpawnState.Spawning)
                 {
-                    enemyAmmountText.text = "Spawning enemies";
                     StartCoroutine(SpawnWave(waves[nextWave]));
                 }
             }           
         }
         else
         {
+            waveStateText.gameObject.SetActive(true);
+            enemyAmmount.gameObject.SetActive(false);
             waveCountdown -= Time.deltaTime;
 
-            enemyAmmountText.text = "All enemies defeated";
+            //enemyAmmountText.text = "All enemies defeated";
             waveStateText.text = "Next wave in: " + waveCountdown.ToString("F2");
         }        
     }
 
     void EndWave()
     {
-       // Debug.Log("Wave Finished");
-
         state = SpawnState.CountDown;
         waveCountdown = timeBetweenWaves;
         totalEnemies = 0;
@@ -106,7 +115,7 @@ public class WaveSpawner : MonoBehaviour
         if (searchingLiveEnemiesCountdown <= 0)
         {
             searchingLiveEnemiesCountdown = 1f;
-            if (GameObject.FindGameObjectWithTag("Enemy") == null)
+            if (totalEnemies == 0)
             {
                 return false;
             }
@@ -136,7 +145,6 @@ public class WaveSpawner : MonoBehaviour
         //Debug.Log("Spawning enemy");
         Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
         Instantiate(enemy, randomSpawnPoint.position, Quaternion.identity, randomSpawnPoint.transform);
-        totalEnemies++;
     }
 
 }
