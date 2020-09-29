@@ -144,6 +144,6 @@ public class BaseWeapon : MonoBehaviour
     protected void PlaceImpactEffect(RaycastHit hitPoint)
     {
         GameObject impactGO = Instantiate(impactEffect.gameObject, hitPoint.point, Quaternion.LookRotation(hitPoint.normal));
-        Destroy(impactGO, 1f);
+        Destroy(impactGO, 2f);
     }
 }
