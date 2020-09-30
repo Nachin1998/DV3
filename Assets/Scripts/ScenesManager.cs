@@ -28,12 +28,14 @@ public class ScenesManager : MonoBehaviour
     public void SurvivalMode()
     {
         GameManager.Instance.gameMode = GameManager.GameMode.Survival;
+        Cursor.visible = false;
         SceneManager.LoadScene(1);
     }
 
     public void HoldZoneMode()
     {
         GameManager.Instance.gameMode = GameManager.GameMode.HoldZone;
+        Cursor.visible = false;
         SceneManager.LoadScene(2);
     }
 

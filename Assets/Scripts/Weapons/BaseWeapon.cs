@@ -130,13 +130,13 @@ public class BaseWeapon : MonoBehaviour
         {
             Debug.DrawRay(playerCamera.position, playerCamera.forward * range, Color.green);
         }
-        StartCoroutine(MuzzleFlash());
+        StartCoroutine(MuzzleFlash(0.3f));
     }
 
-    public IEnumerator MuzzleFlash()
+    public IEnumerator MuzzleFlash(float duration)
     {
         muzzleFlash.Play();
-        yield return new WaitForSeconds(muzzleFlash.main.duration * 3);
+        yield return new WaitForSeconds(duration);
         animator.SetBool("isShooting", false);
         muzzleFlash.Stop();
     }

@@ -91,6 +91,6 @@ public class Shotgun : BaseWeapon
             }
         }
 
-        StartCoroutine(MuzzleFlash());
+        StartCoroutine(MuzzleFlash(0.3f));
     }
 }

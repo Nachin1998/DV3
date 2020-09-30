@@ -52,6 +52,8 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        
+
         if (agent.speed >= 5)
         {
             agent.speed = 5;
@@ -92,9 +94,14 @@ public class Enemy : MonoBehaviour
 
     void ChasePlayer()
     {
+        if (isDead)
+        {
+            return;
+        }
+
         Vector3 distaceToAttack = playerTarget.transform.position - transform.position;
 
-        if (playerTarget && !isDead)
+        if (playerTarget)
         {
             agent.SetDestination(playerTarget.transform.position - distaceToAttack.normalized);            
             enemyHead.transform.LookAt(target.transform);
@@ -105,7 +112,7 @@ public class Enemy : MonoBehaviour
             return;
         }
 
-        if (!isDead && Vector3.Distance(transform.position, playerTarget.transform.position) <= attackDistance)
+        if (Vector3.Distance(transform.position, playerTarget.transform.position) <= attackDistance)
         {
             AttackTarget();
         }
@@ -113,6 +120,11 @@ public class Enemy : MonoBehaviour
 
     void SearchZone()
     {
+        if (isDead)
+        {
+            return;
+        }
+
         Debug.Log("HOLD AREA");
         Vector3 distaceToPlatform = platformTarget.transform.position - transform.position;
         agent.SetDestination(platformTarget.transform.position - distaceToPlatform.normalized);

@@ -55,7 +55,7 @@ MonoBehaviour:
   health: 100
   damage: 10
   attackDistance: 4
-  attackSpeedRate: 1
+  attackSpeedRate: 0.5
   isDead: 0
   enemyHead: {fileID: 124497932756909954}
   explosion: {fileID: 1137131228138744862, guid: f7e3609d31e1c5c4eab5859c54c92f9c,

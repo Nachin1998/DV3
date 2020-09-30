@@ -28,9 +28,4 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    public void SetGameMode(int desiredGameMode)
-    {
-        gameMode = (GameMode)desiredGameMode;
-    }
 }
