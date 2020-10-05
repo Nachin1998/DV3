@@ -9,10 +9,11 @@ public class BaseWeapon : MonoBehaviour
     public ParticleSystem muzzleFlash;
     public ParticleSystem impactEffect;
     public int ammoInClips;
-    public int ammoInWeapon;
     public int maxAmmo;
     public float fireRate;
 
+    [Space]
+    
     public float range;
     public float damage;
     public float force;
@@ -29,6 +30,7 @@ public class BaseWeapon : MonoBehaviour
     protected bool isOutOfAmmo = false;
     protected bool isOutOfClips = false;
     protected bool canReload = false;
+    protected int ammoInWeapon;
 
     protected void InitWeapon()
     {
@@ -109,7 +111,6 @@ public class BaseWeapon : MonoBehaviour
 
         if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, range, raycastLayer))
         {
-            Debug.Log("Hit!");
             Debug.DrawRay(playerCamera.position, playerCamera.forward * hit.distance, Color.red);
             string layerHitted = LayerMask.LayerToName(hit.transform.gameObject.layer);
             Vector3 direction = hit.transform.position - playerCamera.position;

@@ -1357,7 +1357,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &776623158
 PrefabInstance:
@@ -2348,6 +2348,30 @@ Transform:
   m_Father: {fileID: 1456954499}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1716562978 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6801165265511020340, guid: 68f79b7a0623c6f4f8a72c402d9b8b77,
+    type: 3}
+  m_PrefabInstance: {fileID: 155076540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acfee07bedc970d49abbe57344ea009f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1716562979 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6801165265511020330, guid: 68f79b7a0623c6f4f8a72c402d9b8b77,
+    type: 3}
+  m_PrefabInstance: {fileID: 155076540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a17aa24e40b3c3478b9e5746fcce57b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2089940873
 GameObject:
   m_ObjectHideFlags: 0
@@ -2457,9 +2481,10 @@ MonoBehaviour:
   weaponCamera: {fileID: 783780834}
   deathMenu: {fileID: 4933619333606065458}
   ammoText: {fileID: 4933619333592616987}
-  totalEnemies: {fileID: 4933619333535778344}
+  enemyData: {fileID: 4933619332316813606}
   waveState: {fileID: 4933619331629629364}
   aim: {fileID: 4933619332895569464}
+  sprintBar: {fileID: 4933619333150156089}
   bloodImage: {fileID: 4933619332953544435}
 --- !u!4 &4911634771599056317
 Transform:
@@ -2473,7 +2498,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4911634771599056319
 GameObject:
@@ -2747,7 +2772,7 @@ RectTransform:
   - {fileID: 4933619333606065469}
   - {fileID: 4933619331941090121}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3722,7 +3747,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1716562978}
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -5864,7 +5889,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1716562979}
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -6168,7 +6193,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1716562978}
         m_MethodName: StopPauseMenu
         m_Mode: 1
         m_Arguments:
@@ -6179,7 +6204,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1716562979}
         m_MethodName: GoToMainMenu
         m_Mode: 1
         m_Arguments:

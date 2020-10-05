@@ -8,10 +8,9 @@ public class PlayerMovement : MonoBehaviour
     public Player body;
     public CharacterController controler;
 
-    public float speed = 12f;
+    public float walkingSpeed = 12f;
     public float sprintSpeed = 20f;
     public float sprintMaxAmmount = 100f;
-    public float currentSprint = 100f;
     public float sprintUsePerSec = 10f;
     public float sprintRefilPerSec = 10f;
 
@@ -28,12 +27,20 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
 
     Vector3 velocity;
+    float maxWalkingSpeed;
+    float currentSprint;
     bool isWalking;
     bool canSprint = true;
     bool isSprinting = false;
     bool isOnGround;
 
     // Update is called once per frame
+    private void Start()
+    {
+        maxWalkingSpeed = walkingSpeed;
+        currentSprint = sprintMaxAmmount;
+    }
+
     void Update()
     {
         if (body.isDead)
@@ -49,7 +56,6 @@ public class PlayerMovement : MonoBehaviour
 
         sprintBar.fillAmount = currentSprint / 100;
 
-        //weaponAnim.SetBool("isSprinting", isSprinting);
         for (int i = 0; i < weaponAnim.Count; i++)
         {
             if (weaponAnim[i].isActiveAndEnabled)
@@ -77,7 +83,6 @@ public class PlayerMovement : MonoBehaviour
             sprintBar.color = Color.red;
         }
 
-        //weaponAnim.SetBool("isWalking", isWalking);
         for (int i = 0; i < weaponAnim.Count; i++)
         {
             if (weaponAnim[i].isActiveAndEnabled)
@@ -90,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
 
         StartCoroutine(Sprint());
 
-        controler.Move(move * speed * Time.deltaTime);
+        controler.Move(move * walkingSpeed * Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
@@ -106,31 +111,28 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift) && isWalking && canSprint)
         {
-            //weaponAnim.SetBool("startedSprinting", true);
             for (int i = 0; i < weaponAnim.Count; i++)
             {
                 if (weaponAnim[i].isActiveAndEnabled)
                 {
                     weaponAnim[i].SetBool("startedSprinting", true);
-                }
-                
+                }                
             }
            
             yield return new WaitForSeconds(0.3f);
 
             isSprinting = true;
-            speed = sprintSpeed;
+            walkingSpeed = sprintSpeed;
             currentSprint -= sprintUsePerSec * Time.deltaTime;
             if (currentSprint <= 0)
             {
                 canSprint = false;
-                //weaponAnim.SetBool("isSprinting", false);
             }
         }
         else
         {
             isSprinting = false;
-            speed = 12f;
+            walkingSpeed = maxWalkingSpeed;
             if (currentSprint < sprintMaxAmmount)
             {
                 currentSprint += sprintRefilPerSec * Time.deltaTime;
@@ -140,7 +142,6 @@ public class PlayerMovement : MonoBehaviour
                 canSprint = true;
             }
 
-            //weaponAnim.SetBool("startedSprinting", false);
             for (int i = 0; i < weaponAnim.Count; i++)
             {
                 if (weaponAnim[i].isActiveAndEnabled)

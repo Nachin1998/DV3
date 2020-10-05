@@ -70,7 +70,6 @@ public class Shotgun : BaseWeapon
 
             if (Physics.Raycast(playerCamera.position, rayDirection, out hits[i], range, raycastLayer))
             {
-                Debug.Log("Hit!");
                 Debug.DrawRay(playerCamera.position, rayDirection * hits[i].distance, Color.red);
                 string layerHitted = LayerMask.LayerToName(hits[i].transform.gameObject.layer);
                 Vector3 pushDirection = hits[i].transform.position - playerCamera.position;

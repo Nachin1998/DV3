@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
 {
     public float health = 100f;
     public float damage = 10f;
+    public float speed = 10f;
     public float attackDistance = 3f;
     public float attackSpeedRate = 2f;
     public bool isDead = false;
@@ -33,7 +34,7 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         maxSpeedRate = attackSpeedRate;
-       
+        agent.speed = speed;
         switch (GameManager.Instance.gameMode)
         {
             case GameManager.GameMode.Survival:
@@ -52,11 +53,9 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        
-
-        if (agent.speed >= 5)
+        if (agent.speed >= speed)
         {
-            agent.speed = 5;
+            agent.speed = speed;
         }
         else
         {
@@ -114,7 +113,18 @@ public class Enemy : MonoBehaviour
 
         if (Vector3.Distance(transform.position, playerTarget.transform.position) <= attackDistance)
         {
-            AttackTarget();
+            if (attackSpeedRate <= 0)
+            {
+                AttackTarget();
+            }
+            else
+            {
+                attackSpeedRate -= Time.deltaTime;
+            }
+        }
+        else
+        {
+            attackSpeedRate = 0;
         }
     }
 
@@ -125,7 +135,6 @@ public class Enemy : MonoBehaviour
             return;
         }
 
-        Debug.Log("HOLD AREA");
         Vector3 distaceToPlatform = platformTarget.transform.position - transform.position;
         agent.SetDestination(platformTarget.transform.position - distaceToPlatform.normalized);
     }
@@ -135,7 +144,7 @@ public class Enemy : MonoBehaviour
         health -= damage;
         //StartCoroutine(DamageVisual());
 
-        if(agent.speed > 3.5f)
+        if(agent.speed > speed / 2)
         {
             agent.speed -= 1;
         }
@@ -143,15 +152,8 @@ public class Enemy : MonoBehaviour
 
     void AttackTarget()
     {
-        if (attackSpeedRate <= 0)
-        {
-            playerTarget.TakeDamage(damage);
-            attackSpeedRate = maxSpeedRate;
-        }
-        else
-        {
-            attackSpeedRate -= Time.deltaTime;
-        }
+        playerTarget.TakeDamage(damage);
+        attackSpeedRate = maxSpeedRate;
     }
 
     /*IEnumerator DamageVisual()
