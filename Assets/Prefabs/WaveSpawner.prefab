@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &807592873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 807592874}
+  m_Layer: 0
+  m_Name: SpawnPoint (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &807592874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807592873}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 88.5, y: 4.93, z: 109.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1651538297834842187}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1364571367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1364571368}
+  m_Layer: 0
+  m_Name: SpawnPoint (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1364571368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364571367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23.3, y: 1.89, z: -108.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1651538297834842187}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1386541002099556284
 GameObject:
   m_ObjectHideFlags: 0
@@ -24,7 +84,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386541002099556284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.17, y: 37.88, z: 22.46}
+  m_LocalPosition: {x: 29.17, y: 1.23, z: 22.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1651538297834842187}
@@ -84,7 +144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651538296756052199}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 0, z: 102.3}
+  m_LocalPosition: {x: 3.45, y: 3.02, z: 102.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1651538297834842187}
@@ -114,7 +174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651538297522717839}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 74.51, y: 4.99, z: -92.5}
+  m_LocalPosition: {x: 74.51, y: 8, z: -84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1651538297834842187}
@@ -144,7 +204,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651538297776825000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7, y: 38.69, z: 31.1}
+  m_LocalPosition: {x: -8.33, y: 2.24, z: 47.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1651538297834842187}
@@ -187,6 +247,8 @@ Transform:
   - {fileID: 4495068454143819060}
   - {fileID: 860101062718769864}
   - {fileID: 1061535203930984497}
+  - {fileID: 1364571368}
+  - {fileID: 807592874}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -203,16 +265,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - name: Cubes
-    enemy: {fileID: 7130800298231032691, guid: 3ba8440a31a770847b7aaf72b7ea6807, type: 3}
-    enemyAmmount: 10
+  - name: Bear1
+    enemy: {fileID: 725135564040574720, guid: c92f1181770ea1d41a388aa5c744564d, type: 3}
+    enemyAmmount: 50
     enemiesPerSecond: 5
-  - name: Spheres
-    enemy: {fileID: 8637836359615038146, guid: 2e68a0b0de5fbbc4a84fe8dd789bb5c0, type: 3}
+  - name: Bear2
+    enemy: {fileID: 5137058443395188411, guid: 2e68a0b0de5fbbc4a84fe8dd789bb5c0, type: 3}
     enemyAmmount: 5
     enemiesPerSecond: 1
-  - name: Capsules
-    enemy: {fileID: 9110361034628252052, guid: 4321315c026b0ac40af01eaf3bc557aa, type: 3}
+  - name: Bear3
+    enemy: {fileID: 33746747920630297, guid: 4321315c026b0ac40af01eaf3bc557aa, type: 3}
     enemyAmmount: 2
     enemiesPerSecond: 1
   spawnPoints:
@@ -226,7 +288,7 @@ MonoBehaviour:
   - {fileID: 860101062718769864}
   - {fileID: 1061535203930984497}
   timeBetweenWaves: 5
-  enemyAmmountText: {fileID: 0}
+  enemyAmmount: {fileID: 0}
   waveStateText: {fileID: 0}
 --- !u!1 &1651538297898262690
 GameObject:
@@ -252,7 +314,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651538297898262690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -97.4, y: 0, z: -84.9}
+  m_LocalPosition: {x: -97.4, y: 2.88, z: -84.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1651538297834842187}
@@ -282,7 +344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651538297974023586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.4, y: 0, z: -17.5}
+  m_LocalPosition: {x: 76.4, y: 0.23, z: -17.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1651538297834842187}
@@ -312,7 +374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2938094550116886674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.9, y: 3.53, z: 31.1}
+  m_LocalPosition: {x: -29.39, y: 3.53, z: 31.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1651538297834842187}
