@@ -11,6 +11,7 @@ public class BaseWeapon : MonoBehaviour
     public int ammoInClips;
     public int maxAmmo;
     public float fireRate;
+    [HideInInspector] public int maxAmmoCap;
 
     [Space]
     
@@ -38,6 +39,7 @@ public class BaseWeapon : MonoBehaviour
         shotSound = GetComponent<AudioSource>();
         
         ammoInWeapon = ammoInClips;
+        maxAmmoCap = maxAmmo;
         muzzleFlash.Stop();
     }
     protected void UpdateAmmo()

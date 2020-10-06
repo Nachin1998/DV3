@@ -5,15 +5,19 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public float health = 100f;
+    public float currentHealth;
+    public float maxHealth = 100f;
     public Image healthBar;
     public bool isDead = false;
 
     public Image bloodScreen;
+
     void Start()
     {
-        healthBar.fillAmount = health / 100;
+        healthBar.fillAmount = currentHealth / 100;
         bloodScreen.gameObject.SetActive(false);
+
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -24,18 +28,18 @@ public class Player : MonoBehaviour
             return;
         }
 
-        healthBar.fillAmount = health / 100;
+        healthBar.fillAmount = currentHealth / 100;
 
-        if(health <= 0)
+        if(currentHealth <= 0)
         {
-            health = 0;
+            currentHealth = 0;
             isDead = true;
         }
     }
 
     public void TakeDamage(float damage)
     {
-        health -= damage;
+        currentHealth -= damage;
         StartCoroutine(ScreenDamage(1));
     }
 
