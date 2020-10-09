@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5110088227033549522}
   m_Layer: 12
   m_Name: Roca_1_low
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8

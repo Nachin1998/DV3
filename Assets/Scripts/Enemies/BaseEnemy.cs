@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
+public class BaseEnemy : MonoBehaviour
 {
     public float health = 100f;
     public float damage = 10f;
@@ -15,17 +15,17 @@ public class Enemy : MonoBehaviour
     public GameObject enemyHead;
     public GameObject explosion;
 
-    GameObject target;
-    Player playerTarget;
-    GameObject platformTarget;
-
-    NavMeshAgent agent;
-    Rigidbody rb;
-
-    float maxSpeedRate;
+    protected GameObject target;
+    protected Player playerTarget;
+    protected GameObject platformTarget;
+     
+    protected NavMeshAgent agent;
+    protected Rigidbody rb;
+    
+    protected float maxSpeedRate;
 
     // Update is called once per frame
-    private void Start()    
+    protected void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
@@ -45,10 +45,10 @@ public class Enemy : MonoBehaviour
                 break;
             default:
                 break;
-        }        
+        }
     }
 
-    void Update()
+    protected void Update()
     {
         if (agent.speed >= speed)
         {
@@ -67,28 +67,10 @@ public class Enemy : MonoBehaviour
         if (isDead)
         {
             Die();
-        }
-
-        switch (GameManager.Instance.gameMode)
-        {
-            case GameManager.GameMode.None:
-                break;
-
-            case GameManager.GameMode.Survival:
-                ChasePlayer();
-                break;
-
-            case GameManager.GameMode.HoldZone:
-                SearchZone();
-                break;
-
-            default:
-                break;
-        }
-        
+        }        
     }
 
-    void ChasePlayer()
+    public virtual void ChasePlayer()
     {
         if (isDead)
         {
@@ -99,7 +81,7 @@ public class Enemy : MonoBehaviour
 
         if (playerTarget)
         {
-            agent.SetDestination(playerTarget.transform.position - distaceToAttack.normalized);            
+            agent.SetDestination(playerTarget.transform.position - distaceToAttack.normalized);
             enemyHead.transform.LookAt(target.transform);
         }
 
@@ -125,7 +107,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void SearchZone()
+    protected void SearchZone()
     {
         if (isDead)
         {
@@ -141,13 +123,13 @@ public class Enemy : MonoBehaviour
         health -= damage;
         //StartCoroutine(DamageVisual());
 
-        if(agent.speed > speed / 2)
+        if (agent.speed > speed / 2)
         {
             agent.speed -= 1;
         }
     }
 
-    void AttackTarget()
+    public virtual void AttackTarget()
     {
         playerTarget.TakeDamage(damage);
         attackSpeedRate = maxSpeedRate;

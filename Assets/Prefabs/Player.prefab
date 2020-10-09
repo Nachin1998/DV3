@@ -111,6 +111,7 @@ MonoBehaviour:
   ammoInClips: 30
   maxAmmo: 240
   fireRate: 0.1
+  maxAmmoCap: 0
   range: 60
   damage: 10
   force: 0
@@ -456,8 +457,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1425458880932521726}
   - component: {fileID: 1425458880932521698}
-  - component: {fileID: 1425458880932521725}
   - component: {fileID: 1425458880932521727}
+  - component: {fileID: 1425458880932521725}
   - component: {fileID: 1425458880932521699}
   - component: {fileID: 1425458880932521724}
   m_Layer: 13
@@ -496,28 +497,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cdf775656928b149a924d7b6704d54e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  currentHealth: 0
+  maxHealth: 100
   healthBar: {fileID: 0}
   isDead: 0
+  flashlight: {fileID: 0}
   bloodScreen: {fileID: 0}
---- !u!143 &1425458880932521725
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425458880932521720}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 1
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1425458880932521727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,6 +534,24 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 4608
+--- !u!143 &1425458880932521725
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425458880932521720}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 1
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &1425458880932521699
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -839,6 +842,7 @@ MonoBehaviour:
   ammoInClips: 8
   maxAmmo: 40
   fireRate: 0
+  maxAmmoCap: 0
   range: 30
   damage: 15
   force: 0
@@ -867,6 +871,7 @@ MonoBehaviour:
   ammoInClips: 24
   maxAmmo: 120
   fireRate: 0.1
+  maxAmmoCap: 0
   range: 60
   damage: 10
   force: 10
