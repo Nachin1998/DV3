@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public Image healthBar;
     public bool isDead = false;
 
+    public Light flashlight;
     public Image bloodScreen;
 
     void Start()
@@ -29,6 +30,11 @@ public class Player : MonoBehaviour
         }
 
         healthBar.fillAmount = currentHealth / 100;
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            flashlight.gameObject.SetActive(!flashlight.gameObject.activeSelf);
+        }
 
         if(currentHealth <= 0)
         {
