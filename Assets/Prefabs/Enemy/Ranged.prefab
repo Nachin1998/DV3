@@ -148,7 +148,9 @@ MonoBehaviour:
   enemyHead: {fileID: 0}
   explosion: {fileID: 1137131228138744862, guid: f7e3609d31e1c5c4eab5859c54c92f9c,
     type: 3}
-  fireSpot: {fileID: 0}
+  fireSpot: {fileID: 1408167548}
+  projectile: {fileID: 4334659427414032388, guid: c514042e7c19ff241a4f8457b02a4c4a,
+    type: 3}
 --- !u!195 &452728378743925238
 NavMeshAgent:
   m_ObjectHideFlags: 0

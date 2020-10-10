@@ -96,7 +96,6 @@ public class Enemy : MonoBehaviour
         }
 
         Vector3 distaceToAttack = playerTarget.transform.position - transform.position;
-
         if (playerTarget)
         {
             agent.SetDestination(playerTarget.transform.position - distaceToAttack.normalized);            

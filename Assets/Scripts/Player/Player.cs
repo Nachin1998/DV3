@@ -8,7 +8,8 @@ public class Player : MonoBehaviour
     public float currentHealth;
     public float maxHealth = 100f;
     public Image healthBar;
-    public bool isDead = false;
+    
+    [HideInInspector] public bool isDead = false;
 
     public Light flashlight;
     public Image bloodScreen;

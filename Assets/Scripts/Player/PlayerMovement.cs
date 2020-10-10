@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Player body;
-    public CharacterController controler;
+    Player body;
+    CharacterController controler;
 
     public float walkingSpeed = 12f;
     public float sprintSpeed = 20f;
@@ -37,6 +37,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
+        body = GetComponent<Player>();
+        controler = GetComponent<CharacterController>();
+
         maxWalkingSpeed = walkingSpeed;
         currentSprint = sprintMaxAmmount;
     }
