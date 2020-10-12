@@ -98,8 +98,11 @@ public class Enemy : MonoBehaviour
         Vector3 distaceToAttack = playerTarget.transform.position - transform.position;
         if (playerTarget)
         {
-            agent.SetDestination(playerTarget.transform.position - distaceToAttack.normalized);            
-            enemyHead.transform.LookAt(target.transform);
+            agent.SetDestination(playerTarget.transform.position - distaceToAttack.normalized);
+            if (enemyHead)
+            {
+                enemyHead.transform.LookAt(target.transform);
+            }
         }
 
         if (playerTarget.isDead)
