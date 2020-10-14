@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     }
 
     public GameMode gameMode = GameMode.None;
+    public WaveSpawner ws;
 
     private void Awake()
     {

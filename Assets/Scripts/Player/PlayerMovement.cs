@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (body.isDead)
+        if (body.isDead || GameManager.Instance.ws.state == WaveSpawner.SpawnState.GameWon)
         {
             return;
         }

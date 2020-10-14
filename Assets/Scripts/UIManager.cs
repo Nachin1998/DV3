@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     public Player player;
     public Camera weaponCamera;
     [Space]
+    public GameObject winMenu;
     public GameObject deathMenu;
     [Space]
     public TextMeshProUGUI ammoText;
@@ -23,6 +24,7 @@ public class UIManager : MonoBehaviour
     {
         weaponCamera.gameObject.SetActive(true);
 
+        winMenu.SetActive(false);
         deathMenu.SetActive(false);
 
         ammoText.gameObject.SetActive(true);
@@ -36,23 +38,33 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        if (!player.isDead)
+        if (player.isDead)
         {
-            return;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+            weaponCamera.gameObject.SetActive(false);
+
+            deathMenu.SetActive(true);
+            
+            ammoText.gameObject.SetActive(false);
+            enemyData.SetActive(false);
+            waveState.gameObject.SetActive(false);
+
+            aim.gameObject.SetActive(false);
+            sprintBar.gameObject.SetActive(false);
+            bloodImage.gameObject.SetActive(true);
         }
 
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        weaponCamera.gameObject.SetActive(false);
+        if(GameManager.Instance.ws.state == WaveSpawner.SpawnState.GameWon)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
 
-        deathMenu.SetActive(true);
+            winMenu.SetActive(true);
 
-        ammoText.gameObject.SetActive(false);
-        enemyData.SetActive(false);
-        waveState.gameObject.SetActive(false);
+            enemyData.SetActive(false);
+        }
 
-        aim.gameObject.SetActive(false);
-        sprintBar.gameObject.SetActive(false);
-        bloodImage.gameObject.SetActive(true);
     }
 }

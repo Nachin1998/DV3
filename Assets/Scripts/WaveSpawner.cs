@@ -20,9 +20,10 @@ public class WaveSpawner : MonoBehaviour
     {
         CountDown,
         Spawning,
-        ActiveWave
+        ActiveWave, 
+        GameWon
     }
-    SpawnState state = SpawnState.CountDown;
+    [HideInInspector] public SpawnState state = SpawnState.CountDown;
 
     public Wave[] waves;
     public Transform[] spawnPoints;
@@ -31,6 +32,8 @@ public class WaveSpawner : MonoBehaviour
     [Space]
     public GameObject enemyAmmount;
     public TextMeshProUGUI waveStateText;
+
+    [HideInInspector] public bool won = false;
 
     int totalEnemies = 0;
 
@@ -51,6 +54,11 @@ public class WaveSpawner : MonoBehaviour
 
     void Update()
     {
+        if(state == SpawnState.GameWon)
+        {
+            return;
+        }
+
         if (state == SpawnState.ActiveWave)
         {
             totalEnemies = FindObjectsOfType<Enemy>().Length;
@@ -97,9 +105,8 @@ public class WaveSpawner : MonoBehaviour
 
         if (nextWave + 1 > waves.Length - 1)
         {
-            nextWave = 0;
-            currentWave = 0;
-            Debug.Log("All waves completed! Starting over");
+            state = SpawnState.GameWon;
+            won = true;
         }
         else
         {
@@ -125,7 +132,6 @@ public class WaveSpawner : MonoBehaviour
 
     IEnumerator SpawnWave(Wave wave)
     {
-       // Debug.Log("Spawning wave...");
         
         state = SpawnState.Spawning;
 
@@ -146,5 +152,4 @@ public class WaveSpawner : MonoBehaviour
         Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
         Instantiate(enemy, randomSpawnPoint.position, Quaternion.identity, randomSpawnPoint.transform);
     }
-
 }
