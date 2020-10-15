@@ -16,7 +16,7 @@ public class MouseLook : MonoBehaviour
     }
     void Update()
     {
-        if(player.isDead || GameManager.Instance.ws.state == WaveSpawner.SpawnState.GameWon)
+        if(player.isDead || GameManager.Instance.won)
         {
             return;
         }

@@ -56,7 +56,7 @@ public class UIManager : MonoBehaviour
             bloodImage.gameObject.SetActive(true);
         }
 
-        if(GameManager.Instance.ws.state == WaveSpawner.SpawnState.GameWon)
+        if(GameManager.Instance.won)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -65,6 +65,5 @@ public class UIManager : MonoBehaviour
 
             enemyData.SetActive(false);
         }
-
     }
 }

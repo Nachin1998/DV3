@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     }
 
     public GameMode gameMode = GameMode.None;
-    public WaveSpawner ws;
+    public bool won = false;
 
     private void Awake()
     {

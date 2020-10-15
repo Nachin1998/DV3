@@ -20,8 +20,7 @@ public class WaveSpawner : MonoBehaviour
     {
         CountDown,
         Spawning,
-        ActiveWave, 
-        GameWon
+        ActiveWave
     }
     [HideInInspector] public SpawnState state = SpawnState.CountDown;
 
@@ -32,8 +31,6 @@ public class WaveSpawner : MonoBehaviour
     [Space]
     public GameObject enemyAmmount;
     public TextMeshProUGUI waveStateText;
-
-    [HideInInspector] public bool won = false;
 
     int totalEnemies = 0;
 
@@ -54,7 +51,7 @@ public class WaveSpawner : MonoBehaviour
 
     void Update()
     {
-        if(state == SpawnState.GameWon)
+        if(GameManager.Instance.won)
         {
             return;
         }
@@ -105,8 +102,7 @@ public class WaveSpawner : MonoBehaviour
 
         if (nextWave + 1 > waves.Length - 1)
         {
-            state = SpawnState.GameWon;
-            won = true;
+            GameManager.Instance.won = true;
         }
         else
         {
