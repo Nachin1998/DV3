@@ -60,19 +60,22 @@ public class RangedEnemy : BaseEnemy
             return;
         }
         
-        Vector3 direction1 = playerTarget.transform.position - transform.position;
+        Vector3 direction = playerTarget.transform.position - transform.position;
         Vector3 direction2 = transform.position - playerTarget.transform.position;
 
+        Debug.Log(direction.magnitude);
         if (playerTarget)
         {
-            if (Vector3.Distance(transform.position, playerTarget.transform.position) <= minimumDistanceFromTarget)
+            if (direction.magnitude > 40)
             {
-                agent.stoppingDistance = 0;
-                agent.SetDestination(playerTarget.transform.position + direction1.normalized);
+                agent.stoppingDistance = 40;
+                agent.SetDestination(playerTarget.transform.position);
             }
-            else
+            else if (direction.magnitude < 20)
             {                
-                agent.SetDestination(playerTarget.transform.position - direction2.normalized);
+                agent.stoppingDistance = 0;
+                agent.speed = 40;
+                agent.SetDestination(agent.transform.position -direction * Time.deltaTime * agent.speed);
             }
 
             if (enemyHead.gameObject != null)

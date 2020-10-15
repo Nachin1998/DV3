@@ -489,15 +489,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkingSpeed: 8
-  sprintSpeed: 15
+  sprintSpeed: 18
   sprintMaxAmmount: 100
   sprintUsePerSec: 10
   sprintRefilPerSec: 10
   sprintBar: {fileID: 0}
   weaponAnim:
   - {fileID: 7970499047053226772}
-  - {fileID: 0}
-  - {fileID: 0}
   jumpHeight: 4
   gravity: 39.24
   groundCheck: {fileID: 1425458879948550985}
