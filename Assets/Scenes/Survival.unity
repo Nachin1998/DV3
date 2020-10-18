@@ -34516,7 +34516,7 @@ PrefabInstance:
     - target: {fileID: 1651538297834842184, guid: 09da9f9191289864aba58c06bdc5b1df,
         type: 3}
       propertyPath: waves.Array.data[0].enemyAmmount
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1651538297834842184, guid: 09da9f9191289864aba58c06bdc5b1df,
         type: 3}
@@ -34528,21 +34528,23 @@ PrefabInstance:
         type: 3}
       propertyPath: waves.Array.data[1].enemy
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1515903172995451603, guid: c9e3a55c3855d514a974889c56a47dc9,
+        type: 3}
     - target: {fileID: 1651538297834842184, guid: 09da9f9191289864aba58c06bdc5b1df,
         type: 3}
       propertyPath: waves.Array.data[2].enemy
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1515903172995451603, guid: 420a91326463c4349a6557904fec46c8,
+        type: 3}
     - target: {fileID: 1651538297834842184, guid: 09da9f9191289864aba58c06bdc5b1df,
         type: 3}
       propertyPath: waves.Array.data[1].enemyAmmount
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1651538297834842184, guid: 09da9f9191289864aba58c06bdc5b1df,
         type: 3}
       propertyPath: waves.Array.data[2].enemyAmmount
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1651538297834842184, guid: 09da9f9191289864aba58c06bdc5b1df,
         type: 3}

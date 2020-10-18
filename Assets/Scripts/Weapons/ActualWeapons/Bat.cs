@@ -7,7 +7,6 @@ public class Bat : MonoBehaviour
     public float damage;
     Animator animator;
     bool isHitting = false;
-    int hitCount = 0;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -41,10 +40,5 @@ public class Bat : MonoBehaviour
             col.GetComponent<BaseEnemy>().TakeDamage(damage);
             col.transform.position += -col.transform.forward * damage * Time.deltaTime;
         }       
-    }
-
-    private void OnTriggerExit(Collider col)
-    {
-        hitCount--;
     }
 }
