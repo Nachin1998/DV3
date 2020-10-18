@@ -16,24 +16,7 @@ public class RangedEnemy : BaseEnemy
 
     new void Update()
     {
-        if (agent.speed >= speed)
-        {
-            agent.speed = speed;
-        }
-        else
-        {
-            agent.speed += Time.deltaTime;
-        }
-
-        if (health <= 0)
-        {
-            isDead = true;
-        }
-
-        if (isDead)
-        {
-            Die();
-        }
+        base.Update();
 
         switch (GameManager.Instance.gameMode)
         {
@@ -58,14 +41,11 @@ public class RangedEnemy : BaseEnemy
         if (isDead)
         {
             return;
-        }
-        
-        Vector3 direction = playerTarget.transform.position - transform.position;
-        Vector3 direction2 = transform.position - playerTarget.transform.position;
+        }        
 
-        Debug.Log(direction.magnitude);
         if (playerTarget)
         {
+            Vector3 direction = playerTarget.transform.position - transform.position;
             if (direction.magnitude > 40)
             {
                 agent.stoppingDistance = 40;
@@ -108,6 +88,7 @@ public class RangedEnemy : BaseEnemy
 
     void Fire()
     {
+        Debug.Log("Fire!");
         Instantiate(projectile, fireSpot.position, fireSpot.rotation);
         attackSpeedRate = maxSpeedRate;
     }

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3056601894445726527}
   m_Layer: 10
   m_Name: Oso_low_5
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,10 +55,10 @@ MonoBehaviour:
   speed: 20
   attackDistance: 5
   attackSpeedRate: 0.1
-  isDead: 0
   enemyHead: {fileID: 0}
   explosion: {fileID: 1137131228138744862, guid: f7e3609d31e1c5c4eab5859c54c92f9c,
     type: 3}
+  isDead: 0
 --- !u!195 &8713635112792610798
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -78,7 +78,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 0.02
-  m_BaseOffset: 0.025
+  m_BaseOffset: 0.018
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!54 &1674307958046852481

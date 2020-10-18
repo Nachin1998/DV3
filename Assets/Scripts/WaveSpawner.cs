@@ -4,14 +4,13 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-
 public class WaveSpawner : MonoBehaviour
 {
     [System.Serializable]
     public class Wave
     {
         public string name;
-        public Enemy enemy;
+        public BaseEnemy enemy;
         public int enemyAmmount;
         public float enemiesPerSecond;
     }
@@ -58,7 +57,7 @@ public class WaveSpawner : MonoBehaviour
 
         if (state == SpawnState.ActiveWave)
         {
-            totalEnemies = FindObjectsOfType<Enemy>().Length;
+            totalEnemies = FindObjectsOfType<BaseEnemy>().Length;
 
             waveStateText.gameObject.SetActive(false);
             enemyAmmount.SetActive(true);
@@ -142,7 +141,7 @@ public class WaveSpawner : MonoBehaviour
         state = SpawnState.ActiveWave;
     }
 
-    void SpawnEnemy(Enemy enemy)
+    void SpawnEnemy(BaseEnemy enemy)
     {
         //Debug.Log("Spawning enemy");
         Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];

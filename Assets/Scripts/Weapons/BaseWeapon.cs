@@ -121,7 +121,7 @@ public class BaseWeapon : MonoBehaviour
             switch (layerHitted)
             {
                 case "Enemy":
-                    hit.collider.gameObject.GetComponent<Enemy>().TakeDamage(damage);
+                    hit.collider.gameObject.GetComponent<BaseEnemy>().TakeDamage(damage);
                     hit.collider.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
                     //hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(direction.normalized * force, ForceMode.Impulse);
                     break;

@@ -10,7 +10,6 @@ public class BaseEnemy : MonoBehaviour
     public float speed = 10f;
     public float attackDistance = 3f;
     public float attackSpeedRate = 2f;
-    public bool isDead = false;
     [Space]
     public GameObject enemyHead;
     public GameObject explosion;
@@ -22,6 +21,7 @@ public class BaseEnemy : MonoBehaviour
     protected NavMeshAgent agent;
     protected Rigidbody rb;
     
+    [HideInInspector] public bool isDead = false;
     protected float maxSpeedRate;
 
     // Update is called once per frame
@@ -78,11 +78,13 @@ public class BaseEnemy : MonoBehaviour
         }
 
         Vector3 distaceToAttack = playerTarget.transform.position - transform.position;
-
         if (playerTarget)
         {
             agent.SetDestination(playerTarget.transform.position - distaceToAttack.normalized);
-            enemyHead.transform.LookAt(target.transform);
+            if (enemyHead)
+            {
+                enemyHead.transform.LookAt(target.transform);
+            }
         }
 
         if (playerTarget.isDead)

@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 1515903172995451603}
   - component: {fileID: 8713635112792610798}
   - component: {fileID: 1674307958046852481}
-  - component: {fileID: 540861321}
+  - component: {fileID: 6504053590646577911}
   - component: {fileID: 9046347486366726769}
-  - component: {fileID: 540861320}
+  - component: {fileID: 6089322421255674338}
   m_Layer: 10
-  m_Name: Oso_low_4
-  m_TagString: Untagged
+  m_Name: Oso_low_6
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,14 +51,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  damage: 100
-  speed: 10
+  damage: 25
+  speed: 20
   attackDistance: 5
-  attackSpeedRate: 0.5
-  isDead: 0
+  attackSpeedRate: 1.5
   enemyHead: {fileID: 0}
   explosion: {fileID: 1137131228138744862, guid: f7e3609d31e1c5c4eab5859c54c92f9c,
     type: 3}
+  isDead: 0
 --- !u!195 &8713635112792610798
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -78,7 +78,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 0.02
-  m_BaseOffset: 0.025
+  m_BaseOffset: 0.018
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!54 &1674307958046852481
@@ -97,7 +97,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &540861321
+--- !u!135 &6504053590646577911
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,7 +123,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.01324451, y: 0.019974658, z: 0.012683734}
   m_Center: {x: 0.00006365061, y: -0.015012649, z: 0.001082296}
---- !u!65 &540861320
+--- !u!65 &6089322421255674338
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -273,7 +273,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 56145f81e482b3a43ac1bcad9c79f37f, type: 2}
+  - {fileID: 2100000, guid: 5d21f3120c6d1ef4d98272fd18f09ff6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
