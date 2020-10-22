@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class BaseEnemy : MonoBehaviour
-{
+{    
     public float health = 100f;
     public float damage = 10f;
     public float speed = 10f;
@@ -25,7 +25,7 @@ public class BaseEnemy : MonoBehaviour
     protected float maxSpeedRate;
 
     // Update is called once per frame
-    protected void Start()
+    protected void InitBaseEnemy()
     {
         agent = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
@@ -43,12 +43,13 @@ public class BaseEnemy : MonoBehaviour
                 GameObject[] platforms = GameObject.FindGameObjectsWithTag("CapturePoint");
                 platformTarget = platforms[Random.Range(0, platforms.Length)];
                 break;
+
             default:
                 break;
         }
     }
 
-    protected void Update()
+    protected void UpdateBaseEnemy()
     {
         if (agent.speed >= speed)
         {
@@ -58,7 +59,7 @@ public class BaseEnemy : MonoBehaviour
         {
             agent.speed += Time.deltaTime;
         }
-
+        
         if (health <= 0)
         {
             isDead = true;

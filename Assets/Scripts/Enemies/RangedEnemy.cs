@@ -9,14 +9,14 @@ public class RangedEnemy : BaseEnemy
     public Transform fireSpot;
     public Projectile projectile;
     public float minimumDistanceFromTarget;
-    new void Start()
+    void Start()
     {
-        base.Start();
+        InitBaseEnemy();
     }
 
-    new void Update()
+    void Update()
     {
-        base.Update();
+        UpdateBaseEnemy();
 
         switch (GameManager.Instance.gameMode)
         {
@@ -38,10 +38,10 @@ public class RangedEnemy : BaseEnemy
 
     public override void ChasePlayer()
     {
-        if (isDead)
+        if (isDead || playerTarget.isDead)
         {
             return;
-        }        
+        }
 
         if (playerTarget)
         {
@@ -52,43 +52,37 @@ public class RangedEnemy : BaseEnemy
                 agent.SetDestination(playerTarget.transform.position);
             }
             else if (direction.magnitude < 20)
-            {                
+            {
                 agent.stoppingDistance = 0;
                 agent.speed = 40;
-                agent.SetDestination(agent.transform.position -direction * Time.deltaTime * agent.speed);
+                agent.SetDestination(agent.transform.position - direction * Time.deltaTime * agent.speed);
             }
 
-            if (enemyHead.gameObject != null)
+            /*if (enemyHead.gameObject != null)
             {
                 enemyHead.transform.LookAt(target.transform);
-            }
-        }
+            }*/
 
-        if (playerTarget.isDead)
-        {
-            return;
-        }
-
-        if (Vector3.Distance(transform.position, playerTarget.transform.position) <= attackDistance)
-        {
-            if (attackSpeedRate <= 0)
+            if (Vector3.Distance(transform.position, playerTarget.transform.position) <= attackDistance)
             {
-                Fire();
+                if (attackSpeedRate <= 0)
+                {
+                    Fire();
+                }
+                else
+                {
+                    attackSpeedRate -= Time.deltaTime;
+                }
             }
             else
             {
-                attackSpeedRate -= Time.deltaTime;
+                attackSpeedRate = 0;
             }
-        }
-        else
-        {
-            attackSpeedRate = 0;
         }
     }
 
     void Fire()
     {
-        Debug.Log("Fire!");
         Instantiate(projectile, fireSpot.position, fireSpot.rotation);
         attackSpeedRate = maxSpeedRate;
     }

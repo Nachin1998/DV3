@@ -5,14 +5,14 @@ using UnityEngine.AI;
 
 public class Enemy : BaseEnemy
 {
-    new void Start()    
+    void Start()    
     {
-        base.Start();      
+        InitBaseEnemy();      
     }
 
-    new void Update()
+    void Update()
     {
-        base.Update();
+        UpdateBaseEnemy();
 
         switch (GameManager.Instance.gameMode)
         {
