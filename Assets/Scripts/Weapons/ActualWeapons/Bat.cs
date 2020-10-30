@@ -18,7 +18,7 @@ public class Bat : MonoBehaviour
         {
             if(!isHitting)
             {
-                StartCoroutine(Hit());                      
+                StartCoroutine(Hit());
             }
         }
     }
@@ -40,5 +40,17 @@ public class Bat : MonoBehaviour
             col.GetComponent<BaseEnemy>().TakeDamage(damage);
             col.transform.position += -col.transform.forward * damage * Time.deltaTime;
         }       
+    }
+
+    private void OnEnable()
+    {
+        transform.position = new Vector3(0, -1, 0);
+        isHitting = false;
+    }
+
+    private void OnDisable()
+    {
+        transform.position = new Vector3(0, -1, 0);
+        isHitting = false;
     }
 }
