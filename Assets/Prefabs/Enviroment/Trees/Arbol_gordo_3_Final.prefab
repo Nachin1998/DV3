@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 861816718382986496}
   - component: {fileID: 3801531323541307755}
   - component: {fileID: 971802977929046629}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: Rama_B_arbol_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2420064599944284388}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: Arbol_gordo_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 1324387267250531014}
   - component: {fileID: 7455556463629306811}
   - component: {fileID: 6104937252724473461}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: Rama_A_arbol_gordo_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 8209799047458672945}
   - component: {fileID: 1915310769357268840}
   - component: {fileID: 3778879237170230244}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: Hojas_arbol_gordo_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 2424502930223778758}
   - component: {fileID: 526674291141666746}
   - component: {fileID: 2200658647416497194}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: Arbol_gordo_3_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,9 +361,9 @@ GameObject:
   - component: {fileID: 7263523793722381322}
   - component: {fileID: 8908371868505094964}
   - component: {fileID: 6747794370665378903}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: Arbol_gordo_3_Final
-  m_TagString: Obstacle
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

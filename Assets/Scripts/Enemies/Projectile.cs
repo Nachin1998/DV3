@@ -29,15 +29,18 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.CompareTag("Player"))
+        switch (col.tag)
         {
-            col.GetComponent<Player>().TakeDamage(10f);
-            Destroy(gameObject);
-        }
+            case "Player":
+                col.GetComponent<Player>().TakeDamage(10f);
+                Destroy(gameObject);
+                break;
 
-        if(col.CompareTag("Ground") || col.CompareTag("Obstacle"))
-        {
-            Destroy(gameObject);
+            case "Ground":
+            case "Rock":
+            case "Tree":
+                Destroy(gameObject);
+                break;
         }
     }
 }

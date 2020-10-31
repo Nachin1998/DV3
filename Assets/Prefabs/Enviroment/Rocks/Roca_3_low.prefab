@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3422094222348866684}
   - component: {fileID: 4571627656247314240}
   - component: {fileID: 4743247540279140556}
-  m_Layer: 12
+  m_Layer: 14
   m_Name: Roca_3_low
-  m_TagString: Obstacle
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8

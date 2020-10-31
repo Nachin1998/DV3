@@ -235,7 +235,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 14135
+    m_Bits: 63287
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -548,7 +548,7 @@ MonoBehaviour:
   groundDistance: 1
   groundMask:
     serializedVersion: 2
-    m_Bits: 4608
+    m_Bits: 20992
 --- !u!143 &1425458880932521725
 CharacterController:
   m_ObjectHideFlags: 0

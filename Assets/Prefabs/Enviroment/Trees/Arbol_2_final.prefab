@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1198757508623704513}
   - component: {fileID: 3080363613935524027}
   - component: {fileID: 2219014290887595332}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: Hoja_arbol_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 240558738862444665}
   - component: {fileID: 7660630246576991965}
   - component: {fileID: 5004749844382835272}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: Arbol_2_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,9 +169,9 @@ GameObject:
   - component: {fileID: 6042580162769639018}
   - component: {fileID: 6164005834561656110}
   - component: {fileID: 5717962097352159671}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: Arbol_2_final
-  m_TagString: Obstacle
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 566552818107786293}
   - component: {fileID: 3631716295289986981}
   - component: {fileID: 8976915617010099878}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: Rama_arbol_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

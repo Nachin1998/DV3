@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8549857140301844467}
   - component: {fileID: 501604522}
   - component: {fileID: 501604521}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Reja_final
   m_TagString: Untagged
   m_Icon: {fileID: 0}

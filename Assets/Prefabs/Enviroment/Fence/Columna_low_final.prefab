@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3417546639158075378}
   - component: {fileID: 3542804618818266712}
   - component: {fileID: 3364710188778024233}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: pasted__Columna_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 2318598793354748888}
   - component: {fileID: 1102556107596869681}
   - component: {fileID: 8215247921027592475}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: pasted__Base_palitos_columna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 6131561607306208766}
   - component: {fileID: 1000724992405107211}
   - component: {fileID: 8650041896686607521}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: pasted__Palitos_columna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4226292142577494028}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: pasted__Limite1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 725998581650539162}
   - component: {fileID: 3489994635887197545}
   - component: {fileID: 2276366670016949774}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: pasted__Columna_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5805310667222632101}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: group2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: 5158360605356461734}
   - component: {fileID: 5419926807285674286}
   - component: {fileID: 6392126631882771005}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: pasted__Columna_base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 6621438901378908054}
   - component: {fileID: 995215130}
   - component: {fileID: 995215131}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Columna_low_final
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +531,7 @@ GameObject:
   - component: {fileID: 8236534009098270186}
   - component: {fileID: 962993321903250940}
   - component: {fileID: 5183063947505529074}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: pasted__Columna_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -608,7 +608,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1828996841282012101}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: group4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
