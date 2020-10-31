@@ -13724,7 +13724,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 58.25
+  m_fontSize: 60.05
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -16528,18 +16528,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 918969084}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 459479857}
-        m_MethodName: ResumeGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &918969084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29531,18 +29520,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1801824042}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 459479857}
-        m_MethodName: ResumeGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1801824042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86272,7 +86250,7 @@ PrefabInstance:
     - target: {fileID: 7812568596331544868, guid: ed500bb5af928894ba786937b409f8da,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.259
+      value: 3.15
       objectReference: {fileID: 0}
     - target: {fileID: 7812568596331544868, guid: ed500bb5af928894ba786937b409f8da,
         type: 3}
@@ -86906,7 +86884,7 @@ PrefabInstance:
     - target: {fileID: 7816767742004084900, guid: af7f7bb70c4240c4d9ca06df871ae555,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.72
+      value: 2.35
       objectReference: {fileID: 0}
     - target: {fileID: 7816767742004084900, guid: af7f7bb70c4240c4d9ca06df871ae555,
         type: 3}
@@ -86967,28 +86945,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1995091785768095078}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8975670187114583800 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7430940563140418462, guid: ed500bb5af928894ba786937b409f8da,
-    type: 3}
-  m_PrefabInstance: {fileID: 1995091785768095078}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &8975670187114583801
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8975670187114583800}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7be18ec3e1eb1234aa12373632c43e55, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
