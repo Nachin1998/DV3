@@ -14,6 +14,11 @@ public class Bat : MonoBehaviour
 
     void Update()
     {
+        if (Pause.gameIsPaused)
+        {
+            return;
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             if(!isHitting)
