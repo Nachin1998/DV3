@@ -1,10 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ScenesManager : MonoBehaviour
 {
+    public GameObject loadingScreen;
+    public Slider slider;
+    public TextMeshProUGUI progressText;
+
     public void Play()
     {
         SceneManager.LoadScene(1);
@@ -29,18 +35,35 @@ public class ScenesManager : MonoBehaviour
     {
         GameManager.Instance.gameMode = GameManager.GameMode.Survival;
         Cursor.visible = false;
-        SceneManager.LoadScene(1);
+        StartCoroutine(LoadAsync(1));
+        //SceneManager.LoadSceneAsync(1);
+        //SceneManager.LoadScene(1);
     }
 
-    public void HoldZoneMode()
+    /*public void HoldZoneMode()
     {
         GameManager.Instance.gameMode = GameManager.GameMode.HoldZone;
         Cursor.visible = false;
         SceneManager.LoadScene(2);
-    }
+    }*/
 
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    IEnumerator LoadAsync(int index)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(index);
+
+        loadingScreen.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / 0.9f);
+            progressText.text = (int)(progress * 100) + "%";
+            slider.value = progress;
+            yield return null;
+        }
     }
 }
