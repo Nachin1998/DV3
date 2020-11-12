@@ -21,12 +21,15 @@ This is a game (still in development) developed by students from <a href="https:
 ## Credits
 
 - **Ignacio Fernandez Lemos** - *Programming*
-- **Nombre Apellido** - *Art*
-- **Nombre Apellido** - *Art*
-- **Nombre Apellido** - *Audio*
-- **Nombre Apellido** - *Audio*
-- **Nombre Apellido** - *Testing*
-- **Nombre Apellido** - *Testing*
+- **Juan Sergio Laguens** - *Art*
+- **Sofia Villalba** - *Art*
+- **Matías Yackevicius** - *Art*
+- **Cristian Almóniga** - *Audio*
+- **Sergio Cabanas** - *Audio*
+- **Andrés Candurra** - *Audio*
+- **Juan Pablo Mattarucco** - *Testing*
+- **Demian Miranda** - *Testing*
+- **Alejandro Mundaray** - *Testing*
 
 
 This game was also possible thanks to the support of these professors:
@@ -36,11 +39,6 @@ This game was also possible thanks to the support of these professors:
 - **Jorge Cuéllar**
 - **Fernando Puig**
 - **Eugenio Taboada**
-
-
-## Acknowledgements
-
-Otras personas a las que quieran agradecerles, sino sacar este título
 
 
 ## Links
