@@ -22,6 +22,7 @@ public class ScenesManager : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        GameManager.Instance.won = false;
         SceneManager.LoadScene(0);
     }
 
@@ -35,16 +36,7 @@ public class ScenesManager : MonoBehaviour
         GameManager.Instance.gameMode = GameManager.GameMode.Survival;
         Cursor.visible = false;
         StartCoroutine(LoadAsync(1));
-        //SceneManager.LoadSceneAsync(1);
-        //SceneManager.LoadScene(1);
     }
-
-    /*public void HoldZoneMode()
-    {
-        GameManager.Instance.gameMode = GameManager.GameMode.HoldZone;
-        Cursor.visible = false;
-        SceneManager.LoadScene(2);
-    }*/
 
     public void QuitGame()
     {
