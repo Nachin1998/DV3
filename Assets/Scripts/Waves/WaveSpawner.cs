@@ -10,8 +10,8 @@ public class WaveSpawner : MonoBehaviour
     public class Wave
     {
         public string name;
-        public BaseEnemy enemy;
-        public int enemyAmmount;
+        public List<BaseEnemy> enemy;
+        public List<int> enemyAmmount;
         public float enemiesPerSecond;
     }
 
@@ -131,12 +131,14 @@ public class WaveSpawner : MonoBehaviour
         state = SpawnState.Spawning;
 
         //totalEnemies = wave.enemyAmmount;
-
-        for (int i = 0; i < wave.enemyAmmount; i++)
+        for (int i = 0; i < wave.enemy.Count; i++)
         {
-            SpawnEnemy(wave.enemy);
-            yield return new WaitForSeconds(1 / wave.enemiesPerSecond);
-        }
+            for (int j = 0; j < wave.enemyAmmount[i]; j++)
+            {
+                SpawnEnemy(wave.enemy[i]);
+                yield return new WaitForSeconds(1 / wave.enemiesPerSecond);
+            }
+        }        
 
         state = SpawnState.ActiveWave;
     }
