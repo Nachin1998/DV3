@@ -45,4 +45,4 @@ Otras personas a las que quieran agradecerles, sino sacar este título
 
 ## Links
 
-Download it from itch.io: equipo-2.itch.io/from-the-woods
+Download it from itch.io: <a href="equipo-2.itch.io/from-the-woods">equipo-2.itch.io/from-the-woods</a>
