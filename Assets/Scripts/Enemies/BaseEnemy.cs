@@ -23,6 +23,7 @@ public class BaseEnemy : MonoBehaviour
     public ParticleSystem explosion;
     protected Player playerTarget;     
     protected NavMeshAgent agent;
+    Animator anim;
 
     public bool isDead { get { return health <= 0; } }
 
@@ -35,7 +36,9 @@ public class BaseEnemy : MonoBehaviour
 
         maxAttackSpeedRate = attackSpeedRate;
         agent.speed = speed;
-        playerTarget = FindObjectOfType<Player>();        
+        playerTarget = FindObjectOfType<Player>();
+
+        anim = GetComponent<Animator>();
     }
 
     protected void UpdateBaseEnemy()
@@ -49,9 +52,20 @@ public class BaseEnemy : MonoBehaviour
             agent.speed += Time.deltaTime;
         }
 
+        if(agent.speed >= 0)
+        {
+            anim.SetBool("startedWalking", true);
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("startedWalking", false);
+            anim.SetBool("isWalking", false);
+        }
+
         if (isDead)
         {
-            Die();
+            StartCoroutine(Die(2f));
         }        
     }
 
@@ -77,7 +91,7 @@ public class BaseEnemy : MonoBehaviour
         {
             if (attackSpeedRate <= 0)
             {
-                AttackTarget();
+                StartCoroutine(AttackTarget(2));
             }
             else
             {
@@ -100,14 +114,23 @@ public class BaseEnemy : MonoBehaviour
         }
     }
 
-    public virtual void AttackTarget()
+    IEnumerator AttackTarget(float duration)
     {
+        anim.SetBool("isAttacking", true);
         playerTarget.TakeDamage(damage);
         attackSpeedRate = maxAttackSpeedRate;
+
+        yield return new WaitForSeconds(duration);
+
+        anim.SetBool("isAttacking", false);
     }
 
-    public void Die()
+    IEnumerator Die(float duration)
     {
+        anim.SetBool("isDead", true);
+
+        yield return new WaitForSeconds(duration);
+
         GameObject explosionGO = Instantiate(explosion.gameObject, transform.position, Quaternion.identity);
         Destroy(explosionGO, 2);
         gameObject.SetActive(false);

@@ -49,8 +49,17 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 09c10705d65cde41b3ebd263197221b8
     GuidInternal: 
-    m_lastTime: -8585964849414358739
-    List: []
+    m_lastTime: -8585963100399136910
+    List:
+    - name: MySoundBank
+      guid: a6d18557cc28004bb3fa0044693f89b7
+      id: 3104675574
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MySoundBank
+        ObjectType: 7
+      Path: Default Work Unit\MySoundBank
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -59,8 +68,404 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 66ce0cf28e999d44bd0284df88f7dad3
     GuidInternal: 
-    m_lastTime: -8585964849415148921
-    List: []
+    m_lastTime: -8585963101091610160
+    List:
+    - name: bear_dead
+      guid: 9fd9af914aeaf5418bf90dc627df1445
+      id: 2003226068
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: bear_dead
+        ObjectType: 3
+      Path: Default Work Unit\bear_dead
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: bear_footstep
+      guid: a81d9164aaa7034cbbbe35ecff85fa14
+      id: 3582681732
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: bear_footstep
+        ObjectType: 3
+      Path: Default Work Unit\bear_footstep
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: bear_impact
+      guid: bdb8fdd6da16784480b218296a7d96c0
+      id: 2384465804
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: bear_impact
+        ObjectType: 3
+      Path: Default Work Unit\bear_impact
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: bear_shoot
+      guid: 6d1b3ab8ef5f5c4c9127be10b016fc80
+      id: 4016552735
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: bear_shoot
+        ObjectType: 3
+      Path: Default Work Unit\bear_shoot
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: bear1_voice
+      guid: e74ae128b0e12a489c49adc3f4a42484
+      id: 1067372639
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: bear1_voice
+        ObjectType: 3
+      Path: Default Work Unit\bear1_voice
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: bear2_voice
+      guid: 0655abc6d45a184cb6dfe6ea63da6012
+      id: 485889504
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: bear2_voice
+        ObjectType: 3
+      Path: Default Work Unit\bear2_voice
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: bear3_voice
+      guid: 98dc1a190fb8a64a8431de0a15d43516
+      id: 407021321
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: bear3_voice
+        ObjectType: 3
+      Path: Default Work Unit\bear3_voice
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: bear4_voice
+      guid: 81a6a619f71ebd499e308ea4d20c155a
+      id: 302574538
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: bear4_voice
+        ObjectType: 3
+      Path: Default Work Unit\bear4_voice
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: button_exit
+      guid: 8a5923532b3e5549811d156715829877
+      id: 1778101440
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_exit
+        ObjectType: 3
+      Path: Default Work Unit\button_exit
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: button_others
+      guid: 509f59366acd044493002b9acb2b1ec6
+      id: 2581005265
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_others
+        ObjectType: 3
+      Path: Default Work Unit\button_others
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: button_others_01
+      guid: 81b95ef68e441c41b391f92607d50a82
+      id: 3159091421
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_others_01
+        ObjectType: 3
+      Path: Default Work Unit\button_others_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: button_others_02
+      guid: 07e55cd289aa544994801c97bfd16f6c
+      id: 3159091422
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_others_02
+        ObjectType: 3
+      Path: Default Work Unit\button_others_02
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: button_others_03
+      guid: e04629310b97fd429c3d75307ab4a538
+      id: 3159091423
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_others_03
+        ObjectType: 3
+      Path: Default Work Unit\button_others_03
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: button_others_04
+      guid: 2713f10a25740144b1626a8ef98373e0
+      id: 3159091416
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_others_04
+        ObjectType: 3
+      Path: Default Work Unit\button_others_04
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: button_others_05
+      guid: 2d1e1be54a6ced4db1b50280843a85fd
+      id: 3159091417
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_others_05
+        ObjectType: 3
+      Path: Default Work Unit\button_others_05
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: button_others_06
+      guid: 4c9d9df9626afe4eb3d33d2adf94a5d5
+      id: 3159091418
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_others_06
+        ObjectType: 3
+      Path: Default Work Unit\button_others_06
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: button_others_07
+      guid: 7a51a85b924979459e877f3c98bb17d7
+      id: 3159091419
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_others_07
+        ObjectType: 3
+      Path: Default Work Unit\button_others_07
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: button_play
+      guid: fe742038436e904c88864fdc9d1b6370
+      id: 1394085446
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_play
+        ObjectType: 3
+      Path: Default Work Unit\button_play
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: play_ambient
+      guid: ced398fb41286f44bdc36f8576bc0167
+      id: 1562304622
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_ambient
+        ObjectType: 3
+      Path: Default Work Unit\play_ambient
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: player_batair
+      guid: 04bd576cd185574b980430bf03d34539
+      id: 1526469190
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_batair
+        ObjectType: 3
+      Path: Default Work Unit\player_batair
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: player_bathit
+      guid: d10c447b59be5a408ea936e529991a65
+      id: 1460491645
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_bathit
+        ObjectType: 3
+      Path: Default Work Unit\player_bathit
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: player_bullets
+      guid: 0f4d1d244bea464b90b6b172a7ae59a2
+      id: 2897551616
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_bullets
+        ObjectType: 3
+      Path: Default Work Unit\player_bullets
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: player_dead
+      guid: 248929909f1cc64cb4d0220744a1db37
+      id: 2226114503
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_dead
+        ObjectType: 3
+      Path: Default Work Unit\player_dead
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: player_footstep
+      guid: 4ea20ab5d4f77b4e802c6c7a9a6890dc
+      id: 2453392179
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_footstep
+        ObjectType: 3
+      Path: Default Work Unit\player_footstep
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: player_gunchange
+      guid: 440438957e39264692cd63e92ef0b259
+      id: 646858905
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_gunchange
+        ObjectType: 3
+      Path: Default Work Unit\player_gunchange
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: player_health
+      guid: 6c3df56cb7d6284b91264f9f51dbf752
+      id: 215992295
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_health
+        ObjectType: 3
+      Path: Default Work Unit\player_health
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: player_hurt
+      guid: 681df0bb2e46ad4099065401ff49e20b
+      id: 1068092414
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_hurt
+        ObjectType: 3
+      Path: Default Work Unit\player_hurt
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: player_reload
+      guid: 52b21d001f2aa54ca1cfe7d9532f9f43
+      id: 1650679582
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_reload
+        ObjectType: 3
+      Path: Default Work Unit\player_reload
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: player_sandwich
+      guid: 9367126f3fd2474ebdaaf796515eecb4
+      id: 1825296518
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_sandwich
+        ObjectType: 3
+      Path: Default Work Unit\player_sandwich
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: player_shoot
+      guid: ad6216d5ee57f640a4a80d3d04ad7b6a
+      id: 4004702906
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_shoot
+        ObjectType: 3
+      Path: Default Work Unit\player_shoot
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: shoot_metal
+      guid: 696324d06fba1049befb090445fd9184
+      id: 3081428398
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: shoot_metal
+        ObjectType: 3
+      Path: Default Work Unit\shoot_metal
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: shoot_rock
+      guid: 253e6ed2ee732047a90e171e22c8e468
+      id: 1827768426
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: shoot_rock
+        ObjectType: 3
+      Path: Default Work Unit\shoot_rock
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: shoot_tree
+      guid: 0772266ac3b774418236ee82dd5cd1e4
+      id: 1978508865
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: shoot_tree
+        ObjectType: 3
+      Path: Default Work Unit\shoot_tree
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -103,5 +508,7 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /DV3_WwiseProject
+  - /DV3_WwiseProject/Events
+  - /DV3_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
