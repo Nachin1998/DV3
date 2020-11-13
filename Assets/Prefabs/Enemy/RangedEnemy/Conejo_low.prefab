@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 619964997}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Fire spot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,9 +43,9 @@ GameObject:
   - component: {fileID: 5519597468001493702}
   - component: {fileID: 6645100881201495324}
   - component: {fileID: 5826038453158264340}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Conejo_low
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 6530302005271528576}
   - component: {fileID: 6208515686599748746}
   - component: {fileID: 3747392775629325620}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: polySurface2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 5182408721926741573}
   - component: {fileID: 3964305957209080936}
   - component: {fileID: 3651888095686328610}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: polySurface1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
