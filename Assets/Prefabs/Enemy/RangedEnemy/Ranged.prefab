@@ -168,7 +168,7 @@ MonoBehaviour:
     type: 3}
   isDead: 0
   fireSpot: {fileID: 4393544048617494069}
-  projectile: {fileID: 4334659427414032388, guid: c514042e7c19ff241a4f8457b02a4c4a,
+  projectile: {fileID: -2390918078163990921, guid: 0b33a40371dfafa49861fffcac8292f4,
     type: 3}
   minimumDistanceFromTarget: 20
 --- !u!195 &4905561284245863994

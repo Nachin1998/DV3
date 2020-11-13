@@ -41,7 +41,6 @@ public class Bat : MonoBehaviour
     {
         if (col.CompareTag("Enemy"))
         {
-            Debug.Log("Hit");
             col.GetComponent<BaseEnemy>().TakeDamage(damage);
             col.transform.position += -col.transform.forward * damage * Time.deltaTime;
         }       
