@@ -48,15 +48,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf7b6cbbd8b2854faa082f56260630e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyState: 0
   health: 100
   damage: 1
   speed: 10
   attackDistance: 5
   attackSpeedRate: 0.5
-  enemyHead: {fileID: 0}
-  explosion: {fileID: 1137131228138744862, guid: f7e3609d31e1c5c4eab5859c54c92f9c,
+  explosion: {fileID: 1272897774375861278, guid: a65d740cb07525641a9ee32e642cb0a3,
     type: 3}
-  isDead: 0
 --- !u!195 &8713635112792610798
 NavMeshAgent:
   m_ObjectHideFlags: 0

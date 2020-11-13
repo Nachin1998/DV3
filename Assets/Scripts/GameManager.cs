@@ -7,14 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public enum GameMode
-    {
-        None,
-        Survival,
-        HoldZone
-    }
 
-    public GameMode gameMode = GameMode.None;
     public bool won = false;
 
     private void Awake()

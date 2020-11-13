@@ -17,23 +17,7 @@ public class RangedEnemy : BaseEnemy
     void Update()
     {
         UpdateBaseEnemy();
-
-        switch (GameManager.Instance.gameMode)
-        {
-            case GameManager.GameMode.None:
-                break;
-
-            case GameManager.GameMode.Survival:
-                ChasePlayer();
-                break;
-
-            case GameManager.GameMode.HoldZone:
-                SearchZone();
-                break;
-
-            default:
-                break;
-        }
+        ChasePlayer();
     }
 
     public override void ChasePlayer()
@@ -58,11 +42,6 @@ public class RangedEnemy : BaseEnemy
                 agent.SetDestination(agent.transform.position - direction * Time.deltaTime * agent.speed);
             }
 
-            /*if (enemyHead.gameObject != null)
-            {
-                enemyHead.transform.LookAt(target.transform);
-            }*/
-
             if (Vector3.Distance(transform.position, playerTarget.transform.position) <= attackDistance)
             {
                 if (attackSpeedRate <= 0)
@@ -84,7 +63,7 @@ public class RangedEnemy : BaseEnemy
     void Fire()
     {
         Instantiate(projectile, fireSpot.position, fireSpot.rotation);
-        attackSpeedRate = maxSpeedRate;
+        attackSpeedRate = maxAttackSpeedRate;
     }
 
     /*using System.Collections;

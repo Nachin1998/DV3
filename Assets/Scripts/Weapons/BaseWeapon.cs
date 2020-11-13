@@ -6,8 +6,11 @@ using TMPro;
 public class BaseWeapon : MonoBehaviour
 {
     public Transform playerCamera;
+
     public ParticleSystem muzzleFlash;
-    public ParticleSystem impactEffect;
+    public ParticleSystem enviromentImpactEffect;
+    public ParticleSystem enemyImpactEffect;
+
     public int ammoInClips;
     public int maxAmmo;
     public float fireRate;
@@ -123,10 +126,13 @@ public class BaseWeapon : MonoBehaviour
                 case "Enemy":
                     hit.collider.gameObject.GetComponent<BaseEnemy>().TakeDamage(damage);
                     hit.collider.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                    //hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(direction.normalized * force, ForceMode.Impulse);
+                    PlaceImpactEffect(hit, enemyImpactEffect);
+                    break;
+
+                default:
+                    PlaceImpactEffect(hit, enviromentImpactEffect);
                     break;
             }
-            PlaceImpactEffect(hit);
            
         }
         else
@@ -144,9 +150,9 @@ public class BaseWeapon : MonoBehaviour
         muzzleFlash.Stop();
     }
 
-    protected void PlaceImpactEffect(RaycastHit hitPoint)
+    protected void PlaceImpactEffect(RaycastHit hitPoint, ParticleSystem ps)
     {
-        GameObject impactGO = Instantiate(impactEffect.gameObject, hitPoint.point, Quaternion.LookRotation(hitPoint.normal));
+        GameObject impactGO = Instantiate(ps.gameObject, hitPoint.point, Quaternion.LookRotation(hitPoint.normal));
         Destroy(impactGO, 2f);
     }
 }

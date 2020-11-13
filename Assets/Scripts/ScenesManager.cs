@@ -33,7 +33,6 @@ public class ScenesManager : MonoBehaviour
 
     public void SurvivalMode()
     {
-        GameManager.Instance.gameMode = GameManager.GameMode.Survival;
         Cursor.visible = false;
         StartCoroutine(LoadAsync(1));
     }

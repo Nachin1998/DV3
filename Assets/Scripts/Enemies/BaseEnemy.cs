@@ -4,49 +4,38 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class BaseEnemy : MonoBehaviour
-{    
+{
+    public enum EnemyState
+    {
+        Wandering,
+        Chasing
+    }
+    public EnemyState enemyState = EnemyState.Wandering;
+
     public float health = 100f;
     public float damage = 10f;
     public float speed = 10f;
     public float attackDistance = 3f;
     public float attackSpeedRate = 2f;
-    [Space]
-    public GameObject enemyHead;
-    public GameObject explosion;
 
-    protected GameObject target;
-    protected Player playerTarget;
-    protected GameObject platformTarget;
-     
+    [Space]
+
+    public ParticleSystem explosion;
+    protected Player playerTarget;     
     protected NavMeshAgent agent;
-    protected Rigidbody rb;
-    
-    [HideInInspector] public bool isDead = false;
-    protected float maxSpeedRate;
+
+    public bool isDead { get { return health <= 0; } }
+
+    protected float maxAttackSpeedRate;
 
     // Update is called once per frame
     protected void InitBaseEnemy()
     {
         agent = GetComponent<NavMeshAgent>();
-        rb = GetComponent<Rigidbody>();
 
-        maxSpeedRate = attackSpeedRate;
+        maxAttackSpeedRate = attackSpeedRate;
         agent.speed = speed;
-        switch (GameManager.Instance.gameMode)
-        {
-            case GameManager.GameMode.Survival:
-                target = GameObject.FindGameObjectWithTag("Player");
-                playerTarget = target.GetComponent<Player>();
-                break;
-
-            case GameManager.GameMode.HoldZone:
-                GameObject[] platforms = GameObject.FindGameObjectsWithTag("CapturePoint");
-                platformTarget = platforms[Random.Range(0, platforms.Length)];
-                break;
-
-            default:
-                break;
-        }
+        playerTarget = FindObjectOfType<Player>();        
     }
 
     protected void UpdateBaseEnemy()
@@ -58,11 +47,6 @@ public class BaseEnemy : MonoBehaviour
         else
         {
             agent.speed += Time.deltaTime;
-        }
-        
-        if (health <= 0)
-        {
-            isDead = true;
         }
 
         if (isDead)
@@ -82,10 +66,6 @@ public class BaseEnemy : MonoBehaviour
         if (playerTarget)
         {
             agent.SetDestination(playerTarget.transform.position - distaceToAttack.normalized);
-            if (enemyHead)
-            {
-                enemyHead.transform.LookAt(target.transform);
-            }
         }
 
         if (playerTarget.isDead)
@@ -110,21 +90,9 @@ public class BaseEnemy : MonoBehaviour
         }
     }
 
-    protected void SearchZone()
-    {
-        if (isDead)
-        {
-            return;
-        }
-
-        Vector3 distaceToPlatform = platformTarget.transform.position - transform.position;
-        agent.SetDestination(platformTarget.transform.position - distaceToPlatform.normalized);
-    }
-
     public void TakeDamage(float damage)
     {
         health -= damage;
-        //StartCoroutine(DamageVisual());
 
         if (agent.speed > speed / 2)
         {
@@ -135,18 +103,12 @@ public class BaseEnemy : MonoBehaviour
     public virtual void AttackTarget()
     {
         playerTarget.TakeDamage(damage);
-        attackSpeedRate = maxSpeedRate;
+        attackSpeedRate = maxAttackSpeedRate;
     }
-
-    /*IEnumerator DamageVisual()
-    {
-        yield return new WaitForSeconds(0.02f);
-    }*/
 
     public void Die()
     {
-        //mat.color = startingColor;
-        GameObject explosionGO = Instantiate(explosion, transform.position, Quaternion.identity);
+        GameObject explosionGO = Instantiate(explosion.gameObject, transform.position, Quaternion.identity);
         Destroy(explosionGO, 2);
         gameObject.SetActive(false);
         Destroy(gameObject, 2.1f);
