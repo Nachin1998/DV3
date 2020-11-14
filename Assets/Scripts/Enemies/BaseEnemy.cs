@@ -24,7 +24,6 @@ public class BaseEnemy : MonoBehaviour
     protected Player playerTarget;     
     protected NavMeshAgent agent;
     Animator anim;
-
     public bool isDead { get { return health <= 0; } }
 
     protected float maxAttackSpeedRate;
@@ -84,6 +83,8 @@ public class BaseEnemy : MonoBehaviour
 
         if (playerTarget.isDead)
         {
+            anim.SetBool("startedWalking", false);
+            anim.SetBool("isWalking", false);
             return;
         }
 
@@ -127,6 +128,7 @@ public class BaseEnemy : MonoBehaviour
 
     IEnumerator Die(float duration)
     {
+        agent.speed = 0;
         anim.SetBool("isDead", true);
 
         yield return new WaitForSeconds(duration);

@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 5519597468001493702}
   - component: {fileID: 6645100881201495324}
   - component: {fileID: 5826038453158264340}
+  - component: {fileID: -5871840979187904492}
   m_Layer: 10
   m_Name: Conejo_low
   m_TagString: Enemy
@@ -143,6 +144,25 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4164511204261677510, guid: f006c894d1c5457448adbbdb1e59f6c0, type: 3}
+--- !u!95 &-5871840979187904492
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390059627089522424}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1583536919947119317
 GameObject:
   m_ObjectHideFlags: 0

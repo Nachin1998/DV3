@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16989203456800938}
   m_LocalRotation: {x: 0.012169063, y: -0.002164425, z: 0.17510122, w: 0.9844729}
-  m_LocalPosition: {x: -0.00031731848, y: -0.0074981367, z: 0.000028421595}
+  m_LocalPosition: {x: -0.00031731848, y: -0.0074981367, z: -0.0030364967}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 6676046834903821752}
@@ -275,7 +275,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300621216134842607}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.01604065, z: 0}
+  m_LocalPosition: {x: 0, y: -0.01604065, z: -0.0030649183}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 1499318147037379638}
@@ -505,9 +505,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyState: 0
-  health: 100
+  health: 1
   damage: 1
-  speed: 8
+  speed: 10
   attackDistance: 5
   attackSpeedRate: 0.5
   explosion: {fileID: 1272897774375861278, guid: a65d740cb07525641a9ee32e642cb0a3,
@@ -531,7 +531,7 @@ NavMeshAgent:
   m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 0.02
-  m_BaseOffset: 0.018
+  m_BaseOffset: 0.015
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!54 &4623252819467638117
@@ -683,7 +683,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3697580839676774081}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.024821034, y: -0.09642751, z: -0.5958072}
+  m_LocalPosition: {x: -0.024821034, y: -0.09642751, z: -0.59887207}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 3051809590041313542}
@@ -707,7 +707,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8368722655750445499, guid: da30e2641c04a5f459ba567d31811caa, type: 3}
+  - {fileID: 2100000, guid: 8b43b6c1e54214f45b76519aeaea82b6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -920,7 +920,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6604509839590779130}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0012782555, y: 0.8475, z: -0.1153551}
+  m_LocalPosition: {x: -0.0012782555, y: 0.8475, z: -0.11842}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 3051809590041313542}
@@ -944,7 +944,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8748892135801146194, guid: da30e2641c04a5f459ba567d31811caa, type: 3}
+  - {fileID: 2100000, guid: 56145f81e482b3a43ac1bcad9c79f37f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

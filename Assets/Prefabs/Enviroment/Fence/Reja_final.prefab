@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2709962660082660106}
   - component: {fileID: 8549857140301844467}
   - component: {fileID: 501604522}
-  - component: {fileID: 501604521}
   m_Layer: 13
   m_Name: Reja_final
   m_TagString: Untagged
@@ -94,16 +93,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1340.6499, y: 997.7739, z: 160.43483}
   m_Center: {x: -1.2583313, y: 0, z: 0}
---- !u!65 &501604521
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7970218818546268975}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1340.6499, y: 109.7435, z: 718.9308}
-  m_Center: {x: -1.2583256, y: 554.62103, z: -3.60682}

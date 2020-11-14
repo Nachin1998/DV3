@@ -21,6 +21,7 @@ public class BaseWeapon : MonoBehaviour
     public float range;
     public float damage;
     public float force;
+    protected int ammoInWeapon;
 
     public TextMeshProUGUI ammoText;
 
@@ -31,10 +32,9 @@ public class BaseWeapon : MonoBehaviour
     
     protected bool isShooting = false;
     protected bool isReloading = false;
-    protected bool isOutOfAmmo = false;
-    protected bool isOutOfClips = false;
-    protected bool canReload = false;
-    protected int ammoInWeapon;
+    protected bool isOutOfAmmo { get { return ammoInWeapon == 0; } }
+    protected bool isOutOfClips { get { return maxAmmo == 0; } }
+    protected bool canReload { get { return ammoInWeapon != ammoInClips;  } }
 
     protected void InitWeapon()
     {
@@ -45,35 +45,9 @@ public class BaseWeapon : MonoBehaviour
         maxAmmoCap = maxAmmo;
         muzzleFlash.Stop();
     }
+
     protected void UpdateAmmo()
     {
-        if (maxAmmo == 0)
-        {
-            isOutOfClips = true;
-        }
-        else
-        {
-            isOutOfClips = false;
-        }
-
-        if (ammoInWeapon == ammoInClips)
-        {
-            canReload = false;
-        }
-        else
-        {
-            canReload = true;
-        }
-
-        if (ammoInWeapon == 0)
-        {
-            isOutOfAmmo = true;
-        }
-        else
-        {
-            isOutOfAmmo = false;
-        }
-
         ammoText.text = ammoInWeapon.ToString() + " / " + maxAmmo.ToString();
     }
 
