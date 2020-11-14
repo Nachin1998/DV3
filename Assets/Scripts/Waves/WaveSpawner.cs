@@ -6,14 +6,14 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
-    [System.Serializable]
+    /*[System.Serializable]
     public class Wave
     {
         public string name;
         public List<BaseEnemy> enemy;
         public List<int> enemyAmmount;
         public float enemiesPerSecond;
-    }
+    }*/
 
     public enum SpawnState
     {
@@ -130,12 +130,11 @@ public class WaveSpawner : MonoBehaviour
         
         state = SpawnState.Spawning;
 
-        //totalEnemies = wave.enemyAmmount;
         for (int i = 0; i < wave.enemy.Count; i++)
         {
             for (int j = 0; j < wave.enemyAmmount[i]; j++)
             {
-                SpawnEnemy(wave.enemy[i]);
+                SpawnEnemy(wave.enemy[i], spawnPoints[Random.Range(0, spawnPoints.Length)]);
                 yield return new WaitForSeconds(1 / wave.enemiesPerSecond);
             }
         }        
@@ -143,10 +142,8 @@ public class WaveSpawner : MonoBehaviour
         state = SpawnState.ActiveWave;
     }
 
-    void SpawnEnemy(BaseEnemy enemy)
+    void SpawnEnemy(BaseEnemy enemy, Transform spawnPoint)
     {
-        //Debug.Log("Spawning enemy");
-        Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-        Instantiate(enemy, randomSpawnPoint.position, Quaternion.identity, randomSpawnPoint.transform);
+        Instantiate(enemy, spawnPoint.position, Quaternion.identity, spawnPoint);
     }
 }

@@ -449,7 +449,7 @@ GameObject:
   - component: {fileID: 4623252819467638117}
   - component: {fileID: 462673201892095972}
   m_Layer: 10
-  m_Name: Oso_Animaciones_Remastered
+  m_Name: OsoAnim1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

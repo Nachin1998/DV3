@@ -10,15 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a690e5626dbaf84468a3ae6f2ce3555d, type: 3}
-  m_Name: Wave1
+  m_Name: Wave2
   m_EditorClassIdentifier: 
   name: Wave1
-  enemiesToSpawn:
-  - name: Melee Enemy
-    enemy: {fileID: 1515903172995451603, guid: c9e3a55c3855d514a974889c56a47dc9, type: 3}
-    enemyAmmount: 10
-  - name: Ranged Enemy
-    enemy: {fileID: 4519963250886229754, guid: 1615b742ebe84a049a02120efe02f88f, type: 3}
-    enemyAmmount: 5
-  spawnRate: 0
-  spawnPositions: []
+  enemy:
+  - {fileID: 7481952269645654392, guid: 880dd77814db4634e94fc05a925f06dd, type: 3}
+  - {fileID: 968238122113716416, guid: ec429b94e923f794793fa051466c46da, type: 3}
+  enemyAmmount: 0a00000003000000
+  enemiesPerSecond: 2
