@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public Player player;
-    public Camera weaponCamera;
+    public GameObject weaponHolder;
     [Space]
     public GameObject winMenu;
     public GameObject deathMenu;
@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        weaponCamera.gameObject.SetActive(true);
+        weaponHolder.SetActive(true);
 
         winMenu.SetActive(false);
         deathMenu.SetActive(false);
@@ -43,7 +43,7 @@ public class UIManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
-            weaponCamera.gameObject.SetActive(false);
+            weaponHolder.SetActive(false);
 
             deathMenu.SetActive(true);
             
