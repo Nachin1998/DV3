@@ -743,12 +743,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf7b6cbbd8b2854faa082f56260630e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyState: 0
-  health: 1
+  enemyState: 1
+  health: 120
   damage: 20
-  speed: 6
+  sightRange: 50
   attackDistance: 5
   attackSpeedRate: 1.5
+  chasingSpeed: 10
+  wanderRadius: 20
+  wanderTimer: 10
+  wanderSpeed: 7
+  areaToWander: {fileID: 0}
   explosion: {fileID: 1272897774375861278, guid: a65d740cb07525641a9ee32e642cb0a3,
     type: 3}
 --- !u!195 &8764285363355830325

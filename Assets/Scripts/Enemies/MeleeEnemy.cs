@@ -13,6 +13,5 @@ public class MeleeEnemy : BaseEnemy
     void Update()
     {
         UpdateBaseEnemy();
-        //ChasePlayer();
     }
 }

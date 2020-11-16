@@ -7,9 +7,11 @@ public class BaseEnemy : MonoBehaviour
 {
     public enum EnemyState
     {
+        Idle,
         Wandering,
         Chasing,
-        Attacking
+        Attacking, 
+        Dead
     }
 
     [Header("Enemy Data")]
@@ -18,6 +20,7 @@ public class BaseEnemy : MonoBehaviour
     public float health = 100f;
     public float damage = 10f;
     public float sightRange = 20f;
+
     [Header("Chasing")]
     public float attackDistance = 3f;
     public float attackSpeedRate = 2f;
@@ -34,7 +37,7 @@ public class BaseEnemy : MonoBehaviour
     public ParticleSystem explosion;
     protected Player playerTarget;     
     protected NavMeshAgent agent;
-    Animator anim;
+    protected Animator anim;
     public bool isDead { get { return health <= 0; } }
 
     protected float maxAttackSpeedRate;
@@ -55,49 +58,52 @@ public class BaseEnemy : MonoBehaviour
 
     protected void UpdateBaseEnemy()
     {
-       /* if (agent.velocity.magnitude != 0)// && enemyState != EnemyState.Chasing)
+        if (playerTarget.isDead)
         {
-            anim.SetBool("startedWalking", true);
-            anim.SetBool("isWalking", true);
+            enemyState = EnemyState.Idle;
         }
-        else
-        {
-            anim.SetBool("startedWalking", false);
-            anim.SetBool("isWalking", false);
-        }*/
 
         if (isDead)
         {
-            StartCoroutine(Die(2f));
-            return;
-        }
+            enemyState = EnemyState.Dead;
+        }        
 
         switch (enemyState)
         {
+            case EnemyState.Idle:
+                anim.SetBool("startedWalking", false);
+                anim.SetBool("isWalking", false);
+                anim.SetBool("startedRunning", false);
+                anim.SetBool("isRunning", false);
+                anim.SetBool("isAttacking", false);
+                break;
+
             case EnemyState.Wandering:
-                Wander();
                 if (Vector3.Distance(transform.position, playerTarget.transform.position) <= sightRange)
                 {
                     enemyState = EnemyState.Chasing;
-                }                
+                }
+                Wander();                              
                 break;
 
             case EnemyState.Chasing:
-                ChasePlayer();
-
                 if (Vector3.Distance(transform.position, playerTarget.transform.position) <= attackDistance)
                 {
                     enemyState = EnemyState.Attacking;
                 }
+                ChasePlayer();                
                 break;
 
             case EnemyState.Attacking:
-                Attack();
-
                 if (Vector3.Distance(transform.position, playerTarget.transform.position) >= attackDistance)
                 {
-                    enemyState = EnemyState.Wandering;
+                    enemyState = EnemyState.Chasing;
                 }
+                Attack();                
+                break;
+
+            case EnemyState.Dead:
+                StartCoroutine(Die(2f));
                 break;
 
             default:
@@ -105,39 +111,11 @@ public class BaseEnemy : MonoBehaviour
         }   
     }
 
-    public virtual void ChasePlayer()
-    {
-        agent.speed = chasingSpeed;
-
-        Vector3 distaceToAttack = playerTarget.transform.position - transform.position;
-        if (playerTarget)
-        {
-            agent.SetDestination(playerTarget.transform.position - distaceToAttack.normalized);
-        }
-
-        anim.SetBool("startedRunning", true);
-        anim.SetBool("isRunning", true);
-
-        if (playerTarget.isDead)
-        {
-            anim.SetBool("startedWalking", false);
-            anim.SetBool("isWalking", false);
-            return;
-        }
-    }
-
-    public void Wander()
-    {
+    public virtual void Wander()
+    {  
         agent.speed = wanderSpeed;
 
         timer += Time.deltaTime;
-
-        if (timer >= wanderTimer)
-        {
-            Vector3 newPos = RandomNavSphere(areaToWander.position, wanderRadius, -1);
-            agent.SetDestination(newPos);
-            timer = 0;
-        }
 
         if (agent.velocity.magnitude != 0)
         {
@@ -149,11 +127,50 @@ public class BaseEnemy : MonoBehaviour
             anim.SetBool("startedWalking", false);
             anim.SetBool("isWalking", false);
         }
-        anim.SetBool("startedRunning", false);
-        anim.SetBool("isRunning", false);
+
+        if (timer >= wanderTimer)
+        {
+            Vector3 newPos;
+            if (areaToWander == null)
+            {
+                newPos = RandomNavSphere(transform.position, wanderRadius, -1);
+            }
+            else
+            {
+                newPos = RandomNavSphere(areaToWander.position, wanderRadius, -1);
+            }
+            agent.SetDestination(newPos);
+            timer = 0;
+        }
     }
 
-    public void Attack()
+    public virtual void ChasePlayer()
+    {
+        agent.speed = chasingSpeed;
+
+        if (agent.velocity.magnitude != 0)
+        {
+            anim.SetBool("startedWalking", true);
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("startedWalking", false);
+            anim.SetBool("isWalking", false);
+        }
+
+        Vector3 distaceToAttack = playerTarget.transform.position - transform.position;
+        if (playerTarget)
+        {
+            agent.SetDestination(playerTarget.transform.position - distaceToAttack.normalized);
+        }
+        anim.SetBool("startedWalking", true);
+        anim.SetBool("isWalking", true);
+        anim.SetBool("startedRunning", true);
+        anim.SetBool("isRunning", true);
+    }
+
+    public virtual void Attack()
     {
         attackSpeedRate -= Time.deltaTime;
 
@@ -167,7 +184,7 @@ public class BaseEnemy : MonoBehaviour
         }
     }
 
-    public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
+    public Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
     {
         Vector3 randDirection = Random.insideUnitSphere * dist;
         randDirection += origin;
@@ -183,15 +200,7 @@ public class BaseEnemy : MonoBehaviour
         health -= damage;
     }
 
-    private void ChangeState()
-    {
-        int intState = (int)enemyState;
-        intState++;
-        intState = intState % ((int)EnemyState.Chasing);
-        enemyState = (EnemyState)intState;
-    }
-
-    IEnumerator AttackTarget(float duration)
+    public virtual IEnumerator AttackTarget(float duration)
     {
         anim.SetBool("isAttacking", true);
         playerTarget.TakeDamage(damage);
@@ -213,14 +222,5 @@ public class BaseEnemy : MonoBehaviour
         Destroy(explosionGO, 2);
         gameObject.SetActive(false);
         Destroy(gameObject, 2.1f);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(areaToWander.position, wanderRadius);
-
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, sightRange);
     }
 }
