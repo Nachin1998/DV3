@@ -752,7 +752,7 @@ MonoBehaviour:
   chasingSpeed: 10
   wanderRadius: 20
   wanderTimer: 10
-  wanderSpeed: 7
+  wanderSpeed: 2
   areaToWander: {fileID: 0}
   explosion: {fileID: 1272897774375861278, guid: a65d740cb07525641a9ee32e642cb0a3,
     type: 3}

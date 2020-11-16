@@ -24,7 +24,6 @@ public class WaveSpawner : MonoBehaviour
     [HideInInspector] public SpawnState state = SpawnState.CountDown;
 
     public Wave[] waves;
-    public Transform[] spawnPoints;
     [Space]
     public float timeBetweenWaves = 5f;
     [Space]
@@ -134,7 +133,7 @@ public class WaveSpawner : MonoBehaviour
         {
             for (int j = 0; j < wave.enemyAmmount[i]; j++)
             {
-                SpawnEnemy(wave.enemy[i], spawnPoints[Random.Range(0, spawnPoints.Length)]);
+                SpawnEnemy(wave.enemy[i], wave.spawnPoint);
                 yield return new WaitForSeconds(1 / wave.enemiesPerSecond);
             }
         }        

@@ -10,11 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a690e5626dbaf84468a3ae6f2ce3555d, type: 3}
-  m_Name: Wave2
+  m_Name: Wave1
   m_EditorClassIdentifier: 
   name: Wave1
   enemy:
   - {fileID: 7481952269645654392, guid: 880dd77814db4634e94fc05a925f06dd, type: 3}
-  - {fileID: 968238122113716416, guid: ec429b94e923f794793fa051466c46da, type: 3}
-  enemyAmmount: 0a00000003000000
+  - {fileID: 7431541084582465430, guid: a920c6d08102bbf44bb69fe54e64be61, type: 3}
+  - {fileID: 8903272745203095080, guid: 044b7fb0a24b59f4b82f95276f2c556a, type: 3}
+  - {fileID: 3395464901680180795, guid: 327ec0a8c64fb3246bbfe368bf1e1fd2, type: 3}
+  enemyAmmount: 05000000030000000100000003000000
   enemiesPerSecond: 2
+  spawnPoint: {fileID: 8052140826664281699, guid: 263f490107514bd4ba1d9d428d2f0d48,
+    type: 3}

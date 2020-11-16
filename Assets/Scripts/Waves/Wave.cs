@@ -9,6 +9,8 @@ public class Wave : ScriptableObject
     public List<BaseEnemy> enemy;
     public List<int> enemyAmmount;
     public float enemiesPerSecond;
+    public Transform spawnPoint;
+
     //public List<Transform> spawnPoints;
 
     /*[System.Serializable]

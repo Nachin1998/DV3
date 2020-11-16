@@ -69,8 +69,7 @@ public class RangedEnemy : BaseEnemy
                     StartCoroutine(AttackTarget(2));
                     attackSpeedRate = maxAttackSpeedRate;
                 }
-            }
-           
+            }           
         }        
     }
 
