@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b712dca61926f841b97d880df2a4eb6, type: 3}
+  m_Name: 6A267207-B7C3-4174-8236-EE82DD5CD1E4
+  m_EditorClassIdentifier: 
+  objectName: shoot_tree
+  id: 1978508865
+  guid: 6A267207-B7C3-4174-8236-EE82DD5CD1E4
