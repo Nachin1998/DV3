@@ -109,8 +109,8 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 2
     agentHeight: 3
-    agentSlope: 50.1
-    agentClimb: 0.75
+    agentSlope: 60
+    agentClimb: 1
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
@@ -2545,7 +2545,7 @@ MeshCollider:
   m_GameObject: {fileID: 1276002647}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -49429,13 +49429,13 @@ PrefabInstance:
         type: 3}
       propertyPath: waves.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 2fc996c2fb69c9546806585fff6404a3,
+      objectReference: {fileID: 11400000, guid: 0306436fdd901de43b2b83c65ef1e34b,
         type: 2}
     - target: {fileID: 1651538297834842184, guid: 09da9f9191289864aba58c06bdc5b1df,
         type: 3}
       propertyPath: waves.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 7afc6cbafbb917741b5627b01da7cf5c,
+      objectReference: {fileID: 11400000, guid: 89ba7d75b94f8a34d8b2de18453aa3a7,
         type: 2}
     - target: {fileID: 1651538297834842185, guid: 09da9f9191289864aba58c06bdc5b1df,
         type: 3}

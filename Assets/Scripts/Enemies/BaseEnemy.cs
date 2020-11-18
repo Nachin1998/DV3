@@ -117,16 +117,10 @@ public class BaseEnemy : MonoBehaviour
 
         timer += Time.deltaTime;
 
-        if (agent.velocity.magnitude != 0)
-        {
-            anim.SetBool("startedWalking", true);
-            anim.SetBool("isWalking", true);
-        }
-        else
-        {
-            anim.SetBool("startedWalking", false);
-            anim.SetBool("isWalking", false);
-        }
+
+        anim.SetBool("startedWalking", true);
+        anim.SetBool("isWalking", true);
+
 
         if (timer >= wanderTimer)
         {
@@ -222,5 +216,11 @@ public class BaseEnemy : MonoBehaviour
         Destroy(explosionGO, 2);
         gameObject.SetActive(false);
         Destroy(gameObject, 2.1f);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, sightRange);
     }
 }

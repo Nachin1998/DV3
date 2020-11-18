@@ -21,10 +21,21 @@ public class RangedEnemy : BaseEnemy
 
     public override void ChasePlayer()
     {
-        if (!playerTarget.isDead)
+        agent.speed = chasingSpeed;
+
+        if (agent.velocity.magnitude != 0)
         {
-            anim.SetBool("startedRunning", true);
-            anim.SetBool("isRunning", true);
+            anim.SetBool("startedWalking", true);
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("startedWalking", false);
+            anim.SetBool("isWalking", false);
+        }
+
+        anim.SetBool("startedRunning", true);
+        anim.SetBool("isRunning", true);
 
             Vector3 direction = playerTarget.transform.position - transform.position;
             Debug.Log(direction.magnitude);
@@ -33,12 +44,7 @@ public class RangedEnemy : BaseEnemy
                 agent.stoppingDistance = 40;
                 agent.SetDestination(playerTarget.transform.position);
             }
-        }
-        else
-        {
-            anim.SetBool("startedWalking", false);
-            anim.SetBool("isWalking", false);
-        }
+        
     }
 
     public override void Attack()

@@ -5,15 +5,15 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Waves", fileName = "Wave")]
 public class Wave : ScriptableObject
 {
-    public string name;
+    /*public string name;
     public List<BaseEnemy> enemy;
     public List<int> enemyAmmount;
     public float enemiesPerSecond;
-    public Transform spawnPoint;
+    public Transform spawnPoint;*/
 
     //public List<Transform> spawnPoints;
 
-    /*[System.Serializable]
+    [System.Serializable]
     public class EnemyToSpawn
     {
         public string name;
@@ -23,6 +23,6 @@ public class Wave : ScriptableObject
 
     public string name;
     public List<EnemyToSpawn> enemiesToSpawn;
-    public float spawnRate;
-    public List<Transform> spawnPositions;*/
+    public float enemiesPerSecond;
+    public Transform spawnPoint;
 }

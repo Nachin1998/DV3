@@ -79,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (canSprint)
         {
-            sprintBar.color = Color.blue;
+            sprintBar.color = Color.white;
         }
         else
         {

@@ -125,15 +125,14 @@ public class WaveSpawner : MonoBehaviour
     }
 
     IEnumerator SpawnWave(Wave wave)
-    {
-        
+    {        
         state = SpawnState.Spawning;
 
-        for (int i = 0; i < wave.enemy.Count; i++)
+        for (int i = 0; i < wave.enemiesToSpawn.Count; i++)
         {
-            for (int j = 0; j < wave.enemyAmmount[i]; j++)
+            for (int j = 0; j < wave.enemiesToSpawn[i].enemyAmmount; j++)
             {
-                SpawnEnemy(wave.enemy[i], wave.spawnPoint);
+                SpawnEnemy(wave.enemiesToSpawn[i].enemy, wave.spawnPoint);
                 yield return new WaitForSeconds(1 / wave.enemiesPerSecond);
             }
         }        

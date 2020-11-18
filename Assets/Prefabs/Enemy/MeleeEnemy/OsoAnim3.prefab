@@ -746,7 +746,7 @@ MonoBehaviour:
   enemyState: 1
   health: 120
   damage: 20
-  sightRange: 150
+  sightRange: 300
   attackDistance: 5
   attackSpeedRate: 1.5
   chasingSpeed: 10
