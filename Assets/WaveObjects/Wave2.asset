@@ -18,5 +18,5 @@ MonoBehaviour:
   - {fileID: 968238122113716416, guid: ec429b94e923f794793fa051466c46da, type: 3}
   enemyAmmount: 0a00000003000000
   enemiesPerSecond: 2
-  spawnPoint: {fileID: 5567853998416746458, guid: ab7bfd3dc3451ed428cf94a0815998ae,
+  spawnPoint: {fileID: 5691734613558289737, guid: ab7bfd3dc3451ed428cf94a0815998ae,
     type: 3}

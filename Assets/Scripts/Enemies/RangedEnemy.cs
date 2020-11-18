@@ -59,13 +59,13 @@ public class RangedEnemy : BaseEnemy
         {
             if(agent.velocity.magnitude == 0)
             {
+                anim.SetBool("startedWalking", false);
+                anim.SetBool("isWalking", false);
+                anim.SetBool("startedRunning", false);
+                anim.SetBool("isRunning", false);
+
                 if (attackSpeedRate <= 0)
                 {
-                    anim.SetBool("startedWalking", false);
-                    anim.SetBool("isWalking", false);
-                    anim.SetBool("startedRunning", false);
-                    anim.SetBool("isRunning", false);
-
                     StartCoroutine(AttackTarget(2));
                     attackSpeedRate = maxAttackSpeedRate;
                 }

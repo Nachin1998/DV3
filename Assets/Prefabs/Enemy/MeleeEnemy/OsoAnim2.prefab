@@ -507,13 +507,13 @@ MonoBehaviour:
   enemyState: 1
   health: 50
   damage: 3.5
-  sightRange: 50
+  sightRange: 125
   attackDistance: 5
   attackSpeedRate: 0.2
   chasingSpeed: 10
-  wanderRadius: 20
-  wanderTimer: 10
-  wanderSpeed: 2
+  wanderRadius: 75
+  wanderTimer: 30
+  wanderSpeed: 3
   areaToWander: {fileID: 0}
   explosion: {fileID: 1272897774375861278, guid: a65d740cb07525641a9ee32e642cb0a3,
     type: 3}

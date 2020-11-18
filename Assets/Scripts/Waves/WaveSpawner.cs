@@ -143,6 +143,6 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy(BaseEnemy enemy, Transform spawnPoint)
     {
-        Instantiate(enemy, spawnPoint.position, Quaternion.identity, spawnPoint);
+        Instantiate(enemy, spawnPoint.position, Quaternion.identity);
     }
 }
