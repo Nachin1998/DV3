@@ -43,4 +43,4 @@ This game was also possible thanks to the support of these professors:
 
 ## Links
 
-Download it from itch.io: <a href="equipo-2.itch.io/from-the-woods">equipo-2.itch.io/from-the-woods</a>
+Download it from itch.io: <a href="https://equipo-2.itch.io/from-the-woods">equipo-2.itch.io/from-the-woods</a>
