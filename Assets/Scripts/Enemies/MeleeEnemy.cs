@@ -12,7 +12,6 @@ public class MeleeEnemy : BaseEnemy
 
     void Update()
     {
-        UpdateBaseEnemy();
-        AkSoundEngine.PostEvent("bear_dead", gameObject);
+        UpdateBaseEnemy();        
     }
 }

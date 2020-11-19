@@ -20,7 +20,7 @@ public class Pistol : BaseWeapon
             if (!isReloading && !isOutOfAmmo)
             {
                 Fire();
-                //AkSoundEngine.PostEvent("shoot_tree", gameObject);
+                AkSoundEngine.PostEvent("player_shoot", gameObject);
             }
         }
 

@@ -54,6 +54,8 @@ public class BaseEnemy : MonoBehaviour
 
         anim = GetComponent<Animator>();
         timer = wanderTimer;
+
+        //AkSoundEngine.PostEvent("bear_dead", gameObject);
     }
 
     protected void UpdateBaseEnemy()

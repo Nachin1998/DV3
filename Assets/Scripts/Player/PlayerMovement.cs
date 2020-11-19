@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,6 +35,9 @@ public class PlayerMovement : MonoBehaviour
     bool isSprinting = false;
     bool isOnGround;
 
+    float stepSoundOffset = 0.6f;
+    float movingTimer;
+
     // Update is called once per frame
     private void Start()
     {
@@ -42,6 +46,8 @@ public class PlayerMovement : MonoBehaviour
 
         maxWalkingSpeed = walkingSpeed;
         currentSprint = sprintMaxAmmount;
+
+        movingTimer = stepSoundOffset;
     }
 
     void Update()
@@ -108,6 +114,25 @@ public class PlayerMovement : MonoBehaviour
         velocity.y -= gravity * Time.deltaTime;
 
         controler.Move(velocity * Time.deltaTime);
+
+        if (isWalking)
+        {
+            movingTimer += Time.deltaTime;
+            if(movingTimer >= stepSoundOffset)
+            {
+                AkSoundEngine.PostEvent("player_footstep", gameObject);
+                movingTimer = 0;
+            }            
+        }
+
+        if (isSprinting)
+        {
+            stepSoundOffset = 0.4f;
+        }
+        else
+        {
+            stepSoundOffset = 0.6f;
+        }
     }
 
     public IEnumerator Sprint()
