@@ -508,5 +508,7 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /DV3_WwiseProject
+  - /DV3_WwiseProject/Events
+  - /DV3_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
