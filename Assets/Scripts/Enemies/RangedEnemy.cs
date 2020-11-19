@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class RangedEnemy : BaseEnemy
 {
-    // Start is called before the first frame update
-
     public Transform fireSpot;
     public Projectile projectile;
     public float minimumDistanceFromTarget;
@@ -16,8 +14,7 @@ public class RangedEnemy : BaseEnemy
 
     void Update()
     {
-        UpdateBaseEnemy();
-        
+        UpdateBaseEnemy();        
     }
 
     public override void ChasePlayer()
