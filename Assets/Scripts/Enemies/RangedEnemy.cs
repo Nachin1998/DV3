@@ -17,34 +17,23 @@ public class RangedEnemy : BaseEnemy
     void Update()
     {
         UpdateBaseEnemy();
+        
     }
 
     public override void ChasePlayer()
     {
         agent.speed = chasingSpeed;
 
-        if (agent.velocity.magnitude != 0)
-        {
-            anim.SetBool("startedWalking", true);
-            anim.SetBool("isWalking", true);
-        }
-        else
-        {
-            anim.SetBool("startedWalking", false);
-            anim.SetBool("isWalking", false);
-        }
-
         anim.SetBool("startedRunning", true);
         anim.SetBool("isRunning", true);
 
-            Vector3 direction = playerTarget.transform.position - transform.position;
-            Debug.Log(direction.magnitude);
-            if (direction.magnitude > 40)
-            {
-                agent.stoppingDistance = 40;
-                agent.SetDestination(playerTarget.transform.position);
-            }
-        
+        Vector3 direction = playerTarget.transform.position - transform.position;
+        Debug.Log(direction.magnitude);
+        if (direction.magnitude > 40)
+        {
+            agent.stoppingDistance = 40;
+            agent.SetDestination(playerTarget.transform.position);
+        }        
     }
 
     public override void Attack()

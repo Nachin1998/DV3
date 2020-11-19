@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="135">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="2953616821">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3104675574" Language="SFX" Hash="3197010666">
+			<ObjectPath>\SoundBanks\Default Work Unit\MySoundBank</ObjectPath>
+			<ShortName>MySoundBank</ShortName>
+			<Path>MySoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1067372639" Name="bear1_voice" ObjectPath="\Events\Default Work Unit\bear1_voice" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="485889504" Name="bear2_voice" ObjectPath="\Events\Default Work Unit\bear2_voice" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="407021321" Name="bear3_voice" ObjectPath="\Events\Default Work Unit\bear3_voice" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="302574538" Name="bear4_voice" ObjectPath="\Events\Default Work Unit\bear4_voice" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2003226068" Name="bear_dead" ObjectPath="\Events\Default Work Unit\bear_dead" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3582681732" Name="bear_footstep" ObjectPath="\Events\Default Work Unit\bear_footstep" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2384465804" Name="bear_impact" ObjectPath="\Events\Default Work Unit\bear_impact" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4016552735" Name="bear_shoot" ObjectPath="\Events\Default Work Unit\bear_shoot" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1778101440" Name="button_exit" ObjectPath="\Events\Default Work Unit\button_exit" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2581005265" Name="button_others" ObjectPath="\Events\Default Work Unit\button_others" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3159091421" Name="button_others_01" ObjectPath="\Events\Default Work Unit\button_others_01" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3159091422" Name="button_others_02" ObjectPath="\Events\Default Work Unit\button_others_02" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3159091423" Name="button_others_03" ObjectPath="\Events\Default Work Unit\button_others_03" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3159091416" Name="button_others_04" ObjectPath="\Events\Default Work Unit\button_others_04" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3159091417" Name="button_others_05" ObjectPath="\Events\Default Work Unit\button_others_05" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3159091418" Name="button_others_06" ObjectPath="\Events\Default Work Unit\button_others_06" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3159091419" Name="button_others_07" ObjectPath="\Events\Default Work Unit\button_others_07" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1394085446" Name="button_play" ObjectPath="\Events\Default Work Unit\button_play" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1562304622" Name="play_ambient" ObjectPath="\Events\Default Work Unit\play_ambient" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1526469190" Name="player_batair" ObjectPath="\Events\Default Work Unit\player_batair" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1460491645" Name="player_bathit" ObjectPath="\Events\Default Work Unit\player_bathit" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2897551616" Name="player_bullets" ObjectPath="\Events\Default Work Unit\player_bullets" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2226114503" Name="player_dead" ObjectPath="\Events\Default Work Unit\player_dead" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2453392179" Name="player_footstep" ObjectPath="\Events\Default Work Unit\player_footstep" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="646858905" Name="player_gunchange" ObjectPath="\Events\Default Work Unit\player_gunchange" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="215992295" Name="player_health" ObjectPath="\Events\Default Work Unit\player_health" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1068092414" Name="player_hurt" ObjectPath="\Events\Default Work Unit\player_hurt" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1650679582" Name="player_reload" ObjectPath="\Events\Default Work Unit\player_reload" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1825296518" Name="player_sandwich" ObjectPath="\Events\Default Work Unit\player_sandwich" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4004702906" Name="player_shoot" ObjectPath="\Events\Default Work Unit\player_shoot" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3081428398" Name="shoot_metal" ObjectPath="\Events\Default Work Unit\shoot_metal" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1827768426" Name="shoot_rock" ObjectPath="\Events\Default Work Unit\shoot_rock" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1978508865" Name="shoot_tree" ObjectPath="\Events\Default Work Unit\shoot_tree" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

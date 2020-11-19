@@ -71,6 +71,8 @@ public class BaseEnemy : MonoBehaviour
         switch (enemyState)
         {
             case EnemyState.Idle:
+                agent.speed = 0;
+
                 anim.SetBool("startedWalking", false);
                 anim.SetBool("isWalking", false);
                 anim.SetBool("startedRunning", false);
@@ -117,10 +119,10 @@ public class BaseEnemy : MonoBehaviour
 
         timer += Time.deltaTime;
 
-
+        anim.SetBool("startedRunning", false);
+        anim.SetBool("isRunning", false);
         anim.SetBool("startedWalking", true);
         anim.SetBool("isWalking", true);
-
 
         if (timer >= wanderTimer)
         {
@@ -142,32 +144,22 @@ public class BaseEnemy : MonoBehaviour
     {
         agent.speed = chasingSpeed;
 
-        if (agent.velocity.magnitude != 0)
-        {
-            anim.SetBool("startedWalking", true);
-            anim.SetBool("isWalking", true);
-        }
-        else
-        {
-            anim.SetBool("startedWalking", false);
-            anim.SetBool("isWalking", false);
-        }
+        anim.SetBool("startedRunning", true);
+        anim.SetBool("isRunning", true);
 
         Vector3 distaceToAttack = playerTarget.transform.position - transform.position;
         if (playerTarget)
         {
             agent.SetDestination(playerTarget.transform.position - distaceToAttack.normalized);
         }
-        anim.SetBool("startedWalking", true);
-        anim.SetBool("isWalking", true);
-        anim.SetBool("startedRunning", true);
-        anim.SetBool("isRunning", true);
     }
 
     public virtual void Attack()
     {
         attackSpeedRate -= Time.deltaTime;
 
+        anim.SetBool("startedWalking", false);
+        anim.SetBool("isWalking", false);
         anim.SetBool("startedRunning", false);
         anim.SetBool("isRunning", false);
 

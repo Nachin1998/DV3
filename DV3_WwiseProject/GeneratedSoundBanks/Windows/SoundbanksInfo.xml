@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3104675574" Language="SFX" Hash="3197010666">
+		<SoundBank Id="3104675574" Language="SFX" Hash="115167154">
 			<ObjectPath>\SoundBanks\Default Work Unit\MySoundBank</ObjectPath>
 			<ShortName>MySoundBank</ShortName>
 			<Path>MySoundBank.bnk</Path>
@@ -25,7 +25,14 @@
 				<Event Id="485889504" Name="bear2_voice" ObjectPath="\Events\Default Work Unit\bear2_voice" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="407021321" Name="bear3_voice" ObjectPath="\Events\Default Work Unit\bear3_voice" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="302574538" Name="bear4_voice" ObjectPath="\Events\Default Work Unit\bear4_voice" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2003226068" Name="bear_dead" ObjectPath="\Events\Default Work Unit\bear_dead" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2003226068" Name="bear_dead" ObjectPath="\Events\Default Work Unit\bear_dead" DurationType="OneShot" DurationMin="2.427427" DurationMax="5.827033">
+					<IncludedMemoryFiles>
+						<File Id="958011035" Language="SFX">
+							<ShortName>bear_dead3.wav</ShortName>
+							<Path>SFX\bear_dead3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3582681732" Name="bear_footstep" ObjectPath="\Events\Default Work Unit\bear_footstep" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2384465804" Name="bear_impact" ObjectPath="\Events\Default Work Unit\bear_impact" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="4016552735" Name="bear_shoot" ObjectPath="\Events\Default Work Unit\bear_shoot" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
@@ -39,18 +46,118 @@
 				<Event Id="3159091418" Name="button_others_06" ObjectPath="\Events\Default Work Unit\button_others_06" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3159091419" Name="button_others_07" ObjectPath="\Events\Default Work Unit\button_others_07" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1394085446" Name="button_play" ObjectPath="\Events\Default Work Unit\button_play" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1562304622" Name="play_ambient" ObjectPath="\Events\Default Work Unit\play_ambient" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1526469190" Name="player_batair" ObjectPath="\Events\Default Work Unit\player_batair" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1460491645" Name="player_bathit" ObjectPath="\Events\Default Work Unit\player_bathit" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1562304622" Name="play_ambient" ObjectPath="\Events\Default Work Unit\play_ambient" DurationType="OneShot" DurationMin="0.864858" DurationMax="4.401992">
+					<IncludedMemoryFiles>
+						<File Id="9677936" Language="SFX">
+							<ShortName>play_ambient.wav</ShortName>
+							<Path>SFX\play_ambient_1840DA15.wem</Path>
+						</File>
+						<File Id="140878479" Language="SFX">
+							<ShortName>play_ambient.wav</ShortName>
+							<Path>SFX\play_ambient_208A1956.wem</Path>
+						</File>
+						<File Id="363749502" Language="SFX">
+							<ShortName>play_ambient.wav</ShortName>
+							<Path>SFX\play_ambient_03187BD3.wem</Path>
+						</File>
+						<File Id="512923481" Language="SFX">
+							<ShortName>play_ambient.wav</ShortName>
+							<Path>SFX\play_ambient_A1BCF4A7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1526469190" Name="player_batair" ObjectPath="\Events\Default Work Unit\player_batair" DurationType="OneShot" DurationMin="0.169877" DurationMax="0.309046">
+					<IncludedMemoryFiles>
+						<File Id="507888404" Language="SFX">
+							<ShortName>player_batair.wav</ShortName>
+							<Path>SFX\player_batair_B45CD14D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1460491645" Name="player_bathit" ObjectPath="\Events\Default Work Unit\player_bathit" DurationType="OneShot" DurationMin="0.349542" DurationMax="0.349542">
+					<IncludedMemoryFiles>
+						<File Id="418571893" Language="SFX">
+							<ShortName>player_bathit.wav</ShortName>
+							<Path>SFX\player_bathit_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2897551616" Name="player_bullets" ObjectPath="\Events\Default Work Unit\player_bullets" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2226114503" Name="player_dead" ObjectPath="\Events\Default Work Unit\player_dead" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2453392179" Name="player_footstep" ObjectPath="\Events\Default Work Unit\player_footstep" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2453392179" Name="player_footstep" ObjectPath="\Events\Default Work Unit\player_footstep" DurationType="OneShot" DurationMin="0.675646" DurationMax="1.124762">
+					<IncludedMemoryFiles>
+						<File Id="541672595" Language="SFX">
+							<ShortName>Paso5.wav</ShortName>
+							<Path>SFX\Paso5_10C4C929.wem</Path>
+						</File>
+						<File Id="613067261" Language="SFX">
+							<ShortName>Paso4.wav</ShortName>
+							<Path>SFX\Paso4_10C4C929.wem</Path>
+						</File>
+						<File Id="633252433" Language="SFX">
+							<ShortName>Paso3.wav</ShortName>
+							<Path>SFX\Paso3_10C4C929.wem</Path>
+						</File>
+						<File Id="1052662792" Language="SFX">
+							<ShortName>Paso2.wav</ShortName>
+							<Path>SFX\Paso2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="646858905" Name="player_gunchange" ObjectPath="\Events\Default Work Unit\player_gunchange" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="215992295" Name="player_health" ObjectPath="\Events\Default Work Unit\player_health" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="215992295" Name="player_health" ObjectPath="\Events\Default Work Unit\player_health" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="208970938" Language="SFX">
+							<ShortName>CLOTHES.wav</ShortName>
+							<Path>SFX\CLOTHES_10C4C929.wem</Path>
+						</File>
+						<File Id="721326387" Language="SFX">
+							<ShortName>kid breath run.wav</ShortName>
+							<Path>SFX\kid breath run_D79FB2B7.wem</Path>
+						</File>
+						<File Id="904374131" Language="SFX">
+							<ShortName>KID CRY 1.wav</ShortName>
+							<Path>SFX\KID CRY 1_10C4C929.wem</Path>
+						</File>
+						<File Id="1063716976" Language="SFX">
+							<ShortName>heart.wav</ShortName>
+							<Path>SFX\heart_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1068092414" Name="player_hurt" ObjectPath="\Events\Default Work Unit\player_hurt" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1650679582" Name="player_reload" ObjectPath="\Events\Default Work Unit\player_reload" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1825296518" Name="player_sandwich" ObjectPath="\Events\Default Work Unit\player_sandwich" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="4004702906" Name="player_shoot" ObjectPath="\Events\Default Work Unit\player_shoot" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1650679582" Name="player_reload" ObjectPath="\Events\Default Work Unit\player_reload" DurationType="OneShot" DurationMin="0.510777" DurationMax="0.905344">
+					<IncludedMemoryFiles>
+						<File Id="695209723" Language="SFX">
+							<ShortName>recarga_2.wav</ShortName>
+							<Path>SFX\recarga_2_E0923EC6.wem</Path>
+						</File>
+						<File Id="916686511" Language="SFX">
+							<ShortName>recarga_1.wav</ShortName>
+							<Path>SFX\recarga_1_2176E769.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1825296518" Name="player_sandwich" ObjectPath="\Events\Default Work Unit\player_sandwich" DurationType="OneShot" DurationMin="0.491432" DurationMax="0.747747">
+					<IncludedMemoryFiles>
+						<File Id="140229405" Language="SFX">
+							<ShortName>mordiscos_1.wav</ShortName>
+							<Path>SFX\mordiscos_1_4CE06FDF.wem</Path>
+						</File>
+						<File Id="282399641" Language="SFX">
+							<ShortName>mordiscos_1.wav</ShortName>
+							<Path>SFX\mordiscos_1_62429013.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4004702906" Name="player_shoot" ObjectPath="\Events\Default Work Unit\player_shoot" DurationType="OneShot" DurationMin="0.570772" DurationMax="0.720791">
+					<IncludedMemoryFiles>
+						<File Id="108484305" Language="SFX">
+							<ShortName>disparo_3.wav</ShortName>
+							<Path>SFX\disparo_3_D3950A5C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3081428398" Name="shoot_metal" ObjectPath="\Events\Default Work Unit\shoot_metal" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1827768426" Name="shoot_rock" ObjectPath="\Events\Default Work Unit\shoot_rock" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1978508865" Name="shoot_tree" ObjectPath="\Events\Default Work Unit\shoot_tree" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
