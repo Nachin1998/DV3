@@ -81,6 +81,7 @@ MonoBehaviour:
   pickUpType: 0
   healthRecovery: 20
   ammoRecovery: 0
+  audioEventName: player_sandwich
 --- !u!1 &8064158766124434204
 GameObject:
   m_ObjectHideFlags: 0

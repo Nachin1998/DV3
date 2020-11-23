@@ -4944,6 +4944,7 @@ MonoBehaviour:
   pickUpType: 1
   healthRecovery: 0
   ammoRecovery: 20
+  audioEventName: player_reload
 --- !u!65 &7777722766309959474
 BoxCollider:
   m_ObjectHideFlags: 0

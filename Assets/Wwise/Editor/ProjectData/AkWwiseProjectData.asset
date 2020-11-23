@@ -404,8 +404,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\player_health
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: player_hurt
       guid: 681df0bb2e46ad4099065401ff49e20b
       id: 1068092414
