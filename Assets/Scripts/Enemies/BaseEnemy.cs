@@ -10,7 +10,7 @@ public class BaseEnemy : MonoBehaviour
         Idle,
         Wandering,
         Chasing,
-        Attacking, 
+        Attacking,
         Dead
     }
 
@@ -35,9 +35,10 @@ public class BaseEnemy : MonoBehaviour
     [Space]
 
     public ParticleSystem explosion;
-    protected Player playerTarget;     
+    protected Player playerTarget;
     protected NavMeshAgent agent;
     protected Animator anim;
+    protected bool isAttacking;
     public bool isDead { get { return health <= 0; } }
 
     protected float maxAttackSpeedRate;
@@ -49,13 +50,12 @@ public class BaseEnemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
 
         maxAttackSpeedRate = attackSpeedRate;
+        attackSpeedRate = 0;
         agent.speed = wanderSpeed;
         playerTarget = FindObjectOfType<Player>();
 
         anim = GetComponent<Animator>();
         timer = wanderTimer;
-
-        //AkSoundEngine.PostEvent("bear_dead", gameObject);
     }
 
     protected void UpdateBaseEnemy()
@@ -68,7 +68,7 @@ public class BaseEnemy : MonoBehaviour
         if (isDead)
         {
             enemyState = EnemyState.Dead;
-        }        
+        }
 
         switch (enemyState)
         {
@@ -83,26 +83,14 @@ public class BaseEnemy : MonoBehaviour
                 break;
 
             case EnemyState.Wandering:
-                if (Vector3.Distance(transform.position, playerTarget.transform.position) <= sightRange)
-                {
-                    enemyState = EnemyState.Chasing;
-                }
-                Wander();                              
+                Wander();                
                 break;
 
             case EnemyState.Chasing:
-                if (Vector3.Distance(transform.position, playerTarget.transform.position) <= attackDistance)
-                {
-                    enemyState = EnemyState.Attacking;
-                }
                 ChasePlayer();                
                 break;
 
             case EnemyState.Attacking:
-                if (Vector3.Distance(transform.position, playerTarget.transform.position) >= attackDistance)
-                {
-                    enemyState = EnemyState.Chasing;
-                }
                 Attack();                
                 break;
 
@@ -112,11 +100,16 @@ public class BaseEnemy : MonoBehaviour
 
             default:
                 break;
-        }   
+        }
     }
 
     public virtual void Wander()
-    {  
+    {
+        if (Vector3.Distance(transform.position, playerTarget.transform.position) <= sightRange)
+        {
+            enemyState = EnemyState.Chasing;
+        }
+
         agent.speed = wanderSpeed;
 
         timer += Time.deltaTime;
@@ -144,6 +137,11 @@ public class BaseEnemy : MonoBehaviour
 
     public virtual void ChasePlayer()
     {
+        if (Vector3.Distance(transform.position, playerTarget.transform.position) <= attackDistance)
+        {
+            enemyState = EnemyState.Attacking;
+        }
+
         agent.speed = chasingSpeed;
 
         anim.SetBool("startedRunning", true);
@@ -158,6 +156,12 @@ public class BaseEnemy : MonoBehaviour
 
     public virtual void Attack()
     {
+        if (Vector3.Distance(transform.position, playerTarget.transform.position) >= attackDistance)
+        {
+            attackSpeedRate = 0;
+            enemyState = EnemyState.Wandering;
+        }
+
         attackSpeedRate -= Time.deltaTime;
 
         anim.SetBool("startedWalking", false);
@@ -190,6 +194,7 @@ public class BaseEnemy : MonoBehaviour
 
     public virtual IEnumerator AttackTarget(float duration)
     {
+        isAttacking = true;
         anim.SetBool("isAttacking", true);
         playerTarget.TakeDamage(damage);
         attackSpeedRate = maxAttackSpeedRate;
@@ -197,6 +202,7 @@ public class BaseEnemy : MonoBehaviour
         yield return new WaitForSeconds(duration);
 
         anim.SetBool("isAttacking", false);
+        isAttacking = false;
     }
 
     IEnumerator Die(float duration)

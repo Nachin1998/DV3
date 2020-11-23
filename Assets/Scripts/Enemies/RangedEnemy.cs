@@ -19,13 +19,18 @@ public class RangedEnemy : BaseEnemy
 
     public override void ChasePlayer()
     {
+        if (Vector3.Distance(transform.position, playerTarget.transform.position) <= attackDistance)
+        {
+            enemyState = EnemyState.Attacking;
+        }
+
         agent.speed = chasingSpeed;
 
         anim.SetBool("startedRunning", true);
         anim.SetBool("isRunning", true);
 
         Vector3 direction = playerTarget.transform.position - transform.position;
-        Debug.Log(direction.magnitude);
+
         if (direction.magnitude > 40)
         {
             agent.stoppingDistance = 40;
@@ -35,6 +40,12 @@ public class RangedEnemy : BaseEnemy
 
     public override void Attack()
     {
+        if (Vector3.Distance(transform.position, playerTarget.transform.position) >= attackDistance)
+        {
+            attackSpeedRate = 0;
+            enemyState = EnemyState.Wandering;
+        }
+
         attackSpeedRate -= Time.deltaTime;        
 
         Vector3 direction = playerTarget.transform.position - transform.position;

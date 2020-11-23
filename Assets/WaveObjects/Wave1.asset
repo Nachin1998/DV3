@@ -15,16 +15,16 @@ MonoBehaviour:
   name: Wave1
   enemiesToSpawn:
   - name: Melee
-    enemy: {fileID: 7481952269645654392, guid: 880dd77814db4634e94fc05a925f06dd, type: 3}
+    enemy: {fileID: 5890288233696175762, guid: 2840e5f7213551a438318e5494b6d650, type: 3}
     enemyAmmount: 3
   - name: Melee 2
-    enemy: {fileID: 7431541084582465430, guid: a920c6d08102bbf44bb69fe54e64be61, type: 3}
+    enemy: {fileID: 8837982487687963082, guid: ef7a226f78b8754478a6ace112a1424a, type: 3}
     enemyAmmount: 5
   - name: Melee 3
-    enemy: {fileID: 8903272745203095080, guid: 044b7fb0a24b59f4b82f95276f2c556a, type: 3}
+    enemy: {fileID: 8942367727769409015, guid: d9db1e6e94713d34fb5dd0f874122ed8, type: 3}
     enemyAmmount: 2
   - name: Ranged
-    enemy: {fileID: 3395464901680180795, guid: 327ec0a8c64fb3246bbfe368bf1e1fd2, type: 3}
+    enemy: {fileID: 5176444123357786245, guid: 8289d144b034d9b48bb1585ff6a0e6f4, type: 3}
     enemyAmmount: 4
   enemiesPerSecond: 2
   spawnPoint: {fileID: 3354604341925447903, guid: 263f490107514bd4ba1d9d428d2f0d48,

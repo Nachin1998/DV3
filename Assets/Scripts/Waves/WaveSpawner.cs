@@ -6,15 +6,6 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
-    /*[System.Serializable]
-    public class Wave
-    {
-        public string name;
-        public List<BaseEnemy> enemy;
-        public List<int> enemyAmmount;
-        public float enemiesPerSecond;
-    }*/
-
     public enum SpawnState
     {
         CountDown,
@@ -142,6 +133,6 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy(BaseEnemy enemy, Transform spawnPoint)
     {
-        Instantiate(enemy, spawnPoint.position, Quaternion.identity);
+        Instantiate(enemy, spawnPoint.position, Quaternion.identity, transform);
     }
 }

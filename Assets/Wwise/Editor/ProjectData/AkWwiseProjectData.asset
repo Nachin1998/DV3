@@ -20,7 +20,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b10aa3994264204ab916e6420c0dcc44
     GuidInternal: 
-    m_lastTime: -8585958882431594997
+    m_lastTime: -8585956113796448544
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 1798fb9b95e5d94aa7bd63d3ec520428
     GuidInternal: 
-    m_lastTime: -8585958882432945296
+    m_lastTime: -8585956113799293560
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 09c10705d65cde41b3ebd263197221b8
     GuidInternal: 
-    m_lastTime: -8585958882432885283
+    m_lastTime: -8585956113796498463
     List:
     - name: MySoundBank
       guid: a6d18557cc28004bb3fa0044693f89b7
@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 66ce0cf28e999d44bd0284df88f7dad3
     GuidInternal: 
-    m_lastTime: -8585958882433095329
+    m_lastTime: -8585956113802838296
     List:
     - name: bear_dead
       guid: 9fd9af914aeaf5418bf90dc627df1445
@@ -286,6 +286,30 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: game_pause
+      guid: 373efb9fdc7eb64db3e48a59bae62860
+      id: 2772308904
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: game_pause
+        ObjectType: 3
+      Path: Default Work Unit\game_pause
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: game_start
+      guid: 0397b3a6d1f71043b6906ef399332c4c
+      id: 733168346
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: game_start
+        ObjectType: 3
+      Path: Default Work Unit\game_start
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: play_ambient
       guid: ced398fb41286f44bdc36f8576bc0167
       id: 1562304622
@@ -380,8 +404,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\player_health
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: player_hurt
       guid: 681df0bb2e46ad4099065401ff49e20b
       id: 1068092414
@@ -474,7 +498,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e2f21df832910446b06dfa8cd5186b3d
     GuidInternal: 
-    m_lastTime: -8585958882433085327
+    m_lastTime: -8585956113802828024
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -484,7 +508,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 2f792d5101efac4ab41c252198ec1ee4
     GuidInternal: 
-    m_lastTime: -8585958882432855274
+    m_lastTime: -8585956113796478457
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -494,7 +518,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 33ef5d8b227b8e429d22d0fa44ef4072
     GuidInternal: 
-    m_lastTime: -8585958882432845274
+    m_lastTime: -8585956113796468456
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -504,7 +528,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e9a573a16745b3499ea7287848af91eb
     GuidInternal: 
-    m_lastTime: -8585958882432045101
+    m_lastTime: -8585956113796458452
     List: []
   ExpandedItems:
   - /DV3_WwiseProject
