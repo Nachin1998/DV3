@@ -22,7 +22,6 @@ public class Interactable : MonoBehaviour
             switch (pickUpType)
             {
                 case PickUpType.HealthPickUp:
-
                     if (col.GetComponent<Player>().currentHealth == col.GetComponent<Player>().maxHealth)
                     {
                         return;
@@ -42,7 +41,6 @@ public class Interactable : MonoBehaviour
                     break;
 
                 case PickUpType.AmmoPickUp:
-
                     if (col.GetComponentInChildren<BaseWeapon>() != null)
                     {
                         if (col.GetComponentInChildren<BaseWeapon>().maxAmmo == col.GetComponentInChildren<BaseWeapon>().maxAmmoCap)
