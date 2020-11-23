@@ -13,7 +13,6 @@ public class Interactable : MonoBehaviour
 
     public float healthRecovery;
     public int ammoRecovery;
-    public string audioEventName;
 
     private void OnTriggerEnter(Collider col)
     {
@@ -36,7 +35,7 @@ public class Interactable : MonoBehaviour
                     {
                         col.GetComponent<Player>().currentHealth += healthRecovery;
                     }
-                    AkSoundEngine.PostEvent(audioEventName, gameObject);
+                    AkSoundEngine.PostEvent("player_sandwich", gameObject);
                     Destroy(gameObject);
                     break;
 
@@ -57,7 +56,7 @@ public class Interactable : MonoBehaviour
                         {
                             col.GetComponentInChildren<BaseWeapon>().maxAmmo += ammoRecovery;
                         }
-                        AkSoundEngine.PostEvent(audioEventName, gameObject);
+                        AkSoundEngine.PostEvent("player_reload", gameObject);
                         Destroy(gameObject);
                     }
 

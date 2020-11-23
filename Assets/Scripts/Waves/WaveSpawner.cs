@@ -126,7 +126,7 @@ public class WaveSpawner : MonoBehaviour
                 SpawnEnemy(wave.enemiesToSpawn[i].enemy, wave.spawnPoint);
                 yield return new WaitForSeconds(1 / wave.enemiesPerSecond);
             }
-        }        
+        }
 
         state = SpawnState.ActiveWave;
     }
