@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3104675574" Language="SFX" Hash="4271194459">
+		<SoundBank Id="3104675574" Language="SFX" Hash="2121114501">
 			<ObjectPath>\SoundBanks\Default Work Unit\MySoundBank</ObjectPath>
 			<ShortName>MySoundBank</ShortName>
 			<Path>MySoundBank.bnk</Path>
@@ -25,11 +25,11 @@
 				<Event Id="485889504" Name="bear2_voice" ObjectPath="\Events\Default Work Unit\bear2_voice" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="407021321" Name="bear3_voice" ObjectPath="\Events\Default Work Unit\bear3_voice" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="302574538" Name="bear4_voice" ObjectPath="\Events\Default Work Unit\bear4_voice" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2003226068" Name="bear_dead" ObjectPath="\Events\Default Work Unit\bear_dead" DurationType="OneShot" DurationMin="2.427427" DurationMax="5.827033">
+				<Event Id="2003226068" Name="bear_dead" ObjectPath="\Events\Default Work Unit\bear_dead" DurationType="OneShot" DurationMin="1.533035" DurationMax="3.680047">
 					<IncludedMemoryFiles>
 						<File Id="958011035" Language="SFX">
 							<ShortName>bear_dead3.wav</ShortName>
-							<Path>SFX\bear_dead3_10C4C929.wem</Path>
+							<Path>SFX\bear_dead3_F8700B14.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -74,7 +74,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1460491645" Name="player_bathit" ObjectPath="\Events\Default Work Unit\player_bathit" DurationType="OneShot" DurationMin="0.349542" DurationMax="0.349542">
+				<Event Id="1460491645" Name="player_bathit" ObjectPath="\Events\Default Work Unit\player_bathit" DurationType="OneShot" DurationMin="0.272823" DurationMax="0.467932">
 					<IncludedMemoryFiles>
 						<File Id="418571893" Language="SFX">
 							<ShortName>player_bathit.wav</ShortName>
@@ -109,15 +109,11 @@
 					<IncludedMemoryFiles>
 						<File Id="208970938" Language="SFX">
 							<ShortName>CLOTHES.wav</ShortName>
-							<Path>SFX\CLOTHES_51AB0BD0.wem</Path>
+							<Path>SFX\CLOTHES_652096BC.wem</Path>
 						</File>
 						<File Id="721326387" Language="SFX">
 							<ShortName>kid breath run.wav</ShortName>
-							<Path>SFX\kid breath run_D79FB2B7.wem</Path>
-						</File>
-						<File Id="904374131" Language="SFX">
-							<ShortName>KID CRY 1.wav</ShortName>
-							<Path>SFX\KID CRY 1_10C4C929.wem</Path>
+							<Path>SFX\kid breath run_DE6DA4F2.wem</Path>
 						</File>
 						<File Id="1063716976" Language="SFX">
 							<ShortName>heart.wav</ShortName>
@@ -125,7 +121,26 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1068092414" Name="player_hurt" ObjectPath="\Events\Default Work Unit\player_hurt" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1068092414" Name="player_hurt" ObjectPath="\Events\Default Work Unit\player_hurt" DurationType="OneShot" DurationMin="0.639552" DurationMax="1.099459">
+					<IncludedMemoryFiles>
+						<File Id="425620364" Language="SFX">
+							<ShortName>KID CRY 3.wav</ShortName>
+							<Path>SFX\KID CRY 3_68E5B3BA.wem</Path>
+						</File>
+						<File Id="456418140" Language="SFX">
+							<ShortName>KID CRY 2.wav</ShortName>
+							<Path>SFX\KID CRY 2_C461D450.wem</Path>
+						</File>
+						<File Id="522052368" Language="SFX">
+							<ShortName>KID CRY 4.wav</ShortName>
+							<Path>SFX\KID CRY 4_B0C1ABA7.wem</Path>
+						</File>
+						<File Id="904374131" Language="SFX">
+							<ShortName>KID CRY 1.wav</ShortName>
+							<Path>SFX\KID CRY 1_D7163382.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1650679582" Name="player_reload" ObjectPath="\Events\Default Work Unit\player_reload" DurationType="OneShot" DurationMin="0.510777" DurationMax="0.905344">
 					<IncludedMemoryFiles>
 						<File Id="695209723" Language="SFX">
@@ -162,6 +177,9 @@
 				<Event Id="1827768426" Name="shoot_rock" ObjectPath="\Events\Default Work Unit\shoot_rock" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1978508865" Name="shoot_tree" ObjectPath="\Events\Default Work Unit\shoot_tree" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="3677180323" Name="HEALTH" ObjectPath="\Game Parameters\Default Work Unit\HEALTH"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

@@ -1,6 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{509CF797-F32B-44D2-B0B5-18797F1AB116}" SchemaVersion="97">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{509CF797-F32B-44D2-B0B5-18797F1AB116}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{509CF797-F32B-44D2-B0B5-18797F1AB116}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicPlaylistContainer Name="MX menu" ID="{15B1CF0B-7CA9-4458-B121-BC6C36FC0F2E}" ShortID="567961222">
+					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="110"/>
+						<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="FTW MENU TEST 2" ID="{6C728A8C-0CF7-42D4-B923-C5729F17A312}" ShortID="82220400">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="49091.9492424242"/>
+								<Property Name="Tempo" Type="Real64" Value="110"/>
+								<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="FTW MENU TEST 2" ID="{A4B92D01-70B9-446F-920B-F629A2260E2A}" ShortID="897944822">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FTW MENU TEST 2" ID="{4AAA6D17-5AF7-4680-A1BB-23CEC700446B}">
+											<Language>SFX</Language>
+											<AudioFile>FTW MENU TEST 2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="784470125"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{CA42DD1E-818E-4012-82AD-8BFA7658E9EE}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{1FE85853-BD37-4199-B9C2-9AB87EE1F2C0}">
+											<ClipList>
+												<MusicClip Name="FTW MENU TEST 2" ID="{07ECB5D7-F6DA-4903-A323-0A9899E7CA0A}">
+													<PropertyList>
+														<Property Name="BeginTrimOffset" Type="Real64" Value="3273.84737538889"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="42546.5746481162"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="4.51997796394993"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1116.22193156983"/>
+														<Property Name="PlayAt" Type="Real64" Value="-3273.84737538889"/>
+													</PropertyList>
+													<AudioSourceRef Name="FTW MENU TEST 2" ID="{4AAA6D17-5AF7-4680-A1BB-23CEC700446B}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{4478E5B9-C34E-428C-BCD1-BD5B8D15F655}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>3.27385</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>42.54657</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{E8B20B07-65FB-4445-A3C2-F45825A70BD6}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>3.27385</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>42.54657</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{FFDDE396-1972-474E-8A26-FA2FC9287D85}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>3.27385</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>42.54657</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{881AD2D3-A511-4AED-ABBB-E7A1DF1241E6}"/>
+								<MusicCue Name="Exit Cue" ID="{A88ABD1C-6E17-475A-9B18-D0FA04C6D226}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="39272.7272727273"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{C2956E5A-1B6A-483A-96B6-A1E0CB53AF14}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{F4ECC97B-D39B-4016-8F58-BC0D1E85DF74}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{404168F5-EA79-4884-A81E-81223C599320}" ShortID="920786114">
+							<PropertyList>
+								<Property Name="LoopCount" Type="int16" Value="0">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{859AE9DC-1D84-4F42-AC7F-815C8C34D587}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{38013321-F62E-4D7A-ADEF-9A60BC529E5C}" ShortID="599434176">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="FTW MENU TEST 2" ID="{6C728A8C-0CF7-42D4-B923-C5729F17A312}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>

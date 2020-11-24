@@ -36,7 +36,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="player_hurt" ID="{BBF01D68-462E-40AD-9906-5401FF49E20B}"/>
+				<Event Name="player_hurt" ID="{BBF01D68-462E-40AD-9906-5401FF49E20B}">
+					<ChildrenList>
+						<Action Name="" ID="{2DB1B1BB-FACB-489B-B850-BE3C0C62CC48}" ShortID="406951616">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player hurt" ID="{FF80FE87-B555-481F-86BE-B6F5EC0C2CFD}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="player_batair" ID="{6C57BD04-85D1-4B57-9804-30BF03D34539}">
 					<ChildrenList>
 						<Action Name="" ID="{BF3CFC74-7D72-4EE8-8CB9-99512E6E742B}" ShortID="716127290">
@@ -127,7 +137,35 @@
 				<Event Name="button_others_07" ID="{5BA8517A-4992-4579-9E87-7F3C98BB17D7}"/>
 				<Event Name="button_exit" ID="{5323598A-3E2B-4955-811D-156715829877}"/>
 				<Event Name="game_start" ID="{A6B39703-F7D1-4310-B690-6EF399332C4C}"/>
-				<Event Name="game_pause" ID="{9FFB3E37-7EDC-4DB6-B3E4-8A59BAE62860}"/>
+				<Event Name="menu_start" ID="{1F57A6EA-DFB2-4F97-89CB-2D81923FCF3E}">
+					<ChildrenList>
+						<Action Name="" ID="{60BE05B3-F3FD-41DF-876E-85BC23BBDD80}" ShortID="807062440">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MX menu" ID="{15B1CF0B-7CA9-4458-B121-BC6C36FC0F2E}" WorkUnitID="{509CF797-F32B-44D2-B0B5-18797F1AB116}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pause_on" ID="{C087ACD0-1F02-46A1-AE16-BBE577444486}"/>
+				<Event Name="pause_off" ID="{F916788C-DBD6-41FE-BBA1-7B86EAF62D7E}"/>
+				<Event Name="start_gameplay" ID="{12DBA7DC-E55E-4977-8CCC-EBF5BEDE1A4B}">
+					<ChildrenList>
+						<Action Name="" ID="{A9F850A5-A997-485B-962F-47544911DAF0}" ShortID="899657008">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="8"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MX menu" ID="{15B1CF0B-7CA9-4458-B121-BC6C36FC0F2E}" WorkUnitID="{509CF797-F32B-44D2-B0B5-18797F1AB116}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

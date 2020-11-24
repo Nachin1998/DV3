@@ -5,7 +5,34 @@
 			<ChildrenList>
 				<Sound Name="bear_dead3" ID="{69DDEBAA-6144-4A78-863B-E98008239C14}" ShortID="173947770">
 					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{34671975-F7EC-466C-B613-E9D0B2CD0DBC}">
+										<PropertyList>
+											<Property Name="Max" Type="Real64" Value="7"/>
+											<Property Name="Min" Type="Real64" Value="-46"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{67397C4B-6218-406C-8322-89FF7724C0E0}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="22"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-400</Value>
+							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{FDBD0646-A7A6-4360-877C-C08009C12780}">
@@ -22,6 +49,11 @@
 							<ValueList>
 								<Value>-6</Value>
 							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{42F6CC25-F14A-48C8-8AAF-4ED19A58F449}"/>
+								</ModifierInfo>
+							</ModifierList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>
@@ -34,6 +66,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="bear_dead3" ID="{A967612E-20EB-4E30-AB93-DB9E56F0ECBD}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.182619647355164"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.308564231738035"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.251889168765743"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.50503778337531"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>bear_dead3.wav</AudioFile>
 							<MediaIDList>
@@ -256,6 +295,9 @@
 					</ChildrenList>
 				</RandomSequenceContainer>
 				<BlendContainer Name="Player health" ID="{5B4042E3-B3FF-447A-B678-D082E255E0D7}" ShortID="652205001">
+					<PropertyList>
+						<Property Name="BlendBehavior" Type="int16" Value="1"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
@@ -282,7 +324,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-13</Value>
+										<Value>-16</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -297,10 +339,10 @@
 							<ChildrenList>
 								<AudioFileSource Name="CLOTHES" ID="{74C844F9-0D08-4996-ADD8-7459EB1BBA5B}">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.418765743073048"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.394836272040302"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.227329974811083"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.191435768261965"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="4.35516372795969"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.79471032745591"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>CLOTHES.wav</AudioFile>
@@ -313,9 +355,145 @@
 								<ActiveSource Name="CLOTHES" ID="{74C844F9-0D08-4996-ADD8-7459EB1BBA5B}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="CRY n BREATHE" ID="{4185D152-709A-4198-9B54-764BD0464914}" ShortID="693654445">
+							<PropertyList>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="KID CRY 1" ID="{A1271957-9256-48D2-9F0B-1017E5D73563}" ShortID="1005494322">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{C65490E2-110F-443E-B3B2-4F149DA7DB04}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-200"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-20</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="KID CRY 1" ID="{8E22A572-0068-4BA9-8892-6FC6383FF31B}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.158690176322418"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0680100755667515"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.677581863979849"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>KID CRY 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="904374131"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="KID CRY 1" ID="{8E22A572-0068-4BA9-8892-6FC6383FF31B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="kid breath run" ID="{938AD8CE-3AA4-467F-B593-6C35AEE44B37}" ShortID="688742946">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>380</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E2F319A0-0817-473F-9D1E-B25F1BCD9875}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="328"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="kid breath run" ID="{BEFA6A46-FE4B-403B-B3F0-F658877F2742}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0592560873215787"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.17936544080605"/>
+												<Property Name="LoopEnd" Type="Real64" Value="2.86766671183216"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>kid breath run.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="721326387"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="kid breath run" ID="{BEFA6A46-FE4B-403B-B3F0-F658877F2742}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="KID CRY 1" ID="{A1271957-9256-48D2-9F0B-1017E5D73563}"/>
+								<ItemRef Name="kid breath run" ID="{938AD8CE-3AA4-467F-B593-6C35AEE44B37}"/>
+							</Playlist>
+						</RandomSequenceContainer>
 						<Sound Name="heart" ID="{BF4C2A39-CDED-4F23-8864-A5FEB5AB64C6}" ShortID="1026345264">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -338,9 +516,256 @@
 								<ActiveSource Name="heart" ID="{5774960E-946C-4D22-BC4A-20D8D7D4F7F6}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="kid breath run" ID="{938AD8CE-3AA4-467F-B593-6C35AEE44B37}" ShortID="688742946">
+					</ChildrenList>
+					<BlendTrackList>
+						<BlendTrack Name="LOW LIFE" ID="{EB48A0E1-8EB9-46BB-A2F7-B8B207417C69}" ShortID="302908538">
 							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{9EFBA872-458B-46D2-981A-EC22ADB0EEB9}" ShortID="920826332">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="HEALTH" ID="{10A371F4-3868-499B-8A71-8EC9FB0C16FA}" WorkUnitID="{F81DF2E2-9132-4604-B06D-FA8CD5186B3D}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{C3CDEE6E-949A-48B4-888E-0A154D678A34}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-0.15651</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>0.29807</XPos>
+														<YPos>-4.8086</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>0.29907</XPos>
+														<YPos>-200</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>-200</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="LayerCrossFadeControlInput">
+									<ObjectRef Name="HEALTH" ID="{10A371F4-3868-499B-8A71-8EC9FB0C16FA}" WorkUnitID="{F81DF2E2-9132-4604-B06D-FA8CD5186B3D}"/>
+								</Reference>
+							</ReferenceList>
+							<BlendTrackAssocList>
+								<BlendTrackAssoc>
+									<ItemRef Name="CLOTHES" ID="{664989DF-41F4-494F-888F-1F949A36FE5C}"/>
+									<CrossfadingInfo>
+										<LeftEdgePos>0</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<RightEdgePos>0.0736490979959255</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+								<BlendTrackAssoc>
+									<ItemRef Name="heart" ID="{BF4C2A39-CDED-4F23-8864-A5FEB5AB64C6}"/>
+									<CrossfadingInfo>
+										<LeftEdgePos>0.0533051484436042</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<RightEdgePos>0.269751749766029</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+								<BlendTrackAssoc>
+									<ItemRef Name="CRY n BREATHE" ID="{4185D152-709A-4198-9B54-764BD0464914}"/>
+									<CrossfadingInfo>
+										<LeftEdgePos>0.179270517589694</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<RightEdgePos>0.299846998853468</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+							</BlendTrackAssocList>
+						</BlendTrack>
+					</BlendTrackList>
+				</BlendContainer>
+				<RandomSequenceContainer Name="Player hurt" ID="{FF80FE87-B555-481F-86BE-B6F5EC0C2CFD}" ShortID="900617661">
+					<PropertyList>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-23</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="KID CRY 2" ID="{E9FE5FD6-B934-45F4-8DFF-6EE3665AB3B4}" ShortID="67954774">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-50</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{F9A973BC-B6AE-4006-A62C-159B35B5A9D5}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="51"/>
+													<Property Name="Min" Type="Real64" Value="-202"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KID CRY 2" ID="{227D07DD-6CD2-4242-933B-70B2CD8959CD}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0717884130982368"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.128463476070529"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.283375314861461"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.997481108312342"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KID CRY 2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="456418140"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KID CRY 2" ID="{227D07DD-6CD2-4242-933B-70B2CD8959CD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KID CRY 3" ID="{26527AE3-3811-47B3-99C8-2351ACA4F950}" ShortID="614055476">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4191C4CE-8C16-4E46-A90D-47D1216B1ADD}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="152"/>
+													<Property Name="Min" Type="Real64" Value="-152"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KID CRY 3" ID="{A12F81E1-EB1E-4581-8628-0AF885AA6E35}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.10575314861461"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.251163727959698"/>
+										<Property Name="LoopEnd" Type="Real64" Value="1.0623109468573"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0561813602015113"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.06322600239591"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KID CRY 3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="425620364"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KID CRY 3" ID="{A12F81E1-EB1E-4581-8628-0AF885AA6E35}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KID CRY 4" ID="{CB9222E9-30B7-4011-85F3-EDC341A0C582}" ShortID="249288638">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{BC1FA47E-C0C3-4C6B-80D0-93B84496ACA6}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="177"/>
+													<Property Name="Min" Type="Real64" Value="-202"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KID CRY 4" ID="{C1E5D3F5-F6F5-48DB-8CE2-CA62EBC668F1}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.100755667506297"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0881612090680099"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.26574307304786"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.11586901763224"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KID CRY 4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="522052368"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KID CRY 4" ID="{C1E5D3F5-F6F5-48DB-8CE2-CA62EBC668F1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KID CRY 1" ID="{F57FACA6-36AB-4FEE-AC3D-D7BDEA7B0B6A}" ShortID="809119417">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{F0F4CE1F-E372-48EA-AE8B-51718CF918BC}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-5</Value>
@@ -356,49 +781,18 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="kid breath run" ID="{BEFA6A46-FE4B-403B-B3F0-F658877F2742}">
-									<Language>SFX</Language>
-									<AudioFile>kid breath run.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="721326387"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="kid breath run" ID="{BEFA6A46-FE4B-403B-B3F0-F658877F2742}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="KID CRY 1" ID="{A1271957-9256-48D2-9F0B-1017E5D73563}" ShortID="1005494322">
-							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{C65490E2-110F-443E-B3B2-4F149DA7DB04}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="253"/>
-													<Property Name="Min" Type="Real64" Value="-500"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-14</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="KID CRY 1" ID="{8E22A572-0068-4BA9-8892-6FC6383FF31B}">
+								<AudioFileSource Name="KID CRY 1" ID="{7FDCB048-4E52-449F-976C-E79451230F0E}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.158690176322418"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0680100755667515"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.677581863979849"/>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>KID CRY 1.wav</AudioFile>
 									<MediaIDList>
@@ -407,97 +801,27 @@
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="KID CRY 1" ID="{8E22A572-0068-4BA9-8892-6FC6383FF31B}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</BlendContainer>
-				<RandomSequenceContainer Name="Player hurt" ID="{FF80FE87-B555-481F-86BE-B6F5EC0C2CFD}" ShortID="900617661">
-					<PropertyList>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-9</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="KID CRY 2" ID="{E9FE5FD6-B934-45F4-8DFF-6EE3665AB3B4}" ShortID="67954774">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="KID CRY 2" ID="{227D07DD-6CD2-4242-933B-70B2CD8959CD}">
-									<Language>SFX</Language>
-									<AudioFile>KID CRY 2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="456418140"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="KID CRY 2" ID="{227D07DD-6CD2-4242-933B-70B2CD8959CD}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="KID CRY 3" ID="{26527AE3-3811-47B3-99C8-2351ACA4F950}" ShortID="614055476">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="KID CRY 3" ID="{A12F81E1-EB1E-4581-8628-0AF885AA6E35}">
-									<Language>SFX</Language>
-									<AudioFile>KID CRY 3.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="425620364"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="KID CRY 3" ID="{A12F81E1-EB1E-4581-8628-0AF885AA6E35}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="KID CRY 4" ID="{CB9222E9-30B7-4011-85F3-EDC341A0C582}" ShortID="249288638">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="KID CRY 4" ID="{C1E5D3F5-F6F5-48DB-8CE2-CA62EBC668F1}">
-									<Language>SFX</Language>
-									<AudioFile>KID CRY 4.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="522052368"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="KID CRY 4" ID="{C1E5D3F5-F6F5-48DB-8CE2-CA62EBC668F1}" Platform="Linked"/>
+								<ActiveSource Name="KID CRY 1" ID="{7FDCB048-4E52-449F-976C-E79451230F0E}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
 				<Sound Name="player_bathit" ID="{B22B15EE-4E4A-4D4F-83DF-A153021C3264}" ShortID="621900554">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{FAC73E4F-773A-40A3-944D-818BF952A080}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="429"/>
+											<Property Name="Min" Type="Real64" Value="-505"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
@@ -1056,6 +1380,161 @@
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</BlendContainer>
+				<RandomSequenceContainer Name="Player hurt_01" ID="{4E85F4F9-ED13-4960-9AE4-47AE2674CCFB}" ShortID="403979614">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-23</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="KID CRY 2" ID="{07923F87-0C58-4A1A-824D-5E1AC38EACF2}" ShortID="598694047">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-50</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4130A2BB-77A1-44E9-9A66-812BEE2BE3C3}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="51"/>
+													<Property Name="Min" Type="Real64" Value="-202"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KID CRY 2" ID="{AB67A8F4-8E88-4B0A-91C9-F97CD46FE2A5}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0717884130982368"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.128463476070529"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.283375314861461"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.997481108312342"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KID CRY 2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="456418140"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KID CRY 2" ID="{AB67A8F4-8E88-4B0A-91C9-F97CD46FE2A5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KID CRY 3" ID="{E99A2715-868A-455B-92EF-C55EF8FA5727}" ShortID="546526626">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{0878A18A-166E-46BD-919E-653446B7C1C5}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="152"/>
+													<Property Name="Min" Type="Real64" Value="-152"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KID CRY 3" ID="{00575C31-2415-4CD3-9CBD-7D58B7A072D5}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.10575314861461"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.251163727959698"/>
+										<Property Name="LoopEnd" Type="Real64" Value="1.0623109468573"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0561813602015113"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.06322600239591"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KID CRY 3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="425620364"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KID CRY 3" ID="{00575C31-2415-4CD3-9CBD-7D58B7A072D5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KID CRY 4" ID="{B99D9B6D-CD63-4BBD-BF48-ADE4A888A269}" ShortID="75144887">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C65F9DF5-2031-4C4D-AF76-00B66D8E97E7}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="177"/>
+													<Property Name="Min" Type="Real64" Value="-202"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KID CRY 4" ID="{9E47D56D-E91B-432A-8752-767F97CE105E}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.100755667506297"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0881612090680099"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.26574307304786"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.11586901763224"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KID CRY 4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="522052368"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KID CRY 4" ID="{9E47D56D-E91B-432A-8752-767F97CE105E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

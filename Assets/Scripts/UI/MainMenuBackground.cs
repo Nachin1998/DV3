@@ -17,6 +17,7 @@ public class MainMenuBackground : MonoBehaviour
     void Start()
     {
         background = GetComponent<Image>();
+        AkSoundEngine.PostEvent("player_bathit", gameObject);
     }
 
     // Update is called once per frame
