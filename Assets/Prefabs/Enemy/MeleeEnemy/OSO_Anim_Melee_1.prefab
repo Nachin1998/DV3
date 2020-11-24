@@ -671,7 +671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyState: 1
   health: 100
-  damage: 10
+  damage: 5
   sightRange: 300
   attackDistance: 5
   attackSpeedRate: 1

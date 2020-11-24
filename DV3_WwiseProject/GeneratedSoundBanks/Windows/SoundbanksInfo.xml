@@ -11,12 +11,12 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2062498347">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3426359127">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3104675574" Language="SFX" Hash="2121114501">
+		<SoundBank Id="3104675574" Language="SFX" Hash="1381333096">
 			<ObjectPath>\SoundBanks\Default Work Unit\MySoundBank</ObjectPath>
 			<ShortName>MySoundBank</ShortName>
 			<Path>MySoundBank.bnk</Path>
@@ -46,23 +46,75 @@
 				<Event Id="3159091418" Name="button_others_06" ObjectPath="\Events\Default Work Unit\button_others_06" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3159091419" Name="button_others_07" ObjectPath="\Events\Default Work Unit\button_others_07" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1394085446" Name="button_play" ObjectPath="\Events\Default Work Unit\button_play" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1562304622" Name="play_ambient" ObjectPath="\Events\Default Work Unit\play_ambient" DurationType="OneShot" DurationMin="0.864858" DurationMax="4.401992">
+				<Event Id="1562304622" Name="play_ambient" ObjectPath="\Events\Default Work Unit\play_ambient" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="9677936" Language="SFX">
 							<ShortName>play_ambient.wav</ShortName>
 							<Path>SFX\play_ambient_1840DA15.wem</Path>
 						</File>
+						<File Id="18416221" Language="SFX">
+							<ShortName>Ramas2.wav</ShortName>
+							<Path>SFX\Ramas2_7643567C.wem</Path>
+						</File>
+						<File Id="104741923" Language="SFX">
+							<ShortName>Grillo3.wav</ShortName>
+							<Path>SFX\Grillo3_0E169DA7.wem</Path>
+						</File>
 						<File Id="140878479" Language="SFX">
 							<ShortName>play_ambient.wav</ShortName>
 							<Path>SFX\play_ambient_208A1956.wem</Path>
+						</File>
+						<File Id="266300629" Language="SFX">
+							<ShortName>Ramas1.wav</ShortName>
+							<Path>SFX\Ramas1_10C4C929.wem</Path>
+						</File>
+						<File Id="273651243" Language="SFX">
+							<ShortName>Rana.wav</ShortName>
+							<Path>SFX\Rana_10C4C929.wem</Path>
+						</File>
+						<File Id="274442957" Language="SFX">
+							<ShortName>Ramas2.wav</ShortName>
+							<Path>SFX\Ramas2_10C4C929.wem</Path>
+						</File>
+						<File Id="325537324" Language="SFX">
+							<ShortName>Grillo3.wav</ShortName>
+							<Path>SFX\Grillo3_10C4C929.wem</Path>
 						</File>
 						<File Id="363749502" Language="SFX">
 							<ShortName>play_ambient.wav</ShortName>
 							<Path>SFX\play_ambient_03187BD3.wem</Path>
 						</File>
+						<File Id="492690470" Language="SFX">
+							<ShortName>viento2.wav</ShortName>
+							<Path>SFX\viento2_10C4C929.wem</Path>
+						</File>
+						<File Id="508866808" Language="SFX">
+							<ShortName>susurro2.wav</ShortName>
+							<Path>SFX\susurro2_10C4C929.wem</Path>
+						</File>
 						<File Id="512923481" Language="SFX">
 							<ShortName>play_ambient.wav</ShortName>
 							<Path>SFX\play_ambient_A1BCF4A7.wem</Path>
+						</File>
+						<File Id="648194541" Language="SFX">
+							<ShortName>viento1.wav</ShortName>
+							<Path>SFX\viento1_10C4C929.wem</Path>
+						</File>
+						<File Id="698850561" Language="SFX">
+							<ShortName>susurro3.wav</ShortName>
+							<Path>SFX\susurro3_10C4C929.wem</Path>
+						</File>
+						<File Id="801641602" Language="SFX">
+							<ShortName>susurro4.wav</ShortName>
+							<Path>SFX\susurro4_10C4C929.wem</Path>
+						</File>
+						<File Id="901123229" Language="SFX">
+							<ShortName>Grillo3.wav</ShortName>
+							<Path>SFX\Grillo3_72BBCE16.wem</Path>
+						</File>
+						<File Id="937009985" Language="SFX">
+							<ShortName>susurro1.wav</ShortName>
+							<Path>SFX\susurro1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

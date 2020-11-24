@@ -525,10 +525,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyState: 1
   health: 100
-  damage: 10
+  damage: 1
   sightRange: 300
   attackDistance: 5
-  attackSpeedRate: 1
+  attackSpeedRate: 0.3
   chasingSpeed: 10
   wanderRadius: 75
   wanderTimer: 30

@@ -123,6 +123,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{81C69372-5B4E-401E-9F05-91AD99639822}" ShortID="905210353">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambient" ID="{A34F097C-45D4-4252-BEB7-3D3F655F6E4B}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="bear_footstep" ID="{64911DA8-A7AA-4C03-BBBE-35ECFF85FA14}"/>
@@ -146,6 +153,16 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{7C5B2F26-6CBD-485D-9530-475D55219F81}" ShortID="386882917">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MX gameplay" ID="{962B67B9-F80D-43B5-A207-027B1381AB0C}" WorkUnitID="{509CF797-F32B-44D2-B0B5-18797F1AB116}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="pause_on" ID="{C087ACD0-1F02-46A1-AE16-BBE577444486}"/>
@@ -158,6 +175,24 @@
 								<Property Name="FadeOutCurve" Type="int16" Value="8"/>
 								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MX menu" ID="{15B1CF0B-7CA9-4458-B121-BC6C36FC0F2E}" WorkUnitID="{509CF797-F32B-44D2-B0B5-18797F1AB116}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{48AFD7FF-9774-48EB-B8BE-0F03D457DE34}" ShortID="692869968">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MX gameplay" ID="{962B67B9-F80D-43B5-A207-027B1381AB0C}" WorkUnitID="{509CF797-F32B-44D2-B0B5-18797F1AB116}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="menu_backtomain" ID="{469EF090-2041-48C9-B87F-2DF3B4E5F78D}">
+					<ChildrenList>
+						<Action Name="" ID="{4E2B1F72-34CF-46F6-A95E-EEF766DD2765}" ShortID="168231369">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="MX menu" ID="{15B1CF0B-7CA9-4458-B121-BC6C36FC0F2E}" WorkUnitID="{509CF797-F32B-44D2-B0B5-18797F1AB116}"/>

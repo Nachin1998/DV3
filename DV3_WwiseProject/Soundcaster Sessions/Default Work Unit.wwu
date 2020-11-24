@@ -13,6 +13,10 @@
 							<ObjectRef Name="menu_start" ID="{1F57A6EA-DFB2-4F97-89CB-2D81923FCF3E}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}"/>
 							<Position X="1" Y="1"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="menu_backtomain" ID="{469EF090-2041-48C9-B87F-2DF3B4E5F78D}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}"/>
+							<Position X="2" Y="1"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>

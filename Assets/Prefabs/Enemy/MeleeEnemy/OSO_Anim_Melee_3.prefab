@@ -528,7 +528,7 @@ MonoBehaviour:
   damage: 10
   sightRange: 300
   attackDistance: 5
-  attackSpeedRate: 1
+  attackSpeedRate: 1.5
   chasingSpeed: 10
   wanderRadius: 75
   wanderTimer: 30

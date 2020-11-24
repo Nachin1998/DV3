@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1148620754666819609}
   m_LocalRotation: {x: 0.20874155, y: 0.12171639, z: 0.06534903, w: 0.9681641}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.027023062, y: 0.038238995, z: 0.021277817}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3494850454230857078}
   m_Father: {fileID: 7816767742004084900}
@@ -4944,7 +4944,6 @@ MonoBehaviour:
   pickUpType: 1
   healthRecovery: 0
   ammoRecovery: 20
-  audioEventName: player_reload
 --- !u!65 &7777722766309959474
 BoxCollider:
   m_ObjectHideFlags: 0
