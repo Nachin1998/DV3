@@ -24,8 +24,7 @@ public class Bat : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             if(!isHitting)
-            {
-                AkSoundEngine.PostEvent("player_batair", gameObject);
+            {                
                 StartCoroutine(Hit());
             }
         }
@@ -34,13 +33,18 @@ public class Bat : MonoBehaviour
     public IEnumerator Hit()
     {
         isHitting = true;
-        animator.SetBool("Hitting", true);
-        collider.isTrigger = true;
+        animator.SetBool("isAttacking", true);
 
         yield return new WaitForSeconds(0.3f);
+        collider.isTrigger = true;
+        AkSoundEngine.PostEvent("player_batair", gameObject);
 
+        yield return new WaitForSeconds(0.1f);
         collider.isTrigger = false;
-        animator.SetBool("Hitting", false);
+
+        yield return new WaitForSeconds(0.9f);
+
+        animator.SetBool("isAttacking", false);
         isHitting = false;        
     }
 
@@ -52,17 +56,5 @@ public class Bat : MonoBehaviour
             col.GetComponent<BaseEnemy>().TakeDamage(damage);
             col.transform.position += -col.transform.forward * damage * Time.deltaTime;
         }       
-    }
-
-    private void OnEnable()
-    {
-        transform.position = new Vector3(0, -1, 0);
-        isHitting = false;
-    }
-
-    private void OnDisable()
-    {
-        transform.position = new Vector3(0, -1, 0);
-        isHitting = false;
     }
 }

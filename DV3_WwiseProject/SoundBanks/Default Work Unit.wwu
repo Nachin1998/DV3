@@ -5,39 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="MySoundBank" ID="{5785D1A6-28CC-4B00-B3FA-0044693F89B7}">
 					<ObjectInclusionList>
-						<ObjectRef Name="player_bathit" ID="{7B440CD1-BE59-405A-8EA9-36E529991A65}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="player_hurt" ID="{BBF01D68-462E-40AD-9906-5401FF49E20B}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="player_shoot" ID="{D51662AD-57EE-40F6-A4A8-0D3D04AD7B6A}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="button_others_01" ID="{F65EB981-448E-411C-B391-F92607D50A82}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="shoot_tree" ID="{6A267207-B7C3-4174-8236-EE82DD5CD1E4}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="bear_dead" ID="{91AFD99F-EA4A-41F5-8BF9-0DC627DF1445}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="button_others_03" ID="{312946E0-970B-42FD-9C3D-75307AB4A538}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="button_others_04" ID="{0AF11327-7425-4401-B162-6A8EF98373E0}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="button_others" ID="{36599F50-CD6A-4404-9300-2B9ACB2B1EC6}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="play_ambient" ID="{FB98D3CE-2841-446F-BDC3-6F8576BC0167}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="bear_impact" ID="{D6FDB8BD-16DA-4478-80B2-18296A7D96C0}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="button_others_07" ID="{5BA8517A-4992-4579-9E87-7F3C98BB17D7}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="player_gunchange" ID="{95380444-397E-4626-92CD-63E92EF0B259}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="shoot_rock" ID="{D26E3E25-73EE-4720-A90E-171E22C8E468}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="bear1_voice" ID="{28E14AE7-E1B0-482A-9C49-ADC3F4A42484}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="shoot_metal" ID="{D0246369-BA6F-4910-BEFB-090445FD9184}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="button_others_02" ID="{D25CE507-AA89-4954-9480-1C97BFD16F6C}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="button_exit" ID="{5323598A-3E2B-4955-811D-156715829877}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="bear4_voice" ID="{19A6A681-1EF7-49BD-9E30-8EA4D20C155A}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="bear3_voice" ID="{191ADC98-B80F-4AA6-8431-DE0A15D43516}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="player_health" ID="{6CF53D6C-D6B7-4B28-9126-4F9F51DBF752}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="player_bullets" ID="{241D4D0F-EA4B-4B46-90B6-B172A7AE59A2}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="player_batair" ID="{6C57BD04-85D1-4B57-9804-30BF03D34539}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="bear_footstep" ID="{64911DA8-A7AA-4C03-BBBE-35ECFF85FA14}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="bear2_voice" ID="{C6AB5506-5AD4-4C18-B6DF-E6EA63DA6012}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="bear_shoot" ID="{B83A1B6D-5FEF-4C5C-9127-BE10B016FC80}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="button_play" ID="{382074FE-6E43-4C90-8886-4FDC9D1B6370}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="player_reload" ID="{001DB252-2A1F-4CA5-A1CF-E7D9532F9F43}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="player_dead" ID="{90298924-1C9F-4CC6-B4D0-220744A1DB37}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="button_others_05" ID="{E51B1E2D-6C4A-4DED-B1B5-0280843A85FD}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="player_sandwich" ID="{6F126793-D23F-4E47-BDAA-F796515EECB4}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="player_footstep" ID="{B50AA24E-F7D4-4E7B-802C-6C7A9A6890DC}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="button_others_06" ID="{F99D9D4C-6A62-4EFE-B3D3-3D2ADF94A5D5}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

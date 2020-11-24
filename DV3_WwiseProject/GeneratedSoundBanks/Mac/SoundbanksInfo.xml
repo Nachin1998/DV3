@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3104675574" Language="SFX" Hash="1381333096">
+		<SoundBank Id="3104675574" Language="SFX" Hash="3899134303">
 			<ObjectPath>\SoundBanks\Default Work Unit\MySoundBank</ObjectPath>
 			<ShortName>MySoundBank</ShortName>
 			<Path>MySoundBank.bnk</Path>
@@ -46,6 +46,25 @@
 				<Event Id="3159091418" Name="button_others_06" ObjectPath="\Events\Default Work Unit\button_others_06" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3159091419" Name="button_others_07" ObjectPath="\Events\Default Work Unit\button_others_07" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1394085446" Name="button_play" ObjectPath="\Events\Default Work Unit\button_play" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\game_start" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3719698954" Name="menu_backtomain" ObjectPath="\Events\Default Work Unit\menu_backtomain" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="784470125" Language="SFX">
+							<ShortName>FTW MENU TEST 2.wav</ShortName>
+							<Path>SFX\FTW MENU TEST 2_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3908297853" Name="menu_start" ObjectPath="\Events\Default Work Unit\menu_start" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="784470125" Language="SFX">
+							<ShortName>FTW MENU TEST 2.wav</ShortName>
+							<Path>SFX\FTW MENU TEST 2_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3967028551" Name="pause_off" ObjectPath="\Events\Default Work Unit\pause_off" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3537680115" Name="pause_on" ObjectPath="\Events\Default Work Unit\pause_on" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1562304622" Name="play_ambient" ObjectPath="\Events\Default Work Unit\play_ambient" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="9677936" Language="SFX">
@@ -228,6 +247,46 @@
 				<Event Id="3081428398" Name="shoot_metal" ObjectPath="\Events\Default Work Unit\shoot_metal" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1827768426" Name="shoot_rock" ObjectPath="\Events\Default Work Unit\shoot_rock" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1978508865" Name="shoot_tree" ObjectPath="\Events\Default Work Unit\shoot_tree" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3576058218" Name="start_gameplay" ObjectPath="\Events\Default Work Unit\start_gameplay" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="165428651" Language="SFX">
+							<ShortName>BRASS LOW - 55 BPM 4-4.wav</ShortName>
+							<Path>SFX\BRASS LOW - 55 BPM 4-4_D79FB2B7.wem</Path>
+						</File>
+						<File Id="216819983" Language="SFX">
+							<ShortName>SCREAMS 2 - 55 BPM 4-4.wav</ShortName>
+							<Path>SFX\SCREAMS 2 - 55 BPM 4-4_D79FB2B7.wem</Path>
+						</File>
+						<File Id="253712796" Language="SFX">
+							<ShortName>STEAM BELLS STEEL - 55 BPM 4-4.wav</ShortName>
+							<Path>SFX\STEAM BELLS STEEL - 55 BPM 4-4_D79FB2B7.wem</Path>
+						</File>
+						<File Id="533333160" Language="SFX">
+							<ShortName>PIANO - 55 BPM 4-4.wav</ShortName>
+							<Path>SFX\PIANO - 55 BPM 4-4_D79FB2B7.wem</Path>
+						</File>
+						<File Id="551482605" Language="SFX">
+							<ShortName>TAIKO2 - 55 BPM 4-4.wav</ShortName>
+							<Path>SFX\TAIKO2 - 55 BPM 4-4_D79FB2B7.wem</Path>
+						</File>
+						<File Id="597452169" Language="SFX">
+							<ShortName>VIOLINS - 55 BPM 4-4.wav</ShortName>
+							<Path>SFX\VIOLINS - 55 BPM 4-4_D79FB2B7.wem</Path>
+						</File>
+						<File Id="694658400" Language="SFX">
+							<ShortName>BRASS LOW 2 - 55 BPM 4-4 - BAR 5.wav</ShortName>
+							<Path>SFX\BRASS LOW 2 - 55 BPM 4-4 - BAR 5_D79FB2B7.wem</Path>
+						</File>
+						<File Id="814452999" Language="SFX">
+							<ShortName>TIMBALS - 55 BPM 4-4.wav</ShortName>
+							<Path>SFX\TIMBALS - 55 BPM 4-4_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1062825447" Language="SFX">
+							<ShortName>SCREAMS - 55 BPM 4-4 .wav</ShortName>
+							<Path>SFX\SCREAMS - 55 BPM 4-4 _D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
 			<GameParameters>
 				<GameParameter Id="3677180323" Name="HEALTH" ObjectPath="\Game Parameters\Default Work Unit\HEALTH"/>
