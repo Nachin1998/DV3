@@ -376,6 +376,7 @@ GameObject:
   - component: {fileID: 140250899}
   - component: {fileID: 140250901}
   - component: {fileID: 140250898}
+  - component: {fileID: 140250902}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -476,6 +477,33 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &140250902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140250897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63470d840632916439996ec4870d2990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalMenuBackground: {fileID: 21300000, guid: f8e5e05cdf21de44f8a1260e78623363,
+    type: 3}
+  cursedMenuBackground: {fileID: 21300000, guid: 6294302bf6d1d1140971728f511ccc0f,
+    type: 3}
+  creditsBackground: {fileID: 864829936}
+  creditsText: {fileID: 927760660}
+  normalCreditsBackground: {fileID: 21300000, guid: 673701bb3af460d4596c9364f3d1cdf2,
+    type: 3}
+  cursedCreditsBackground: {fileID: 21300000, guid: 3761bf9e0688d86499b2574a40fa8c87,
+    type: 3}
+  normalCreditsText: {fileID: 21300000, guid: 85f30de9287a8234c894047358e6c4e3, type: 3}
+  cursedCreditsText: {fileID: 21300000, guid: 0a0f0f67f0206da4d94b9885406af2d3, type: 3}
+  minWaitTime: 20
+  maxWaitTime: 30
+  flashDuration: 0.5
 --- !u!1 &168366345
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +515,6 @@ GameObject:
   - component: {fileID: 168366346}
   - component: {fileID: 168366348}
   - component: {fileID: 168366347}
-  - component: {fileID: 168366349}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -551,23 +578,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168366345}
   m_CullTransparentMesh: 0
---- !u!114 &168366349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168366345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63470d840632916439996ec4870d2990, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  normalBackground: {fileID: 21300000, guid: f8e5e05cdf21de44f8a1260e78623363, type: 3}
-  cursedBackground: {fileID: 21300000, guid: 6294302bf6d1d1140971728f511ccc0f, type: 3}
-  minWaitTime: 20
-  maxWaitTime: 30
-  flashDuration: 0.5
 --- !u!1 &217501197
 GameObject:
   m_ObjectHideFlags: 0
@@ -1104,8 +1114,8 @@ RectTransform:
   m_Father: {fileID: 872131743}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5916369}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2326,7 +2336,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1034906941
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2652,9 +2662,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1439178172
 MonoBehaviour:
@@ -3684,8 +3694,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 495791434}
   m_HandleRect: {fileID: 495791433}
   m_Direction: 2
-  m_Value: 1.0000001
-  m_Size: 0.40836313
+  m_Value: 1
+  m_Size: 0.4083632
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
