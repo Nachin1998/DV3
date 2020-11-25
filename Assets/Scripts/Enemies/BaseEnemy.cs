@@ -44,6 +44,10 @@ public class BaseEnemy : MonoBehaviour
     protected float maxAttackSpeedRate;
     protected float timer;
 
+    bool playedDeathSound = false;
+    float stepSoundOffset = 0.6f;
+    float movingTimer;
+
     // Update is called once per frame
     protected void InitBaseEnemy()
     {
@@ -56,13 +60,14 @@ public class BaseEnemy : MonoBehaviour
 
         anim = GetComponent<Animator>();
         timer = wanderTimer;
+        movingTimer = stepSoundOffset;
     }
 
     protected void UpdateBaseEnemy()
     {
         if (playerTarget.isDead)
         {
-            enemyState = EnemyState.Idle;
+            enemyState = EnemyState.Wandering;
         }
 
         if (isDead)
@@ -83,10 +88,12 @@ public class BaseEnemy : MonoBehaviour
                 break;
 
             case EnemyState.Wandering:
+                //StartFootstepsSound();
                 Wander();                
                 break;
 
             case EnemyState.Chasing:
+                //StartFootstepsSound();
                 ChasePlayer();                
                 break;
 
@@ -105,7 +112,7 @@ public class BaseEnemy : MonoBehaviour
 
     public virtual void Wander()
     {
-        if (Vector3.Distance(transform.position, playerTarget.transform.position) <= sightRange)
+        if (Vector3.Distance(transform.position, playerTarget.transform.position) <= sightRange && !playerTarget.isDead)
         {
             enemyState = EnemyState.Chasing;
         }
@@ -209,7 +216,11 @@ public class BaseEnemy : MonoBehaviour
     {
         agent.speed = 0;
         anim.SetBool("isDead", true);
-
+        if (!playedDeathSound)
+        {
+            AkSoundEngine.PostEvent("bear_dead", gameObject);
+            playedDeathSound = true;
+        }
         yield return new WaitForSeconds(duration);
 
         GameObject explosionGO = Instantiate(explosion.gameObject, transform.position, Quaternion.identity);
@@ -218,9 +229,13 @@ public class BaseEnemy : MonoBehaviour
         Destroy(gameObject, 2.1f);
     }
 
-    private void OnDrawGizmos()
+    void StartFootstepsSound()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, sightRange);
-    }
+        movingTimer += Time.deltaTime;
+        if (movingTimer >= stepSoundOffset)
+        {
+            AkSoundEngine.PostEvent("player_footstep", playerTarget.gameObject);
+            movingTimer = 0;
+        }
+    }    
 }

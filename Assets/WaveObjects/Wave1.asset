@@ -16,10 +16,10 @@ MonoBehaviour:
   enemiesToSpawn:
   - name: Melee
     enemy: {fileID: 5890288233696175762, guid: 2840e5f7213551a438318e5494b6d650, type: 3}
-    enemyAmmount: 4
+    enemyAmmount: 2
   - name: Melee 2
     enemy: {fileID: 8837982487687963082, guid: ef7a226f78b8754478a6ace112a1424a, type: 3}
-    enemyAmmount: 3
+    enemyAmmount: 1
   - name: Melee 3
     enemy: {fileID: 8942367727769409015, guid: d9db1e6e94713d34fb5dd0f874122ed8, type: 3}
     enemyAmmount: 2

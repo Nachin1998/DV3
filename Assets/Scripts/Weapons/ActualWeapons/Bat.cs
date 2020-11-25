@@ -36,9 +36,9 @@ public class Bat : MonoBehaviour
         animator.SetBool("isAttacking", true);
 
         yield return new WaitForSeconds(0.3f);
+
         collider.isTrigger = true;
         AkSoundEngine.PostEvent("player_batair", gameObject);
-
         yield return new WaitForSeconds(0.1f);
         collider.isTrigger = false;
 

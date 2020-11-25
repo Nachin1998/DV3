@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
 
     public Light flashlight;
     public Image bloodScreen;
+    bool goHit = false;
 
     void Start()
     {
@@ -48,6 +49,7 @@ public class Player : MonoBehaviour
     {
         currentHealth -= damage;
         StartCoroutine(ScreenDamage(1));
+        AkSoundEngine.PostEvent("player_hurt", gameObject);
     }
 
     public IEnumerator ScreenDamage(float bloodDuration)

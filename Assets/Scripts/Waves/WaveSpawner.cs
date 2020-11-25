@@ -28,6 +28,8 @@ public class WaveSpawner : MonoBehaviour
     int currentWave = 0;
     int nextWave = 0;
 
+    bool playSound = false;
+
     TextMeshProUGUI enemyAmmountText;
 
     void Start()
@@ -63,6 +65,12 @@ public class WaveSpawner : MonoBehaviour
         if (waveCountdown <= 0)
         {
             waveStateText.text = "Spawning Nightmares...";
+            if (!playSound)
+            {
+                AkSoundEngine.PostEvent("play_ambient", gameObject);
+                playSound = true;
+            }
+
             if (state != SpawnState.ActiveWave)
             {
                 waveCountdown = 0;
@@ -88,7 +96,7 @@ public class WaveSpawner : MonoBehaviour
         state = SpawnState.CountDown;
         waveCountdown = timeBetweenWaves;
         totalEnemies = 0;
-
+        playSound = false;
         if (nextWave + 1 > waves.Length - 1)
         {
             GameManager.Instance.won = true;
