@@ -28,7 +28,7 @@ public class Pistol : BaseWeapon
         {
             if (!isReloading && !isOutOfClips && canReload)
             {
-                StartCoroutine(Reload(2.8f));
+                StartCoroutine(Reload(5f));
             }
         }
     }

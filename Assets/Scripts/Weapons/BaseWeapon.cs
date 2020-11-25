@@ -28,7 +28,6 @@ public class BaseWeapon : MonoBehaviour
     public LayerMask raycastLayer;
 
     protected Animator animator;
-    protected AudioSource shotSound;
     
     protected bool isShooting = false;
     protected bool isReloading = false;
@@ -39,7 +38,6 @@ public class BaseWeapon : MonoBehaviour
     protected void InitWeapon()
     {
         animator = GetComponent<Animator>();
-        shotSound = GetComponent<AudioSource>();
         
         ammoInWeapon = ammoInClips;
         maxAmmoCap = maxAmmo;
@@ -86,7 +84,6 @@ public class BaseWeapon : MonoBehaviour
         ammoInWeapon--;
         muzzleFlash.Play();
         animator.SetBool("isShooting", true);
-        shotSound.Play();
 
         if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, range, raycastLayer))
         {
