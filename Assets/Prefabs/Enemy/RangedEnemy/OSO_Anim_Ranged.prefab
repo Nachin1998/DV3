@@ -1102,9 +1102,9 @@ MonoBehaviour:
   attackDistance: 40
   attackSpeedRate: 1
   chasingSpeed: 10
-  wanderRadius: 50
+  wanderRadius: 75
   wanderTimer: 5
-  wanderSpeed: 2
+  wanderSpeed: 1
   areaToWander: {fileID: 0}
   explosion: {fileID: 1272897774375861278, guid: a65d740cb07525641a9ee32e642cb0a3,
     type: 3}
