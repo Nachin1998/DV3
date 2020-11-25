@@ -6974,6 +6974,11 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 1517842110}
+    - target: {fileID: 4813908789986839195, guid: 31b72e23eef2b30488e6c4ed5f6eeadc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b8b0e24e821a1644ab01328fcb1603f, type: 2}
     - target: {fileID: 6605785450817582048, guid: 31b72e23eef2b30488e6c4ed5f6eeadc,
         type: 3}
       propertyPath: m_LocalPosition.x
