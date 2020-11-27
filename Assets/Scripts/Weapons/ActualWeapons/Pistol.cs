@@ -14,7 +14,6 @@ public class Pistol : BaseWeapon
             return;
         }
 
-        UpdateAmmo();
         if (Input.GetMouseButtonDown(0))
         {
             if (!isReloading && !isOutOfAmmo)

@@ -17,7 +17,6 @@ public class PlayerMovement : MonoBehaviour
 
     public Image sprintBar;
 
-    //public Animator weaponAnim;
     public List <Animator> weaponAnim = new List<Animator>();
 
     public float jumpHeight = 3f;
@@ -27,15 +26,15 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
-    Vector3 velocity;
-    float maxWalkingSpeed;
-    float currentSprint;
-    bool isWalking;
-    bool canSprint = true;
-    bool isSprinting = false;
-    bool isOnGround;
+    [HideInInspector]public float maxWalkingSpeed;
+    [HideInInspector]public float currentSprint;
+    [HideInInspector]public bool isWalking;
+    [HideInInspector]public bool canSprint = true;
+    [HideInInspector]public bool isSprinting = false;
+    [HideInInspector]public bool isOnGround;
 
-    float stepSoundOffset = 0.6f;
+    Vector3 velocity;
+    float stepSoundOffset = 1f;
     float movingTimer;
 
     // Update is called once per frame
@@ -63,8 +62,6 @@ public class PlayerMovement : MonoBehaviour
         isWalking = (x != 0 || z != 0);
         isOnGround = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        sprintBar.fillAmount = currentSprint / 100;
-
         for (int i = 0; i < weaponAnim.Count; i++)
         {
             if (weaponAnim[i].isActiveAndEnabled)
@@ -81,15 +78,6 @@ public class PlayerMovement : MonoBehaviour
         if (currentSprint > sprintMaxAmmount)
         {
             currentSprint = sprintMaxAmmount;
-        }
-
-        if (canSprint)
-        {
-            sprintBar.color = Color.white;
-        }
-        else
-        {
-            sprintBar.color = Color.red;
         }
 
         for (int i = 0; i < weaponAnim.Count; i++)
@@ -127,11 +115,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (isSprinting)
         {
-            stepSoundOffset = 0.4f;
+            stepSoundOffset = 0.6f;
         }
         else
         {
-            stepSoundOffset = 0.6f;
+            stepSoundOffset = 1f;
         }
     }
 

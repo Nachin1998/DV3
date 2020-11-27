@@ -17,27 +17,19 @@ public class WaveSpawner : MonoBehaviour
     public Wave[] waves;
     [Space]
     public float timeBetweenWaves = 5f;
-    [Space]
-    public GameObject enemyAmmount;
-    public TextMeshProUGUI waveStateText;
 
-    int totalEnemies = 0;
+    [HideInInspector]public int totalEnemies = 0;
 
     float searchingLiveEnemiesCountdown = 1f;
-    float waveCountdown = 0f;
+    public float waveCountdown = 0f;
     int currentWave = 0;
     int nextWave = 0;
 
     bool playSound = false;
 
-    TextMeshProUGUI enemyAmmountText;
-
     void Start()
     {
         waveCountdown = timeBetweenWaves;
-        enemyAmmountText = enemyAmmount.GetComponentInChildren<TextMeshProUGUI>();
-
-        enemyAmmount.gameObject.SetActive(false);
     }
 
     void Update()
@@ -51,10 +43,6 @@ public class WaveSpawner : MonoBehaviour
         {
             totalEnemies = FindObjectsOfType<BaseEnemy>().Length;
 
-            waveStateText.gameObject.SetActive(false);
-            enemyAmmount.SetActive(true);
-            enemyAmmountText.text = "x " + totalEnemies.ToString();
-
             if (!AreEnemiesAlive())
             {
                 EndWave();
@@ -64,7 +52,6 @@ public class WaveSpawner : MonoBehaviour
         
         if (waveCountdown <= 0)
         {
-            waveStateText.text = "Spawning Nightmares...";
             if (!playSound)
             {
                 AkSoundEngine.PostEvent("play_ambient", gameObject);
@@ -82,12 +69,7 @@ public class WaveSpawner : MonoBehaviour
         }
         else
         {
-            waveStateText.gameObject.SetActive(true);
-            enemyAmmount.gameObject.SetActive(false);
             waveCountdown -= Time.deltaTime;
-
-            //enemyAmmountText.text = "All enemies defeated";
-            waveStateText.text = "Next wave in: " + waveCountdown.ToString("F2");
         }        
     }
 

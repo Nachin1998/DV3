@@ -7,31 +7,24 @@ public class Player : MonoBehaviour
 {
     public float currentHealth;
     public float maxHealth = 100f;
-    public Image healthBar;
     
     [HideInInspector] public bool isDead = false;
 
     public Light flashlight;
-    public Image bloodScreen;
-    bool goHit = false;
+    public bool tookDamage = false;
 
     void Start()
     {
-        healthBar.fillAmount = currentHealth / 100;
-        bloodScreen.gameObject.SetActive(false);
-
         currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (isDead)
         {
             return;
         }
-
-        healthBar.fillAmount = currentHealth / 100;
 
         if (Input.GetKeyDown(KeyCode.F))
         {
@@ -48,15 +41,14 @@ public class Player : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        StartCoroutine(ScreenDamage(1));
+        StartCoroutine(TookDamage(0.5f));
         AkSoundEngine.PostEvent("player_hurt", gameObject);
     }
 
-    public IEnumerator ScreenDamage(float bloodDuration)
+    public IEnumerator TookDamage(float bloodDuration)
     {
-        bloodScreen.gameObject.SetActive(true);
-        bloodScreen.CrossFadeAlpha(0, bloodDuration, false);
+        tookDamage = true;
         yield return new WaitForSeconds(bloodDuration);
-        bloodScreen.gameObject.SetActive(false);
+        tookDamage = false;
     }
 }

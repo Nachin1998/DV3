@@ -21,9 +21,7 @@ public class BaseWeapon : MonoBehaviour
     public float range;
     public float damage;
     public float force;
-    protected int ammoInWeapon;
-
-    public TextMeshProUGUI ammoText;
+    public int ammoInWeapon;
 
     public LayerMask raycastLayer;
 
@@ -42,11 +40,6 @@ public class BaseWeapon : MonoBehaviour
         ammoInWeapon = ammoInClips;
         maxAmmoCap = maxAmmo;
         muzzleFlash.Stop();
-    }
-
-    protected void UpdateAmmo()
-    {
-        ammoText.text = ammoInWeapon.ToString() + " / " + maxAmmo.ToString();
     }
 
     void OnDisable()

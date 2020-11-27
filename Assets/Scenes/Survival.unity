@@ -2226,6 +2226,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701394481}
   m_CullTransparentMesh: 0
+--- !u!114 &840875077 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1775641717, guid: 31b72e23eef2b30488e6c4ed5f6eeadc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1425458880213277779}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdf5781cab736954e92b4341e0f07745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &877822989
 GameObject:
   m_ObjectHideFlags: 0
@@ -4366,7 +4378,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.871313, g: 0.6933962, b: 1, a: 1}
-  m_Intensity: 0.7
+  m_Intensity: 1.7
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5683,6 +5695,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1835286403}
   - component: {fileID: 1835286402}
+  - component: {fileID: 1835286404}
+  - component: {fileID: 1835286405}
+  - component: {fileID: 1835286406}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -5726,6 +5741,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1835286404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835286401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9519ceff14275844392254a961dcf3b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 473087293}
+  healthBar: {fileID: 160769136}
+  bloodScreen: {fileID: 1946413142}
+  sprintBar: {fileID: 1088150428}
+--- !u!114 &1835286405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835286401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06b1bfc474a90f419955bd5aedae602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bw: {fileID: 840875077}
+  ammoText: {fileID: 1517842110}
+--- !u!114 &1835286406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835286401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c14dcd85e5652a4d82341e398b1eba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ws: {fileID: 160580756}
+  enemyAmmount: {fileID: 1780501897}
+  waveStateText: {fileID: 662257937}
 --- !u!4 &1842411939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3259925729969720197, guid: 41fed48557fca7742892d599371697b4,
