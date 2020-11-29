@@ -27,6 +27,7 @@ public class Pistol : BaseWeapon
         {
             if (!isReloading && !isOutOfClips && canReload)
             {
+                AkSoundEngine.PostEvent("player_reload", gameObject);
                 StartCoroutine(Reload(3.5f));
             }
         }

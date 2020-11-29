@@ -3,10 +3,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	302574538	bear4_voice			\Default Work Unit\bear4_voice	
 	407021321	bear3_voice			\Default Work Unit\bear3_voice	
 	485889504	bear2_voice			\Default Work Unit\bear2_voice	
+	510827497	button_back			\Default Work Unit\button_back	
 	646858905	player_gunchange			\Default Work Unit\player_gunchange	
 	733168346	game_start			\Default Work Unit\game_start	
+	804193798	button_credits			\Default Work Unit\button_credits	
 	1067372639	bear1_voice			\Default Work Unit\bear1_voice	
 	1068092414	player_hurt			\Default Work Unit\player_hurt	
+	1136530457	button_restart			\Default Work Unit\button_restart	
 	1394085446	button_play			\Default Work Unit\button_play	
 	1460491645	player_bathit			\Default Work Unit\player_bathit	
 	1526469190	player_batair			\Default Work Unit\player_batair	
@@ -15,21 +18,17 @@ Event	ID	Name			Wwise Object Path	Notes
 	1778101440	button_exit			\Default Work Unit\button_exit	
 	1825296518	player_sandwich			\Default Work Unit\player_sandwich	
 	1827768426	shoot_rock			\Default Work Unit\shoot_rock	
+	1961981585	button_resume			\Default Work Unit\button_resume	
 	1978508865	shoot_tree			\Default Work Unit\shoot_tree	
 	2003226068	bear_dead			\Default Work Unit\bear_dead	
 	2226114503	player_dead			\Default Work Unit\player_dead	
 	2384465804	bear_impact			\Default Work Unit\bear_impact	
 	2453392179	player_footstep			\Default Work Unit\player_footstep	
-	2581005265	button_others			\Default Work Unit\button_others	
 	2897551616	player_bullets			\Default Work Unit\player_bullets	
 	3081428398	shoot_metal			\Default Work Unit\shoot_metal	
-	3159091416	button_others_04			\Default Work Unit\button_others_04	
 	3159091417	button_others_05			\Default Work Unit\button_others_05	
 	3159091418	button_others_06			\Default Work Unit\button_others_06	
 	3159091419	button_others_07			\Default Work Unit\button_others_07	
-	3159091421	button_others_01			\Default Work Unit\button_others_01	
-	3159091422	button_others_02			\Default Work Unit\button_others_02	
-	3159091423	button_others_03			\Default Work Unit\button_others_03	
 	3537680115	pause_on			\Default Work Unit\pause_on	
 	3576058218	start_gameplay			\Default Work Unit\start_gameplay	
 	3582681732	bear_footstep			\Default Work Unit\bear_footstep	
@@ -38,68 +37,77 @@ Event	ID	Name			Wwise Object Path	Notes
 	3967028551	pause_off			\Default Work Unit\pause_off	
 	4004702906	player_shoot			\Default Work Unit\player_shoot	
 	4016552735	bear_shoot			\Default Work Unit\bear_shoot	
+	4251422607	button_settings			\Default Work Unit\button_settings	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	3677180323	HEALTH			\Default Work Unit\HEALTH	
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	51063578	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Player hurt\Silence_04\Wwise Silence	
 	84345220	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Pisadas ramas\Silencio\Wwise Silence	
+	94220565	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Player hurt\Silence_01\Wwise Silence	
+	321316395	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Grillos\Grillos\Silencio\Wwise Silence	
+	346742326	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Grillos\Grillos\Silencio_01\Wwise Silence	
+	411726151	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Player hurt\Silence_02\Wwise Silence	
 	495260618	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Ranas\Silencio\Wwise Silence	
+	504810746	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Ranas\Ranas\Silencio_01\Wwise Silence	
+	536084755	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Player hurt\Silence_03\Wwise Silence	
+	646290286	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Ranas\Ranas\Silencio\Wwise Silence	
 	664804429	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Grillos\Silencio\Wwise Silence	
 	775080842	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Susurro\Silencio\Wwise Silence	
+	902525967	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Player hurt\Silence\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	3053503	STEM 5 - 55 BPM 4-4	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\STEM 5 - 55 BPM 4-4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX gameplay\5 PIANO - TAIKO\STEM 5 - 55 BPM 4-4		11729516
 	9677936	play_ambient	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\play_ambient_1840DA15.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vox ambient\play_ambient		533124
 	18416221	Ramas2_01	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\Ramas2_7643567C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Pisadas ramas\Ramas\Ramas2_01		70790
-	104741923	Grillo3_01	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\Grillo3_0E169DA7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Grillos\Grillos\Grillo3_01		68618
+	20039159	KID CRY 6	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\KID CRY 1_247CB2C9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player hurt\KID CRY 6		94148
+	100217217	KID CRY 5	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\KID CRY 4_AC15DEDE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player hurt\KID CRY 5		150876
+	104741923	Grillo3_01	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\Grillo3_9D57D80D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Grillos\Grillos\Grillo3_01		67436
 	108484305	disparo_3	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\disparo_3_D3950A5C.wem		\Actor-Mixer Hierarchy\Default Work Unit\player_shoot\disparo_3		105268
 	140229405	mordiscos_2	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\mordiscos_1_4CE06FDF.wem		\Actor-Mixer Hierarchy\Default Work Unit\player_sandwich\sandwich\mordiscos_2		131968
 	140878479	play_ambient 3	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\play_ambient_208A1956.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vox ambient\play_ambient 3		344480
+	141074568	STEM 4 - 55 BPM 4-4	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\STEM 4 - 55 BPM 4-4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX gameplay\4 BRASS - TAIKO\STEM 4 - 55 BPM 4-4		11729516
 	149831543	BUTTON G HI EXIT	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\BUTTON G HI_D6ABBFBF.wem		\Actor-Mixer Hierarchy\Default Work Unit\BUTTON G HI EXIT		282200
-	165428651	BRASS LOW - 55 BPM 4-4	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\BRASS LOW - 55 BPM 4-4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX gameplay\Stem Brass percs\BRASS LOW - 55 BPM 4-4		3351336
 	187592224	BUTTON A HI	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\BUTTON A HI_4DBCC53A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Buttons\BUTTON A HI		210388
 	208970938	CLOTHES	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\CLOTHES_652096BC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player health\CLOTHES		344648
-	216819983	SCREAMS 2 - 55 BPM 4-4	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\SCREAMS 2 - 55 BPM 4-4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX gameplay\Steam violin brass\SCREAMS 2 - 55 BPM 4-4		7540424
 	220144409	cambio_arma_1	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\cambio_arma_1_FF8E6230.wem		\Actor-Mixer Hierarchy\Default Work Unit\player_reload\cambio_arma_1		200992
-	253712796	STEAM BELLS STEEL - 55 BPM 4-4	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\STEAM BELLS STEEL - 55 BPM 4-4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX gameplay\Steam violin no brass\STEAM BELLS STEEL - 55 BPM 4-4		7540424
 	266300629	Ramas1	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\Ramas1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Pisadas ramas\Ramas\Ramas1		109194
 	273651243	Rana	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\Rana_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Ranas\Ranas\Rana		40484
 	274442957	Ramas2	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\Ramas2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Pisadas ramas\Ramas\Ramas2		184458
 	282399641	mordiscos_1	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\mordiscos_1_62429013.wem		\Actor-Mixer Hierarchy\Default Work Unit\player_sandwich\sandwich\mordiscos_1		117868
+	292943070	STEM 2 - 55 BPM 4-4	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\STEM 2 - 55 BPM 4-4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX gameplay\2 VIO - BELLS\STEM 2 - 55 BPM 4-4		11729516
 	294499401	BUTTON D HI	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\BUTTON D HI_B2CAE2F8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Buttons\BUTTON D HI		301560
-	325537324	Grillo3	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\Grillo3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Grillos\Grillos\Grillo3		178004
+	325537324	Grillo3	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\Grillo3_A3CF2D92.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Grillos\Grillos\Grillo3		91598
 	360034372	BUTTON C LO	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\BUTTON C LO_E681E506.wem		\Actor-Mixer Hierarchy\Default Work Unit\Buttons\BUTTON C LO		277456
 	363749502	play_ambient 4	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\play_ambient_03187BD3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vox ambient\play_ambient 4		462512
 	418571893	player_bathit	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\player_bathit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player_bathit		67176
 	425620364	KID CRY 3	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\KID CRY 3_68E5B3BA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player hurt\KID CRY 3		193416
+	454378737	STEM 3 - 55 BPM 4-4	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\STEM 3 - 55 BPM 4-4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX gameplay\3 PIANO - BELLS\STEM 3 - 55 BPM 4-4		11729516
 	456418140	KID CRY 2	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\KID CRY 2_C461D450.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player hurt\KID CRY 2		137172
+	468103433	KID CRY 7	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\KID CRY 3_9B46786B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player hurt\KID CRY 7		99196
 	492690470	viento2	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\viento2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Viento\viento2		914968
 	507888404	player_batair	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\player_batair_B45CD14D.wem		\Actor-Mixer Hierarchy\Default Work Unit\player_batair		84464
-	508866808	susurro2	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\susurro2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Susurro\Susurros\susurro2		147532
+	508866808	susurro2	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\susurro2_4470CCD4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Susurro\Susurros\susurro2		147532
 	512923481	play_ambient 2	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\play_ambient_A1BCF4A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vox ambient\play_ambient 2		613084
 	522052368	KID CRY 4	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\KID CRY 4_B0C1ABA7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player hurt\KID CRY 4		163288
-	533333160	PIANO - 55 BPM 4-4	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\PIANO - 55 BPM 4-4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX gameplay\Stem Piano screams\PIANO - 55 BPM 4-4		7540424
 	541672595	Paso5	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\Paso5_A131596A.wem		\Actor-Mixer Hierarchy\Default Work Unit\player_footstep\Paso5		18708
-	551482605	TAIKO2 - 55 BPM 4-4	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\TAIKO2 - 55 BPM 4-4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX gameplay\Stem Piano screams\TAIKO2 - 55 BPM 4-4		7540424
-	597452169	VIOLINS - 55 BPM 4-4	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\VIOLINS - 55 BPM 4-4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX gameplay\Steam violin brass\VIOLINS - 55 BPM 4-4		7540424
 	613067261	Paso4	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\Paso4_928EF9C7.wem		\Actor-Mixer Hierarchy\Default Work Unit\player_footstep\Paso4		19606
 	633252433	Paso3	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\Paso3_0A682567.wem		\Actor-Mixer Hierarchy\Default Work Unit\player_footstep\Paso3		16042
 	648194541	viento1	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\viento1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Viento\viento1		1313814
 	676211636	BUTTON G LO	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\BUTTON G LO_38C879EC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Buttons\BUTTON G LO		356640
-	694658400	BRASS LOW 2 - 55 BPM 4-4 - BAR 5	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\BRASS LOW 2 - 55 BPM 4-4 - BAR 5_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX gameplay\Steam violin brass\BRASS LOW 2 - 55 BPM 4-4 - BAR 5		7540424
 	695209723	recarga_2	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\recarga_2_CE0FCCB5.wem		\Actor-Mixer Hierarchy\Default Work Unit\player_reload\recarga_2		121896
-	698850561	susurro3	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\susurro3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Susurro\Susurros\susurro3		92080
+	698850561	susurro3	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\susurro3_BF6040BC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Susurro\Susurros\susurro3		84326
 	721326387	kid breath run	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\kid breath run_DE6DA4F2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player health\CRY n BREATHE\kid breath run		645376
 	784470125	FTW MENU TEST 2	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\FTW MENU TEST 2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX menu\FTW MENU TEST 2\FTW MENU TEST 2		9425520
 	801445729	BUTTON C HI	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\BUTTON C HI_EB999BBF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Buttons\BUTTON C HI		288736
 	801641602	susurro4	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\susurro4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Susurro\Susurros\susurro4		141182
-	814452999	TIMBALS - 55 BPM 4-4	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\TIMBALS - 55 BPM 4-4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX gameplay\Stem Piano screams\TIMBALS - 55 BPM 4-4		7540424
-	901123229	Grillo3_02	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\Grillo3_72BBCE16.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Grillos\Grillos\Grillo3_02		29618
+	867473249	STEM 1 - 55 BPM 4-4	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\STEM 1 - 55 BPM 4-4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX gameplay\1 BRASS - VIO\STEM 1 - 55 BPM 4-4		11729516
+	901123229	Grillo3_02	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\Grillo3_D0FEAA03.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Grillos\Grillos\Grillo3_02		29618
 	904374131	KID CRY 1	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\KID CRY 1_D7163382.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player hurt\KID CRY 1		130160
 	910117542	BUTTON A LO	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\BUTTON A LO_8F659640.wem		\Actor-Mixer Hierarchy\Default Work Unit\Buttons\BUTTON A LO		309036
-	937009985	susurro1	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\susurro1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Susurro\Susurros\susurro1		123542
+	937009985	susurro1	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\susurro1_325BFDD2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Susurro\Susurros\susurro1		123542
 	958011035	bear_dead3	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\bear_dead3_F8700B14.wem		\Actor-Mixer Hierarchy\Default Work Unit\bear_dead3		240668
 	1052662792	Paso2	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\Paso2_7D58662D.wem		\Actor-Mixer Hierarchy\Default Work Unit\player_footstep\Paso2		31168
-	1062825447	SCREAMS - 55 BPM 4-4	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\SCREAMS - 55 BPM 4-4 _D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX gameplay\Stem Piano screams\SCREAMS - 55 BPM 4-4		7540424
 	1063716976	heart	C:\Users\Usuario\Desktop\Repos\From-the-Woods\DV3_WwiseProject\.cache\Windows\SFX\heart_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player health\heart		99392
 

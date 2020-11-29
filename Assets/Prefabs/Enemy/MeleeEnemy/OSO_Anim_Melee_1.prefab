@@ -673,7 +673,7 @@ MonoBehaviour:
   health: 100
   damage: 5
   sightRange: 300
-  attackDistance: 8
+  attackDistance: 5
   attackSpeedRate: 1
   chasingSpeed: 10
   wanderRadius: 75

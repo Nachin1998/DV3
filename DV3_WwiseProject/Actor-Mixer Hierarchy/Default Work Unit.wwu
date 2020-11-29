@@ -23,7 +23,8 @@
 									<Modifier Name="" ID="{67397C4B-6218-406C-8322-89FF7724C0E0}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="22"/>
+											<Property Name="Max" Type="Real64" Value="55"/>
+											<Property Name="Min" Type="Real64" Value="-33"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -46,9 +47,6 @@
 							</ModifierList>
 						</Property>
 						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-6</Value>
-							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{42F6CC25-F14A-48C8-8AAF-4ED19A58F449}"/>
@@ -88,7 +86,7 @@
 					<PropertyList>
 						<Property Name="Pitch" Type="int32">
 							<ValueList>
-								<Value>610</Value>
+								<Value>830</Value>
 							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
@@ -100,6 +98,11 @@
 									</Modifier>
 								</ModifierInfo>
 							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>
@@ -143,6 +146,11 @@
 									</Modifier>
 								</ModifierInfo>
 							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>
@@ -572,17 +580,17 @@
 				</BlendContainer>
 				<RandomSequenceContainer Name="Player hurt" ID="{FF80FE87-B555-481F-86BE-B6F5EC0C2CFD}" ShortID="900617661">
 					<PropertyList>
-						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="6"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-11</Value>
+								<Value>-4</Value>
 							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{73A04260-CE31-4D53-8457-D7E57A77EB7D}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Min" Type="Real64" Value="-10"/>
+											<Property Name="Min" Type="Real64" Value="-14"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -615,6 +623,11 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -659,6 +672,11 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -736,6 +754,13 @@
 						</Sound>
 						<Sound Name="KID CRY 1" ID="{F57FACA6-36AB-4FEE-AC3D-D7BDEA7B0B6A}" ShortID="809119417">
 							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{29917693-2167-4592-BD87-1314F39E8EE2}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -751,7 +776,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -787,6 +812,312 @@
 								<ActiveSource Name="KID CRY 1" ID="{7FDCB048-4E52-449F-976C-E79451230F0E}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="KID CRY 5" ID="{F07F4771-1BC9-4E61-8F0A-E202DED1F85D}" ShortID="75942539">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{D88F099F-6805-4185-82AF-105F12FB383F}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="177"/>
+													<Property Name="Min" Type="Real64" Value="-152"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KID CRY 4" ID="{36A2E03F-6BEE-46F0-80AA-3EDB8524BE7C}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0952124302557427"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.343150122593509"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.210643015521064"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.996135093020266"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KID CRY 4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="100217217"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KID CRY 4" ID="{36A2E03F-6BEE-46F0-80AA-3EDB8524BE7C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KID CRY 6" ID="{1A937C35-88CB-4411-BDA0-7FF024818132}" ShortID="866171014">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{55A6F7E3-9124-4DB1-811E-7734FA121367}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KID CRY 1" ID="{F481E9C5-B9D4-4D2B-A7F4-DE0875A8A64F}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.158690176322418"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0680100755667515"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.494456762749446"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.984478935698448"/>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KID CRY 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="20039159"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KID CRY 1" ID="{F481E9C5-B9D4-4D2B-A7F4-DE0875A8A64F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KID CRY 7" ID="{F85EEFCD-1CDC-454E-B12C-8BDBC8A15695}" ShortID="816328744">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4E3C901E-B718-436D-A8D8-6685A54F1E17}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="303"/>
+													<Property Name="Min" Type="Real64" Value="-126"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KID CRY 3" ID="{E0E7329C-F7D5-4DE4-A344-C0ACFB173132}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0451383672181205"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.126072818868789"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.51631691148682"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KID CRY 3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="468103433"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KID CRY 3" ID="{E0E7329C-F7D5-4DE4-A344-C0ACFB173132}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Silence" ID="{3C74DF63-4333-49AB-90E5-39F626ED06F6}" ShortID="348354001">
+							<PropertyList>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>65</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Wwise Audio Input" ID="{A02C3253-3819-4C82-BE3C-321DC9FB0B81}" ShortID="25175039" PluginName="Wwise Audio Input" CompanyID="0" PluginID="200">
+									<Language>SFX</Language>
+								</SourcePlugin>
+								<SourcePlugin Name="Wwise Silence" ID="{35F3270A-DF26-4196-AB57-7238914F16F4}" ShortID="902525967" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+									<PropertyList>
+										<Property Name="Length" Type="Real32" Value="3"/>
+										<Property Name="LengthMax" Type="Real32" Value="3"/>
+										<Property Name="LengthMin" Type="Real32" Value="-3"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wwise Silence" ID="{35F3270A-DF26-4196-AB57-7238914F16F4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Silence_01" ID="{5A929F70-5A26-4394-A1E9-FFC25064E882}" ShortID="31440009">
+							<PropertyList>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>65</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Wwise Audio Input" ID="{54D6C958-2997-4ECD-9453-131BCC1C7ED8}" ShortID="624001203" PluginName="Wwise Audio Input" CompanyID="0" PluginID="200">
+									<Language>SFX</Language>
+								</SourcePlugin>
+								<SourcePlugin Name="Wwise Silence" ID="{6E55A29C-33C2-4A35-9314-F6BB93D574BF}" ShortID="94220565" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+									<PropertyList>
+										<Property Name="Length" Type="Real32" Value="3"/>
+										<Property Name="LengthMax" Type="Real32" Value="3"/>
+										<Property Name="LengthMin" Type="Real32" Value="-3"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wwise Silence" ID="{6E55A29C-33C2-4A35-9314-F6BB93D574BF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Silence_02" ID="{29ED5692-1115-438A-B877-E04ADFD0EB4E}" ShortID="403536618">
+							<PropertyList>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>65</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Wwise Audio Input" ID="{64383B1E-E414-40E1-9B17-B3DCD1DF0B44}" ShortID="979215154" PluginName="Wwise Audio Input" CompanyID="0" PluginID="200">
+									<Language>SFX</Language>
+								</SourcePlugin>
+								<SourcePlugin Name="Wwise Silence" ID="{5860CBB0-C8D5-4A56-A586-E6C9A8A02F0A}" ShortID="411726151" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+									<PropertyList>
+										<Property Name="Length" Type="Real32" Value="3"/>
+										<Property Name="LengthMax" Type="Real32" Value="3"/>
+										<Property Name="LengthMin" Type="Real32" Value="-3"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wwise Silence" ID="{5860CBB0-C8D5-4A56-A586-E6C9A8A02F0A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Silence_03" ID="{9F0D8958-A3F6-4EFD-A26B-518AF14E51D0}" ShortID="389597194">
+							<PropertyList>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>65</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Wwise Audio Input" ID="{7F508C97-EEE5-4755-9492-546C9C4280FA}" ShortID="222977415" PluginName="Wwise Audio Input" CompanyID="0" PluginID="200">
+									<Language>SFX</Language>
+								</SourcePlugin>
+								<SourcePlugin Name="Wwise Silence" ID="{CCC76174-786A-4427-B028-7AE7A5C66B68}" ShortID="536084755" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+									<PropertyList>
+										<Property Name="Length" Type="Real32" Value="3"/>
+										<Property Name="LengthMax" Type="Real32" Value="3"/>
+										<Property Name="LengthMin" Type="Real32" Value="-3"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wwise Silence" ID="{CCC76174-786A-4427-B028-7AE7A5C66B68}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Silence_04" ID="{0786B242-519D-474F-8C4E-6BD16FBC5084}" ShortID="29197307">
+							<PropertyList>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>65</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Wwise Audio Input" ID="{EEB85200-9BCB-45F5-813C-7E345BA34ED3}" ShortID="515735572" PluginName="Wwise Audio Input" CompanyID="0" PluginID="200">
+									<Language>SFX</Language>
+								</SourcePlugin>
+								<SourcePlugin Name="Wwise Silence" ID="{0E1A2844-BFDD-4D92-8D4A-BEC78717BD1D}" ShortID="51063578" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+									<PropertyList>
+										<Property Name="Length" Type="Real32" Value="3"/>
+										<Property Name="LengthMax" Type="Real32" Value="3"/>
+										<Property Name="LengthMin" Type="Real32" Value="-3"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wwise Silence" ID="{0E1A2844-BFDD-4D92-8D4A-BEC78717BD1D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
 				<Sound Name="player_bathit" ID="{B22B15EE-4E4A-4D4F-83DF-A153021C3264}" ShortID="621900554">
@@ -797,12 +1128,17 @@
 									<Modifier Name="" ID="{FAC73E4F-773A-40A3-944D-818BF952A080}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="429"/>
-											<Property Name="Min" Type="Real64" Value="-505"/>
+											<Property Name="Max" Type="Real64" Value="1162"/>
+											<Property Name="Min" Type="Real64" Value="-253"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
 							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>
@@ -828,16 +1164,27 @@
 				</Sound>
 				<RandomSequenceContainer Name="player_footstep" ID="{7AB9694D-D870-418A-88B5-BD39DE2B2E2C}" ShortID="448166768">
 					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{A99DDB52-35A7-48CB-846F-B7879A8BEA59}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="278"/>
+											<Property Name="Min" Type="Real64" Value="-303"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>7</Value>
-							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{8859F695-7B63-4F3D-8F12-B28D0755270A}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="15"/>
+											<Property Name="Max" Type="Real64" Value="13"/>
+											<Property Name="Min" Type="Real64" Value="-6"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -854,13 +1201,6 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="Paso2" ID="{0606B601-A92F-4D46-B62D-7291A2391DD0}" ShortID="508421994">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>10</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
@@ -891,13 +1231,6 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Paso3" ID="{8F3E1EB6-5A29-4A5C-8502-E3441B969E91}" ShortID="329099911">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>8</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
@@ -928,13 +1261,6 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Paso4" ID="{3D2E9723-CFEA-4BA1-AEB7-EE7E8BDC4DA3}" ShortID="406466884">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>8</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
@@ -965,13 +1291,6 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Paso5" ID="{303A63C9-F76D-4259-BAC2-D0D2620F46DD}" ShortID="1010500757">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>9</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
@@ -1011,8 +1330,8 @@
 									<Modifier Name="" ID="{1C615E7B-FB9E-42F5-9A8D-361578AEEFC5}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="202"/>
-											<Property Name="Min" Type="Real64" Value="-278"/>
+											<Property Name="Max" Type="Real64" Value="101"/>
+											<Property Name="Min" Type="Real64" Value="-101"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -1048,8 +1367,9 @@
 										<ModifierInfo>
 											<Modifier Name="" ID="{D052FBC2-15B3-4091-ABDC-40F6FA024FAD}">
 												<PropertyList>
-													<Property Name="Max" Type="Real64" Value="278"/>
-													<Property Name="Min" Type="Real64" Value="-480"/>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="101"/>
+													<Property Name="Min" Type="Real64" Value="-101"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -1057,7 +1377,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>9</Value>
+										<Value>4</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1440,161 +1760,6 @@
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</BlendContainer>
-				<RandomSequenceContainer Name="Player hurt_01" ID="{4E85F4F9-ED13-4960-9AE4-47AE2674CCFB}" ShortID="403979614">
-					<PropertyList>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-9</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="KID CRY 2" ID="{07923F87-0C58-4A1A-824D-5E1AC38EACF2}" ShortID="598694047">
-							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-50</Value>
-									</ValueList>
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{4130A2BB-77A1-44E9-9A66-812BEE2BE3C3}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="51"/>
-													<Property Name="Min" Type="Real64" Value="-202"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="KID CRY 2" ID="{AB67A8F4-8E88-4B0A-91C9-F97CD46FE2A5}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.0717884130982368"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.128463476070529"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.283375314861461"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.997481108312342"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>KID CRY 2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="456418140"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="KID CRY 2" ID="{AB67A8F4-8E88-4B0A-91C9-F97CD46FE2A5}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="KID CRY 3" ID="{E99A2715-868A-455B-92EF-C55EF8FA5727}" ShortID="546526626">
-							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{0878A18A-166E-46BD-919E-653446B7C1C5}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="152"/>
-													<Property Name="Min" Type="Real64" Value="-152"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="KID CRY 3" ID="{00575C31-2415-4CD3-9CBD-7D58B7A072D5}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.10575314861461"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.251163727959698"/>
-										<Property Name="LoopEnd" Type="Real64" Value="1.0623109468573"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.0561813602015113"/>
-										<Property Name="TrimEnd" Type="Real64" Value="1.06322600239591"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>KID CRY 3.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="425620364"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="KID CRY 3" ID="{00575C31-2415-4CD3-9CBD-7D58B7A072D5}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="KID CRY 4" ID="{B99D9B6D-CD63-4BBD-BF48-ADE4A888A269}" ShortID="75144887">
-							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{C65F9DF5-2031-4C4D-AF76-00B66D8E97E7}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="177"/>
-													<Property Name="Min" Type="Real64" Value="-202"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="KID CRY 4" ID="{9E47D56D-E91B-432A-8752-767F97CE105E}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.100755667506297"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0881612090680099"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="1.26574307304786"/>
-										<Property Name="TrimEnd" Type="Real64" Value="2.11586901763224"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>KID CRY 4.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="522052368"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="KID CRY 4" ID="{9E47D56D-E91B-432A-8752-767F97CE105E}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</RandomSequenceContainer>
 				<BlendContainer Name="Ambient" ID="{A34F097C-45D4-4252-BEB7-3D3F655F6E4B}" ShortID="974144853">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -1610,6 +1775,11 @@
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1727,6 +1897,52 @@
 												<ActiveSource Name="Rana" ID="{3A51B10C-2153-484A-A58F-AFEF90DD32A1}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<Sound Name="Silencio" ID="{E2DCB0D0-EB6E-42E9-8F2C-0128A41F17CC}" ShortID="656875526">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SourcePlugin Name="Wwise Silence" ID="{EE229FB9-015D-4B8E-A60D-FD5B181E660D}" ShortID="646290286" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+													<PropertyList>
+														<Property Name="Length" Type="Real32" Value="5"/>
+														<Property Name="LengthMax" Type="Real32" Value="3"/>
+														<Property Name="LengthMin" Type="Real32" Value="-3"/>
+													</PropertyList>
+													<Language>SFX</Language>
+												</SourcePlugin>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Wwise Silence" ID="{EE229FB9-015D-4B8E-A60D-FD5B181E660D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Silencio_01" ID="{523E453E-E2A6-42E1-AFE2-F93EF55355D4}" ShortID="225139443">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SourcePlugin Name="Wwise Silence" ID="{1C34DBC9-2E6D-4DDA-B630-3FA709B286EA}" ShortID="504810746" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+													<PropertyList>
+														<Property Name="Length" Type="Real32" Value="3"/>
+														<Property Name="LengthMax" Type="Real32" Value="3"/>
+														<Property Name="LengthMin" Type="Real32" Value="-3"/>
+													</PropertyList>
+													<Language>SFX</Language>
+												</SourcePlugin>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Wwise Silence" ID="{1C34DBC9-2E6D-4DDA-B630-3FA709B286EA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<Sound Name="Silencio" ID="{7C66F474-0BF3-4282-94BB-51DD2B3558FF}" ShortID="936274741">
@@ -1760,12 +1976,25 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Grillos" ID="{EB906FA5-350B-46E4-9188-E5F93C2E4855}" ShortID="43425122">
 							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{B77BDC9F-E397-4720-A1BE-1096DC7A8F02}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="177"/>
+													<Property Name="Min" Type="Real64" Value="-253"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1797,6 +2026,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Grillo3" ID="{F79CA318-9584-406E-AFC4-C87B09E66D72}" ShortID="1037679549">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>41</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
@@ -1807,6 +2043,12 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Grillo3" ID="{65F8C5AC-FCEE-47EF-A97F-B1F578C68A8F}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.371284271284271"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.50995670995671"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.03780663780664"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Grillo3.wav</AudioFile>
 													<MediaIDList>
@@ -1819,6 +2061,23 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Grillo3_01" ID="{FC761658-698D-4DA7-8BA6-206D9D1674EA}" ShortID="991831131">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>39</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-250</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
@@ -1830,9 +2089,11 @@
 											<ChildrenList>
 												<AudioFileSource Name="Grillo3" ID="{F81A4455-64E3-493B-85BD-3ECD738EF366}">
 													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0894660894660895"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.174458874458875"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.635638182213525"/>
-														<Property Name="TrimEnd" Type="Real64" Value="1.41291313328985"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.39949321986994"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Grillo3.wav</AudioFile>
@@ -1846,6 +2107,18 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Grillo3_02" ID="{4C026C81-E01A-497C-956F-36194ADC2694}" ShortID="879065190">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>46</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-50</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
@@ -1857,6 +2130,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="Grillo3" ID="{479295D7-E076-4D20-B370-C2B95DFE73DC}">
 													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.084992784992785"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.161038961038961"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 														<Property Name="TrimBegin" Type="Real64" Value="1.4854587953903"/>
 														<Property Name="TrimEnd" Type="Real64" Value="1.82055066318765"/>
@@ -1870,6 +2145,52 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="Grillo3" ID="{479295D7-E076-4D20-B370-C2B95DFE73DC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Silencio" ID="{D56A9954-6B08-449B-BD6F-684F6420D773}" ShortID="263872729">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SourcePlugin Name="Wwise Silence" ID="{B7275627-48F0-48C2-94DA-14799FCF4DD1}" ShortID="321316395" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+													<PropertyList>
+														<Property Name="Length" Type="Real32" Value="4"/>
+														<Property Name="LengthMax" Type="Real32" Value="2"/>
+														<Property Name="LengthMin" Type="Real32" Value="-2"/>
+													</PropertyList>
+													<Language>SFX</Language>
+												</SourcePlugin>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Wwise Silence" ID="{B7275627-48F0-48C2-94DA-14799FCF4DD1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Silencio_01" ID="{C02B2596-1616-433D-9D97-F3E42EB4B12D}" ShortID="898126231">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SourcePlugin Name="Wwise Silence" ID="{F9C30D98-8B21-43FB-992F-90E8E2F818C2}" ShortID="346742326" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+													<PropertyList>
+														<Property Name="Length" Type="Real32" Value="3"/>
+														<Property Name="LengthMax" Type="Real32" Value="2"/>
+														<Property Name="LengthMin" Type="Real32" Value="-2"/>
+													</PropertyList>
+													<Language>SFX</Language>
+												</SourcePlugin>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Wwise Silence" ID="{F9C30D98-8B21-43FB-992F-90E8E2F818C2}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -1886,7 +2207,7 @@
 									<ChildrenList>
 										<SourcePlugin Name="Wwise Silence" ID="{6ABA5307-A44B-4EBB-ABE0-318F5C1652DC}" ShortID="664804429" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
 											<PropertyList>
-												<Property Name="Length" Type="Real32" Value="7"/>
+												<Property Name="Length" Type="Real32" Value="4"/>
 												<Property Name="LengthMax" Type="Real32" Value="2"/>
 												<Property Name="LengthMin" Type="Real32" Value="-2"/>
 											</PropertyList>
@@ -1922,7 +2243,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-9</Value>
+												<Value>-8</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1939,7 +2260,12 @@
 											<PropertyList>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
-														<Value>200</Value>
+														<Value>580</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1953,6 +2279,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="susurro2" ID="{C7419FC4-9FB7-433A-8B2A-ED311AA668F7}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.207606377362475"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>susurro2.wav</AudioFile>
 													<MediaIDList>
@@ -1968,7 +2299,17 @@
 											<PropertyList>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
-														<Value>180</Value>
+														<Value>560</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{0AEE092A-C626-42C2-894E-87F08B372214}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1982,6 +2323,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="susurro3" ID="{ED8172ED-7E91-4F10-A47F-3B761F319E7B}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.555174442282456"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.955362686094393"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>susurro3.wav</AudioFile>
 													<MediaIDList>
@@ -2011,6 +2357,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="susurro1" ID="{F0EFF964-6F08-4514-AE34-15BDD57875D7}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0403541135596885"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.543228451765037"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>susurro1.wav</AudioFile>
 													<MediaIDList>
@@ -2087,6 +2438,11 @@
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2232,12 +2588,37 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Viento" ID="{8A580960-8507-4EB8-96E2-168B62CF3DA3}" ShortID="714557132">
 							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{B64269CB-4D82-4DA4-A310-0A455E25BB30}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="328"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-9</Value>
+										<Value>1</Value>
 									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{3233CBF8-BEAB-4B4D-90B6-02EC99AEACB2}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="3"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -2251,9 +2632,9 @@
 							<ChildrenList>
 								<Sound Name="viento1" ID="{22BE6F56-45EA-414E-84EC-0EF79DBA49B6}" ShortID="303984553">
 									<PropertyList>
-										<Property Name="Volume" Type="Real64">
+										<Property Name="Pitch" Type="int32">
 											<ValueList>
-												<Value>-7</Value>
+												<Value>280</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2286,9 +2667,9 @@
 								</Sound>
 								<Sound Name="viento2" ID="{5BAC0246-9088-41A6-A82D-049C1EFAA55A}" ShortID="75449494">
 									<PropertyList>
-										<Property Name="Volume" Type="Real64">
+										<Property Name="Pitch" Type="int32">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>100</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2326,11 +2707,6 @@
 												<Value>180</Value>
 											</ValueList>
 										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-8</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -2364,11 +2740,6 @@
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>-430</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-7</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>

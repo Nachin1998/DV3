@@ -20,7 +20,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b10aa3994264204ab916e6420c0dcc44
     GuidInternal: 
-    m_lastTime: -8585951779314775808
+    m_lastTime: -8585949405274775808
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 1798fb9b95e5d94aa7bd63d3ec520428
     GuidInternal: 
-    m_lastTime: -8585951779314775808
+    m_lastTime: -8585949405274775808
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 09c10705d65cde41b3ebd263197221b8
     GuidInternal: 
-    m_lastTime: -8585951779314775808
+    m_lastTime: -8585949405274775808
     List:
     - name: MySoundBank
       guid: a6d18557cc28004bb3fa0044693f89b7
@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 66ce0cf28e999d44bd0284df88f7dad3
     GuidInternal: 
-    m_lastTime: -8585951779314775808
+    m_lastTime: -8585949405274775808
     List:
     - name: bear_dead
       guid: 9fd9af914aeaf5418bf90dc627df1445
@@ -166,6 +166,30 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: button_back
+      guid: 2d694b0500fe044ea52afedda892620c
+      id: 510827497
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_back
+        ObjectType: 3
+      Path: Default Work Unit\button_back
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: button_credits
+      guid: c30b003a229eb144b2db5cd48555d6d7
+      id: 804193798
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_credits
+        ObjectType: 3
+      Path: Default Work Unit\button_credits
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: button_exit
       guid: 8a5923532b3e5549811d156715829877
       id: 1778101440
@@ -178,66 +202,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.469457
       minDuration: 1.469457
-    - name: button_others
-      guid: 509f59366acd044493002b9acb2b1ec6
-      id: 2581005265
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: button_others
-        ObjectType: 3
-      Path: Default Work Unit\button_others
-      maxAttenuation: 0
-      maxDuration: 1.968736
-      minDuration: 1.003357
-    - name: button_others_01
-      guid: 81b95ef68e441c41b391f92607d50a82
-      id: 3159091421
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: button_others_01
-        ObjectType: 3
-      Path: Default Work Unit\button_others_01
-      maxAttenuation: 0
-      maxDuration: 1.968736
-      minDuration: 1.003357
-    - name: button_others_02
-      guid: 07e55cd289aa544994801c97bfd16f6c
-      id: 3159091422
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: button_others_02
-        ObjectType: 3
-      Path: Default Work Unit\button_others_02
-      maxAttenuation: 0
-      maxDuration: 1.968736
-      minDuration: 1.003357
-    - name: button_others_03
-      guid: e04629310b97fd429c3d75307ab4a538
-      id: 3159091423
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: button_others_03
-        ObjectType: 3
-      Path: Default Work Unit\button_others_03
-      maxAttenuation: 0
-      maxDuration: 1.968736
-      minDuration: 1.003357
-    - name: button_others_04
-      guid: 2713f10a25740144b1626a8ef98373e0
-      id: 3159091416
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: button_others_04
-        ObjectType: 3
-      Path: Default Work Unit\button_others_04
-      maxAttenuation: 0
-      maxDuration: 1.968736
-      minDuration: 1.003357
     - name: button_others_05
       guid: 2d1e1be54a6ced4db1b50280843a85fd
       id: 3159091417
@@ -286,6 +250,42 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.968736
       minDuration: 1.003357
+    - name: button_restart
+      guid: adf50a9ed11d5b489a7929fc285c8cdd
+      id: 1136530457
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_restart
+        ObjectType: 3
+      Path: Default Work Unit\button_restart
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: button_resume
+      guid: 6014dd53b97d194db9cc554eb8e48676
+      id: 1961981585
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_resume
+        ObjectType: 3
+      Path: Default Work Unit\button_resume
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: button_settings
+      guid: 043ca80334dfa24ab86a297c7f09d126
+      id: 4251422607
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_settings
+        ObjectType: 3
+      Path: Default Work Unit\button_settings
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: game_start
       guid: 0397b3a6d1f71043b6906ef399332c4c
       id: 733168346
@@ -368,8 +368,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\player_batair
       maxAttenuation: 0
-      maxDuration: 0.309046
-      minDuration: 0.169877
+      maxDuration: 0.272166
+      minDuration: 0.149605
     - name: player_bathit
       guid: d10c447b59be5a408ea936e529991a65
       id: 1460491645
@@ -380,8 +380,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\player_bathit
       maxAttenuation: 0
-      maxDuration: 0.467932
-      minDuration: 0.272823
+      maxDuration: 0.404544
+      minDuration: 0.178649
     - name: player_bullets
       guid: 0f4d1d244bea464b90b6b172a7ae59a2
       id: 2897551616
@@ -416,8 +416,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\player_footstep
       maxAttenuation: 0
-      maxDuration: 0.352653
-      minDuration: 0.181158
+      maxDuration: 0.420104
+      minDuration: 0.154283
     - name: player_gunchange
       guid: 440438957e39264692cd63e92ef0b259
       id: 646858905
@@ -452,8 +452,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\player_hurt
       maxAttenuation: 0
-      maxDuration: 1.099459
-      minDuration: 0.639552
+      maxDuration: 6
+      minDuration: 0
     - name: player_reload
       guid: 52b21d001f2aa54ca1cfe7d9532f9f43
       id: 1650679582
@@ -488,7 +488,7 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\player_shoot
       maxAttenuation: 0
-      maxDuration: 0.700272
+      maxDuration: 0.670195
       minDuration: 0.530707
     - name: shoot_metal
       guid: 696324d06fba1049befb090445fd9184
@@ -546,7 +546,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e2f21df832910446b06dfa8cd5186b3d
     GuidInternal: 
-    m_lastTime: -8585951779314775808
+    m_lastTime: -8585949405274775808
     List:
     - name: HEALTH
       guid: f471a31068389b498a718ec9fb0c16fa
@@ -565,7 +565,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 2f792d5101efac4ab41c252198ec1ee4
     GuidInternal: 
-    m_lastTime: -8585951779314775808
+    m_lastTime: -8585949405274775808
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -575,7 +575,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 33ef5d8b227b8e429d22d0fa44ef4072
     GuidInternal: 
-    m_lastTime: -8585951779314775808
+    m_lastTime: -8585949405274775808
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -585,7 +585,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e9a573a16745b3499ea7287848af91eb
     GuidInternal: 
-    m_lastTime: -8585951779314775808
+    m_lastTime: -8585949405274775808
     List: []
   ExpandedItems:
   - /DV3_WwiseProject

@@ -47,6 +47,7 @@ public class WeaponSwitcher : MonoBehaviour
 
         if (previousSelectedWeaponIndex != selectedWeaponIndex)
         {
+            AkSoundEngine.PostEvent("player_gunchange", gameObject);
             SelectWeapon();
         }
     }

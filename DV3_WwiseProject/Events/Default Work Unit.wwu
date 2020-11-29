@@ -133,64 +133,9 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="bear_footstep" ID="{64911DA8-A7AA-4C03-BBBE-35ECFF85FA14}"/>
-				<Event Name="button_others" ID="{36599F50-CD6A-4404-9300-2B9ACB2B1EC6}">
-					<ChildrenList>
-						<Action Name="" ID="{D05FB6A1-8B5D-4399-BA18-6817F2A7C75F}" ShortID="105900793">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Buttons" ID="{FC5C7D48-F7FE-4634-B207-A5C5F3191E8E}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="button_play" ID="{382074FE-6E43-4C90-8886-4FDC9D1B6370}">
 					<ChildrenList>
 						<Action Name="" ID="{3270248F-4833-4F59-AB6C-0070EC12CEE5}" ShortID="434267510">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Buttons" ID="{FC5C7D48-F7FE-4634-B207-A5C5F3191E8E}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="button_others_01" ID="{F65EB981-448E-411C-B391-F92607D50A82}">
-					<ChildrenList>
-						<Action Name="" ID="{F63BD687-EE6C-4D61-97D2-4F65E8BF12B8}" ShortID="525669877">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Buttons" ID="{FC5C7D48-F7FE-4634-B207-A5C5F3191E8E}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="button_others_02" ID="{D25CE507-AA89-4954-9480-1C97BFD16F6C}">
-					<ChildrenList>
-						<Action Name="" ID="{0E7AEDC5-CD26-4B5A-8870-024F62681489}" ShortID="835589885">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Buttons" ID="{FC5C7D48-F7FE-4634-B207-A5C5F3191E8E}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="button_others_03" ID="{312946E0-970B-42FD-9C3D-75307AB4A538}">
-					<ChildrenList>
-						<Action Name="" ID="{0FDD6DE6-8139-48D8-BF30-D3BE29182C8F}" ShortID="532508082">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Buttons" ID="{FC5C7D48-F7FE-4634-B207-A5C5F3191E8E}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="button_others_04" ID="{0AF11327-7425-4401-B162-6A8EF98373E0}">
-					<ChildrenList>
-						<Action Name="" ID="{C91B730F-1196-4BF3-8719-68A0C5DF9DF0}" ShortID="789796269">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Buttons" ID="{FC5C7D48-F7FE-4634-B207-A5C5F3191E8E}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
@@ -314,6 +259,11 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="button_settings" ID="{03A83C04-DF34-4AA2-B86A-297C7F09D126}"/>
+				<Event Name="button_back" ID="{054B692D-FE00-4E04-A52A-FEDDA892620C}"/>
+				<Event Name="button_credits" ID="{3A000BC3-9E22-44B1-B2DB-5CD48555D6D7}"/>
+				<Event Name="button_restart" ID="{9E0AF5AD-1DD1-485B-9A79-29FC285C8CDD}"/>
+				<Event Name="button_resume" ID="{53DD1460-7DB9-4D19-B9CC-554EB8E48676}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
