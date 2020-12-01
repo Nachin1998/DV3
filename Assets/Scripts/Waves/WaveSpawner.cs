@@ -113,7 +113,7 @@ public class WaveSpawner : MonoBehaviour
         {
             for (int j = 0; j < wave.enemiesToSpawn[i].enemyAmmount; j++)
             {
-                SpawnEnemy(wave.enemiesToSpawn[i].enemy, wave.spawnPoint);
+                SpawnEnemy(wave.enemiesToSpawn[i].enemy, wave.spawnPoints[Random.Range(0, wave.spawnPoints.Count)]);
                 yield return new WaitForSeconds(1 / wave.enemiesPerSecond);
             }
         }

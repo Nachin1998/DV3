@@ -11,12 +11,25 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3426359127">
+		<SoundBank Id="1355168291" Language="SFX" Hash="264387329">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="1006694123" Name="MUSIC_VOLUME" ObjectPath="\Game Parameters\Default Work Unit\MUSIC_VOLUME"/>
+				<GameParameter Id="1564184899" Name="SFX_VOLUME" ObjectPath="\Game Parameters\Default Work Unit\SFX_VOLUME"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="3092587493" Name="Pause" ObjectPath="\States\Default Work Unit\Pause">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Pause\None"/>
+						<State Id="1651971902" Name="On" ObjectPath="\States\Default Work Unit\Pause\On"/>
+						<State Id="930712164" Name="Off" ObjectPath="\States\Default Work Unit\Pause\Off"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3104675574" Language="SFX" Hash="2194265550">
+		<SoundBank Id="3104675574" Language="SFX" Hash="577415634">
 			<ObjectPath>\SoundBanks\Default Work Unit\MySoundBank</ObjectPath>
 			<ShortName>MySoundBank</ShortName>
 			<Path>MySoundBank.bnk</Path>
@@ -46,7 +59,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3159091417" Name="button_others_05" ObjectPath="\Events\Default Work Unit\button_others_05" DurationType="OneShot" DurationMin="1.003357" DurationMax="1.968736">
+				<Event Id="3159091417" Name="button_others_05" ObjectPath="\Events\Default Work Unit\button_others_05" DurationType="OneShot" DurationMin="0.638744" DurationMax="1.570276">
 					<IncludedMemoryFiles>
 						<File Id="187592224" Language="SFX">
 							<ShortName>BUTTON A HI.wav</ShortName>
@@ -74,7 +87,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3159091418" Name="button_others_06" ObjectPath="\Events\Default Work Unit\button_others_06" DurationType="OneShot" DurationMin="1.003357" DurationMax="1.968736">
+				<Event Id="3159091418" Name="button_others_06" ObjectPath="\Events\Default Work Unit\button_others_06" DurationType="OneShot" DurationMin="0.638744" DurationMax="1.570276">
 					<IncludedMemoryFiles>
 						<File Id="187592224" Language="SFX">
 							<ShortName>BUTTON A HI.wav</ShortName>
@@ -102,7 +115,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3159091419" Name="button_others_07" ObjectPath="\Events\Default Work Unit\button_others_07" DurationType="OneShot" DurationMin="1.003357" DurationMax="1.968736">
+				<Event Id="3159091419" Name="button_others_07" ObjectPath="\Events\Default Work Unit\button_others_07" DurationType="OneShot" DurationMin="0.638744" DurationMax="1.570276">
 					<IncludedMemoryFiles>
 						<File Id="187592224" Language="SFX">
 							<ShortName>BUTTON A HI.wav</ShortName>
@@ -130,7 +143,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1394085446" Name="button_play" ObjectPath="\Events\Default Work Unit\button_play" DurationType="OneShot" DurationMin="1.003357" DurationMax="1.968736">
+				<Event Id="1394085446" Name="button_play" ObjectPath="\Events\Default Work Unit\button_play" DurationType="OneShot" DurationMin="0.638744" DurationMax="1.570276">
 					<IncludedMemoryFiles>
 						<File Id="187592224" Language="SFX">
 							<ShortName>BUTTON A HI.wav</ShortName>
@@ -158,9 +171,90 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1136530457" Name="button_restart" ObjectPath="\Events\Default Work Unit\button_restart" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1961981585" Name="button_resume" ObjectPath="\Events\Default Work Unit\button_resume" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="4251422607" Name="button_settings" ObjectPath="\Events\Default Work Unit\button_settings" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1136530457" Name="button_restart" ObjectPath="\Events\Default Work Unit\button_restart" DurationType="OneShot" DurationMin="0.638744" DurationMax="1.570276">
+					<IncludedMemoryFiles>
+						<File Id="187592224" Language="SFX">
+							<ShortName>BUTTON A HI.wav</ShortName>
+							<Path>SFX\BUTTON A HI_4DBCC53A.wem</Path>
+						</File>
+						<File Id="294499401" Language="SFX">
+							<ShortName>BUTTON D HI.wav</ShortName>
+							<Path>SFX\BUTTON D HI_B2CAE2F8.wem</Path>
+						</File>
+						<File Id="360034372" Language="SFX">
+							<ShortName>BUTTON C LO.wav</ShortName>
+							<Path>SFX\BUTTON C LO_E681E506.wem</Path>
+						</File>
+						<File Id="676211636" Language="SFX">
+							<ShortName>BUTTON G LO.wav</ShortName>
+							<Path>SFX\BUTTON G LO_38C879EC.wem</Path>
+						</File>
+						<File Id="801445729" Language="SFX">
+							<ShortName>BUTTON C HI.wav</ShortName>
+							<Path>SFX\BUTTON C HI_EB999BBF.wem</Path>
+						</File>
+						<File Id="910117542" Language="SFX">
+							<ShortName>BUTTON A LO.wav</ShortName>
+							<Path>SFX\BUTTON A LO_8F659640.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1961981585" Name="button_resume" ObjectPath="\Events\Default Work Unit\button_resume" DurationType="OneShot" DurationMin="0.638744" DurationMax="1.570276">
+					<IncludedMemoryFiles>
+						<File Id="187592224" Language="SFX">
+							<ShortName>BUTTON A HI.wav</ShortName>
+							<Path>SFX\BUTTON A HI_4DBCC53A.wem</Path>
+						</File>
+						<File Id="294499401" Language="SFX">
+							<ShortName>BUTTON D HI.wav</ShortName>
+							<Path>SFX\BUTTON D HI_B2CAE2F8.wem</Path>
+						</File>
+						<File Id="360034372" Language="SFX">
+							<ShortName>BUTTON C LO.wav</ShortName>
+							<Path>SFX\BUTTON C LO_E681E506.wem</Path>
+						</File>
+						<File Id="676211636" Language="SFX">
+							<ShortName>BUTTON G LO.wav</ShortName>
+							<Path>SFX\BUTTON G LO_38C879EC.wem</Path>
+						</File>
+						<File Id="801445729" Language="SFX">
+							<ShortName>BUTTON C HI.wav</ShortName>
+							<Path>SFX\BUTTON C HI_EB999BBF.wem</Path>
+						</File>
+						<File Id="910117542" Language="SFX">
+							<ShortName>BUTTON A LO.wav</ShortName>
+							<Path>SFX\BUTTON A LO_8F659640.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4251422607" Name="button_settings" ObjectPath="\Events\Default Work Unit\button_settings" DurationType="OneShot" DurationMin="0.638744" DurationMax="1.570276">
+					<IncludedMemoryFiles>
+						<File Id="187592224" Language="SFX">
+							<ShortName>BUTTON A HI.wav</ShortName>
+							<Path>SFX\BUTTON A HI_4DBCC53A.wem</Path>
+						</File>
+						<File Id="294499401" Language="SFX">
+							<ShortName>BUTTON D HI.wav</ShortName>
+							<Path>SFX\BUTTON D HI_B2CAE2F8.wem</Path>
+						</File>
+						<File Id="360034372" Language="SFX">
+							<ShortName>BUTTON C LO.wav</ShortName>
+							<Path>SFX\BUTTON C LO_E681E506.wem</Path>
+						</File>
+						<File Id="676211636" Language="SFX">
+							<ShortName>BUTTON G LO.wav</ShortName>
+							<Path>SFX\BUTTON G LO_38C879EC.wem</Path>
+						</File>
+						<File Id="801445729" Language="SFX">
+							<ShortName>BUTTON C HI.wav</ShortName>
+							<Path>SFX\BUTTON C HI_EB999BBF.wem</Path>
+						</File>
+						<File Id="910117542" Language="SFX">
+							<ShortName>BUTTON A LO.wav</ShortName>
+							<Path>SFX\BUTTON A LO_8F659640.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\game_start" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3719698954" Name="menu_backtomain" ObjectPath="\Events\Default Work Unit\menu_backtomain" DurationType="Infinite">
 					<IncludedMemoryFiles>
@@ -178,8 +272,16 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3967028551" Name="pause_off" ObjectPath="\Events\Default Work Unit\pause_off" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3537680115" Name="pause_on" ObjectPath="\Events\Default Work Unit\pause_on" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3967028551" Name="pause_off" ObjectPath="\Events\Default Work Unit\pause_off" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<ActionSetState>
+						<ActionSetStateEntry Id="930712164" Name="Off" ObjectPath="\States\Default Work Unit\Pause\Off"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3537680115" Name="pause_on" ObjectPath="\Events\Default Work Unit\pause_on" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<ActionSetState>
+						<ActionSetStateEntry Id="1651971902" Name="On" ObjectPath="\States\Default Work Unit\Pause\On"/>
+					</ActionSetState>
+				</Event>
 				<Event Id="1562304622" Name="play_ambient" ObjectPath="\Events\Default Work Unit\play_ambient" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="9677936" Language="SFX">
@@ -397,11 +499,24 @@
 							<Path>SFX\STEM 1 - 55 BPM 4-4_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<ActionSetState>
+						<ActionSetStateEntry Id="930712164" Name="Off" ObjectPath="\States\Default Work Unit\Pause\Off"/>
+					</ActionSetState>
 				</Event>
+				<Event Id="3891337659" Name="volume_music" ObjectPath="\Events\Default Work Unit\volume_music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3673881719" Name="volume_sfx" ObjectPath="\Events\Default Work Unit\volume_sfx" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<GameParameters>
 				<GameParameter Id="3677180323" Name="HEALTH" ObjectPath="\Game Parameters\Default Work Unit\HEALTH"/>
 			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="930712164" Name="Off" ObjectPath="\States\Default Work Unit\Pause\Off">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="1651971902" Name="On" ObjectPath="\States\Default Work Unit\Pause\On">
+					<States/>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

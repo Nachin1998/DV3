@@ -20,8 +20,16 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
+							<GameParameterRef Name="SFX_VOLUME" ID="{92F9E7F3-9C79-45C7-9AEA-7D0050071613}"/>
+							<Value>80</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="HEALTH" ID="{10A371F4-3868-499B-8A71-8EC9FB0C16FA}"/>
 							<Value>0.250683355418043</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="MUSIC_VOLUME" ID="{5377F044-0801-4BCD-ACD2-27401DC6C1BA}"/>
+							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>

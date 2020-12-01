@@ -14,7 +14,7 @@ public class RangedEnemy : BaseEnemy
 
     void Update()
     {
-        UpdateBaseEnemy();        
+        UpdateBaseEnemy();
     }
 
     public override void ChasePlayer()
@@ -35,32 +35,37 @@ public class RangedEnemy : BaseEnemy
         {
             agent.stoppingDistance = 40;
             agent.SetDestination(playerTarget.transform.position);
-        }        
+        }
     }
 
     public override void Attack()
     {
         if (Vector3.Distance(transform.position, playerTarget.transform.position) >= attackDistance)
         {
+            anim.SetBool("isAttacking", true);
             attackSpeedRate = 0;
             enemyState = EnemyState.Wandering;
         }
 
-        attackSpeedRate -= Time.deltaTime;        
+        attackSpeedRate -= Time.deltaTime;
 
         Vector3 direction = playerTarget.transform.position - transform.position;
+
         if (direction.magnitude < 20)
         {
             anim.SetBool("isAttacking", false);
+            anim.SetBool("startedWalking", true);
+            anim.SetBool("isWalking", true);
             anim.SetBool("startedRunning", true);
             anim.SetBool("isRunning", true);
+
             agent.stoppingDistance = 0;
             agent.speed = 40;
             agent.SetDestination(agent.transform.position - direction * Time.deltaTime * agent.speed);
         }
         else
         {
-            if(agent.velocity.magnitude == 0)
+            if (agent.velocity.magnitude == 0)
             {
                 anim.SetBool("startedWalking", false);
                 anim.SetBool("isWalking", false);
@@ -69,20 +74,18 @@ public class RangedEnemy : BaseEnemy
 
                 if (attackSpeedRate <= 0)
                 {
-                    StartCoroutine(AttackTarget(2));
+                    anim.SetBool("isAttacking", true);
+                    Instantiate(projectile, fireSpot.position, fireSpot.rotation);
                     attackSpeedRate = maxAttackSpeedRate;
                 }
-            }           
-        }        
-    }
-
-    public override IEnumerator AttackTarget(float duration)
-    {
-        anim.SetBool("isAttacking", true);
-        Instantiate(projectile, fireSpot.position, fireSpot.rotation);
-        attackSpeedRate = maxAttackSpeedRate;
-
-        yield return new WaitForSeconds(duration);
-        anim.SetBool("isAttacking", false);
+            }
+            else
+            {
+                anim.SetBool("startedWalking", true);
+                anim.SetBool("isWalking", true);
+                anim.SetBool("startedRunning", true);
+                anim.SetBool("isRunning", true);
+            }
+        }
     }
 }

@@ -18,7 +18,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+							<ObjectRef Name="Music" ID="{505C5A98-B177-491D-A360-0DEBB7CB71B7}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -186,13 +186,18 @@
 				<MusicPlaylistContainer Name="MX gameplay" ID="{962B67B9-F80D-43B5-A207-027B1381AB0C}" ShortID="592100166">
 					<PropertyList>
 						<Property Name="Tempo" Type="Real64" Value="55"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+							<ObjectRef Name="Music" ID="{505C5A98-B177-491D-A360-0DEBB7CB71B7}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>

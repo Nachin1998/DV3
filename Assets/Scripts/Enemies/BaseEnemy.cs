@@ -165,8 +165,10 @@ public class BaseEnemy : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, playerTarget.transform.position) >= attackDistance)
         {
+            anim.SetBool("isAttacking", false);
             attackSpeedRate = 0;
             enemyState = EnemyState.Wandering;
+            return;
         }
 
         attackSpeedRate -= Time.deltaTime;
@@ -175,6 +177,7 @@ public class BaseEnemy : MonoBehaviour
         anim.SetBool("isWalking", false);
         anim.SetBool("startedRunning", false);
         anim.SetBool("isRunning", false);
+        anim.SetBool("isAttacking", true);
 
         if (attackSpeedRate <= 0)
         {
@@ -202,13 +205,10 @@ public class BaseEnemy : MonoBehaviour
     public virtual IEnumerator AttackTarget(float duration)
     {
         isAttacking = true;
-        anim.SetBool("isAttacking", true);
         playerTarget.TakeDamage(damage);
         attackSpeedRate = maxAttackSpeedRate;
 
         yield return new WaitForSeconds(duration);
-
-        anim.SetBool("isAttacking", false);
         isAttacking = false;
     }
 

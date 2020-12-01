@@ -9,6 +9,94 @@
 							<ObjectRef Name="System" ID="{F7E033ED-1671-46A8-9EEB-B1A27009388D}" WorkUnitID="{A98DA677-CD8F-48DD-BB74-F4C690D2EAF5}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="SFX" ID="{B51DC3E0-9806-4710-B13D-F1C928BB75FF}">
+							<PropertyList>
+								<Property Name="OutputBusVolume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{462EDE40-9543-4C9A-873D-37D0654111E6}" ShortID="203115143">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="SFX_VOLUME" ID="{92F9E7F3-9C79-45C7-9AEA-7D0050071613}" WorkUnitID="{F81DF2E2-9132-4604-B06D-FA8CD5186B3D}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{B751A74A-7726-4F2E-BA82-095F364EC4FF}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+						</Bus>
+						<Bus Name="Music" ID="{505C5A98-B177-491D-A360-0DEBB7CB71B7}">
+							<PropertyList>
+								<Property Name="OutputBusVolume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{4418C864-A924-4C94-A7DC-E586123A2862}" ShortID="433596867">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="MUSIC_VOLUME" ID="{5377F044-0801-4BCD-ACD2-27401DC6C1BA}" WorkUnitID="{F81DF2E2-9132-4604-B06D-FA8CD5186B3D}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{0DC86EF4-4F26-4E60-8000-664594B96BFE}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+						</Bus>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Pause" ID="{D500F0E2-8DCE-4850-9AE1-2A793414F6B7}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="On" ID="{97437E88-BD9A-4788-B33F-8696AAC8169D}"/>
+								<CustomState Name="" ID="{4CBD4504-0F93-4488-9EE6-673FCE704979}" ShortID="910294490">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="60"/>
+										<Property Name="Pitch" Type="int32" Value="-300"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Off" ID="{EA893A11-B92B-4C5C-8141-F982117C5711}"/>
+								<CustomState Name="" ID="{DA3AA230-D1D2-4FFD-B009-2E59988A300B}" ShortID="524365995"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

@@ -20,7 +20,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b10aa3994264204ab916e6420c0dcc44
     GuidInternal: 
-    m_lastTime: -8585949405274775808
+    m_lastTime: -8585948325014775808
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 1798fb9b95e5d94aa7bd63d3ec520428
     GuidInternal: 
-    m_lastTime: -8585949405274775808
+    m_lastTime: -8585948325014775808
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -41,6 +41,28 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
       Path: Default Work Unit\Master Audio Bus
+    - name: Music
+      guid: 985a5c5077b11d49a3600debb7cb71b7
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Music
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\Music
+    - name: SFX
+      guid: e0c31db506981047b13df1c928bb75ff
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: SFX
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\SFX
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -49,7 +71,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 09c10705d65cde41b3ebd263197221b8
     GuidInternal: 
-    m_lastTime: -8585949405274775808
+    m_lastTime: -8585948325014775808
     List:
     - name: MySoundBank
       guid: a6d18557cc28004bb3fa0044693f89b7
@@ -68,7 +90,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 66ce0cf28e999d44bd0284df88f7dad3
     GuidInternal: 
-    m_lastTime: -8585949405274775808
+    m_lastTime: -8585948325014775808
     List:
     - name: bear_dead
       guid: 9fd9af914aeaf5418bf90dc627df1445
@@ -212,8 +234,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\button_others_05
       maxAttenuation: 0
-      maxDuration: 1.968736
-      minDuration: 1.003357
+      maxDuration: 1.570276
+      minDuration: 0.638744
     - name: button_others_06
       guid: 4c9d9df9626afe4eb3d33d2adf94a5d5
       id: 3159091418
@@ -224,8 +246,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\button_others_06
       maxAttenuation: 0
-      maxDuration: 1.968736
-      minDuration: 1.003357
+      maxDuration: 1.570276
+      minDuration: 0.638744
     - name: button_others_07
       guid: 7a51a85b924979459e877f3c98bb17d7
       id: 3159091419
@@ -236,8 +258,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\button_others_07
       maxAttenuation: 0
-      maxDuration: 1.968736
-      minDuration: 1.003357
+      maxDuration: 1.570276
+      minDuration: 0.638744
     - name: button_play
       guid: fe742038436e904c88864fdc9d1b6370
       id: 1394085446
@@ -248,8 +270,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\button_play
       maxAttenuation: 0
-      maxDuration: 1.968736
-      minDuration: 1.003357
+      maxDuration: 1.570276
+      minDuration: 0.638744
     - name: button_restart
       guid: adf50a9ed11d5b489a7929fc285c8cdd
       id: 1136530457
@@ -260,8 +282,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\button_restart
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 1.570276
+      minDuration: 0.638744
     - name: button_resume
       guid: 6014dd53b97d194db9cc554eb8e48676
       id: 1961981585
@@ -272,8 +294,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\button_resume
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 1.570276
+      minDuration: 0.638744
     - name: button_settings
       guid: 043ca80334dfa24ab86a297c7f09d126
       id: 4251422607
@@ -284,8 +306,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\button_settings
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 1.570276
+      minDuration: 0.638744
     - name: game_start
       guid: 0397b3a6d1f71043b6906ef399332c4c
       id: 733168346
@@ -538,6 +560,30 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: volume_music
+      guid: 2c09e9622c80584bbc457da30fe00d9a
+      id: 3891337659
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: volume_music
+        ObjectType: 3
+      Path: Default Work Unit\volume_music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: volume_sfx
+      guid: e503167b30cfa94b80464b79012d9b5f
+      id: 3673881719
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: volume_sfx
+        ObjectType: 3
+      Path: Default Work Unit\volume_sfx
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -546,7 +592,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e2f21df832910446b06dfa8cd5186b3d
     GuidInternal: 
-    m_lastTime: -8585949405274775808
+    m_lastTime: -8585948325014775808
     List:
     - name: HEALTH
       guid: f471a31068389b498a718ec9fb0c16fa
@@ -557,6 +603,24 @@ MonoBehaviour:
       - ElementName: HEALTH
         ObjectType: 13
       Path: Default Work Unit\HEALTH
+    - name: MUSIC_VOLUME
+      guid: 44f077530108cd4bacd227401dc6c1ba
+      id: 1006694123
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUSIC_VOLUME
+        ObjectType: 13
+      Path: Default Work Unit\MUSIC_VOLUME
+    - name: SFX_VOLUME
+      guid: f3e7f992799cc7459aea7d0050071613
+      id: 1564184899
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX_VOLUME
+        ObjectType: 13
+      Path: Default Work Unit\SFX_VOLUME
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -565,8 +629,39 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 2f792d5101efac4ab41c252198ec1ee4
     GuidInternal: 
-    m_lastTime: -8585949405274775808
-    List: []
+    m_lastTime: -8585948325014775808
+    List:
+    - name: Pause
+      guid: e2f000d5ce8d50489ae12a793414f6b7
+      id: 3092587493
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Pause
+        ObjectType: 9
+      Path: Default Work Unit\Pause
+      values:
+      - name: None
+        guid: 85c361f2d127dc45b78fce6d15e4576b
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: Off
+        guid: 113a89ea2bb95c4c8141f982117c5711
+        id: 930712164
+        PathAndIcons:
+        - ElementName: Off
+          ObjectType: 8
+      - name: On
+        guid: 887e43979abd8847b33f8696aac8169d
+        id: 1651971902
+        PathAndIcons:
+        - ElementName: On
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -575,7 +670,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 33ef5d8b227b8e429d22d0fa44ef4072
     GuidInternal: 
-    m_lastTime: -8585949405274775808
+    m_lastTime: -8585948325014775808
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -585,7 +680,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e9a573a16745b3499ea7287848af91eb
     GuidInternal: 
-    m_lastTime: -8585949405274775808
+    m_lastTime: -8585948325014775808
     List: []
   ExpandedItems:
   - /DV3_WwiseProject

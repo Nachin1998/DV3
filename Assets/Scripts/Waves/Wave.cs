@@ -16,5 +16,5 @@ public class Wave : ScriptableObject
     public string name;
     public List<EnemyToSpawn> enemiesToSpawn;
     public float enemiesPerSecond;
-    public Transform spawnPoint;
+    public List <Transform> spawnPoints;
 }
