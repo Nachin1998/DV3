@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
+    public Player player;
     public float mouseSpeed = 100f;
     public Transform playerBody;
-    Player player;
     float xRotation = 0f;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        player = GetComponentInParent<Player>();
     }
+
     void Update()
     {
         if(player.isDead || GameManager.Instance.won)

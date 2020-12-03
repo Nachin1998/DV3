@@ -9,6 +9,8 @@ public class MainMenuFlashController : MonoBehaviour
     public Image menuBackground;
     public Sprite normalMenuBackground;
     public Sprite cursedMenuBackground;
+    public Button normalPlayButton;
+    public Button newCursedPlayButton;
 
     [Header("Credits")]
     public Image creditsBackground;
@@ -25,6 +27,15 @@ public class MainMenuFlashController : MonoBehaviour
     public float flashDuration;
 
     float timer = 0;
+
+    void Start()
+    {
+        if(normalPlayButton && newCursedPlayButton)
+        {
+            normalPlayButton.gameObject.SetActive(true);
+            newCursedPlayButton.gameObject.SetActive(false);
+        }
+    }
 
     void Update()
     {
@@ -43,10 +54,22 @@ public class MainMenuFlashController : MonoBehaviour
         creditsBackground.sprite = cursedCreditsBackground;
         creditsText.sprite = cursedCreditsText;
 
+        if (normalPlayButton && newCursedPlayButton)
+        {
+            normalPlayButton.gameObject.SetActive(false);
+            newCursedPlayButton.gameObject.SetActive(true);
+        }
+
         yield return new WaitForSeconds(flashDuration);
 
         menuBackground.sprite = normalMenuBackground;
         creditsBackground.sprite = normalCreditsBackground;
         creditsText.sprite = normalCreditsText;
+
+        if (normalPlayButton && newCursedPlayButton)
+        {
+            normalPlayButton.gameObject.SetActive(true);
+            newCursedPlayButton.gameObject.SetActive(false);
+        }
     }
 }

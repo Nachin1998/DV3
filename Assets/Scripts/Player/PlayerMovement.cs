@@ -15,8 +15,6 @@ public class PlayerMovement : MonoBehaviour
     public float sprintUsePerSec = 10f;
     public float sprintRefilPerSec = 10f;
 
-    public Image sprintBar;
-
     public List <Animator> weaponAnim = new List<Animator>();
 
     public float jumpHeight = 3f;
