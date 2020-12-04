@@ -4,50 +4,77 @@ using UnityEngine;
 
 public class TopDownMovement : MonoBehaviour
 {
-    public float movementSpeed;
-    public float sprintSpeed;
-    float auxBaseSpeed;
-    bool isWalking { get { return movement.x != 0 || movement.z != 0; } }
-    bool isSprinting { get { return Input.GetKey(KeyCode.LeftShift); } }
+    public float walkingSpeed = 12f;
+    public float sprintSpeed = 20f;
 
-    Rigidbody rb;
+    [Space]
+
+    public float sprintMaxAmmount = 100f;
+    public float sprintUsePerSec = 7.5f;
+    public float sprintRefilPerSec = 10f;
+
+    float auxBaseSpeed;
+    public float currentSprint;
+    public bool canSprint = true;
+    bool isWalking { get { return movement.x != 0 || movement.z != 0; } }
+    bool isSprinting { get { return Input.GetKey(KeyCode.LeftShift) && canSprint; } }
+
     Vector3 movement;
     Camera cam;
     Vector3 mousePos;
 
     void Start()
     {
-        auxBaseSpeed = movementSpeed;
-        rb = GetComponent<Rigidbody>();
+        auxBaseSpeed = walkingSpeed;
         cam = Camera.main;
-        mousePos = cam.WorldToScreenPoint(Input.mousePosition);
+        currentSprint = sprintMaxAmmount;
     }
 
     // Update is called once per frame
     void Update()
     {
+        cam.transform.position = new Vector3(transform.position.x, 75, transform.position.z);
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.z = Input.GetAxisRaw("Vertical");
 
-        transform.position += movement * movementSpeed * Time.deltaTime;
+        transform.position += movement * walkingSpeed * Time.deltaTime;
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        Plane plane = new Plane(Vector3.up, Vector3.zero);
+        float length;
 
-        Vector3 mousePos = Input.mousePosition;
-
-        Ray ray = cam.ScreenPointToRay(mousePos);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, 200))
+        if(plane.Raycast(ray, out length))
         {
-            transform.LookAt(hit.point);
+            Vector3 pointToLook = ray.GetPoint(length);
+            transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+        }
+
+        if (currentSprint > sprintMaxAmmount)
+        {
+            currentSprint = sprintMaxAmmount;
         }
 
         if (isSprinting)
         {
-            movementSpeed = sprintSpeed;
+            walkingSpeed = sprintSpeed;
+            currentSprint -= sprintUsePerSec * Time.deltaTime;
         }
         else
         {
-            movementSpeed = auxBaseSpeed;
+            if(currentSprint < sprintMaxAmmount)
+            {
+                currentSprint += sprintUsePerSec * Time.deltaTime;
+            }
+            walkingSpeed = auxBaseSpeed;
+        }
+
+        if (currentSprint <= 0)
+        {
+            canSprint = false;
+        }
+
+        if (currentSprint >= 25f)
+        {
+            canSprint = true;
         }
     }
 }

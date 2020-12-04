@@ -7,6 +7,7 @@ public class PlayerUI : MonoBehaviour
 {
     public Player player;
     PlayerMovement pm;
+    TopDownMovement tdm;
 
     [Space]
 
@@ -16,7 +17,15 @@ public class PlayerUI : MonoBehaviour
 
     void Start()
     {
-        pm = player.GetComponent<PlayerMovement>();
+        if(player.GetComponent<PlayerMovement>() != null)
+        {
+            pm = player.GetComponent<PlayerMovement>();
+        }
+        else
+        {
+            tdm = player.GetComponent<TopDownMovement>();
+        }
+
         healthBar.fillAmount = player.currentHealth / 100;
         bloodScreen.gameObject.SetActive(false);
     }
@@ -25,16 +34,32 @@ public class PlayerUI : MonoBehaviour
     void Update()
     {
         healthBar.fillAmount = player.currentHealth / 100;
-        sprintBar.fillAmount = pm.currentSprint / 100;
-
-        if (pm.canSprint)
+        if (pm)
         {
-            sprintBar.color = Color.white;
+            sprintBar.fillAmount = pm.currentSprint / 100;
+            if (pm.canSprint)
+            {
+                sprintBar.color = Color.white;
+            }
+            else
+            {
+                sprintBar.color = Color.red;
+            }
         }
         else
         {
-            sprintBar.color = Color.red;
+            sprintBar.fillAmount = tdm.currentSprint / 100;
+            if (tdm.canSprint)
+            {
+                sprintBar.color = Color.white;
+            }
+            else
+            {
+                sprintBar.color = Color.red;
+            }
         }
+
+        
 
         if (player.tookDamage)
         {

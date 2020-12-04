@@ -10,9 +10,10 @@ public class ScenesManager : MonoBehaviour
     public Slider slider;
     public TextMeshProUGUI progressText;
 
-    public void Play()
+    public void LoadLevel(int index)
     {
-        SceneManager.LoadScene(1);
+        Cursor.visible = false;
+        StartCoroutine(LoadAsync(index));
     }
 
     public void ReplayLevel()
@@ -29,12 +30,6 @@ public class ScenesManager : MonoBehaviour
     public void NextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    public void SurvivalMode()
-    {
-        Cursor.visible = false;
-        StartCoroutine(LoadAsync(1));
     }
 
     public void QuitGame()

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a690e5626dbaf84468a3ae6f2ce3555d, type: 3}
+  m_Name: Wave1
+  m_EditorClassIdentifier: 
+  name: Wave1
+  enemiesToSpawn:
+  - name: Melee
+    enemy: {fileID: 5890288233696175762, guid: 2840e5f7213551a438318e5494b6d650, type: 3}
+    enemyAmmount: 2
+  - name: Melee 2
+    enemy: {fileID: 8837982487687963082, guid: ef7a226f78b8754478a6ace112a1424a, type: 3}
+    enemyAmmount: 1
+  - name: Melee 3
+    enemy: {fileID: 8942367727769409015, guid: d9db1e6e94713d34fb5dd0f874122ed8, type: 3}
+    enemyAmmount: 2
+  - name: Ranged
+    enemy: {fileID: 5176444123357786245, guid: 8289d144b034d9b48bb1585ff6a0e6f4, type: 3}
+    enemyAmmount: 2
+  enemiesPerSecond: 2
+  spawnPoints:
+  - {fileID: 1010954044097974769, guid: b0e52b2099696b24a901bd97e6596986, type: 3}
+  - {fileID: 1496516679158684115, guid: fb00714f377ae994f964e00c6984f855, type: 3}
+  - {fileID: 8663291017475742141, guid: ea4a30dcdd2d0b44f94d60410eedbe1d, type: 3}
+  - {fileID: 1137855174786170419, guid: 68cdc34c3af0b6a4aaf0332fb0cbbdab, type: 3}
+  - {fileID: 7869438349835495045, guid: d7b2d934746bd7748b598f87bf8213dd, type: 3}
+  - {fileID: 1949523680894870193, guid: f2a48f8ad7759054db6f384d4ec2864e, type: 3}
