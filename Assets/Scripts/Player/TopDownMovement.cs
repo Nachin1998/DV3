@@ -13,9 +13,14 @@ public class TopDownMovement : MonoBehaviour
     public float sprintUsePerSec = 7.5f;
     public float sprintRefilPerSec = 10f;
 
+    [Space]
+
+    public float yCamOffset;
+
     float auxBaseSpeed;
-    public float currentSprint;
-    public bool canSprint = true;
+    [HideInInspector]public float currentSprint;
+    [HideInInspector]public bool canSprint = true;
+
     bool isWalking { get { return movement.x != 0 || movement.z != 0; } }
     bool isSprinting { get { return Input.GetKey(KeyCode.LeftShift) && canSprint; } }
 
@@ -33,15 +38,15 @@ public class TopDownMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cam.transform.position = new Vector3(transform.position.x, 75, transform.position.z);
+        cam.transform.position = new Vector3(transform.position.x, transform.position.y + yCamOffset, transform.position.z);
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.z = Input.GetAxisRaw("Vertical");
 
         transform.position += movement * walkingSpeed * Time.deltaTime;
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         Plane plane = new Plane(Vector3.up, Vector3.zero);
-        float length;
 
+        float length;
         if(plane.Raycast(ray, out length))
         {
             Vector3 pointToLook = ray.GetPoint(length);

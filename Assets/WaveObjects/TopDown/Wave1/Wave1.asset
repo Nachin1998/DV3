@@ -28,9 +28,13 @@ MonoBehaviour:
     enemyAmmount: 2
   enemiesPerSecond: 2
   spawnPoints:
-  - {fileID: 1010954044097974769, guid: b0e52b2099696b24a901bd97e6596986, type: 3}
-  - {fileID: 1496516679158684115, guid: fb00714f377ae994f964e00c6984f855, type: 3}
-  - {fileID: 8663291017475742141, guid: ea4a30dcdd2d0b44f94d60410eedbe1d, type: 3}
-  - {fileID: 1137855174786170419, guid: 68cdc34c3af0b6a4aaf0332fb0cbbdab, type: 3}
-  - {fileID: 7869438349835495045, guid: d7b2d934746bd7748b598f87bf8213dd, type: 3}
-  - {fileID: 1949523680894870193, guid: f2a48f8ad7759054db6f384d4ec2864e, type: 3}
+  - {fileID: 6352151217812194005, guid: b0e52b2099696b24a901bd97e6596986, type: 3}
+  - {fileID: 890335219784888691, guid: fb00714f377ae994f964e00c6984f855, type: 3}
+  - {fileID: 3774023843945137904, guid: ea4a30dcdd2d0b44f94d60410eedbe1d, type: 3}
+  - {fileID: 8472074707357854027, guid: 68cdc34c3af0b6a4aaf0332fb0cbbdab, type: 3}
+  - {fileID: 7693129515897607628, guid: d7b2d934746bd7748b598f87bf8213dd, type: 3}
+  - {fileID: 7820350166934855848, guid: ee3eff428b9d27f4d8b5ba06b424e62f, type: 3}
+  - {fileID: 1371823833733134173, guid: ae3b4fbf943c38348a22c4931b7d209b, type: 3}
+  - {fileID: 6639678493487754693, guid: 47a33b1ae3016e9469349395e6799416, type: 3}
+  - {fileID: 7308988371081589262, guid: 9ebed093849cbe048b11d715b61ee087, type: 3}
+  - {fileID: 6038280827878588818, guid: f2a48f8ad7759054db6f384d4ec2864e, type: 3}

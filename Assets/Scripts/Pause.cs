@@ -32,7 +32,7 @@ public class Pause : MonoBehaviour
     public void ResumeGame()
     {
         AkSoundEngine.PostEvent("pause_off", gameObject);
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
