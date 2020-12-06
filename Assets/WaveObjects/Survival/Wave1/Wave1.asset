@@ -16,21 +16,25 @@ MonoBehaviour:
   enemiesToSpawn:
   - name: Melee
     enemy: {fileID: 5890288233696175762, guid: 2840e5f7213551a438318e5494b6d650, type: 3}
-    enemyAmmount: 2
+    enemyAmmount: 6
   - name: Melee 2
     enemy: {fileID: 8837982487687963082, guid: ef7a226f78b8754478a6ace112a1424a, type: 3}
-    enemyAmmount: 1
+    enemyAmmount: 3
   - name: Melee 3
     enemy: {fileID: 8942367727769409015, guid: d9db1e6e94713d34fb5dd0f874122ed8, type: 3}
-    enemyAmmount: 2
+    enemyAmmount: 4
   - name: Ranged
     enemy: {fileID: 5176444123357786245, guid: 8289d144b034d9b48bb1585ff6a0e6f4, type: 3}
-    enemyAmmount: 2
+    enemyAmmount: 3
   enemiesPerSecond: 2
   spawnPoints:
-  - {fileID: 1309083265232397855, guid: c2f436954dd6e99458bf998f95e6c23f, type: 3}
-  - {fileID: 7632174340026816050, guid: 7837ff01a275a5c4dbef5b3508a4edde, type: 3}
-  - {fileID: 5602699591753241865, guid: 83f8bb4908eb8a14baa2241b06ffabf6, type: 3}
-  - {fileID: 5201439295627196881, guid: f79b77e85e0dda545b7ffc4db6137a98, type: 3}
-  - {fileID: 2460465675962704842, guid: 3144935eedde17449b2eaa4697de615b, type: 3}
-  - {fileID: 8377500342856467691, guid: 263f490107514bd4ba1d9d428d2f0d48, type: 3}
+  - {fileID: 4486656761526579301, guid: c2f436954dd6e99458bf998f95e6c23f, type: 3}
+  - {fileID: 3143940214278207922, guid: 7837ff01a275a5c4dbef5b3508a4edde, type: 3}
+  - {fileID: 3574853715549997447, guid: 83f8bb4908eb8a14baa2241b06ffabf6, type: 3}
+  - {fileID: 8752489037851249318, guid: f79b77e85e0dda545b7ffc4db6137a98, type: 3}
+  - {fileID: 1565703913226912355, guid: 3144935eedde17449b2eaa4697de615b, type: 3}
+  - {fileID: 7196277238150413914, guid: cd602e9c850f0f8439456b7e1df4d8ed, type: 3}
+  - {fileID: 1057917876349668105, guid: ffb67488cfbabd846a25c960feec0f0e, type: 3}
+  - {fileID: 1720897591581513178, guid: 7a0c22d839b88794ebc31958cb70336c, type: 3}
+  - {fileID: 5362932643203758731, guid: 208376a424a3a9e498f4480c2301b6c6, type: 3}
+  - {fileID: 8241399070336725029, guid: 263f490107514bd4ba1d9d428d2f0d48, type: 3}
