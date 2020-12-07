@@ -36,7 +36,7 @@ public class WavesUI : MonoBehaviour
         {
             waveStateText.gameObject.SetActive(true);
             enemyAmmount.gameObject.SetActive(false);
-            waveStateText.text = "Next wave in: " + wm.waveCountdown.ToString("F2");
+            waveStateText.text = "Next wave in: " + ((int)wm.waveCountdown).ToString();
         }
     }
 }
