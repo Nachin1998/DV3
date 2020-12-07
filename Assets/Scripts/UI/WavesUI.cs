@@ -3,7 +3,7 @@ using TMPro;
 
 public class WavesUI : MonoBehaviour
 {
-    public WaveSpawner ws;
+    public WaveManager wm;
 
     [Space]
 
@@ -20,15 +20,15 @@ public class WavesUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ws.state == WaveSpawner.SpawnState.ActiveWave)
+        if (wm.state == WaveManager.WaveState.ActiveWave)
         {
             waveStateText.gameObject.SetActive(false);
             enemyAmmount.SetActive(true);
-            enemyAmmountText.text = "x " + ws.totalEnemies.ToString();
+            enemyAmmountText.text = "x " + wm.totalEnemies.ToString();
             return;
         }
 
-        if (ws.waveCountdown <= 0)
+        if (wm.waveCountdown <= 0)
         {
             waveStateText.text = "Spawning Nightmares...";
         }
@@ -36,7 +36,7 @@ public class WavesUI : MonoBehaviour
         {
             waveStateText.gameObject.SetActive(true);
             enemyAmmount.gameObject.SetActive(false);
-            waveStateText.text = "Next wave in: " + ws.waveCountdown.ToString("F2");
+            waveStateText.text = "Next wave in: " + wm.waveCountdown.ToString("F2");
         }
     }
 }
