@@ -11,8 +11,19 @@ public class Interactable : MonoBehaviour
     }
     public PickUpType pickUpType;
 
+    public GameObject interactableQuad;
     public float healthRecovery;
     public int ammoRecovery;
+
+    GameObject auxUI;
+
+    private void Start()
+    {
+        if(interactableQuad != null)
+        {
+            auxUI = Instantiate(interactableQuad, transform.position + Vector3.up, Quaternion.Euler(90, 0, 0), transform.parent);
+        }
+    }
 
     private void OnTriggerEnter(Collider col)
     {
@@ -36,6 +47,10 @@ public class Interactable : MonoBehaviour
                         col.GetComponent<Player>().currentHealth += healthRecovery;
                     }
                     AkSoundEngine.PostEvent("player_sandwich", gameObject);
+                    if (auxUI != null)
+                    {
+                        Destroy(auxUI);
+                    }
                     Destroy(gameObject);
                     break;
 
@@ -57,6 +72,10 @@ public class Interactable : MonoBehaviour
                             col.GetComponentInChildren<BaseWeapon>().maxAmmo += ammoRecovery;
                         }
                         AkSoundEngine.PostEvent("player_reload", gameObject);
+                        if(auxUI != null)
+                        {
+                            Destroy(auxUI);
+                        }
                         Destroy(gameObject);
                     }
 
