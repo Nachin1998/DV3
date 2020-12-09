@@ -29,7 +29,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3104675574" Language="SFX" Hash="577415634">
+		<SoundBank Id="3104675574" Language="SFX" Hash="1717797876">
 			<ObjectPath>\SoundBanks\Default Work Unit\MySoundBank</ObjectPath>
 			<ShortName>MySoundBank</ShortName>
 			<Path>MySoundBank.bnk</Path>
@@ -46,9 +46,41 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3582681732" Name="bear_footstep" ObjectPath="\Events\Default Work Unit\bear_footstep" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2384465804" Name="bear_impact" ObjectPath="\Events\Default Work Unit\bear_impact" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="859168564" Name="bear_defeated" ObjectPath="\Events\Default Work Unit\bear_defeated" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3582681732" Name="bear_footstep" ObjectPath="\Events\Default Work Unit\bear_footstep" DurationType="OneShot" DurationMin="0.236009" DurationMax="0.383713">
+					<IncludedMemoryFiles>
+						<File Id="131895359" Language="SFX">
+							<ShortName>Pasoso1.wav</ShortName>
+							<Path>SFX\Pasoso1_10C4C929.wem</Path>
+						</File>
+						<File Id="139313373" Language="SFX">
+							<ShortName>Pasoso4.wav</ShortName>
+							<Path>SFX\Pasoso4_10C4C929.wem</Path>
+						</File>
+						<File Id="170249342" Language="SFX">
+							<ShortName>Pasoso2.wav</ShortName>
+							<Path>SFX\Pasoso2_10C4C929.wem</Path>
+						</File>
+						<File Id="1064938979" Language="SFX">
+							<ShortName>Pasoso3.wav</ShortName>
+							<Path>SFX\Pasoso3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2384465804" Name="bear_impact" ObjectPath="\Events\Default Work Unit\bear_impact" DurationType="OneShot" DurationMin="0.239369" DurationMax="0.262512">
+					<IncludedMemoryFiles>
+						<File Id="124684172" Language="SFX">
+							<ShortName>Bulletoso1.wav</ShortName>
+							<Path>SFX\Bulletoso1_10C4C929.wem</Path>
+						</File>
+						<File Id="199202428" Language="SFX">
+							<ShortName>Bulletoso2.wav</ShortName>
+							<Path>SFX\Bulletoso2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="4016552735" Name="bear_shoot" ObjectPath="\Events\Default Work Unit\bear_shoot" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1071660241" Name="bear_spawning" ObjectPath="\Events\Default Work Unit\bear_spawning" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="510827497" Name="button_back" ObjectPath="\Events\Default Work Unit\button_back" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="804193798" Name="button_credits" ObjectPath="\Events\Default Work Unit\button_credits" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1778101440" Name="button_exit" ObjectPath="\Events\Default Work Unit\button_exit" DurationType="OneShot" DurationMin="1.469457" DurationMax="1.469457">
@@ -255,6 +287,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1432716332" Name="game_over" ObjectPath="\Events\Default Work Unit\game_over" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\game_start" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3719698954" Name="menu_backtomain" ObjectPath="\Events\Default Work Unit\menu_backtomain" DurationType="Infinite">
 					<IncludedMemoryFiles>
@@ -370,7 +403,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2897551616" Name="player_bullets" ObjectPath="\Events\Default Work Unit\player_bullets" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2897551616" Name="player_bullets" ObjectPath="\Events\Default Work Unit\player_bullets" DurationType="OneShot" DurationMin="0.279823" DurationMax="0.309945">
+					<IncludedMemoryFiles>
+						<File Id="867034980" Language="SFX">
+							<ShortName>bullets.wav</ShortName>
+							<Path>SFX\bullets_C8CFD9CD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2226114503" Name="player_dead" ObjectPath="\Events\Default Work Unit\player_dead" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2453392179" Name="player_footstep" ObjectPath="\Events\Default Work Unit\player_footstep" DurationType="OneShot" DurationMin="0.154283" DurationMax="0.420104">
 					<IncludedMemoryFiles>
@@ -441,19 +481,19 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1650679582" Name="player_reload" ObjectPath="\Events\Default Work Unit\player_reload" DurationType="OneShot" DurationMin="0.798347" DurationMax="1.986434">
+				<Event Id="1650679582" Name="player_reload" ObjectPath="\Events\Default Work Unit\player_reload" DurationType="OneShot" DurationMin="3.919083" DurationMax="5.849598">
 					<IncludedMemoryFiles>
 						<File Id="220144409" Language="SFX">
 							<ShortName>cambio_arma_1.wav</ShortName>
-							<Path>SFX\cambio_arma_1_FF8E6230.wem</Path>
+							<Path>SFX\cambio_arma_1_51DFB482.wem</Path>
 						</File>
 						<File Id="695209723" Language="SFX">
 							<ShortName>recarga_2.wav</ShortName>
-							<Path>SFX\recarga_2_CE0FCCB5.wem</Path>
+							<Path>SFX\recarga_2_8775E792.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1825296518" Name="player_sandwich" ObjectPath="\Events\Default Work Unit\player_sandwich" DurationType="OneShot" DurationMin="0.395038" DurationMax="0.747747">
+				<Event Id="1825296518" Name="player_sandwich" ObjectPath="\Events\Default Work Unit\player_sandwich" DurationType="OneShot" DurationMin="1.710711" DurationMax="2.037918">
 					<IncludedMemoryFiles>
 						<File Id="140229405" Language="SFX">
 							<ShortName>mordiscos_1.wav</ShortName>
@@ -462,6 +502,10 @@
 						<File Id="282399641" Language="SFX">
 							<ShortName>mordiscos_1.wav</ShortName>
 							<Path>SFX\mordiscos_1_62429013.wem</Path>
+						</File>
+						<File Id="1014687912" Language="SFX">
+							<ShortName>mixkit-game-flute-bonus-2313.wav</ShortName>
+							<Path>SFX\mixkit-game-flute-bonus-2313_B3DA9CBC.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

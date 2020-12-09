@@ -74,13 +74,23 @@
 						<Action Name="" ID="{F0D97FC1-C7CD-4B91-8009-CE799169BC66}" ShortID="772523174">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="sandwich" ID="{A8CBFDAF-C50C-4229-8E35-BB719A976954}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+									<ObjectRef Name="player_sandwich" ID="{C1FF3469-C358-4884-8B1E-DD187C0BC36C}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="player_bullets" ID="{241D4D0F-EA4B-4B46-90B6-B172A7AE59A2}"/>
+				<Event Name="player_bullets" ID="{241D4D0F-EA4B-4B46-90B6-B172A7AE59A2}">
+					<ChildrenList>
+						<Action Name="" ID="{41D90D2B-28A8-4453-8622-1E67775C1532}" ShortID="19360732">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_bullets" ID="{FE6BAC26-32DC-44EF-A11F-491068CB70C1}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="player_gunchange" ID="{95380444-397E-4626-92CD-63E92EF0B259}"/>
 				<Event Name="player_health" ID="{6CF53D6C-D6B7-4B28-9126-4F9F51DBF752}">
 					<ChildrenList>
@@ -102,7 +112,17 @@
 				<Event Name="bear2_voice" ID="{C6AB5506-5AD4-4C18-B6DF-E6EA63DA6012}"/>
 				<Event Name="bear3_voice" ID="{191ADC98-B80F-4AA6-8431-DE0A15D43516}"/>
 				<Event Name="bear4_voice" ID="{19A6A681-1EF7-49BD-9E30-8EA4D20C155A}"/>
-				<Event Name="bear_impact" ID="{D6FDB8BD-16DA-4478-80B2-18296A7D96C0}"/>
+				<Event Name="bear_impact" ID="{D6FDB8BD-16DA-4478-80B2-18296A7D96C0}">
+					<ChildrenList>
+						<Action Name="" ID="{5E46D0E2-92A1-4999-B5ED-CD3A4F20093A}" ShortID="326282271">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Impactbear" ID="{1E86F4C0-81A8-473C-A394-7491066EA9D4}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="bear_dead" ID="{91AFD99F-EA4A-41F5-8BF9-0DC627DF1445}">
 					<ChildrenList>
 						<Action Name="" ID="{8048ADE3-B304-43E5-943B-866A184B7908}" ShortID="782938738">
@@ -125,7 +145,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="bear_footstep" ID="{64911DA8-A7AA-4C03-BBBE-35ECFF85FA14}"/>
+				<Event Name="bear_footstep" ID="{64911DA8-A7AA-4C03-BBBE-35ECFF85FA14}">
+					<ChildrenList>
+						<Action Name="" ID="{0CC1356F-21D6-4695-B62E-BB06565B74D4}" ShortID="380280140">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bear footstep" ID="{458A86AB-99E1-4ABF-9FBE-E5CBAC5CC9C1}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="button_play" ID="{382074FE-6E43-4C90-8886-4FDC9D1B6370}">
 					<ChildrenList>
 						<Action Name="" ID="{3270248F-4833-4F59-AB6C-0070EC12CEE5}" ShortID="434267510">
@@ -345,6 +375,9 @@
 				</Event>
 				<Event Name="volume_music" ID="{62E9092C-802C-4B58-BC45-7DA30FE00D9A}"/>
 				<Event Name="volume_sfx" ID="{7B1603E5-CF30-4BA9-8046-4B79012D9B5F}"/>
+				<Event Name="bear_defeated" ID="{5B72FC93-A0FD-4E9A-BD67-5779A60C4829}"/>
+				<Event Name="bear_spawning" ID="{F359241C-0008-45F1-A342-CC2BB20BDC73}"/>
+				<Event Name="game_over" ID="{B33F37AF-4E21-42FA-B947-365CE00212A2}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -5,12 +5,18 @@ using TMPro;
 
 public class WeaponUI : MonoBehaviour
 {
-    public BaseWeapon bw;
+    public List <BaseWeapon> bws;
     public TextMeshProUGUI ammoText;
 
     // Update is called once per frame
     void Update()
     {
-        ammoText.text = bw.ammoInWeapon.ToString() + " / " + bw.maxAmmo.ToString();
+        for (int i = 0; i < bws.Count; i++)
+        {
+            if (bws[i].isActiveAndEnabled)
+            {
+                ammoText.text = bws[i].ammoInWeapon.ToString() + " / " + bws[i].maxAmmo.ToString();
+            }
+        }
     }
 }

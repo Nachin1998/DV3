@@ -32,11 +32,6 @@ public class GameManager : MonoBehaviour
         pm = playerGO.GetComponent<PlayerMovement>();
     }
 
-    void Update()
-    {
-        
-    }
-
     public void SavePlayer()
     {
         SaveSystem.SavePlayer(player, pm, bw);
@@ -49,7 +44,7 @@ public class GameManager : MonoBehaviour
 
         Debug.Log(new Vector3(data.position[0], data.position[1], data.position[2]));
         Debug.Log(Application.persistentDataPath);
-
+        
         player.currentHealth = data.currentHealth;
         playerGO.transform.position = new Vector3(data.position[0], data.position[1], data.position[2]);
         pm.currentSprint = data.currentSprint;

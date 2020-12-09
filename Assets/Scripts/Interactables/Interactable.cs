@@ -71,7 +71,8 @@ public class Interactable : MonoBehaviour
                         {
                             col.GetComponentInChildren<BaseWeapon>().maxAmmo += ammoRecovery;
                         }
-                        AkSoundEngine.PostEvent("player_reload", gameObject);
+
+                        AkSoundEngine.PostEvent("player_bullets", gameObject);
                         if(auxUI != null)
                         {
                             Destroy(auxUI);
