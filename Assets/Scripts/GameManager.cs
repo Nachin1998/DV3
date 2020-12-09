@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject playerGO;
     public BaseWeapon bw;
+    public WaveManager wm;
 
     Player player;
     PlayerMovement pm;
@@ -32,6 +33,19 @@ public class GameManager : MonoBehaviour
         pm = playerGO.GetComponent<PlayerMovement>();
     }
 
+    public void SaveWave()
+    {
+        SaveSystem.SaveWave(wm);
+    }
+    public void LoadWave()
+    {
+        WaveData data = SaveSystem.LoadWave();
+
+        wm.waveCountdown = data.waveCountdown;
+        wm.currentWave = data.currentWave;
+        wm.state = (WaveManager.WaveState)data.currentWave;
+    }
+
     public void SavePlayer()
     {
         SaveSystem.SavePlayer(player, pm, bw);
@@ -43,7 +57,6 @@ public class GameManager : MonoBehaviour
         PlayerData data = SaveSystem.LoadPlayer();
 
         Debug.Log(new Vector3(data.position[0], data.position[1], data.position[2]));
-        Debug.Log(Application.persistentDataPath);
         
         player.currentHealth = data.currentHealth;
         playerGO.transform.position = new Vector3(data.position[0], data.position[1], data.position[2]);

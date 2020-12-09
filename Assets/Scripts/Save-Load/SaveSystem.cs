@@ -34,4 +34,35 @@ public static class SaveSystem
             return null;
         }
     }
+
+    public static void SaveWave(WaveManager wm)
+    {
+        string path = Application.persistentDataPath + "wave.ftw";
+
+        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        FileStream stream = new FileStream(path, FileMode.Create);
+        WaveData data = new WaveData(wm);
+
+        binaryFormatter.Serialize(stream, data);
+        stream.Close();
+    }
+
+    public static WaveData LoadWave()
+    {
+        string path = Application.persistentDataPath + "wave.ftw";
+        if (File.Exists(path))
+        {
+            BinaryFormatter binaryFormatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+            WaveData data = binaryFormatter.Deserialize(stream) as WaveData;
+
+            stream.Close();
+            return data;
+        }
+        else
+        {
+            Debug.LogError("Save file not found");
+            return null;
+        }
+    }
 }

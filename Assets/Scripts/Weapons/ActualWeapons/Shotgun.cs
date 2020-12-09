@@ -50,7 +50,7 @@ public class Shotgun : BaseWeapon
         {
             if (!isReloading && !isOutOfClips && canReload)
             {
-                StartCoroutine(Reload(2.8f));
+                StartCoroutine(Reload(3.5f));
             }
         }
     }
