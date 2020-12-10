@@ -56,7 +56,7 @@ public class TopDownMovement : MonoBehaviour
             currentSprint = sprintMaxAmmount;
         }
 
-        if (isSprinting)
+        if (isSprinting && isWalking)
         {
             walkingSpeed = sprintSpeed;
             currentSprint -= sprintUsePerSec * Time.deltaTime;
