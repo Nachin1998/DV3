@@ -673,6 +673,11 @@ MonoBehaviour:
   health: 100
   damage: 5
   sightRange: 300
+  enemySounds:
+  - bear1_voice
+  - bear2_voice
+  - bear3_voice
+  - bear4_voice
   attackDistance: 5
   attackSpeedRate: 1
   chasingSpeed: 10

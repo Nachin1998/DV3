@@ -16,10 +16,11 @@ public class BaseEnemy : MonoBehaviour
 
     [Header("Enemy Data")]
     public EnemyState enemyState = EnemyState.Wandering;
-
     public float health = 100f;
     public float damage = 10f;
     public float sightRange = 20f;
+    public string[] enemySounds;
+    protected float speakingTimer;
 
     [Header("Chasing")]
     public float attackDistance = 3f;
@@ -88,12 +89,10 @@ public class BaseEnemy : MonoBehaviour
                 break;
 
             case EnemyState.Wandering:
-                //StartFootstepsSound();
                 Wander();                
                 break;
 
             case EnemyState.Chasing:
-                //StartFootstepsSound();
                 ChasePlayer();                
                 break;
 
@@ -108,6 +107,8 @@ public class BaseEnemy : MonoBehaviour
             default:
                 break;
         }
+
+        MakeSound();
     }
 
     public virtual void Wander()
@@ -212,6 +213,20 @@ public class BaseEnemy : MonoBehaviour
         isAttacking = false;
     }
 
+    public void MakeSound()
+    {
+        speakingTimer += Time.deltaTime;
+
+        for (int i = 0; i < enemySounds.Length; i++)
+        {
+            if(speakingTimer >= 10)
+            {
+                AkSoundEngine.PostEvent(enemySounds[Random.Range(0, enemySounds.Length)], gameObject);
+                speakingTimer = 0;
+            }
+        }
+    }
+
     IEnumerator Die(float duration)
     {
         agent.speed = 0;
@@ -228,14 +243,4 @@ public class BaseEnemy : MonoBehaviour
         gameObject.SetActive(false);
         Destroy(gameObject, 2.1f);
     }
-
-    void StartFootstepsSound()
-    {
-        movingTimer += Time.deltaTime;
-        if (movingTimer >= stepSoundOffset)
-        {
-            AkSoundEngine.PostEvent("player_footstep", playerTarget.gameObject);
-            movingTimer = 0;
-        }
-    }    
 }

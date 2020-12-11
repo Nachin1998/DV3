@@ -73,6 +73,7 @@ public class WaveManager : MonoBehaviour
     void EndWave()
     {
         state = WaveState.CountDown;
+        AkSoundEngine.PostEvent("bear_defeated", gameObject);
         waveCountdown = timeBetweenWaves;
         totalEnemies = 0;
         playSound = false;
@@ -105,6 +106,8 @@ public class WaveManager : MonoBehaviour
     IEnumerator SpawnWave(Wave wave)
     {        
         state = WaveState.Spawning;
+
+        AkSoundEngine.PostEvent("bear_spawning", gameObject);
 
         for (int i = 0; i < wave.enemiesToSpawn.Count; i++)
         {

@@ -87,8 +87,24 @@ public class BaseWeapon : MonoBehaviour
             {
                 case "Enemy":
                     hit.collider.gameObject.GetComponent<BaseEnemy>().TakeDamage(damage);
-                    hit.collider.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+
+                    AkSoundEngine.PostEvent("bear_impact", gameObject);
                     PlaceImpactEffect(hit, enemyImpactEffect);
+                    break;
+
+                case "Tree":
+                    AkSoundEngine.PostEvent("shoot_tree", gameObject);
+                    PlaceImpactEffect(hit, enviromentImpactEffect);
+                    break;
+
+                case "Rock":
+                    AkSoundEngine.PostEvent("shoot_rock", gameObject);
+                    PlaceImpactEffect(hit, enviromentImpactEffect);
+                    break;
+
+                case "Wall":
+                    AkSoundEngine.PostEvent("shoot_metal", gameObject);
+                    PlaceImpactEffect(hit, enviromentImpactEffect);
                     break;
 
                 default:

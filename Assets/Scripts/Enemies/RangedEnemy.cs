@@ -74,6 +74,7 @@ public class RangedEnemy : BaseEnemy
 
                 if (attackSpeedRate <= 0)
                 {
+                    AkSoundEngine.PostEvent("bear_shoot", gameObject);
                     anim.SetBool("isAttacking", true);
                     Instantiate(projectile, fireSpot.position, fireSpot.rotation);
                     attackSpeedRate = maxAttackSpeedRate;

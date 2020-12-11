@@ -1,7 +1,14 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	89505537	Gameplay			\Default Work Unit\Gameplay	
+	2005704188	Main_menu			\Default Work Unit\Main_menu	
 	3092587493	Pause			\Default Work Unit\Pause	
 
 State	ID	Name	State Group			Notes
+	748895195	None	Gameplay			
+	2582085496	Exploration	Gameplay			
+	2937832959	Battle	Gameplay			
+	748895195	None	Main_menu			
+	2005704188	Main_Menu	Main_menu			
 	748895195	None	Pause			
 	930712164	Off	Pause			
 	1651971902	On	Pause			

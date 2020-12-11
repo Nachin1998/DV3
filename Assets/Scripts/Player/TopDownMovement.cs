@@ -17,13 +17,13 @@ public class TopDownMovement : MonoBehaviour
 
     float auxBaseSpeed;
     [HideInInspector]public float currentSprint;
-    [HideInInspector]public bool canSprint = true;
+    [HideInInspector] public bool canSprint = true;
 
     bool isWalking { get { return movement.x != 0 || movement.z != 0; } }
     bool isSprinting { get { return Input.GetKey(KeyCode.LeftShift) && canSprint; } }
 
-    Vector3 movement;
     Camera cam;
+    Vector3 movement;
     Vector3 mousePos;
 
     void Start()

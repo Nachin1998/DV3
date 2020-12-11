@@ -40,7 +40,7 @@ public class Shotgun : BaseWeapon
                 if (!isReloading && !isOutOfAmmo)
                 {
                     Fire();
-                    AkSoundEngine.PostEvent("player_shoot", gameObject);
+                    AkSoundEngine.PostEvent("shotgun_shot", gameObject);
                     timer = 0;
                 }
             }

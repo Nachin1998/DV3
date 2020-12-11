@@ -20,7 +20,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b10aa3994264204ab916e6420c0dcc44
     GuidInternal: 
-    m_lastTime: -8585941487594775808
+    m_lastTime: -8585939253134775808
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 1798fb9b95e5d94aa7bd63d3ec520428
     GuidInternal: 
-    m_lastTime: -8585941487594775808
+    m_lastTime: -8585939253134775808
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -71,7 +71,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 09c10705d65cde41b3ebd263197221b8
     GuidInternal: 
-    m_lastTime: -8585941487594775808
+    m_lastTime: -8585939253134775808
     List:
     - name: MySoundBank
       guid: a6d18557cc28004bb3fa0044693f89b7
@@ -90,7 +90,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 66ce0cf28e999d44bd0284df88f7dad3
     GuidInternal: 
-    m_lastTime: -8585941487594775808
+    m_lastTime: -8585939253134775808
     List:
     - name: bear_dead
       guid: 9fd9af914aeaf5418bf90dc627df1445
@@ -114,8 +114,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\bear_defeated
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 6
+      minDuration: 6
     - name: bear_footstep
       guid: a81d9164aaa7034cbbbe35ecff85fa14
       id: 3582681732
@@ -162,8 +162,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\bear_spawning
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 7.75
+      minDuration: 7.75
     - name: bear1_voice
       guid: e74ae128b0e12a489c49adc3f4a42484
       id: 1067372639
@@ -174,8 +174,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\bear1_voice
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 11
+      minDuration: 1.194525
     - name: bear2_voice
       guid: 0655abc6d45a184cb6dfe6ea63da6012
       id: 485889504
@@ -222,8 +222,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\button_back
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 1.570276
+      minDuration: 0.638744
     - name: button_credits
       guid: c30b003a229eb144b2db5cd48555d6d7
       id: 804193798
@@ -234,8 +234,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\button_credits
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 1.570276
+      minDuration: 0.638744
     - name: button_exit
       guid: 8a5923532b3e5549811d156715829877
       id: 1778101440
@@ -342,8 +342,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\game_over
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 8.181812
+      minDuration: 8.181812
     - name: game_start
       guid: 0397b3a6d1f71043b6906ef399332c4c
       id: 733168346
@@ -380,6 +380,30 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: mute_off
+      guid: 32eabed24c94f2489181a9798375616b
+      id: 1302509176
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: mute_off
+        ObjectType: 3
+      Path: Default Work Unit\mute_off
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: mute_on
+      guid: 8db12acc1b2c784eabc384186d6c5223
+      id: 1781283874
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: mute_on
+        ObjectType: 3
+      Path: Default Work Unit\mute_on
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: pause_off
       guid: 8c7816f9d6dbfe41bba17b86eaf62d7e
       id: 3967028551
@@ -486,8 +510,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\player_gunchange
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.733502
+      minDuration: 0.183376
     - name: player_health
       guid: 6c3df56cb7d6284b91264f9f51dbf752
       id: 215992295
@@ -522,8 +546,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\player_reload
       maxAttenuation: 0
-      maxDuration: 5.849598
-      minDuration: 3.919083
+      maxDuration: 4.12507
+      minDuration: 4.12507
     - name: player_sandwich
       guid: 9367126f3fd2474ebdaaf796515eecb4
       id: 1825296518
@@ -584,6 +608,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: shotgun_shot
+      guid: ffa7b17d0fedb5418de8dfd7d930504d
+      id: 835721748
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: shotgun_shot
+        ObjectType: 3
+      Path: Default Work Unit\shotgun_shot
+      maxAttenuation: 0
+      maxDuration: 1.052266
+      minDuration: 0.787516
     - name: start_gameplay
       guid: dca7db125ee577498cccebf5bede1a4b
       id: 3576058218
@@ -628,7 +664,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e2f21df832910446b06dfa8cd5186b3d
     GuidInternal: 
-    m_lastTime: -8585941487594775808
+    m_lastTime: -8585939253134775808
     List:
     - name: HEALTH
       guid: f471a31068389b498a718ec9fb0c16fa
@@ -665,8 +701,64 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 2f792d5101efac4ab41c252198ec1ee4
     GuidInternal: 
-    m_lastTime: -8585941487594775808
+    m_lastTime: -8585939253134775808
     List:
+    - name: Gameplay
+      guid: 1e4f70b5bef9904aa4be08e5910f56b7
+      id: 89505537
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Gameplay
+        ObjectType: 9
+      Path: Default Work Unit\Gameplay
+      values:
+      - name: Battle
+        guid: 11c21bd770cd274eae60b3704a76c6ff
+        id: 2937832959
+        PathAndIcons:
+        - ElementName: Battle
+          ObjectType: 8
+      - name: Exploration
+        guid: 8d92c73cf298c64bb2234d68d3a863dd
+        id: 2582085496
+        PathAndIcons:
+        - ElementName: Exploration
+          ObjectType: 8
+      - name: None
+        guid: 3c5fee9de50feb4681b1f6cbf79bb8a2
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Main_menu
+      guid: d6e0fcff98f0f147b3d464471ed53b86
+      id: 2005704188
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main_menu
+        ObjectType: 9
+      Path: Default Work Unit\Main_menu
+      values:
+      - name: Main_Menu
+        guid: e931d9cdabdb5f4da0abe8386f543e32
+        id: 2005704188
+        PathAndIcons:
+        - ElementName: Main_Menu
+          ObjectType: 8
+      - name: None
+        guid: 64cbf0dd5c320c44bef9fc8966e2d6cc
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: Pause
       guid: e2f000d5ce8d50489ae12a793414f6b7
       id: 3092587493
@@ -706,7 +798,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 33ef5d8b227b8e429d22d0fa44ef4072
     GuidInternal: 
-    m_lastTime: -8585941487594775808
+    m_lastTime: -8585939253134775808
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -716,7 +808,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e9a573a16745b3499ea7287848af91eb
     GuidInternal: 
-    m_lastTime: -8585941487594775808
+    m_lastTime: -8585939253134775808
     List: []
   ExpandedItems:
   - /DV3_WwiseProject

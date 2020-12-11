@@ -21,7 +21,7 @@ public class Interactable : MonoBehaviour
     {
         if(interactableQuad != null)
         {
-            auxUI = Instantiate(interactableQuad, transform.position + Vector3.up, Quaternion.Euler(90, 0, 0), transform.parent);
+            auxUI = Instantiate(interactableQuad, transform.position, Quaternion.Euler(90, 0, 0), transform.parent);
         }
     }
 

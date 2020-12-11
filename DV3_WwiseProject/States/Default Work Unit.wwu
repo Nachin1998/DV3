@@ -10,6 +10,19 @@
 						<State Name="Off" ID="{EA893A11-B92B-4C5C-8141-F982117C5711}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="Gameplay" ID="{B5704F1E-F9BE-4A90-A4BE-08E5910F56B7}">
+					<ChildrenList>
+						<State Name="None" ID="{9DEE5F3C-0FE5-46EB-81B1-F6CBF79BB8A2}"/>
+						<State Name="Battle" ID="{D71BC211-CD70-4E27-AE60-B3704A76C6FF}"/>
+						<State Name="Exploration" ID="{3CC7928D-98F2-4BC6-B223-4D68D3A863DD}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Main_menu" ID="{FFFCE0D6-F098-47F1-B3D4-64471ED53B86}">
+					<ChildrenList>
+						<State Name="None" ID="{DDF0CB64-325C-440C-BEF9-FC8966E2D6CC}"/>
+						<State Name="Main_Menu" ID="{CDD931E9-DBAB-4D5F-A0AB-E8386F543E32}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

@@ -91,7 +91,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="player_gunchange" ID="{95380444-397E-4626-92CD-63E92EF0B259}"/>
+				<Event Name="player_gunchange" ID="{95380444-397E-4626-92CD-63E92EF0B259}">
+					<ChildrenList>
+						<Action Name="" ID="{CBE75F70-4157-433B-AD34-E2AEA558C9A8}" ShortID="177207522">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_gunchange" ID="{D4A03462-776F-499B-A1D2-6BCDC1F4BDD5}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="player_health" ID="{6CF53D6C-D6B7-4B28-9126-4F9F51DBF752}">
 					<ChildrenList>
 						<Action Name="" ID="{7BFE8DB9-DC60-4D39-88DE-84D37749D3EB}" ShortID="44981515">
@@ -108,7 +118,17 @@
 				<Event Name="shoot_rock" ID="{D26E3E25-73EE-4720-A90E-171E22C8E468}"/>
 				<Event Name="shoot_metal" ID="{D0246369-BA6F-4910-BEFB-090445FD9184}"/>
 				<Event Name="bear_shoot" ID="{B83A1B6D-5FEF-4C5C-9127-BE10B016FC80}"/>
-				<Event Name="bear1_voice" ID="{28E14AE7-E1B0-482A-9C49-ADC3F4A42484}"/>
+				<Event Name="bear1_voice" ID="{28E14AE7-E1B0-482A-9C49-ADC3F4A42484}">
+					<ChildrenList>
+						<Action Name="" ID="{7843F367-882B-4547-8A8B-6AB8BE745977}" ShortID="665570557">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bear Voices" ID="{9AE9EC01-6A1C-40EE-BB43-6D6CD5D871BC}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="bear2_voice" ID="{C6AB5506-5AD4-4C18-B6DF-E6EA63DA6012}"/>
 				<Event Name="bear3_voice" ID="{191ADC98-B80F-4AA6-8431-DE0A15D43516}"/>
 				<Event Name="bear4_voice" ID="{19A6A681-1EF7-49BD-9E30-8EA4D20C155A}"/>
@@ -128,7 +148,7 @@
 						<Action Name="" ID="{8048ADE3-B304-43E5-943B-866A184B7908}" ShortID="782938738">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="bear_dead3" ID="{69DDEBAA-6144-4A78-863B-E98008239C14}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+									<ObjectRef Name="bear_dead" ID="{F9250498-47EA-4B89-95B8-E7C3434609BE}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -326,6 +346,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{5E1EFDB9-5A8E-48E0-9612-D9DAAAC56157}" ShortID="678791036">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Buttons" ID="{FC5C7D48-F7FE-4634-B207-A5C5F3191E8E}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="button_settings" ID="{03A83C04-DF34-4AA2-B86A-297C7F09D126}">
@@ -339,8 +366,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="button_back" ID="{054B692D-FE00-4E04-A52A-FEDDA892620C}"/>
-				<Event Name="button_credits" ID="{3A000BC3-9E22-44B1-B2DB-5CD48555D6D7}"/>
+				<Event Name="button_back" ID="{054B692D-FE00-4E04-A52A-FEDDA892620C}">
+					<ChildrenList>
+						<Action Name="" ID="{CB3E203B-C618-4D43-91EB-FD46D057434E}" ShortID="695206160">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Buttons" ID="{FC5C7D48-F7FE-4634-B207-A5C5F3191E8E}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="button_credits" ID="{3A000BC3-9E22-44B1-B2DB-5CD48555D6D7}">
+					<ChildrenList>
+						<Action Name="" ID="{C5B23386-CD7E-4C54-BF56-E0F078B3F9BE}" ShortID="223631508">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Buttons" ID="{FC5C7D48-F7FE-4634-B207-A5C5F3191E8E}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="button_restart" ID="{9E0AF5AD-1DD1-485B-9A79-29FC285C8CDD}">
 					<ChildrenList>
 						<Action Name="" ID="{219F1CC3-ECF2-4701-B5B0-0C9BA9F31874}" ShortID="559494616">
@@ -375,9 +422,52 @@
 				</Event>
 				<Event Name="volume_music" ID="{62E9092C-802C-4B58-BC45-7DA30FE00D9A}"/>
 				<Event Name="volume_sfx" ID="{7B1603E5-CF30-4BA9-8046-4B79012D9B5F}"/>
-				<Event Name="bear_defeated" ID="{5B72FC93-A0FD-4E9A-BD67-5779A60C4829}"/>
-				<Event Name="bear_spawning" ID="{F359241C-0008-45F1-A342-CC2BB20BDC73}"/>
-				<Event Name="game_over" ID="{B33F37AF-4E21-42FA-B947-365CE00212A2}"/>
+				<Event Name="bear_defeated" ID="{5B72FC93-A0FD-4E9A-BD67-5779A60C4829}">
+					<ChildrenList>
+						<Action Name="" ID="{070FAD16-E5C2-493C-81A3-7088AA62A9E1}" ShortID="1064943665">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="STINGER BEAR DEFEATED" ID="{33A13A4A-987F-46D0-919D-FBAE5B21DB98}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="bear_spawning" ID="{F359241C-0008-45F1-A342-CC2BB20BDC73}">
+					<ChildrenList>
+						<Action Name="" ID="{6AEF7E59-6990-49CA-9706-00373DA7562C}" ShortID="1044026311">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="STINGER NEW NIGHTMARES" ID="{05254B28-F3ED-4CEA-A0AC-FFC56675992C}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="game_over" ID="{B33F37AF-4E21-42FA-B947-365CE00212A2}">
+					<ChildrenList>
+						<Action Name="" ID="{071C96BB-35DC-44D2-95B4-9636ECE65094}" ShortID="875942152">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="STINGER GAME OVER" ID="{5035B4F9-D4BE-4437-8BB1-4E25FF883C71}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="mute_on" ID="{CC2AB18D-2C1B-4E78-ABC3-84186D6C5223}"/>
+				<Event Name="mute_off" ID="{D2BEEA32-944C-48F2-9181-A9798375616B}"/>
+				<Event Name="shotgun_shot" ID="{7DB1A7FF-ED0F-41B5-8DE8-DFD7D930504D}">
+					<ChildrenList>
+						<Action Name="" ID="{81A910E1-56B7-4A31-855F-F185C005F542}" ShortID="624475238">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Escopeta" ID="{5A0DD3F7-4178-4705-98D6-6861B66759C8}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

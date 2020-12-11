@@ -36,13 +36,22 @@ public class Player : MonoBehaviour
             currentHealth = 0;
             isDead = true;
         }
+        AkSoundEngine.SetRTPCValue("player_health", currentHealth);
     }
 
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
         StartCoroutine(TookDamage(0.5f));
-        AkSoundEngine.PostEvent("player_hurt", gameObject);
+        if(currentHealth <= 0)
+        {
+            AkSoundEngine.PostEvent("player_dead", gameObject);
+            AkSoundEngine.PostEvent("game_over", gameObject);
+        }
+        else
+        {
+            AkSoundEngine.PostEvent("player_hurt", gameObject);
+        }
     }
 
     public IEnumerator TookDamage(float bloodDuration)

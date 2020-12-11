@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="264387329">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3405945415">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -29,24 +29,54 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3104675574" Language="SFX" Hash="1717797876">
+		<SoundBank Id="3104675574" Language="SFX" Hash="2243639635">
 			<ObjectPath>\SoundBanks\Default Work Unit\MySoundBank</ObjectPath>
 			<ShortName>MySoundBank</ShortName>
 			<Path>MySoundBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1067372639" Name="bear1_voice" ObjectPath="\Events\Default Work Unit\bear1_voice" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1067372639" Name="bear1_voice" ObjectPath="\Events\Default Work Unit\bear1_voice" DurationType="OneShot" DurationMin="1.194525" DurationMax="11.000000">
+					<IncludedMemoryFiles>
+						<File Id="12984163" Language="SFX">
+							<ShortName>Voxoso1.wav</ShortName>
+							<Path>SFX\Voxoso1_10C4C929.wem</Path>
+						</File>
+						<File Id="559574694" Language="SFX">
+							<ShortName>Voxoso2.wav</ShortName>
+							<Path>SFX\Voxoso2_DDA411BE.wem</Path>
+						</File>
+						<File Id="941465211" Language="SFX">
+							<ShortName>Voxoso2.wav</ShortName>
+							<Path>SFX\Voxoso2_B17E99AE.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="485889504" Name="bear2_voice" ObjectPath="\Events\Default Work Unit\bear2_voice" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="407021321" Name="bear3_voice" ObjectPath="\Events\Default Work Unit\bear3_voice" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="302574538" Name="bear4_voice" ObjectPath="\Events\Default Work Unit\bear4_voice" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2003226068" Name="bear_dead" ObjectPath="\Events\Default Work Unit\bear_dead" DurationType="OneShot" DurationMin="1.533035" DurationMax="3.680047">
 					<IncludedMemoryFiles>
+						<File Id="327499080" Language="SFX">
+							<ShortName>dead bear 1.wav</ShortName>
+							<Path>SFX\dead bear 1_10C4C929.wem</Path>
+						</File>
 						<File Id="958011035" Language="SFX">
 							<ShortName>bear_dead3.wav</ShortName>
 							<Path>SFX\bear_dead3_F8700B14.wem</Path>
 						</File>
+						<File Id="974869084" Language="SFX">
+							<ShortName>dead bear 2.wav</ShortName>
+							<Path>SFX\dead bear 2_10C4C929.wem</Path>
+						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="859168564" Name="bear_defeated" ObjectPath="\Events\Default Work Unit\bear_defeated" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="859168564" Name="bear_defeated" ObjectPath="\Events\Default Work Unit\bear_defeated" DurationType="OneShot" DurationMin="6.000000" DurationMax="6.000000">
+					<IncludedMemoryFiles>
+						<File Id="163155782" Language="SFX">
+							<ShortName>STINGER BEAR DEFEATED.wav</ShortName>
+							<Path>SFX\STINGER BEAR DEFEATED_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3582681732" Name="bear_footstep" ObjectPath="\Events\Default Work Unit\bear_footstep" DurationType="OneShot" DurationMin="0.236009" DurationMax="0.383713">
 					<IncludedMemoryFiles>
 						<File Id="131895359" Language="SFX">
@@ -80,9 +110,70 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="4016552735" Name="bear_shoot" ObjectPath="\Events\Default Work Unit\bear_shoot" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1071660241" Name="bear_spawning" ObjectPath="\Events\Default Work Unit\bear_spawning" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="510827497" Name="button_back" ObjectPath="\Events\Default Work Unit\button_back" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="804193798" Name="button_credits" ObjectPath="\Events\Default Work Unit\button_credits" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1071660241" Name="bear_spawning" ObjectPath="\Events\Default Work Unit\bear_spawning" DurationType="OneShot" DurationMin="7.750000" DurationMax="7.750000">
+					<IncludedMemoryFiles>
+						<File Id="940777131" Language="SFX">
+							<ShortName>STINGER NEW NIGHTMARES.wav</ShortName>
+							<Path>SFX\STINGER NEW NIGHTMARES_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="510827497" Name="button_back" ObjectPath="\Events\Default Work Unit\button_back" DurationType="OneShot" DurationMin="0.638744" DurationMax="1.570276">
+					<IncludedMemoryFiles>
+						<File Id="187592224" Language="SFX">
+							<ShortName>BUTTON A HI.wav</ShortName>
+							<Path>SFX\BUTTON A HI_4DBCC53A.wem</Path>
+						</File>
+						<File Id="294499401" Language="SFX">
+							<ShortName>BUTTON D HI.wav</ShortName>
+							<Path>SFX\BUTTON D HI_B2CAE2F8.wem</Path>
+						</File>
+						<File Id="360034372" Language="SFX">
+							<ShortName>BUTTON C LO.wav</ShortName>
+							<Path>SFX\BUTTON C LO_E681E506.wem</Path>
+						</File>
+						<File Id="676211636" Language="SFX">
+							<ShortName>BUTTON G LO.wav</ShortName>
+							<Path>SFX\BUTTON G LO_38C879EC.wem</Path>
+						</File>
+						<File Id="801445729" Language="SFX">
+							<ShortName>BUTTON C HI.wav</ShortName>
+							<Path>SFX\BUTTON C HI_EB999BBF.wem</Path>
+						</File>
+						<File Id="910117542" Language="SFX">
+							<ShortName>BUTTON A LO.wav</ShortName>
+							<Path>SFX\BUTTON A LO_8F659640.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="804193798" Name="button_credits" ObjectPath="\Events\Default Work Unit\button_credits" DurationType="OneShot" DurationMin="0.638744" DurationMax="1.570276">
+					<IncludedMemoryFiles>
+						<File Id="187592224" Language="SFX">
+							<ShortName>BUTTON A HI.wav</ShortName>
+							<Path>SFX\BUTTON A HI_4DBCC53A.wem</Path>
+						</File>
+						<File Id="294499401" Language="SFX">
+							<ShortName>BUTTON D HI.wav</ShortName>
+							<Path>SFX\BUTTON D HI_B2CAE2F8.wem</Path>
+						</File>
+						<File Id="360034372" Language="SFX">
+							<ShortName>BUTTON C LO.wav</ShortName>
+							<Path>SFX\BUTTON C LO_E681E506.wem</Path>
+						</File>
+						<File Id="676211636" Language="SFX">
+							<ShortName>BUTTON G LO.wav</ShortName>
+							<Path>SFX\BUTTON G LO_38C879EC.wem</Path>
+						</File>
+						<File Id="801445729" Language="SFX">
+							<ShortName>BUTTON C HI.wav</ShortName>
+							<Path>SFX\BUTTON C HI_EB999BBF.wem</Path>
+						</File>
+						<File Id="910117542" Language="SFX">
+							<ShortName>BUTTON A LO.wav</ShortName>
+							<Path>SFX\BUTTON A LO_8F659640.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1778101440" Name="button_exit" ObjectPath="\Events\Default Work Unit\button_exit" DurationType="OneShot" DurationMin="1.469457" DurationMax="1.469457">
 					<IncludedMemoryFiles>
 						<File Id="149831543" Language="SFX">
@@ -287,13 +378,44 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1432716332" Name="game_over" ObjectPath="\Events\Default Work Unit\game_over" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1432716332" Name="game_over" ObjectPath="\Events\Default Work Unit\game_over" DurationType="OneShot" DurationMin="8.181812" DurationMax="8.181812">
+					<IncludedMemoryFiles>
+						<File Id="105160318" Language="SFX">
+							<ShortName>STINGER GAME OVER.wav</ShortName>
+							<Path>SFX\STINGER GAME OVER_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\game_start" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3719698954" Name="menu_backtomain" ObjectPath="\Events\Default Work Unit\menu_backtomain" DurationType="Infinite">
 					<IncludedMemoryFiles>
+						<File Id="187592224" Language="SFX">
+							<ShortName>BUTTON A HI.wav</ShortName>
+							<Path>SFX\BUTTON A HI_4DBCC53A.wem</Path>
+						</File>
+						<File Id="294499401" Language="SFX">
+							<ShortName>BUTTON D HI.wav</ShortName>
+							<Path>SFX\BUTTON D HI_B2CAE2F8.wem</Path>
+						</File>
+						<File Id="360034372" Language="SFX">
+							<ShortName>BUTTON C LO.wav</ShortName>
+							<Path>SFX\BUTTON C LO_E681E506.wem</Path>
+						</File>
+						<File Id="676211636" Language="SFX">
+							<ShortName>BUTTON G LO.wav</ShortName>
+							<Path>SFX\BUTTON G LO_38C879EC.wem</Path>
+						</File>
 						<File Id="784470125" Language="SFX">
 							<ShortName>FTW MENU TEST 2.wav</ShortName>
 							<Path>SFX\FTW MENU TEST 2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="801445729" Language="SFX">
+							<ShortName>BUTTON C HI.wav</ShortName>
+							<Path>SFX\BUTTON C HI_EB999BBF.wem</Path>
+						</File>
+						<File Id="910117542" Language="SFX">
+							<ShortName>BUTTON A LO.wav</ShortName>
+							<Path>SFX\BUTTON A LO_8F659640.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -305,6 +427,8 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1302509176" Name="mute_off" ObjectPath="\Events\Default Work Unit\mute_off" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1781283874" Name="mute_on" ObjectPath="\Events\Default Work Unit\mute_on" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3967028551" Name="pause_off" ObjectPath="\Events\Default Work Unit\pause_off" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
 					<ActionSetState>
 						<ActionSetStateEntry Id="930712164" Name="Off" ObjectPath="\States\Default Work Unit\Pause\Off"/>
@@ -432,7 +556,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="646858905" Name="player_gunchange" ObjectPath="\Events\Default Work Unit\player_gunchange" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="646858905" Name="player_gunchange" ObjectPath="\Events\Default Work Unit\player_gunchange" DurationType="OneShot" DurationMin="0.183376" DurationMax="0.733502">
+					<IncludedMemoryFiles>
+						<File Id="603013215" Language="SFX">
+							<ShortName>cambio_arma_1.wav</ShortName>
+							<Path>SFX\cambio_arma_1_C56D9D26.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="215992295" Name="player_health" ObjectPath="\Events\Default Work Unit\player_health" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="208970938" Language="SFX">
@@ -455,41 +586,41 @@
 							<ShortName>KID CRY 1.wav</ShortName>
 							<Path>SFX\KID CRY 1_247CB2C9.wem</Path>
 						</File>
-						<File Id="100217217" Language="SFX">
-							<ShortName>KID CRY 4.wav</ShortName>
-							<Path>SFX\KID CRY 4_AC15DEDE.wem</Path>
+						<File Id="327741231" Language="SFX">
+							<ShortName>FEMALE GROAN 2.wav</ShortName>
+							<Path>SFX\FEMALE GROAN 2_10C4C929.wem</Path>
 						</File>
 						<File Id="425620364" Language="SFX">
 							<ShortName>KID CRY 3.wav</ShortName>
 							<Path>SFX\KID CRY 3_68E5B3BA.wem</Path>
 						</File>
-						<File Id="456418140" Language="SFX">
-							<ShortName>KID CRY 2.wav</ShortName>
-							<Path>SFX\KID CRY 2_C461D450.wem</Path>
-						</File>
-						<File Id="468103433" Language="SFX">
-							<ShortName>KID CRY 3.wav</ShortName>
-							<Path>SFX\KID CRY 3_9B46786B.wem</Path>
-						</File>
-						<File Id="522052368" Language="SFX">
-							<ShortName>KID CRY 4.wav</ShortName>
-							<Path>SFX\KID CRY 4_B0C1ABA7.wem</Path>
+						<File Id="793169703" Language="SFX">
+							<ShortName>FEMALE GROAN 3.wav</ShortName>
+							<Path>SFX\FEMALE GROAN 3_10C4C929.wem</Path>
 						</File>
 						<File Id="904374131" Language="SFX">
 							<ShortName>KID CRY 1.wav</ShortName>
 							<Path>SFX\KID CRY 1_D7163382.wem</Path>
 						</File>
+						<File Id="995724792" Language="SFX">
+							<ShortName>FEMALE GROAN .wav</ShortName>
+							<Path>SFX\FEMALE GROAN _10C4C929.wem</Path>
+						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1650679582" Name="player_reload" ObjectPath="\Events\Default Work Unit\player_reload" DurationType="OneShot" DurationMin="3.919083" DurationMax="5.849598">
+				<Event Id="1650679582" Name="player_reload" ObjectPath="\Events\Default Work Unit\player_reload" DurationType="OneShot" DurationMin="4.125070" DurationMax="4.125070">
 					<IncludedMemoryFiles>
+						<File Id="56214504" Language="SFX">
+							<ShortName>cambio_arma_1.wav</ShortName>
+							<Path>SFX\cambio_arma_1_0BB460A5.wem</Path>
+						</File>
 						<File Id="220144409" Language="SFX">
 							<ShortName>cambio_arma_1.wav</ShortName>
 							<Path>SFX\cambio_arma_1_51DFB482.wem</Path>
 						</File>
 						<File Id="695209723" Language="SFX">
 							<ShortName>recarga_2.wav</ShortName>
-							<Path>SFX\recarga_2_8775E792.wem</Path>
+							<Path>SFX\recarga_2_BD64F68D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -520,6 +651,22 @@
 				<Event Id="3081428398" Name="shoot_metal" ObjectPath="\Events\Default Work Unit\shoot_metal" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1827768426" Name="shoot_rock" ObjectPath="\Events\Default Work Unit\shoot_rock" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1978508865" Name="shoot_tree" ObjectPath="\Events\Default Work Unit\shoot_tree" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="835721748" Name="shotgun_shot" ObjectPath="\Events\Default Work Unit\shotgun_shot" DurationType="OneShot" DurationMin="0.787516" DurationMax="1.052266">
+					<IncludedMemoryFiles>
+						<File Id="774813878" Language="SFX">
+							<ShortName>Escopeta Pigments.wav</ShortName>
+							<Path>SFX\Escopeta Pigments_9921153B.wem</Path>
+						</File>
+						<File Id="1015276808" Language="SFX">
+							<ShortName>Escopeta Pigments.wav</ShortName>
+							<Path>SFX\Escopeta Pigments_28130709.wem</Path>
+						</File>
+						<File Id="1032628103" Language="SFX">
+							<ShortName>Escopeta Pigments.wav</ShortName>
+							<Path>SFX\Escopeta Pigments_4821FA40.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3576058218" Name="start_gameplay" ObjectPath="\Events\Default Work Unit\start_gameplay" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="3053503" Language="SFX">

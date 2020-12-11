@@ -22,12 +22,15 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
+    Vector3 movement;
+
     [HideInInspector]public float maxWalkingSpeed;
     [HideInInspector]public float currentSprint;
-    [HideInInspector]public bool isWalking;
+
+    [HideInInspector]public bool isOnGround { get { return Physics.CheckSphere(groundCheck.position, groundDistance, groundMask); } }
+    [HideInInspector] public bool isWalking { get { return (movement.x != 0 || movement.z != 0); } }
     [HideInInspector]public bool canSprint = true;
-    [HideInInspector]public bool isSprinting = false;
-    [HideInInspector]public bool isOnGround;
+    [HideInInspector]public bool isSprinting { get { return isWalking && canSprint && Input.GetKey(KeyCode.LeftShift); } }
 
     Vector3 velocity;
     float stepSoundOffset = 1f;
@@ -52,19 +55,10 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        movement.x = Input.GetAxis("Horizontal");
+        movement.z = Input.GetAxis("Vertical");
 
-        isWalking = (x != 0 || z != 0);
-        isOnGround = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
-        for (int i = 0; i < weaponAnim.Count; i++)
-        {
-            if (weaponAnim[i].isActiveAndEnabled)
-            {
-                weaponAnim[i].SetBool("isSprinting", isSprinting);
-            }
-        }
+        SetWeaponAnim("isSprinting", isSprinting);
 
         if (isOnGround && velocity.y < 0)
         {
@@ -76,18 +70,9 @@ public class PlayerMovement : MonoBehaviour
             currentSprint = sprintMaxAmmount;
         }
 
-        for (int i = 0; i < weaponAnim.Count; i++)
-        {
-            if (weaponAnim[i].isActiveAndEnabled)
-            {
-                weaponAnim[i].SetBool("isWalking", isWalking);
-            }
-        }
+        SetWeaponAnim("isWalking", isWalking);
 
-        Vector3 move = transform.right * x + transform.forward * z;
-
-        StartCoroutine(Sprint());
-
+        Vector3 move = transform.right * movement.x + transform.forward * movement.z;
         controler.Move(move * walkingSpeed * Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
@@ -108,6 +93,8 @@ public class PlayerMovement : MonoBehaviour
                 movingTimer = 0;
             }            
         }
+        
+        StartCoroutine(Sprint());
 
         if (isSprinting)
         {
@@ -121,19 +108,12 @@ public class PlayerMovement : MonoBehaviour
 
     public IEnumerator Sprint()
     {
-        if (Input.GetKey(KeyCode.LeftShift) && isWalking && canSprint)
+        if (isSprinting)
         {
-            for (int i = 0; i < weaponAnim.Count; i++)
-            {
-                if (weaponAnim[i].isActiveAndEnabled)
-                {
-                    weaponAnim[i].SetBool("startedSprinting", true);
-                }                
-            }
+            SetWeaponAnim("startedSprinting", true);
            
             yield return new WaitForSeconds(0.3f);
 
-            isSprinting = true;
             walkingSpeed = sprintSpeed;
             currentSprint -= sprintUsePerSec * Time.deltaTime;
             if (currentSprint <= 0)
@@ -143,7 +123,6 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            isSprinting = false;
             walkingSpeed = maxWalkingSpeed;
             if (currentSprint < sprintMaxAmmount)
             {
@@ -154,12 +133,17 @@ public class PlayerMovement : MonoBehaviour
                 canSprint = true;
             }
 
-            for (int i = 0; i < weaponAnim.Count; i++)
+            SetWeaponAnim("startedSprinting", false);
+        }
+    }
+
+    void SetWeaponAnim(string animParameter, bool state)
+    {
+        for (int i = 0; i < weaponAnim.Count; i++)
+        {
+            if (weaponAnim[i].isActiveAndEnabled)
             {
-                if (weaponAnim[i].isActiveAndEnabled)
-                {
-                    weaponAnim[i].SetBool("startedSprinting", false);
-                }
+                weaponAnim[i].SetBool(animParameter, state);
             }
         }
     }
