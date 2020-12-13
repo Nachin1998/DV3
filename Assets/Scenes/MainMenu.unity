@@ -1156,7 +1156,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 35.75
+  m_fontSize: 35.8
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1668,6 +1668,7 @@ GameObject:
   - component: {fileID: 745186814}
   - component: {fileID: 745186816}
   - component: {fileID: 745186815}
+  - component: {fileID: 745186817}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -1793,6 +1794,36 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &745186817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745186811}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63cb8e772b10e4b41b81957402b4ddad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d0030bdba5cbf4e4bb2ea5feed91ae78,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
 --- !u!1 &768503405
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,7 +2298,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -381.72336}
+  m_AnchoredPosition: {x: 0, y: -381.7234}
   m_SizeDelta: {x: 556, y: 1290.3978}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1034906940
@@ -2983,7 +3014,7 @@ MonoBehaviour:
   cursedMenuBackground: {fileID: 21300000, guid: 6294302bf6d1d1140971728f511ccc0f,
     type: 3}
   normalPlayButton: {fileID: 1335923191}
-  newCursedPlayButton: {fileID: 2018923674}
+  newCursedPlayButton: {fileID: 0}
   creditsBackground: {fileID: 864829936}
   creditsText: {fileID: 927760660}
   normalCreditsBackground: {fileID: 21300000, guid: 673701bb3af460d4596c9364f3d1cdf2,
@@ -3084,7 +3115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.07861328, y: -119}
+  m_AnchoredPosition: {x: 0.07861328, y: -119.000015}
   m_SizeDelta: {x: -1410.3042, y: -574.9601}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1582274239
@@ -4293,7 +4324,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.07443237, y: 254.40001}
+  m_AnchoredPosition: {x: -0.07443237, y: 254.4}
   m_SizeDelta: {x: 462.33844, y: 143.96599}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2018923674

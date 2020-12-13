@@ -15,6 +15,8 @@ public class Interactable : MonoBehaviour
     public float healthRecovery;
     public int ammoRecovery;
 
+    Player player;
+    BaseWeapon bw;
     GameObject auxUI;
 
     private void Start()
@@ -32,19 +34,20 @@ public class Interactable : MonoBehaviour
             switch (pickUpType)
             {
                 case PickUpType.HealthPickUp:
-                    if (col.GetComponent<Player>().currentHealth == col.GetComponent<Player>().maxHealth)
+                    player = col.GetComponent<Player>();
+                    if (player.currentHealth == player.maxHealth)
                     {
                         return;
                     }
 
-                    if (col.GetComponent<Player>().currentHealth + healthRecovery > col.GetComponent<Player>().maxHealth)
+                    if (player.currentHealth + healthRecovery > player.maxHealth)
                     {
-                        float newHealthRecovery = col.GetComponent<Player>().maxHealth - col.GetComponent<Player>().currentHealth;
-                        col.GetComponent<Player>().currentHealth += newHealthRecovery;
+                        float newHealthRecovery = player.maxHealth - player.currentHealth;
+                        player.currentHealth += newHealthRecovery;
                     }
                     else
                     {
-                        col.GetComponent<Player>().currentHealth += healthRecovery;
+                        player.currentHealth += healthRecovery;
                     }
                     AkSoundEngine.PostEvent("player_sandwich", gameObject);
                     if (auxUI != null)
@@ -55,21 +58,22 @@ public class Interactable : MonoBehaviour
                     break;
 
                 case PickUpType.AmmoPickUp:
-                    if (col.GetComponentInChildren<BaseWeapon>() != null)
+                    bw = col.GetComponent<BaseWeapon>();
+                    if (bw != null)
                     {
-                        if (col.GetComponentInChildren<BaseWeapon>().maxAmmo == col.GetComponentInChildren<BaseWeapon>().maxAmmoCap)
+                        if (bw.maxAmmo == bw.maxAmmoCap)
                         {
                             return;
                         }
 
-                        if (col.GetComponentInChildren<BaseWeapon>().maxAmmo + ammoRecovery > col.GetComponentInChildren<BaseWeapon>().maxAmmoCap)
+                        if (bw.maxAmmo + ammoRecovery > bw.maxAmmoCap)
                         {
-                            int newAmmoRecovery = col.GetComponentInChildren<BaseWeapon>().maxAmmoCap - col.GetComponentInChildren<BaseWeapon>().maxAmmo;
-                            col.GetComponentInChildren<BaseWeapon>().maxAmmo += newAmmoRecovery;
+                            int newAmmoRecovery = bw.maxAmmoCap - bw.maxAmmo;
+                            bw.maxAmmo += newAmmoRecovery;
                         }
                         else
                         {
-                            col.GetComponentInChildren<BaseWeapon>().maxAmmo += ammoRecovery;
+                            bw.maxAmmo += ammoRecovery;
                         }
 
                         AkSoundEngine.PostEvent("player_bullets", gameObject);

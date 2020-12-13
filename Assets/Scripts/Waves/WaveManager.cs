@@ -77,6 +77,7 @@ public class WaveManager : MonoBehaviour
         waveCountdown = timeBetweenWaves;
         totalEnemies = 0;
         playSound = false;
+
         if (nextWave + 1 > waves.Length - 1)
         {
             GameManager.Instance.won = true;
