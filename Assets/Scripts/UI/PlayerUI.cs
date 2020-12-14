@@ -58,7 +58,6 @@ public class PlayerUI : MonoBehaviour
             }
         }
         
-        AkSoundEngine.PostEvent("player_health", gameObject);
         AkSoundEngine.SetRTPCValue("HEALTH", player.currentHealth);
 
         if (player.tookDamage)
