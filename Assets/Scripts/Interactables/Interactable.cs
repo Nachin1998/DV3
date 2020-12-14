@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
@@ -58,7 +56,7 @@ public class Interactable : MonoBehaviour
                     break;
 
                 case PickUpType.AmmoPickUp:
-                    bw = col.GetComponent<BaseWeapon>();
+                    bw = col.GetComponentInChildren<BaseWeapon>();
                     if (bw != null)
                     {
                         if (bw.maxAmmo == bw.maxAmmoCap)
