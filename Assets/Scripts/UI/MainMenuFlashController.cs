@@ -11,6 +11,7 @@ public class MainMenuFlashController : MonoBehaviour
     public Sprite cursedMenuBackground;
     public Button normalPlayButton;
     public Button newCursedPlayButton;
+    public ParticleSystem stars;
 
     [Header("Credits")]
     public Image creditsBackground;
@@ -30,7 +31,8 @@ public class MainMenuFlashController : MonoBehaviour
 
     void Start()
     {
-        if(normalPlayButton && newCursedPlayButton)
+        stars.gameObject.SetActive(true);
+        if (normalPlayButton && newCursedPlayButton)
         {
             normalPlayButton.gameObject.SetActive(true);
             newCursedPlayButton.gameObject.SetActive(false);
@@ -53,6 +55,7 @@ public class MainMenuFlashController : MonoBehaviour
         menuBackground.sprite = cursedMenuBackground;
         creditsBackground.sprite = cursedCreditsBackground;
         creditsText.sprite = cursedCreditsText;
+        stars.gameObject.SetActive(false);
 
         if (normalPlayButton && newCursedPlayButton)
         {
@@ -65,6 +68,7 @@ public class MainMenuFlashController : MonoBehaviour
         menuBackground.sprite = normalMenuBackground;
         creditsBackground.sprite = normalCreditsBackground;
         creditsText.sprite = normalCreditsText;
+        stars.gameObject.SetActive(true);
 
         if (normalPlayButton && newCursedPlayButton)
         {

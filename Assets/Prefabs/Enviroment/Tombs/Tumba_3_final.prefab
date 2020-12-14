@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 487418982474408639}
   - component: {fileID: 2388983347620320885}
   m_Layer: 0
-  m_Name: Tumba_3
+  m_Name: Tumba_3_final
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4190498034990462880}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -90.368835, y: -209.92032, z: 154.52524}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

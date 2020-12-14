@@ -8,10 +8,13 @@ public class AudioManager : MonoBehaviour
     public Slider sfxSlider;
     public Slider musicSlider;
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeSFXVolume()
     {
         AkSoundEngine.SetRTPCValue("SFX_VOLUME", sfxSlider.value);
+    }
+
+    public void ChangeMusicVolume()
+    {
         AkSoundEngine.SetRTPCValue("MUSIC_VOLUME", musicSlider.value);
     }
 }

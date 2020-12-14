@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a8d3aced9b5285848b960ce798eae831
+guid: 6c95ad111f81ad84cafd89e4f6dbec5d
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: TEXT_Melee
-    second: {fileID: 2100000, guid: ac6ee34afceec1f4693f01b275ba2031, type: 2}
+      name: lambert4
+    second: {fileID: 2100000, guid: 112e8f964f0962a4090f2a4b1817d49e, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

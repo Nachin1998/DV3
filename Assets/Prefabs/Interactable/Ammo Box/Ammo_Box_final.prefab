@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 314692494258185778}
   - component: {fileID: 2574638890676474616}
   - component: {fileID: 5424501064603227992}
+  - component: {fileID: 919132148682018557}
   m_Layer: 0
   m_Name: Ammo_Box_final
   m_TagString: Untagged
@@ -96,3 +97,16 @@ MonoBehaviour:
   interactableQuad: {fileID: 0}
   healthRecovery: 0
   ammoRecovery: 20
+--- !u!65 &919132148682018557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4087588537288028973}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8940735, y: 1.2021332, z: 3.467575}
+  m_Center: {x: -0.010047913, y: 0.00077056885, z: 0.22437286}
