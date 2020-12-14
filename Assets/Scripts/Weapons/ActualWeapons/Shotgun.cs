@@ -52,7 +52,9 @@ public class Shotgun : BaseWeapon
             {
                 StartCoroutine(Reload(3.5f));
             }
+
         }
+
     }
 
     public override void Fire()

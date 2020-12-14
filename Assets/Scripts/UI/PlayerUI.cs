@@ -30,7 +30,6 @@ public class PlayerUI : MonoBehaviour
         bloodScreen.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         healthBar.fillAmount = player.currentHealth / 100;
@@ -58,8 +57,9 @@ public class PlayerUI : MonoBehaviour
                 sprintBar.color = Color.red;
             }
         }
-
         
+        AkSoundEngine.PostEvent("player_health", gameObject);
+        AkSoundEngine.SetRTPCValue("HEALTH", player.currentHealth);
 
         if (player.tookDamage)
         {

@@ -1,17 +1,16 @@
 State Group	ID	Name			Wwise Object Path	Notes
-	89505537	Gameplay			\Default Work Unit\Gameplay	
-	2005704188	Main_menu			\Default Work Unit\Main_menu	
 	3092587493	Pause			\Default Work Unit\Pause	
+	3991942870	Music			\Default Work Unit\Music	
 
 State	ID	Name	State Group			Notes
-	748895195	None	Gameplay			
-	2582085496	Exploration	Gameplay			
-	2937832959	Battle	Gameplay			
-	748895195	None	Main_menu			
-	2005704188	Main_Menu	Main_menu			
 	748895195	None	Pause			
 	930712164	Off	Pause			
 	1651971902	On	Pause			
+	748895195	None	Music			
+	994415891	Gameplay_exploration	Music			
+	2005704188	Main_menu	Music			
+	2082940090	Gameplay_Battle	Music			
+	2597878309	Restart_gameplay	Music			
 
 Custom State	ID	Name	State Group	Owner		Notes
 	910294490	On	Pause	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		

@@ -309,12 +309,11 @@
 									<ChildrenList>
 										<AudioFileSource Name="KID CRY 3" ID="{A12F81E1-EB1E-4581-8628-0AF885AA6E35}">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.10575314861461"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.251163727959698"/>
-												<Property Name="LoopEnd" Type="Real64" Value="1.0623109468573"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.175571330432792"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.187163727959698"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 												<Property Name="TrimBegin" Type="Real64" Value="0.0561813602015113"/>
-												<Property Name="TrimEnd" Type="Real64" Value="1.06322600239591"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.920680547850455"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>KID CRY 3.wav</AudioFile>
@@ -365,10 +364,11 @@
 									<ChildrenList>
 										<AudioFileSource Name="KID CRY 1" ID="{7FDCB048-4E52-449F-976C-E79451230F0E}">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.158690176322418"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0680100755667515"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0256524823091142"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.103486793970299"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.677581863979849"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.172949002217295"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.746318005886723"/>
 												<Property Name="VolumeOffset" Type="Real64">
 													<ValueList>
 														<Value>-1</Value>
@@ -378,7 +378,7 @@
 											<Language>SFX</Language>
 											<AudioFile>KID CRY 1.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="904374131"/>
+												<MediaID ID="1044329266"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -394,8 +394,8 @@
 													<Modifier Name="" ID="{55A6F7E3-9124-4DB1-811E-7734FA121367}">
 														<PropertyList>
 															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="100"/>
-															<Property Name="Min" Type="Real64" Value="-200"/>
+															<Property Name="Max" Type="Real64" Value="278"/>
+															<Property Name="Min" Type="Real64" Value="-76"/>
 														</PropertyList>
 													</Modifier>
 												</ModifierInfo>
@@ -418,11 +418,11 @@
 									<ChildrenList>
 										<AudioFileSource Name="KID CRY 1" ID="{F481E9C5-B9D4-4D2B-A7F4-DE0875A8A64F}">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.158690176322418"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0278697772093359"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0680100755667515"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 												<Property Name="TrimBegin" Type="Real64" Value="0.494456762749446"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.984478935698448"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.700665188470067"/>
 												<Property Name="VolumeOffset" Type="Real64">
 													<ValueList>
 														<Value>-1</Value>
@@ -623,6 +623,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="FEMALE GROAN 3" ID="{6D15F71E-9B28-4FFB-9D39-A1F7377A6BE8}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0291382113821138"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0374634146341463"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0811707317073171"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.926178861788618"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>FEMALE GROAN 3.wav</AudioFile>
 											<MediaIDList>
@@ -652,6 +659,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="FEMALE GROAN 2" ID="{15265645-40FA-4908-A16C-15D8B4AB3402}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0562749445676275"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0687804878048781"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0656541019955654"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.36935698447894"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>FEMALE GROAN 2.wav</AudioFile>
 											<MediaIDList>
@@ -681,6 +695,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="FEMALE GROAN" ID="{BFD95278-2BB0-4E5F-B703-33758248717F}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0253850702143385"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0800606060606061"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0702971175166297"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.691254988913526"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>FEMALE GROAN .wav</AudioFile>
 											<MediaIDList>
@@ -951,182 +972,6 @@
 							</ChildrenList>
 							<Playlist>
 								<ItemRef Name="cambio_arma_1" ID="{616277A4-AAF7-410B-AF46-FE99658A81C9}"/>
-							</Playlist>
-						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="player_reload" ID="{3385BE93-B654-4A22-8287-E769BF5FD96D}" ShortID="596886229">
-							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{B5ACE749-CFF0-484E-8645-A18CBFF82D04}">
-												<PropertyList>
-													<Property Name="Max" Type="Real64" Value="1061"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
-								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-5</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="recarga_2" ID="{6884BA6F-4AE8-4F43-8779-E81785D9A5B6}" ShortID="284814724">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{8D428C9F-1628-4B9C-A664-5CE02BB9D3A3}">
-														<PropertyList>
-															<Property Name="Max" Type="Real64" Value="455"/>
-															<Property Name="Min" Type="Real64" Value="-354"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>5</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="recarga_2" ID="{DB095394-7B9A-411B-AF19-B88221279138}">
-											<PropertyList>
-												<Property Name="CrossfadeDuration" Type="Real64" Value="161.591"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0.728008226546435"/>
-												<Property Name="LoopEnd" Type="Real64" Value="1.7733533723567"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.578673205716398"/>
-												<Property Name="TrimEnd" Type="Real64" Value="1.85735432157359"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>recarga_2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="695209723"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="recarga_2" ID="{DB095394-7B9A-411B-AF19-B88221279138}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="cambio_arma_1" ID="{E3708195-254F-4EFB-8266-6F4977583902}" ShortID="642046568">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{4ACA38CE-7910-46F4-9052-B7C1D30FCC89}">
-														<PropertyList>
-															<Property Name="Max" Type="Real64" Value="328"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="cambio_arma_1" ID="{23D1CF46-6D72-47CD-9889-B3DC532CC5DC}">
-											<PropertyList>
-												<Property Name="CrossfadeDuration" Type="Real64" Value="67.421"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0.445608755129959"/>
-												<Property Name="LoopEnd" Type="Real64" Value="1.78243502051983"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.352982216142271"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>cambio_arma_1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="220144409"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="cambio_arma_1" ID="{23D1CF46-6D72-47CD-9889-B3DC532CC5DC}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="cambio_arma_3" ID="{51EE7A6A-ED2C-43DD-9D44-46D97CB2EE48}" ShortID="920569188">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{5E7B58B4-51BE-42FC-9E68-4EED524AB244}">
-														<PropertyList>
-															<Property Name="Min" Type="Real64" Value="-859"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-5</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="SFX" ID="{B51DC3E0-9806-4710-B13D-F1C928BB75FF}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="cambio_arma_1" ID="{12BA9388-ABD0-48BA-AAE3-D15B00C6AD8D}">
-											<PropertyList>
-												<Property Name="CrossfadeDuration" Type="Real64" Value="67.421"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0.498180574555404"/>
-												<Property Name="LoopEnd" Type="Real64" Value="1.75740082079343"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.4606292749658"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>cambio_arma_1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="56214504"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="cambio_arma_1" ID="{12BA9388-ABD0-48BA-AAE3-D15B00C6AD8D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-							<Playlist>
-								<ItemRef Name="cambio_arma_1" ID="{E3708195-254F-4EFB-8266-6F4977583902}"/>
-								<ItemRef Name="recarga_2" ID="{6884BA6F-4AE8-4F43-8779-E81785D9A5B6}"/>
-								<ItemRef Name="cambio_arma_3" ID="{51EE7A6A-ED2C-43DD-9D44-46D97CB2EE48}"/>
 							</Playlist>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="player_shoot" ID="{F6356EDA-E8B4-4DB6-B696-C2D3F09F4F27}" ShortID="642010330">
@@ -2679,7 +2524,7 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-12</Value>
+												<Value>-6</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2724,21 +2569,26 @@
 														<PointList>
 															<Point>
 																<XPos>0</XPos>
-																<YPos>-0.15651</YPos>
+																<YPos>-200</YPos>
 																<Flags>5</Flags>
 															</Point>
 															<Point>
-																<XPos>0.29807</XPos>
-																<YPos>-4.8086</YPos>
+																<XPos>0.1</XPos>
+																<YPos>-0.44671</YPos>
 																<Flags>0</Flags>
 															</Point>
 															<Point>
-																<XPos>0.29907</XPos>
+																<XPos>30</XPos>
+																<YPos>-0.1565</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>30.74066</XPos>
 																<YPos>-200</YPos>
 																<Flags>0</Flags>
 															</Point>
 															<Point>
-																<XPos>1</XPos>
+																<XPos>100</XPos>
 																<YPos>-200</YPos>
 																<Flags>37</Flags>
 															</Point>
@@ -2766,18 +2616,18 @@
 										<BlendTrackAssoc>
 											<ItemRef Name="heart" ID="{BF4C2A39-CDED-4F23-8864-A5FEB5AB64C6}"/>
 											<CrossfadingInfo>
-												<LeftEdgePos>0.0533051484436042</LeftEdgePos>
+												<LeftEdgePos>1.56418580187054</LeftEdgePos>
 												<LeftFadingMode>Automatic</LeftFadingMode>
-												<RightEdgePos>0.269751749766029</RightEdgePos>
+												<RightEdgePos>99.9995</RightEdgePos>
 												<RightFadingMode>Automatic</RightFadingMode>
 											</CrossfadingInfo>
 										</BlendTrackAssoc>
 										<BlendTrackAssoc>
 											<ItemRef Name="CRY n BREATHE" ID="{4185D152-709A-4198-9B54-764BD0464914}"/>
 											<CrossfadingInfo>
-												<LeftEdgePos>0.179270517589694</LeftEdgePos>
+												<LeftEdgePos>1.56468580187054</LeftEdgePos>
 												<LeftFadingMode>Automatic</LeftFadingMode>
-												<RightEdgePos>0.299846998853468</RightEdgePos>
+												<RightEdgePos>100</RightEdgePos>
 												<RightFadingMode>Automatic</RightFadingMode>
 											</CrossfadingInfo>
 										</BlendTrackAssoc>
@@ -2957,6 +2807,11 @@
 						</BlendContainer>
 						<Sound Name="BUTTON G HI EXIT" ID="{EE20D6E8-1A20-48E1-AC6A-DD3CA9A729A7}" ShortID="725325702">
 							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-2400</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-5</Value>
@@ -2975,10 +2830,10 @@
 								<AudioFileSource Name="BUTTON G HI" ID="{C5FC2E69-6821-4FDE-AC6B-9505F08FDA92}">
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="0.117919392091648"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.789152854767184"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.716587075018473"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 										<Property Name="TrimBegin" Type="Real64" Value="0.154202281966001"/>
-										<Property Name="TrimEnd" Type="Real64" Value="1.62365932187731"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.870789356984474"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>BUTTON G HI.wav</AudioFile>
@@ -3383,6 +3238,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="STINGER NEW NIGHTMARES" ID="{88543795-1D01-49CB-A1E3-22BE1519E273}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.274944567627494"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.09645232815965"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.412416851441241"/>
+										<Property Name="TrimEnd" Type="Real64" Value="6.9079822616408"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>STINGER NEW NIGHTMARES.wav</AudioFile>
 									<MediaIDList>
@@ -3432,7 +3294,8 @@
 										<AudioFileSource Name="Escopeta Pigments" ID="{EEE21BB7-B4BB-454F-AEFF-FDEA285ADBBA}">
 											<PropertyList>
 												<Property Name="CrossfadeDuration" Type="Real64" Value="5.105"/>
-												<Property Name="LoopBegin" Type="Real64" Value="1.00243614154079"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0218383960350539"/>
+												<Property Name="LoopBegin" Type="Real64" Value="1.00409449840108"/>
 												<Property Name="LoopEnd" Type="Real64" Value="1.75170998632011"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 												<Property Name="TrimBegin" Type="Real64" Value="0.99400072285992"/>
@@ -3461,8 +3324,8 @@
 									<ChildrenList>
 										<AudioFileSource Name="Escopeta Pigments" ID="{CA469735-A667-46DF-9831-B2053CF844AD}">
 											<PropertyList>
-												<Property Name="CrossfadeDuration" Type="Real64" Value="17.105"/>
-												<Property Name="LoopBegin" Type="Real64" Value="2.56598193399655"/>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="5.105"/>
+												<Property Name="LoopBegin" Type="Real64" Value="2.56654827402124"/>
 												<Property Name="LoopEnd" Type="Real64" Value="3.59748450148081"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 												<Property Name="TrimBegin" Type="Real64" Value="2.55785710843883"/>
@@ -3491,7 +3354,7 @@
 									<ChildrenList>
 										<AudioFileSource Name="Escopeta Pigments" ID="{01746253-1823-4253-BEA1-913EFB51FE9B}">
 											<PropertyList>
-												<Property Name="CrossfadeDuration" Type="Real64" Value="17.105"/>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="5.105"/>
 												<Property Name="LoopBegin" Type="Real64" Value="4.43678502765768"/>
 												<Property Name="LoopEnd" Type="Real64" Value="5.33183052780546"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
@@ -3512,6 +3375,34 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="bear_dead" ID="{F9250498-47EA-4B89-95B8-E7C3434609BE}" ShortID="787387617">
+							<PropertyList>
+								<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+								<Property Name="Lowpass" Type="int16">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4275623F-17F2-47F0-B590-D115E0E40795}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="31"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{475BDAE3-F477-4451-85E2-219907CBCFCD}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="76"/>
+													<Property Name="Min" Type="Real64" Value="-379"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
@@ -3521,85 +3412,6 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="bear_dead3" ID="{69DDEBAA-6144-4A78-863B-E98008239C14}" ShortID="173947770">
-									<PropertyList>
-										<Property Name="Highpass" Type="int16">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{34671975-F7EC-466C-B613-E9D0B2CD0DBC}">
-														<PropertyList>
-															<Property Name="Max" Type="Real64" Value="7"/>
-															<Property Name="Min" Type="Real64" Value="-46"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Lowpass" Type="int16">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{67397C4B-6218-406C-8322-89FF7724C0E0}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="55"/>
-															<Property Name="Min" Type="Real64" Value="-33"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-400</Value>
-											</ValueList>
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{FDBD0646-A7A6-4360-877C-C08009C12780}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="51"/>
-															<Property Name="Min" Type="Real64" Value="-1465"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{42F6CC25-F14A-48C8-8AAF-4ED19A58F449}"/>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="SFX" ID="{B51DC3E0-9806-4710-B13D-F1C928BB75FF}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="bear_dead3" ID="{A967612E-20EB-4E30-AB93-DB9E56F0ECBD}">
-											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.182619647355164"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.308564231738035"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.251889168765743"/>
-												<Property Name="TrimEnd" Type="Real64" Value="1.50503778337531"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>bear_dead3.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="958011035"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="bear_dead3" ID="{A967612E-20EB-4E30-AB93-DB9E56F0ECBD}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="dead bear 1" ID="{20070C32-D076-4DFE-85AF-789294BFCBF3}" ShortID="719480329">
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
@@ -3631,6 +3443,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="dead bear 1" ID="{5FABFA2C-99E2-496A-A650-62D72AE6EA0A}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0598669623059867"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.104767184035477"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>dead bear 1.wav</AudioFile>
 											<MediaIDList>
@@ -3672,6 +3489,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="dead bear 2" ID="{D9DFFE33-8EAF-40E8-80DB-B2F22EF0C01D}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.104767184035477"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.444013303769401"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>dead bear 2.wav</AudioFile>
 											<MediaIDList>
@@ -3681,6 +3503,79 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="dead bear 2" ID="{D9DFFE33-8EAF-40E8-80DB-B2F22EF0C01D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="dead bear 3" ID="{E8649B2E-1188-4F5C-B9E4-995977BF9811}" ShortID="761039998">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{90324D13-C0CD-4679-9053-315248D5569A}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{79D3F6C7-4301-42FF-9B11-651D069BDE56}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dead bear 3" ID="{71D5C845-AC48-4F3A-BB11-2F23221CCE00}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.385809312638581"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.572062084257206"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.272727272727273"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.82926829268292"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dead bear 3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1062061863"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dead bear 3" ID="{71D5C845-AC48-4F3A-BB11-2F23221CCE00}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="dead bear 4" ID="{56A02416-9DEE-47E2-8E74-E50153534CE4}" ShortID="152243348">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dead bear 4" ID="{A5D9C1BA-846C-4FD2-8A61-34AEB422A5EE}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0386844050258684"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.274659275683666"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.41971766444937"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dead bear 4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="123169684"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dead bear 4" ID="{A5D9C1BA-846C-4FD2-8A61-34AEB422A5EE}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -3703,6 +3598,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="STINGER GAME OVER" ID="{15A64C07-F11C-4C4A-8ABF-9804BF140C51}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.253980875831486"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.05220648558758"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.834508592017739"/>
+										<Property Name="TrimEnd" Type="Real64" Value="6.87562513858094"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>STINGER GAME OVER.wav</AudioFile>
 									<MediaIDList>
@@ -3725,6 +3627,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="STINGER BEAR DEFEATED" ID="{6C22F669-660C-4948-B977-E918E8F98B12}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.106430155210643"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.13082039911308"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.279379157427938"/>
+										<Property Name="TrimEnd" Type="Real64" Value="5.90687361419069"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>STINGER BEAR DEFEATED.wav</AudioFile>
 									<MediaIDList>
@@ -3905,6 +3814,96 @@
 								<ItemRef Name="Silencio" ID="{D3EF909C-BE32-4115-AD24-F155E2FB185D}"/>
 								<ItemRef Name="Voices" ID="{AA7C6DBD-2DF1-43FF-8359-EFCC4088D7CA}"/>
 							</Playlist>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="player_reload" ID="{50488D1A-972F-49C6-A33F-167540CB54D1}" ShortID="441351547">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="recarga_pistola" ID="{C7E4014F-12E8-4E0E-B0B7-E45B1F24B914}" ShortID="695549213">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="recarga_pistola" ID="{9AD42254-E02E-4D35-98DD-3F91ECDEAC4F}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="6.701"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0982116877711657"/>
+												<Property Name="LoopEnd" Type="Real64" Value="2.37978680568801"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0872588495418936"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.40887308886864"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>recarga_pistola.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="704669082"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="recarga_pistola" ID="{9AD42254-E02E-4D35-98DD-3F91ECDEAC4F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="shotgun_reload" ID="{5EF8A3C3-4DE8-40FF-8FA0-034774F8B35F}" ShortID="976456308">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{B51DC3E0-9806-4710-B13D-F1C928BB75FF}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="recarga_escopeta" ID="{E2E04D96-C169-430D-A642-27A8A5522661}" ShortID="207826746">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F88572D6-8E52-4DE4-89EA-130D2A419A87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9BFB9817-E595-4AD9-A7BD-63D3EC520428}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="recarga_escopeta" ID="{248A40D7-0903-4942-B30B-E8FC6FE1ECF7}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="5.73"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0372479420651452"/>
+												<Property Name="LoopEnd" Type="Real64" Value="2.16962929445791"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0237752821692416"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>recarga_escopeta.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="664189311"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="recarga_escopeta" ID="{248A40D7-0903-4942-B30B-E8FC6FE1ECF7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>

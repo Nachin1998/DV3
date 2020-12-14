@@ -30,7 +30,7 @@
 						<Action Name="" ID="{0E399D07-57C9-4165-9B62-E0C1025C1361}" ShortID="959098700">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="player_reload" ID="{3385BE93-B654-4A22-8287-E769BF5FD96D}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+									<ObjectRef Name="player_reload" ID="{50488D1A-972F-49C6-A33F-167540CB54D1}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -231,35 +231,36 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="game_start" ID="{A6B39703-F7D1-4310-B690-6EF399332C4C}"/>
+				<Event Name="game_start" ID="{A6B39703-F7D1-4310-B690-6EF399332C4C}">
+					<ChildrenList>
+						<Action Name="" ID="{C1E1339C-A363-4AA1-840A-E74858FF09C0}" ShortID="976705823">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mx" ID="{3B3D4669-EDAF-4E83-AA3A-39D39A23DC18}" WorkUnitID="{509CF797-F32B-44D2-B0B5-18797F1AB116}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EDEB5273-A5B4-428A-943E-E14381DE6B62}" ShortID="1005426896">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="None" ID="{4AEDD380-6FC6-4E91-A962-2DC1C62E0BE5}" WorkUnitID="{512D792F-EF01-4AAC-B41C-252198EC1EE4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="menu_start" ID="{1F57A6EA-DFB2-4F97-89CB-2D81923FCF3E}">
 					<ChildrenList>
-						<Action Name="" ID="{7C5B2F26-6CBD-485D-9530-475D55219F81}" ShortID="386882917">
+						<Action Name="" ID="{09EEEB63-1A4B-4B41-860A-2EABA03C7817}" ShortID="863331953">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="Scope" Type="int16" Value="1"/>
+								<Property Name="ActionType" Type="int16" Value="22"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="MX gameplay" ID="{962B67B9-F80D-43B5-A207-027B1381AB0C}" WorkUnitID="{509CF797-F32B-44D2-B0B5-18797F1AB116}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{60BE05B3-F3FD-41DF-876E-85BC23BBDD80}" ShortID="807062440">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="MX menu" ID="{15B1CF0B-7CA9-4458-B121-BC6C36FC0F2E}" WorkUnitID="{509CF797-F32B-44D2-B0B5-18797F1AB116}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{F433007B-F7B8-42C9-847A-5218A2878DD0}" ShortID="632065905">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="Scope" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Ambient" ID="{A34F097C-45D4-4252-BEB7-3D3F655F6E4B}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+									<ObjectRef Name="Main_menu" ID="{8BC06C9D-C31B-4FF5-AA59-6C4CF4265BAA}" WorkUnitID="{512D792F-EF01-4AAC-B41C-252198EC1EE4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -295,33 +296,13 @@
 				</Event>
 				<Event Name="start_gameplay" ID="{12DBA7DC-E55E-4977-8CCC-EBF5BEDE1A4B}">
 					<ChildrenList>
-						<Action Name="" ID="{A9F850A5-A997-485B-962F-47544911DAF0}" ShortID="899657008">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeOutCurve" Type="int16" Value="8"/>
-								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
-								<Property Name="Scope" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="MX menu" ID="{15B1CF0B-7CA9-4458-B121-BC6C36FC0F2E}" WorkUnitID="{509CF797-F32B-44D2-B0B5-18797F1AB116}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{48AFD7FF-9774-48EB-B8BE-0F03D457DE34}" ShortID="692869968">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="MX gameplay" ID="{962B67B9-F80D-43B5-A207-027B1381AB0C}" WorkUnitID="{509CF797-F32B-44D2-B0B5-18797F1AB116}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{415B6F19-F876-40DB-B3AA-A4FDF3F5A55B}" ShortID="635810762">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="22"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Off" ID="{EA893A11-B92B-4C5C-8141-F982117C5711}" WorkUnitID="{512D792F-EF01-4AAC-B41C-252198EC1EE4}"/>
+									<ObjectRef Name="Gameplay_Battle" ID="{4918ED41-80FF-421F-B876-82E26A92C069}" WorkUnitID="{512D792F-EF01-4AAC-B41C-252198EC1EE4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -329,27 +310,30 @@
 				</Event>
 				<Event Name="menu_backtomain" ID="{469EF090-2041-48C9-B87F-2DF3B4E5F78D}">
 					<ChildrenList>
-						<Action Name="" ID="{4E2B1F72-34CF-46F6-A95E-EEF766DD2765}" ShortID="168231369">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="MX menu" ID="{15B1CF0B-7CA9-4458-B121-BC6C36FC0F2E}" WorkUnitID="{509CF797-F32B-44D2-B0B5-18797F1AB116}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{FA3B63DF-8D98-4446-8F0A-2C237B399592}" ShortID="854445308">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="MX gameplay" ID="{962B67B9-F80D-43B5-A207-027B1381AB0C}" WorkUnitID="{509CF797-F32B-44D2-B0B5-18797F1AB116}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{5E1EFDB9-5A8E-48E0-9612-D9DAAAC56157}" ShortID="678791036">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Buttons" ID="{FC5C7D48-F7FE-4634-B207-A5C5F3191E8E}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{78879385-762A-47F5-A72A-6C30CFB9CF66}" ShortID="494952773">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Main_menu" ID="{8BC06C9D-C31B-4FF5-AA59-6C4CF4265BAA}" WorkUnitID="{512D792F-EF01-4AAC-B41C-252198EC1EE4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8930F926-AA01-47F8-8702-494604CB41D6}" ShortID="580299608">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Off" ID="{EA893A11-B92B-4C5C-8141-F982117C5711}" WorkUnitID="{512D792F-EF01-4AAC-B41C-252198EC1EE4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -397,13 +381,23 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{F3B1E686-A044-4599-8849-5CC675E7C863}" ShortID="16042741">
+						<Action Name="" ID="{E40BCFFA-09B0-4F26-AFFA-B65ED042B1DE}" ShortID="722140532">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="ActionType" Type="int16" Value="22"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="MX gameplay" ID="{962B67B9-F80D-43B5-A207-027B1381AB0C}" WorkUnitID="{509CF797-F32B-44D2-B0B5-18797F1AB116}"/>
+									<ObjectRef Name="Gameplay_Battle" ID="{4918ED41-80FF-421F-B876-82E26A92C069}" WorkUnitID="{512D792F-EF01-4AAC-B41C-252198EC1EE4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{38249AAB-2558-4938-BE7F-305980E91EDA}" ShortID="976334436">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Off" ID="{EA893A11-B92B-4C5C-8141-F982117C5711}" WorkUnitID="{512D792F-EF01-4AAC-B41C-252198EC1EE4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -415,6 +409,16 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Buttons" ID="{FC5C7D48-F7FE-4634-B207-A5C5F3191E8E}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1E7293AC-35D5-4B30-9C01-241ECC9A051F}" ShortID="333186552">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Off" ID="{EA893A11-B92B-4C5C-8141-F982117C5711}" WorkUnitID="{512D792F-EF01-4AAC-B41C-252198EC1EE4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

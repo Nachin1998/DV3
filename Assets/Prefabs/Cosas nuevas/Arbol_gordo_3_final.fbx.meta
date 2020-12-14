@@ -3,7 +3,27 @@ guid: e900513b72fb1d640b214a10c452e09d
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hoja
+    second: {fileID: 2100000, guid: be0b9e958f6ca9c409ea1f5781253076, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rama_A
+    second: {fileID: 2100000, guid: 7b4de1ab6d07b434d99112e3b7ce4c09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rama_B
+    second: {fileID: 2100000, guid: 25c54c5be25453d4eb9d8a6a490b78e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert12
+    second: {fileID: 2100000, guid: 976f807aea98fd6478609ecae06c2874, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
