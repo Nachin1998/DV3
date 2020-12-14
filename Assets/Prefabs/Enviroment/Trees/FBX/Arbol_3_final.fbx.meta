@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 45bacaff53ddbe04aa988d71ced08742
+guid: 2267d10fdea0149448b1175bb2765e7a
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -8,22 +8,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hoja
-    second: {fileID: 2100000, guid: 10a281c7c47820d4fab1bbd5c4a1b8dd, type: 2}
+    second: {fileID: 2100000, guid: 9b80a754d0881064490402c826b85078, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Rama_A
-    second: {fileID: 2100000, guid: dd2d12aa33f20a146941130677a73a7e, type: 2}
+    second: {fileID: 2100000, guid: 62a6ed89699649542a9a4007c887b95f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Rama_B
-    second: {fileID: 2100000, guid: 30d4ed11d93285a4c98957fbe66f376c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Tronco_arbol_3
-    second: {fileID: 2100000, guid: 4df12011e2862984dba52ddfa9942f96, type: 2}
+      name: Tronco_arbol_2
+    second: {fileID: 2100000, guid: 851656cfbc52bf746bba8816ac0023bf, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -79,7 +74,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

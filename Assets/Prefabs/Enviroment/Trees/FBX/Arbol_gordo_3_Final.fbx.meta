@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 391f4667239f9ba439694ef9811716bf
+guid: e900513b72fb1d640b214a10c452e09d
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -8,22 +8,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hoja
-    second: {fileID: 2100000, guid: 376fc7b8922df90429c99060c76d82fe, type: 2}
+    second: {fileID: 2100000, guid: be0b9e958f6ca9c409ea1f5781253076, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Rama_A
-    second: {fileID: 2100000, guid: 503a2fa59fa67bd409aa2c0c5c45a634, type: 2}
+    second: {fileID: 2100000, guid: 7b4de1ab6d07b434d99112e3b7ce4c09, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Rama_B
-    second: {fileID: 2100000, guid: b63323bce37827947bf2672bf4a1b296, type: 2}
+    second: {fileID: 2100000, guid: 25c54c5be25453d4eb9d8a6a490b78e0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert12
-    second: {fileID: 2100000, guid: fbd4080cc1624d3439f875706de131d5, type: 2}
+    second: {fileID: 2100000, guid: 976f807aea98fd6478609ecae06c2874, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -79,7 +79,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
