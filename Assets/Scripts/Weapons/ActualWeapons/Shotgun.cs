@@ -53,9 +53,7 @@ public class Shotgun : BaseWeapon
                 StartCoroutine(Reload(3.5f));
                 AkSoundEngine.PostEvent("shotgun_reload", gameObject);
             }
-
         }
-
     }
 
     public override void Fire()
