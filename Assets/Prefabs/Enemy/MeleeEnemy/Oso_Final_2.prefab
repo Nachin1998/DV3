@@ -932,7 +932,7 @@ MonoBehaviour:
   - bear4_voice
   attackDistance: 5
   attackSpeedRate: 0.3
-  chasingSpeed: 20
+  chasingSpeed: 22
   wanderRadius: 75
   wanderTimer: 5
   wanderSpeed: 1

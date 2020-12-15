@@ -23,8 +23,11 @@ MonoBehaviour:
   - name: Melee 3
     enemy: {fileID: 923680433547004826, guid: ce7e589e94a3ff0429cf3eb408742eef, type: 3}
     enemyAmmount: 2
+  - name: Melee 4
+    enemy: {fileID: 1495784142, guid: 759244d08dc49cb4380ddc87b7ff2634, type: 3}
+    enemyAmmount: 2
   - name: Ranged
-    enemy: {fileID: 923680433547004826, guid: f5a18e1e9f48807499588d8fc8514f92, type: 3}
+    enemy: {fileID: 1251917018025897642, guid: bf41509325ec7e14e9f14f850f2b9054, type: 3}
     enemyAmmount: 1
   enemiesPerSecond: 2
   spawnPoints:

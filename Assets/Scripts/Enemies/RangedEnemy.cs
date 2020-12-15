@@ -60,7 +60,7 @@ public class RangedEnemy : BaseEnemy
             anim.SetBool("isRunning", true);
 
             agent.stoppingDistance = 0;
-            agent.speed = 40;
+            agent.speed = 30;
             agent.SetDestination(agent.transform.position - direction * Time.deltaTime * agent.speed);
         }
         else
