@@ -39,7 +39,7 @@ public class Shotgun : BaseWeapon
             {
                 if (!isReloading && !isOutOfAmmo)
                 {
-                    Fire();
+                    StartCoroutine(Fire(1.5f));                    
                     AkSoundEngine.PostEvent("shotgun_shot", gameObject);
                     timer = 0;
                 }
@@ -56,7 +56,7 @@ public class Shotgun : BaseWeapon
         }
     }
 
-    public override void Fire()
+    public override IEnumerator Fire(float duration)
     {
         ammoInWeapon--;
         muzzleFlash.Play();
@@ -92,6 +92,11 @@ public class Shotgun : BaseWeapon
             }
         }
 
-        StartCoroutine(MuzzleFlash(1f));
+        muzzleFlash.Play();
+
+        yield return new WaitForSeconds(duration);
+
+        animator.SetBool("isShooting", false);
+        muzzleFlash.Stop();
     }
 }

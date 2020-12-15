@@ -68,6 +68,9 @@ public class BaseEnemy : MonoBehaviour
     {
         if (playerTarget.isDead)
         {
+            anim.SetBool("startedRunning", false);
+            anim.SetBool("isRunning", false);
+            anim.SetBool("isAttacking", false);
             enemyState = EnemyState.Wandering;
         }
 
@@ -122,8 +125,8 @@ public class BaseEnemy : MonoBehaviour
 
         timer += Time.deltaTime;
 
-        anim.SetBool("startedRunning", false);
-        anim.SetBool("isRunning", false);
+        //anim.SetBool("startedRunning", false);
+        //anim.SetBool("isRunning", false);
         anim.SetBool("startedWalking", true);
         anim.SetBool("isWalking", true);
 
@@ -174,10 +177,10 @@ public class BaseEnemy : MonoBehaviour
 
         attackSpeedRate -= Time.deltaTime;
 
-        anim.SetBool("startedWalking", false);
-        anim.SetBool("isWalking", false);
-        anim.SetBool("startedRunning", false);
-        anim.SetBool("isRunning", false);
+        //anim.SetBool("startedWalking", false);
+        //anim.SetBool("isWalking", false);
+        //anim.SetBool("startedRunning", false);
+        //anim.SetBool("isRunning", false);
         anim.SetBool("isAttacking", true);
 
         if (attackSpeedRate <= 0)

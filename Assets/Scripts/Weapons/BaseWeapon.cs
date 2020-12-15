@@ -38,12 +38,7 @@ public class BaseWeapon : MonoBehaviour
         ammoInWeapon = ammoInClips;
         maxAmmoCap = maxAmmo;
         muzzleFlash.Stop();
-    }
-
-    void OnDisable()
-    {
-        isReloading = false;
-    }
+    }    
 
     public virtual IEnumerator Reload(float reloadDuration)
     {
@@ -69,7 +64,7 @@ public class BaseWeapon : MonoBehaviour
         isReloading = false;
     }
 
-    public virtual void Fire()
+    public virtual IEnumerator Fire(float duration)
     {
         RaycastHit hit;
         ammoInWeapon--;
@@ -117,13 +112,11 @@ public class BaseWeapon : MonoBehaviour
         {
             Debug.DrawRay(playerCamera.position, playerCamera.forward * range, Color.green);
         }
-        StartCoroutine(MuzzleFlash(0.3f));
-    }
 
-    public IEnumerator MuzzleFlash(float duration)
-    {
         muzzleFlash.Play();
+
         yield return new WaitForSeconds(duration);
+
         animator.SetBool("isShooting", false);
         muzzleFlash.Stop();
     }
@@ -132,5 +125,10 @@ public class BaseWeapon : MonoBehaviour
     {
         GameObject impactGO = Instantiate(ps.gameObject, hitPoint.point, Quaternion.LookRotation(hitPoint.normal));
         Destroy(impactGO, 2f);
+    }
+
+    void OnDisable()
+    {
+        isReloading = false;
     }
 }

@@ -42,7 +42,7 @@ public class Bat : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         collider.isTrigger = false;
 
-        yield return new WaitForSeconds(0.9f);
+        yield return new WaitForSeconds(0.5f);
 
         animator.SetBool("isAttacking", false);
         isHitting = false;        
