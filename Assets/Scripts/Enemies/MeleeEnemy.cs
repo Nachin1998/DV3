@@ -1,4 +1,6 @@
-﻿public class MeleeEnemy : BaseEnemy
+﻿using UnityEngine;
+
+public class MeleeEnemy : BaseEnemy
 {
     void Start()    
     {

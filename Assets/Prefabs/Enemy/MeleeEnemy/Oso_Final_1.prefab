@@ -859,7 +859,7 @@ GameObject:
   - component: {fileID: 3956401194591541083}
   - component: {fileID: 919132148077741528}
   m_Layer: 10
-  m_Name: Oso3
+  m_Name: Oso_Final_1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -924,7 +924,7 @@ MonoBehaviour:
   enemyState: 1
   health: 100
   damage: 5
-  sightRange: 300
+  sightRange: 500
   enemySounds:
   - bear1_voice
   - bear2_voice
@@ -932,7 +932,7 @@ MonoBehaviour:
   - bear4_voice
   attackDistance: 5
   attackSpeedRate: 1
-  chasingSpeed: 10
+  chasingSpeed: 14
   wanderRadius: 75
   wanderTimer: 5
   wanderSpeed: 1

@@ -145,7 +145,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 56145f81e482b3a43ac1bcad9c79f37f, type: 2}
+  - {fileID: 2100000, guid: 5d21f3120c6d1ef4d98272fd18f09ff6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -859,7 +859,7 @@ GameObject:
   - component: {fileID: 3956401194591541083}
   - component: {fileID: 919132148077741528}
   m_Layer: 10
-  m_Name: Oso3
+  m_Name: Oso_Final_3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -923,15 +923,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyState: 1
   health: 100
-  damage: 5
-  sightRange: 300
+  damage: 15
+  sightRange: 500
   enemySounds:
   - bear1_voice
   - bear2_voice
   - bear3_voice
   - bear4_voice
   attackDistance: 5
-  attackSpeedRate: 1
+  attackSpeedRate: 1.5
   chasingSpeed: 10
   wanderRadius: 75
   wanderTimer: 5
