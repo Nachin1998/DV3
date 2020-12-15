@@ -32,6 +32,14 @@ public class PlayerUI : MonoBehaviour
 
     void Update()
     {
+        if (player.isDead)
+        {
+            healthBar.gameObject.SetActive(false);
+            sprintBar.gameObject.SetActive(false);
+            bloodScreen.gameObject.SetActive(true);
+            return;
+        }
+
         healthBar.fillAmount = player.currentHealth / 100;
         if (pm)
         {
@@ -45,7 +53,7 @@ public class PlayerUI : MonoBehaviour
                 sprintBar.color = Color.red;
             }
         }
-        else
+        else if(tdm)
         {
             sprintBar.fillAmount = tdm.currentSprint / 100;
             if (tdm.canSprint)

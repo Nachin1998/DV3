@@ -13,6 +13,7 @@ State	ID	Name	State Group			Notes
 	2597878309	Restart_gameplay	Music			
 
 Custom State	ID	Name	State Group	Owner		Notes
+	284377113	On	Pause	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX		
 	910294490	On	Pause	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes

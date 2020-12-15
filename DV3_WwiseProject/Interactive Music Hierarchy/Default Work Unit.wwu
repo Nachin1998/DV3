@@ -16,11 +16,6 @@
 						<MusicPlaylistContainer Name="MX gameplay" ID="{962B67B9-F80D-43B5-A207-027B1381AB0C}" ShortID="592100166">
 							<PropertyList>
 								<Property Name="Tempo" Type="Real64" Value="55"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>3</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">

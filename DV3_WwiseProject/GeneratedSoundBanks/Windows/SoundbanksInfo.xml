@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1211489552">
+		<SoundBank Id="1355168291" Language="SFX" Hash="752906064">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -29,7 +29,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3104675574" Language="SFX" Hash="3741740276">
+		<SoundBank Id="3104675574" Language="SFX" Hash="967245808">
 			<ObjectPath>\SoundBanks\Default Work Unit\MySoundBank</ObjectPath>
 			<ShortName>MySoundBank</ShortName>
 			<Path>MySoundBank.bnk</Path>
@@ -395,6 +395,10 @@
 							<ShortName>STINGER GAME OVER.wav</ShortName>
 							<Path>SFX\STINGER GAME OVER_D9DADAD4.wem</Path>
 						</File>
+						<File Id="291696794" Language="SFX">
+							<ShortName>player dead 2.wav</ShortName>
+							<Path>SFX\player dead 2_7856B0F5.wem</Path>
+						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\game_start" DurationType="Infinite">
@@ -407,6 +411,14 @@
 							<ShortName>STEM 4 - 55 BPM 4-4.wav</ShortName>
 							<Path>SFX\STEM 4 - 55 BPM 4-4_D79FB2B7.wem</Path>
 						</File>
+						<File Id="208970938" Language="SFX">
+							<ShortName>CLOTHES.wav</ShortName>
+							<Path>SFX\CLOTHES_652096BC.wem</Path>
+						</File>
+						<File Id="281381435" Language="SFX">
+							<ShortName>kid breath run 2.wav</ShortName>
+							<Path>SFX\kid breath run 2_288D0F63.wem</Path>
+						</File>
 						<File Id="292943070" Language="SFX">
 							<ShortName>STEM 2 - 55 BPM 4-4.wav</ShortName>
 							<Path>SFX\STEM 2 - 55 BPM 4-4_D79FB2B7.wem</Path>
@@ -415,6 +427,14 @@
 							<ShortName>STEM 3 - 55 BPM 4-4.wav</ShortName>
 							<Path>SFX\STEM 3 - 55 BPM 4-4_D79FB2B7.wem</Path>
 						</File>
+						<File Id="671082395" Language="SFX">
+							<ShortName>heartbeat 180 bpm.wav</ShortName>
+							<Path>SFX\heartbeat 180 bpm_C60CE5AC.wem</Path>
+						</File>
+						<File Id="721326387" Language="SFX">
+							<ShortName>kid breath run.wav</ShortName>
+							<Path>SFX\kid breath run_15B1CF29.wem</Path>
+						</File>
 						<File Id="784470125" Language="SFX">
 							<ShortName>FTW MENU TEST 2.wav</ShortName>
 							<Path>SFX\FTW MENU TEST 2_D79FB2B7.wem</Path>
@@ -422,6 +442,10 @@
 						<File Id="867473249" Language="SFX">
 							<ShortName>STEM 1 - 55 BPM 4-4.wav</ShortName>
 							<Path>SFX\STEM 1 - 55 BPM 4-4_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1063716976" Language="SFX">
+							<ShortName>heart.wav</ShortName>
+							<Path>SFX\heart_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
@@ -473,7 +497,6 @@
 					</IncludedMemoryFiles>
 					<ActionSetState>
 						<ActionSetStateEntry Id="930712164" Name="Off" ObjectPath="\States\Default Work Unit\Pause\Off"/>
-						<ActionSetStateEntry Id="2005704188" Name="Main_menu" ObjectPath="\States\Default Work Unit\Music\Main_menu"/>
 					</ActionSetState>
 				</Event>
 				<Event Id="3908297853" Name="menu_start" ObjectPath="\Events\Default Work Unit\menu_start" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
@@ -493,78 +516,7 @@
 						<ActionSetStateEntry Id="1651971902" Name="On" ObjectPath="\States\Default Work Unit\Pause\On"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="1562304622" Name="play_ambient" ObjectPath="\Events\Default Work Unit\play_ambient" DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="9677936" Language="SFX">
-							<ShortName>play_ambient.wav</ShortName>
-							<Path>SFX\play_ambient_1840DA15.wem</Path>
-						</File>
-						<File Id="18416221" Language="SFX">
-							<ShortName>Ramas2.wav</ShortName>
-							<Path>SFX\Ramas2_7643567C.wem</Path>
-						</File>
-						<File Id="104741923" Language="SFX">
-							<ShortName>Grillo3.wav</ShortName>
-							<Path>SFX\Grillo3_9D57D80D.wem</Path>
-						</File>
-						<File Id="140878479" Language="SFX">
-							<ShortName>play_ambient.wav</ShortName>
-							<Path>SFX\play_ambient_208A1956.wem</Path>
-						</File>
-						<File Id="266300629" Language="SFX">
-							<ShortName>Ramas1.wav</ShortName>
-							<Path>SFX\Ramas1_10C4C929.wem</Path>
-						</File>
-						<File Id="273651243" Language="SFX">
-							<ShortName>Rana.wav</ShortName>
-							<Path>SFX\Rana_10C4C929.wem</Path>
-						</File>
-						<File Id="274442957" Language="SFX">
-							<ShortName>Ramas2.wav</ShortName>
-							<Path>SFX\Ramas2_10C4C929.wem</Path>
-						</File>
-						<File Id="325537324" Language="SFX">
-							<ShortName>Grillo3.wav</ShortName>
-							<Path>SFX\Grillo3_A3CF2D92.wem</Path>
-						</File>
-						<File Id="363749502" Language="SFX">
-							<ShortName>play_ambient.wav</ShortName>
-							<Path>SFX\play_ambient_03187BD3.wem</Path>
-						</File>
-						<File Id="492690470" Language="SFX">
-							<ShortName>viento2.wav</ShortName>
-							<Path>SFX\viento2_10C4C929.wem</Path>
-						</File>
-						<File Id="508866808" Language="SFX">
-							<ShortName>susurro2.wav</ShortName>
-							<Path>SFX\susurro2_4470CCD4.wem</Path>
-						</File>
-						<File Id="512923481" Language="SFX">
-							<ShortName>play_ambient.wav</ShortName>
-							<Path>SFX\play_ambient_A1BCF4A7.wem</Path>
-						</File>
-						<File Id="648194541" Language="SFX">
-							<ShortName>viento1.wav</ShortName>
-							<Path>SFX\viento1_10C4C929.wem</Path>
-						</File>
-						<File Id="698850561" Language="SFX">
-							<ShortName>susurro3.wav</ShortName>
-							<Path>SFX\susurro3_BF6040BC.wem</Path>
-						</File>
-						<File Id="801641602" Language="SFX">
-							<ShortName>susurro4.wav</ShortName>
-							<Path>SFX\susurro4_10C4C929.wem</Path>
-						</File>
-						<File Id="901123229" Language="SFX">
-							<ShortName>Grillo3.wav</ShortName>
-							<Path>SFX\Grillo3_D0FEAA03.wem</Path>
-						</File>
-						<File Id="937009985" Language="SFX">
-							<ShortName>susurro1.wav</ShortName>
-							<Path>SFX\susurro1_325BFDD2.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
+				<Event Id="1562304622" Name="play_ambient" ObjectPath="\Events\Default Work Unit\play_ambient" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1526469190" Name="player_batair" ObjectPath="\Events\Default Work Unit\player_batair" DurationType="OneShot" DurationMin="0.149605" DurationMax="0.272166">
 					<IncludedMemoryFiles>
 						<File Id="507888404" Language="SFX">
@@ -589,7 +541,6 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2226114503" Name="player_dead" ObjectPath="\Events\Default Work Unit\player_dead" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2453392179" Name="player_footstep" ObjectPath="\Events\Default Work Unit\player_footstep" DurationType="OneShot" DurationMin="0.154283" DurationMax="0.420104">
 					<IncludedMemoryFiles>
 						<File Id="541672595" Language="SFX">
@@ -615,22 +566,6 @@
 						<File Id="603013215" Language="SFX">
 							<ShortName>cambio_arma_1.wav</ShortName>
 							<Path>SFX\cambio_arma_1_C56D9D26.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="215992295" Name="player_health" ObjectPath="\Events\Default Work Unit\player_health" DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="208970938" Language="SFX">
-							<ShortName>CLOTHES.wav</ShortName>
-							<Path>SFX\CLOTHES_652096BC.wem</Path>
-						</File>
-						<File Id="721326387" Language="SFX">
-							<ShortName>kid breath run.wav</ShortName>
-							<Path>SFX\kid breath run_DE6DA4F2.wem</Path>
-						</File>
-						<File Id="1063716976" Language="SFX">
-							<ShortName>heart.wav</ShortName>
-							<Path>SFX\heart_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -697,6 +632,14 @@
 				<Event Id="3081428398" Name="shoot_metal" ObjectPath="\Events\Default Work Unit\shoot_metal" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1827768426" Name="shoot_rock" ObjectPath="\Events\Default Work Unit\shoot_rock" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1978508865" Name="shoot_tree" ObjectPath="\Events\Default Work Unit\shoot_tree" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3479070331" Name="shotgun_reload" ObjectPath="\Events\Default Work Unit\shotgun_reload" DurationType="OneShot" DurationMin="2.153685" DurationMax="2.153685">
+					<IncludedMemoryFiles>
+						<File Id="664189311" Language="SFX">
+							<ShortName>recarga_escopeta.wav</ShortName>
+							<Path>SFX\recarga_escopeta_65CC78D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="835721748" Name="shotgun_shot" ObjectPath="\Events\Default Work Unit\shotgun_shot" DurationType="OneShot" DurationMin="0.787516" DurationMax="1.052266">
 					<IncludedMemoryFiles>
 						<File Id="774813878" Language="SFX">
@@ -713,13 +656,129 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3576058218" Name="start_gameplay" ObjectPath="\Events\Default Work Unit\start_gameplay" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+				<Event Id="3576058218" Name="start_gameplay" ObjectPath="\Events\Default Work Unit\start_gameplay" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="9677936" Language="SFX">
+							<ShortName>play_ambient.wav</ShortName>
+							<Path>SFX\play_ambient_1840DA15.wem</Path>
+						</File>
+						<File Id="18416221" Language="SFX">
+							<ShortName>Ramas2.wav</ShortName>
+							<Path>SFX\Ramas2_7643567C.wem</Path>
+						</File>
+						<File Id="104741923" Language="SFX">
+							<ShortName>Grillo3.wav</ShortName>
+							<Path>SFX\Grillo3_9D57D80D.wem</Path>
+						</File>
+						<File Id="140878479" Language="SFX">
+							<ShortName>play_ambient.wav</ShortName>
+							<Path>SFX\play_ambient_208A1956.wem</Path>
+						</File>
+						<File Id="208970938" Language="SFX">
+							<ShortName>CLOTHES.wav</ShortName>
+							<Path>SFX\CLOTHES_652096BC.wem</Path>
+						</File>
+						<File Id="266300629" Language="SFX">
+							<ShortName>Ramas1.wav</ShortName>
+							<Path>SFX\Ramas1_10C4C929.wem</Path>
+						</File>
+						<File Id="273651243" Language="SFX">
+							<ShortName>Rana.wav</ShortName>
+							<Path>SFX\Rana_10C4C929.wem</Path>
+						</File>
+						<File Id="274442957" Language="SFX">
+							<ShortName>Ramas2.wav</ShortName>
+							<Path>SFX\Ramas2_10C4C929.wem</Path>
+						</File>
+						<File Id="281381435" Language="SFX">
+							<ShortName>kid breath run 2.wav</ShortName>
+							<Path>SFX\kid breath run 2_288D0F63.wem</Path>
+						</File>
+						<File Id="325537324" Language="SFX">
+							<ShortName>Grillo3.wav</ShortName>
+							<Path>SFX\Grillo3_A3CF2D92.wem</Path>
+						</File>
+						<File Id="363749502" Language="SFX">
+							<ShortName>play_ambient.wav</ShortName>
+							<Path>SFX\play_ambient_03187BD3.wem</Path>
+						</File>
+						<File Id="492690470" Language="SFX">
+							<ShortName>viento2.wav</ShortName>
+							<Path>SFX\viento2_10C4C929.wem</Path>
+						</File>
+						<File Id="508866808" Language="SFX">
+							<ShortName>susurro2.wav</ShortName>
+							<Path>SFX\susurro2_4470CCD4.wem</Path>
+						</File>
+						<File Id="512923481" Language="SFX">
+							<ShortName>play_ambient.wav</ShortName>
+							<Path>SFX\play_ambient_A1BCF4A7.wem</Path>
+						</File>
+						<File Id="648194541" Language="SFX">
+							<ShortName>viento1.wav</ShortName>
+							<Path>SFX\viento1_10C4C929.wem</Path>
+						</File>
+						<File Id="671082395" Language="SFX">
+							<ShortName>heartbeat 180 bpm.wav</ShortName>
+							<Path>SFX\heartbeat 180 bpm_C60CE5AC.wem</Path>
+						</File>
+						<File Id="698850561" Language="SFX">
+							<ShortName>susurro3.wav</ShortName>
+							<Path>SFX\susurro3_BF6040BC.wem</Path>
+						</File>
+						<File Id="721326387" Language="SFX">
+							<ShortName>kid breath run.wav</ShortName>
+							<Path>SFX\kid breath run_15B1CF29.wem</Path>
+						</File>
+						<File Id="801641602" Language="SFX">
+							<ShortName>susurro4.wav</ShortName>
+							<Path>SFX\susurro4_10C4C929.wem</Path>
+						</File>
+						<File Id="901123229" Language="SFX">
+							<ShortName>Grillo3.wav</ShortName>
+							<Path>SFX\Grillo3_D0FEAA03.wem</Path>
+						</File>
+						<File Id="937009985" Language="SFX">
+							<ShortName>susurro1.wav</ShortName>
+							<Path>SFX\susurro1_325BFDD2.wem</Path>
+						</File>
+						<File Id="1063716976" Language="SFX">
+							<ShortName>heart.wav</ShortName>
+							<Path>SFX\heart_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{4918ED41-80FF-421F-B876-82E26A92C069}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{4918ED41-80FF-421F-B876-82E26A92C069}">
+							<Media>
+								<File Id="273651243"/>
+								<File Id="273651243"/>
+								<File Id="273651243"/>
+								<File Id="325537324"/>
+								<File Id="104741923"/>
+								<File Id="901123229"/>
+								<File Id="508866808"/>
+								<File Id="698850561"/>
+								<File Id="937009985"/>
+								<File Id="801641602"/>
+								<File Id="266300629"/>
+								<File Id="274442957"/>
+								<File Id="18416221"/>
+								<File Id="648194541"/>
+								<File Id="492690470"/>
+								<File Id="648194541"/>
+								<File Id="492690470"/>
+								<File Id="9677936"/>
+								<File Id="512923481"/>
+								<File Id="140878479"/>
+								<File Id="363749502"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
 					<ActionSetState>
 						<ActionSetStateEntry Id="2082940090" Name="Gameplay_Battle" ObjectPath="\States\Default Work Unit\Music\Gameplay_Battle"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="3891337659" Name="volume_music" ObjectPath="\Events\Default Work Unit\volume_music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3673881719" Name="volume_sfx" ObjectPath="\Events\Default Work Unit\volume_sfx" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<GameParameters>
 				<GameParameter Id="3677180323" Name="HEALTH" ObjectPath="\Game Parameters\Default Work Unit\HEALTH"/>

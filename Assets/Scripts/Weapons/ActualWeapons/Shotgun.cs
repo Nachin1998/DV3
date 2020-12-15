@@ -51,6 +51,7 @@ public class Shotgun : BaseWeapon
             if (!isReloading && !isOutOfClips && canReload)
             {
                 StartCoroutine(Reload(3.5f));
+                AkSoundEngine.PostEvent("shotgun_reload", gameObject);
             }
 
         }

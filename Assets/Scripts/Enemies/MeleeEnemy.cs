@@ -9,6 +9,6 @@ public class MeleeEnemy : BaseEnemy
 
     void Update()
     {
-        UpdateBaseEnemy();        
+        UpdateBaseEnemy();
     }
 }

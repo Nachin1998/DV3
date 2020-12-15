@@ -41,6 +41,27 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Pause" ID="{D500F0E2-8DCE-4850-9AE1-2A793414F6B7}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="On" ID="{97437E88-BD9A-4788-B33F-8696AAC8169D}"/>
+										<CustomState Name="" ID="{3D6F51AE-F42D-4B2D-9E10-0AF2DB6A68E3}" ShortID="284377113">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Off" ID="{EA893A11-B92B-4C5C-8141-F982117C5711}"/>
+										<CustomState Name="" ID="{F87AE112-DFF9-4B86-8C75-06CA081A3123}" ShortID="526980737"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 						</Bus>
 						<Bus Name="Music" ID="{505C5A98-B177-491D-A360-0DEBB7CB71B7}">
 							<PropertyList>

@@ -33,7 +33,7 @@ public class Interactable : MonoBehaviour
             {
                 case PickUpType.HealthPickUp:
                     player = col.GetComponent<Player>();
-                    if (player.currentHealth == player.maxHealth)
+                    if (player.currentHealth >= player.maxHealth)
                     {
                         return;
                     }

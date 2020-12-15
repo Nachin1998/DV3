@@ -102,18 +102,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="player_health" ID="{6CF53D6C-D6B7-4B28-9126-4F9F51DBF752}">
-					<ChildrenList>
-						<Action Name="" ID="{7BFE8DB9-DC60-4D39-88DE-84D37749D3EB}" ShortID="44981515">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Player health" ID="{5B4042E3-B3FF-447A-B678-D082E255E0D7}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="player_dead" ID="{90298924-1C9F-4CC6-B4D0-220744A1DB37}"/>
 				<Event Name="shoot_tree" ID="{6A267207-B7C3-4174-8236-EE82DD5CD1E4}"/>
 				<Event Name="shoot_rock" ID="{D26E3E25-73EE-4720-A90E-171E22C8E468}"/>
 				<Event Name="shoot_metal" ID="{D0246369-BA6F-4910-BEFB-090445FD9184}"/>
@@ -154,17 +142,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="play_ambient" ID="{FB98D3CE-2841-446F-BDC3-6F8576BC0167}">
-					<ChildrenList>
-						<Action Name="" ID="{81C69372-5B4E-401E-9F05-91AD99639822}" ShortID="905210353">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Ambient" ID="{A34F097C-45D4-4252-BEB7-3D3F655F6E4B}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				<Event Name="play_ambient" ID="{FB98D3CE-2841-446F-BDC3-6F8576BC0167}"/>
 				<Event Name="bear_footstep" ID="{64911DA8-A7AA-4C03-BBBE-35ECFF85FA14}">
 					<ChildrenList>
 						<Action Name="" ID="{0CC1356F-21D6-4695-B62E-BB06565B74D4}" ShortID="380280140">
@@ -250,6 +228,20 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{AB74EEF5-F68D-4DCE-8B8A-0F21A427F0DA}" ShortID="348234458">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player health" ID="{5B4042E3-B3FF-447A-B678-D082E255E0D7}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{92032E61-FD0E-4651-A8F2-16D602CDE897}" ShortID="313503050">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player health 2" ID="{36BC4B46-3B62-4929-88A2-691E56BBC1CF}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="menu_start" ID="{1F57A6EA-DFB2-4F97-89CB-2D81923FCF3E}">
@@ -306,6 +298,27 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{25E6BC49-0F3F-4CE9-9A56-3B8EC777BCF0}" ShortID="51367498">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player health" ID="{5B4042E3-B3FF-447A-B678-D082E255E0D7}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F3F63B8A-7AFB-4659-8226-DB17AFAFE044}" ShortID="934419885">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player health 2" ID="{36BC4B46-3B62-4929-88A2-691E56BBC1CF}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BC2996FB-10E5-439A-834A-991683FDED13}" ShortID="841719739">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambient" ID="{4D793321-FFE5-46FF-8270-1A7643B7A5D7}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="menu_backtomain" ID="{469EF090-2041-48C9-B87F-2DF3B4E5F78D}">
@@ -314,16 +327,6 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Buttons" ID="{FC5C7D48-F7FE-4634-B207-A5C5F3191E8E}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{78879385-762A-47F5-A72A-6C30CFB9CF66}" ShortID="494952773">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="22"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Main_menu" ID="{8BC06C9D-C31B-4FF5-AA59-6C4CF4265BAA}" WorkUnitID="{512D792F-EF01-4AAC-B41C-252198EC1EE4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -424,8 +427,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="volume_music" ID="{62E9092C-802C-4B58-BC45-7DA30FE00D9A}"/>
-				<Event Name="volume_sfx" ID="{7B1603E5-CF30-4BA9-8046-4B79012D9B5F}"/>
 				<Event Name="bear_defeated" ID="{5B72FC93-A0FD-4E9A-BD67-5779A60C4829}">
 					<ChildrenList>
 						<Action Name="" ID="{070FAD16-E5C2-493C-81A3-7088AA62A9E1}" ShortID="1064943665">
@@ -457,6 +458,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{E46BAB8D-345C-44DF-B617-41255025882B}" ShortID="795738377">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player dead 2" ID="{64CB8413-5661-4DDB-AD49-A16B44A79EE2}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="mute_on" ID="{CC2AB18D-2C1B-4E78-ABC3-84186D6C5223}"/>
@@ -467,6 +475,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Escopeta" ID="{5A0DD3F7-4178-4705-98D6-6861B66759C8}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="shotgun_reload" ID="{E0C7DD2C-A833-443B-A825-76B4E7597044}">
+					<ChildrenList>
+						<Action Name="" ID="{8F2B4B55-EBB7-4132-A7E2-ADA60649216A}" ShortID="145262285">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="shotgun_reload" ID="{5EF8A3C3-4DE8-40FF-8FA0-034774F8B35F}" WorkUnitID="{DB20742A-B7AA-471A-9C12-44DD02BC5370}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

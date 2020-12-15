@@ -6,7 +6,7 @@
 				<SoundcasterSession Name="test menu" ID="{526A7BC9-D934-41CF-B74F-528E3B42AC63}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="start_gameplay" ID="{12DBA7DC-E55E-4977-8CCC-EBF5BEDE1A4B}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}"/>
+							<ObjectRef Name="game_start" ID="{A6B39703-F7D1-4310-B690-6EF399332C4C}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}"/>
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
@@ -14,8 +14,24 @@
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="menu_backtomain" ID="{469EF090-2041-48C9-B87F-2DF3B4E5F78D}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}"/>
+							<ObjectRef Name="start_gameplay" ID="{12DBA7DC-E55E-4977-8CCC-EBF5BEDE1A4B}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}"/>
 							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="pause_off" ID="{F916788C-DBD6-41FE-BBA1-7B86EAF62D7E}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="game_over" ID="{B33F37AF-4E21-42FA-B947-365CE00212A2}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="menu_backtomain" ID="{469EF090-2041-48C9-B87F-2DF3B4E5F78D}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="pause_on" ID="{C087ACD0-1F02-46A1-AE16-BBE577444486}" WorkUnitID="{F20CCE66-998E-449D-BD02-84DF88F7DAD3}"/>
+							<Position X="3" Y="2"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -25,7 +41,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="HEALTH" ID="{10A371F4-3868-499B-8A71-8EC9FB0C16FA}"/>
-							<Value>44</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="MUSIC_VOLUME" ID="{5377F044-0801-4BCD-ACD2-27401DC6C1BA}"/>
@@ -33,8 +49,8 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="None" ID="{4AEDD380-6FC6-4E91-A962-2DC1C62E0BE5}"/>
-						<CurrentStateRef Name="Off" ID="{EA893A11-B92B-4C5C-8141-F982117C5711}"/>
+						<CurrentStateRef Name="Gameplay_Battle" ID="{4918ED41-80FF-421F-B876-82E26A92C069}"/>
+						<CurrentStateRef Name="On" ID="{97437E88-BD9A-4788-B33F-8696AAC8169D}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

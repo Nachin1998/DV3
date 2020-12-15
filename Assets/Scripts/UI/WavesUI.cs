@@ -7,6 +7,7 @@ public class WavesUI : MonoBehaviour
 
     [Space]
 
+    public Player player;
     public GameObject enemyAmmount;
     public TextMeshProUGUI waveStateText;
     TextMeshProUGUI enemyAmmountText;
@@ -20,6 +21,14 @@ public class WavesUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player.isDead)
+        {
+            enemyAmmount.SetActive(false);
+            waveStateText.gameObject.SetActive(false);
+            enemyAmmountText.gameObject.SetActive(false);
+            return;
+        }
+
         if (wm.state == WaveManager.WaveState.ActiveWave)
         {
             waveStateText.gameObject.SetActive(false);
