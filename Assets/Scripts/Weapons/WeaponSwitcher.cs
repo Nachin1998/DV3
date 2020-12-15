@@ -16,6 +16,25 @@ public class WeaponSwitcher : MonoBehaviour
             return;
         }
         ScrollWheelSelection();
+        NumPadSelection();
+    }
+
+    void NumPadSelection()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            selectedWeaponIndex = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            selectedWeaponIndex = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            selectedWeaponIndex = 2;
+        }
+
+        SelectWeapon();
     }
 
     void ScrollWheelSelection()
