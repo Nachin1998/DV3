@@ -96,7 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUpType: 1
-  interactableQuad: {fileID: 0}
+  interactableQuad: {fileID: 227312669304559783, guid: b6ac3196210079b4fbdb7f3e8800d0e3,
+    type: 3}
   healthRecovery: 0
   ammoRecovery: 20
 --- !u!65 &3545492100148231633

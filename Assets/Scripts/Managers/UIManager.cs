@@ -4,14 +4,14 @@ public class UIManager : MonoBehaviour
 {
     public Player player;
     public GameObject weaponHolder;
-    [Space]
+    public GameObject minimap;
     public GameObject winMenu;
     public GameObject deathMenu;
 
     void Start()
     {
         weaponHolder.SetActive(true);
-
+        minimap.SetActive(true);
         winMenu.SetActive(false);
         deathMenu.SetActive(false);
     }
@@ -22,6 +22,8 @@ public class UIManager : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+
+            minimap.SetActive(false);
 
             weaponHolder.SetActive(false);
 
